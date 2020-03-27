@@ -2,6 +2,7 @@
 
 import os
 import time, threading
+import importlib
 import datetime
 import random
 import matplotlib.pyplot as plt
@@ -11,10 +12,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import nordnet_webelements
+import nordnet_functions
 
 driver = webdriver.Chrome('/usr/bin/chromedriver')
-#driver2 = webdriver.Chrome('/usr/local/bin/chromedriver')
+#driver2 = webdriver.Chrome('/usr/bin/chromedriver')
 
 #Trade mode
 #r = real money
@@ -401,17 +403,12 @@ def bear_bailout():
             if pcps_exit == 0:
                 print("BAILING OUT!!! - bears are coming!!!")
                 bear_bailout_status = 1
-                if trade_mode == "r":
-                    trade=trade_nordnet_watchlist(pcps_max_ticker, "s", ticker_holding_price_value, vol)
-                    while trade == 1:
-                        trade = trade_nordnet_watchlist(pcps_max_ticker, "s", ticker_holding_price_value, vol)
+                trade=nordnet_functions.sell(ticker_holding_price_value)
+                nordnet_functions.open_order_status()
+                if trade == 0:
                     print("Bailed out!!!")
-
-                elif trade_mode == "p":
-                    trade=paper_trade(pcps_max_ticker, "s", ticker_holding_price_value, vol)
-                    while trade == 1:
-                        trade = paper_trade(pcps_max_ticker, "s", ticker_holding_price_value, vol)
-                    print("Bailed out!!!")
+                else:
+                    print("Unable to bail out - sell order not completed..")
 
             elif pcps_exit == 1:
                 print("bear bailout cancelled, due to exit performed by pcps: ", pcps_exit)
@@ -529,11 +526,11 @@ def global_trader():
     #If BUY order yet not filled - cancel buy order
     if modify_entry_cnt == modify_entry_cnt_max and filled_status != "filled":
         print("CANCELLING order")
-        trade_status = "c"
-        trade = paper_trade(pcps_max_ticker, "c", ticker_holding_price_value, vol)
-        while trade == 1:
-            trade = paper_trade(pcps_max_ticker, "c", ticker_holding_price_value, vol)
-
+        cancel=nordnet_functions.cancel_order()
+        if cancel == 1:
+            print("ORDER FILLED - UNABLE TO CANCEL")
+        else:
+            trade_status = "c"
 
     #Fetch prices of pcps_max_ticker: if bought, sold or holding
     if trade_status == "b" or trade_status == "s" or holding_status == 1:
@@ -555,9 +552,8 @@ def global_trader():
     #If SELL order yet not filled - edit sell order
     if modify_exit_cnt == modify_exit_cnt_max and filled_status != "filled":
         print("MODIFYING SELL ORDER")
-        trade = paper_trade(pcps_max_ticker, "s_m", ticker_holding_price_value, vol)
-        while trade == 1:
-            trade = paper_trade(pcps_max_ticker, "s_m", ticker_holding_price_value, vol)
+        trade = nordnet_functions.modify_sell_order(str(ticker_holding_price_value))
+        nordnet_functions.open_order_status()
         if modify_exit_cnt != 0:
             modify_exit_cnt=1
             print("Starting new exit_cnt: ",modify_exit_cnt)
@@ -713,376 +709,6 @@ def find_volume(price):
     vol = int(trading_cash_usd/price)
     print("calculated volum",vol)
     return vol
-def login_nordnet():
-    driver2.implicitly_wait(10) # seconds
-
-    driver2.get("https://classic.nordnet.no/mux/login/startNO.html?clearEndpoint=0&intent=next")
-
-    #Login
-    elem_login_b = driver2.find_element_by_class_name("button.primary.block")
-    elem_login_b.click()
-
-    elem_bd = driver2.find_element_by_id("birthDate")
-    elem_bd.clear()
-    elem_bd.send_keys("120390")
-
-    elem_ph = driver2.find_element_by_id("phone")
-    elem_ph.clear()
-    elem_ph.send_keys("46781037")
-
-    elem_login_b2 = driver2.find_element_by_class_name("button.primary.block")
-    elem_login_b2.click()
-
-    time.sleep(sample_interval*2)
-
-    # enter watchlist in nordnet
-    elem_mine_sider = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[2]/div/div/div/div[1]/div/nav/ul/li[1]/button/span/span/span")
-    elem_mine_sider.click()
-
-    # select watchlist
-    elem_watchlist = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[2]/div/div/div/div[1]/div/nav/ul/li[1]/div/div/div/div[1]/div[1]/div/ul/li[5]/span/a")
-    elem_watchlist.click()
-
-    time.sleep(1.5)
-def trade_nordet(ticker,type,price,vol):
-    # Enter ticker in search field
-    global driver2
-
-    search_quote = '"'
-    elem_ticker = driver2.find_element_by_class_name("c02259")
-    elem_ticker.click()
-    elem_ticker.clear()
-    elem_ticker.send_keys(search_quote)
-    elem_ticker.send_keys(ticker)
-    time.sleep(0.8)
-    elem_ticker.send_keys(Keys.ARROW_DOWN)
-    elem_ticker.send_keys(Keys.RETURN)
-
-    #wait until page loads before proceeding
-    time.sleep(2)
-
-    # buy or sell
-    if type == "b":
-        elem_buy = driver2.find_element_by_class_name("Button__StyledLink-lqp9m3-1.eIVjgI")
-        elem_buy.click()
-    elif type == "s":
-        elem_sell = driver2.find_element_by_class_name("Button__StyledLink-lqp9m3-1.iXLhXW")
-        elem_sell.click()
-
-    # select dropdown account
-    elem_dropd = driver2.find_element_by_css_selector("#instrument-order-accounts-select > div > div > span")
-    elem_dropd.click()
-    # select AF account
-    elem_account = driver2.find_element_by_css_selector("#instrument-order-accounts-select-option-0 > div > div > div.Flexbox__StyledFlexbox-sc-1ob4g1e-0.faownn > div")
-    elem_account.click()
-
-    # select volume
-    elem_volume = driver2.find_element_by_id("volume")
-    elem_volume.clear()
-    elem_volume.send_keys(vol)
-
-    # enter price
-    elem_price = driver2.find_element_by_id("price")
-    elem_price.click()
-    elem_price.clear()
-    elem_price.send_keys(Keys.BACK_SPACE)
-    elem_price.send_keys(Keys.BACK_SPACE)
-    elem_price.send_keys(Keys.BACK_SPACE)
-    elem_price.send_keys(Keys.BACK_SPACE)
-    elem_price.send_keys(Keys.BACK_SPACE)
-    elem_price.send_keys(Keys.BACK_SPACE)
-    elem_price.send_keys(Keys.BACK_SPACE)
-
-    #update price before entering
-    if type == "b":
-        price = str(update_price_before_buy(ticker))
-    elif type == "s":
-        price = str(update_price_before_sell(ticker))
-    print("the price is",price)
-    elem_price.send_keys(price)
-
-    # buy/sell button
-    #elem_buy_sell = driver2.find_element_by_class_name("NormalizedButton__Button-ey7f5x-0.Button__StyledButton-lqp9m3-0.enBkkS ActionButtons__RelativeButton-sc-80k9dq-1.hktbZI")
-    elem_buy_sell = driver2.find_element_by_css_selector("#main-content > div.PageWrapper__Outer-sc-1ur2ylx-0.fLylmR.PageLayoutOverview__StyledPageWrapper-dawtfj-0.dsucPW > div > div.CssGrid__StyledDiv-bu5cxy-0.iGVYku > div.CssGrid__RawCssGridItem-bu5cxy-1.sc-bdVaJa.ibCVYD > div > div > div:nth-child(1) > div > form > div.Box__StyledDiv-sc-1bfv3i9-0.GUVl > div.Flexbox__StyledFlexbox-sc-1ob4g1e-0.hEJJeD > div:nth-child(2) > button")
-    elem_buy_sell.click()
-
-    # confirmation button
-    elem_conf = driver2.find_element_by_xpath("/html/body/div[3]/div[3]/div/div/div/div[2]/div/div[10]/div/div[2]/button")
-    elem_conf.click()
-
-    #ordren er mottatt - ok
-    elem_order_ok = driver2.find_element_by_class_name("Button__StyledLink-lqp9m3-1.bnsRvn")
-    elem_order_ok.click()
-
-    # open the order section to follow order execution status
-    elem_order = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div/div[2]/ul/li[1]/button/span")
-    elem_order.click()
-def trade_nordnet_watchlist(ticker,type,price,vol):
-
-    if type == "b":
-
-        if ticker == ticker_1_txt:
-            # select buy on the first ticker in list
-            elem_buy_1 = driver2.find_element_by_xpath("/html/body/div[1]/div/div[3]/main/div/div[2]/div/div/div/div[2]/div/section/div/div/div[2]/div/div/table/tbody/tr[1]/td[2]/div/a[1]/div/span")
-            elem_buy_1.click()
-        elif ticker == ticker_2_txt:
-            # select 2nd ticker in watchlist
-            elem_buy_2 = driver2.find_element_by_xpath("/html/body/div[1]/div/div[3]/main/div/div[2]/div/div/div/div[2]/div/section/div/div/div[2]/div/div/table/tbody/tr[2]/td[2]/div/a[1]/div/span")
-            elem_buy_2.click()
-        elif ticker == ticker_3_txt:
-            # select 3rd ticker in watchlist
-            elem_buy_3 = driver2.find_element_by_xpath("/html/body/div[1]/div/div[3]/main/div/div[2]/div/div/div/div[2]/div/section/div/div/div[2]/div/div/table/tbody/tr[3]/td[2]/div/a[1]/div/span")
-            elem_buy_3.click()
-        time.sleep(1)
-        # select dropdown account
-        elem_dropd = driver2.find_element_by_css_selector("#instrument-order-accounts-select > div > div > span")
-        elem_dropd.click()
-
-        # select AF account
-        elem_account = driver2.find_element_by_css_selector("#instrument-order-accounts-select-option-0 > div > div > div.Flexbox__StyledFlexbox-sc-1ob4g1e-0.faownn > div")
-        elem_account.click()
-
-        # select volume
-        elem_volume = driver2.find_element_by_id("volume")
-        elem_volume.clear()
-        elem_volume.send_keys(vol)
-
-        # enter price
-        elem_price = driver2.find_element_by_id("price")
-        elem_price.click()
-        elem_price.clear()
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-
-        #update price before entering
-        price = str(update_price_before_buy(ticker))
-
-        elem_price.send_keys(price)
-
-        time.sleep(0.5)
-
-        # buy/sell button
-        elem_buy_sell = driver2.find_element_by_css_selector("#main-content > div.PageWrapper__Outer-sc-1ur2ylx-0.fLylmR.PageLayoutOverview__StyledPageWrapper-dawtfj-0.dsucPW > div > div.CssGrid__StyledDiv-bu5cxy-0.iGVYku > div.CssGrid__RawCssGridItem-bu5cxy-1.sc-bdVaJa.ibCVYD > div > div > div:nth-child(1) > div > form > div.Box__StyledDiv-sc-1bfv3i9-0.GUVl > div.Flexbox__StyledFlexbox-sc-1ob4g1e-0.hEJJeD > div:nth-child(2) > button")
-        elem_buy_sell.click()
-
-        print("buying: ",vol,"of: ",ticker,"at price: ",price)
-
-        # confirmation button - not needed anymore. message wont show.
-        try:
-            elem_conf = driver2.find_element_by_xpath("/html/body/div[3]/div[3]/div/div/div/div[2]/div/div[10]/div/div[2]/button")
-            elem_conf.click()
-        except:
-            print("Confirm order not available - order already sent to exhange")
-
-        time.sleep(2)
-
-        try:
-            #ordren er mottatt - ok
-            elem_order_ok = driver2.find_element_by_class_name("Button__StyledLink-lqp9m3-1.bnsRvn")
-            elem_order_ok.click()
-        except:
-           print("Ordre mottatt - ikke tilgjengelig")
-
-
-
-        #PREFILL the sell order except the price
-        #Hit the sell button
-        elem_sell = driver2.find_element_by_class_name("Button__StyledLink-lqp9m3-1.iXLhXW")
-        elem_sell.click()
-
-        # select dropdown account
-        elem_dropd = driver2.find_element_by_css_selector("#instrument-order-accounts-select > div > div > span")
-        elem_dropd.click()
-
-        # select AF account
-        elem_account = driver2.find_element_by_css_selector("#instrument-order-accounts-select-option-0 > div > div > div.Flexbox__StyledFlexbox-sc-1ob4g1e-0.faownn > div")
-        elem_account.click()
-
-        # select volume
-        elem_volume = driver2.find_element_by_id("volume")
-        elem_volume.clear()
-        elem_volume.send_keys(vol)
-
-        #clear price
-        elem_price = driver2.find_element_by_id("price")
-        elem_price.click()
-        elem_price.clear()
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-        elem_price.send_keys(Keys.BACK_SPACE)
-
-        # open the order section to follow order execution status
-        elem_order = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div/div[2]/ul/li[1]/button/span")
-        elem_order.click()
-
-
-    elif type == "s":
-        # Check if the buy order still exists
-        try:
-            elem_order_exist = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[1]")
-            order_status = "active"
-            print("The buy order was not completed on: ",ticker, "deleting")
-        except:
-            order_status = "completed"
-            print("The buy order was completed, selling: ",ticker)
-
-        if order_status == "completed":
-
-            # enter price
-            elem_price = driver2.find_element_by_id("price")
-            elem_price.click()
-            price = str(update_price_before_sell(ticker))
-            time.sleep(0.2)
-            elem_price.send_keys(price)
-
-            time.sleep(0.2)
-
-            # buy/sell button
-            elem_buy_sell = driver2.find_element_by_css_selector("#main-content > div.PageWrapper__Outer-sc-1ur2ylx-0.fLylmR.PageLayoutOverview__StyledPageWrapper-dawtfj-0.dsucPW > div > div.CssGrid__StyledDiv-bu5cxy-0.iGVYku > div.CssGrid__RawCssGridItem-bu5cxy-1.sc-bdVaJa.ibCVYD > div > div > div:nth-child(1) > div > form > div.Box__StyledDiv-sc-1bfv3i9-0.GUVl > div.Flexbox__StyledFlexbox-sc-1ob4g1e-0.hEJJeD > div:nth-child(2) > button")
-            elem_buy_sell.click()
-            print("selling: ", vol, "of: ", ticker,"at price: ", price)
-
-            time.sleep(1)
-
-            # confirmation button - not needed anymore. message wont show.
-            try:
-                elem_conf = driver2.find_element_by_xpath("/html/body/div[3]/div[3]/div/div/div/div[2]/div/div[10]/div/div[2]/button")
-                elem_conf.click()
-            except:
-                print("Confirm order not available - order already sent to exhange")
-
-            time.sleep(2)
-
-            #ordren er mottatt dialog - etter sender inn ordre
-            try:
-                elem_order_ok = driver2.find_element_by_class_name("Button__StyledLink-lqp9m3-1.bnsRvn")
-                elem_order_ok.click()
-            except:
-                print("Ordre mottatt - ok eksisterer ikke på salg")
-
-
-
-            #Routine to make sure the order is sold -------------------------------------------
-            # reopen the order section to follow order execution status
-            elem_order = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div/div[2]/ul/li[1]/button/span")
-            elem_order.click()
-
-            #First wait one cycle periode
-            time.sleep(sell_order_timeout_udpate_price)
-
-            # Check if the sell order still exists
-            try:
-                elem_order_exist = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[1]")
-                order_status = "active"
-                print("the element exist")
-            except:
-                order_status = "completed"
-                print("the element dont exist")
-
-            #If sell order still active
-            while order_status == "active":
-                #update order with current price
-
-                # click the edit symbol under order
-                elem_edit = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[2]/span/span[1]/a[1]/button")
-                elem_edit.click()
-                time.sleep(0.2)
-
-                # enter price
-                elem_price = driver2.find_element_by_id("price")
-                elem_price.click()
-                elem_price.clear()
-                elem_price.send_keys(Keys.BACK_SPACE)
-                elem_price.send_keys(Keys.BACK_SPACE)
-                elem_price.send_keys(Keys.BACK_SPACE)
-                elem_price.send_keys(Keys.BACK_SPACE)
-                elem_price.send_keys(Keys.BACK_SPACE)
-                elem_price.send_keys(Keys.BACK_SPACE)
-                elem_price.send_keys(Keys.BACK_SPACE)
-                price = str(update_price_before_sell(ticker))
-                elem_price.send_keys(price)
-
-                time.sleep(0.3)
-
-                #Hit edit/submit: try in case the order was completed after clicking the change button and before i did change it again.
-                try:
-                    elem_change = driver2.find_element_by_xpath("/html/body/div[1]/div/div[3]/main/div[2]/div/div[1]/div[8]/div/div/div[1]/div/div/form/div/div[13]/div/div[2]/button")
-                    elem_change.click()
-                except:
-                    print("Order already completed - no need to update price")
-                    break
-
-                time.sleep(1)
-
-                # open the order section to follow order execution status
-                elem_order = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div/div[2]/ul/li[1]/button/span")
-                elem_order.click()
-
-                # ordren er mottatt dialog - etter endring av ordre - eller at ordren var delvis utført
-                try:
-                    elem_order_ok = driver2.find_element_by_class_name("Button__StyledLink-lqp9m3-1.bnsRvn")
-                    elem_order_ok.click()
-                except:
-                    print("No confirmation on change order needed for: ",ticker)
-
-                '''
-                #If order already completed after clicking the change button but before I hit the submit button
-                try:
-                    elem_order_already_done = driver2.find_element_by_xpath("/html/body/div[1]/div/div[3]/main/div[2]/div/div[1]/div[8]/div/div/div[1]/div/div/form/div/div[1]/div/div/span/div[2]")
-                    elem_order_already_done_text = elem_order_already_done.text
-                    if elem_order_already_done_text == "Ordren din er gjennomført":
-                        print("the order already done, not possible to change")
-                        order_status = "completed"
-                        break
-                except:
-                    print("lets go on, order still in process")
-                '''
-
-                time.sleep(sell_order_timeout_udpate_price)
-
-                # Check if the sell order still exists
-                try:
-                    elem_order_exist = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[1]")
-                    order_status = "active"
-                    print("the element exist")
-                except:
-                    order_status = "completed"
-                    print("the element dont exist")
-            print("success, sell order completed",ticker,"at price",price)
-
-            # Go back to watchlist to get ready for next buy
-            # enter watchlist in nordnet
-            elem_mine_sider = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[2]/div/div/div/div[1]/div/nav/ul/li[1]/button/span/span/span")
-            elem_mine_sider.click()
-
-            # select watchlist
-            elem_watchlist = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[2]/div/div/div/div[1]/div/nav/ul/li[1]/div/div/div/div[1]/div[1]/div/ul/li[5]/span/a")
-            elem_watchlist.click()
-
-        #Cancel buy order if still active
-        elif order_status == "active":
-            #cancel buy order
-            elem_cancel_order = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[2]/span/span[2]/button")
-            elem_cancel_order.click()
-
-            # Go back to watchlist to get ready for next buy
-            # enter watchlist in nordnet
-            elem_mine_sider = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[2]/div/div/div/div[1]/div/nav/ul/li[1]/button/span/span/span")
-            elem_mine_sider.click()
-
-            # select watchlist
-            elem_watchlist = driver2.find_element_by_xpath("/html/body/div[1]/div/header/div/div[2]/div[2]/div/div/div/div[1]/div/nav/ul/li[1]/div/div/div/div[1]/div[1]/div/ul/li[5]/span/a")
-            elem_watchlist.click()
-            print("buy order canceled",ticker)
 
 def open_webull():
     global driver
@@ -1515,7 +1141,6 @@ def clear_plot_history():
     h_trade_time_cnt = 0
     print("plot history cleared!!!")
 
-
 def pcps():
     global driver
     global pcps_threshold
@@ -1680,40 +1305,53 @@ def pcps():
                 try:
                     if float(ticker_1_price_value) > float(ticker1_prev_high) and float(ticker1_prev_high) != 0 and float(ticker1_prev_cp) > float(ticker1_prev_op):
                         print("Entered quality check on: ", ticker_1_txt)
+                        #Get BUY order ready in case of quality passes
+                        vol = find_volume(float(ticker_1_price_value))
+                        nordnet_functions.prefill_buy_order(str(1), str(vol))
                         time.sleep(orb_quality_check)
                         if float(ticker_1_price_value) > float(ticker1_prev_high):
-                            ##Get volume
-                            vol = find_volume(float(ticker_1_price_value))
-                            paper_trade(ticker_1_txt, "b", 0, vol)
+                            nordnet_functions.buy(str(ticker_1_price_value), str(vol))
+                            nordnet_functions.prefill_sell_order(str(vol))
+                            nordnet_functions.open_order_status()
                             pcps_max_ticker = ticker_1_txt
                             orb_breakout_true = "yes"
                             continue
                         else:
                             print("Quality check not passed - not entering trade", ticker_1_txt)
+                            nordnet_functions.enter_watchlist()
                     if float(ticker_2_price_value) > float(ticker2_prev_high) and float(ticker2_prev_high) != 0 and float(ticker2_prev_cp) > float(ticker2_prev_op):
                         print("Entered quality check on: ", ticker_2_txt)
+                        #Get BUY order ready in case of quality passes
+                        vol = find_volume(float(ticker_2_price_value))
+                        nordnet_functions.prefill_buy_order(str(2), vol)
                         time.sleep(orb_quality_check)
                         ##Get volume
                         if float(ticker_2_price_value) > float(ticker2_prev_high):
-                            vol = find_volume(float(ticker_2_price_value))
-                            paper_trade(ticker_2_txt, "b", 0, vol)
+                            nordnet_functions.buy(ticker_2_price_value, vol)
+                            nordnet_functions.prefill_sell_order(vol)
+                            nordnet_functions.open_order_status()
                             pcps_max_ticker = ticker_2_txt
                             orb_breakout_true = "yes"
                             continue
                         else:
                             print("Quality check not passed - not entering trade", ticker_2_txt)
+                            nordnet_functions.enter_watchlist()
                     if float(ticker_3_price_value) > float(ticker3_prev_high) and float(ticker3_prev_high) != 0 and float(ticker3_prev_cp) > float(ticker3_prev_op):
                         print("Entered quality check on: ", ticker_3_txt)
+                        #Get BUY order ready in case of quality passes
+                        vol = find_volume(float(ticker_3_price_value))
+                        nordnet_functions.prefill_buy_order(str(3), vol)
                         time.sleep(orb_quality_check)
-                        if float(ticker_2_price_value) > float(ticker2_prev_high):
-                            ##Get volume
-                            vol = find_volume(float(ticker_3_price_value))
-                            paper_trade(ticker_3_txt, "b", 0, vol)
+                        if float(ticker_3_price_value) > float(ticker3_prev_high):
+                            nordnet_functions.buy(ticker_3_price_value, vol)
+                            nordnet_functions.prefill_sell_order(vol)
+                            nordnet_functions.open_order_status()
                             pcps_max_ticker = ticker_3_txt
                             orb_breakout_true = "yes"
                             continue
                         else:
                             print("Quality check not passed - not entering trade: ", ticker_3_txt)
+                            nordnet_functions.enter_watchlist()
                 except:
                     print("Unable to compare prices..retrying")
 
@@ -1723,7 +1361,7 @@ def pcps():
     #Check if order was filled
     if trade_status == "b":
         modify_entry_cnt = 1
-        filled_status=check_order_status()
+        filled_status=nordnet_functions.check_order_status()
         if filled_status == "filled":
             modify_entry_cnt = 0
             modify_entry_tries = 0
@@ -1735,23 +1373,8 @@ def pcps():
             #Update P&L status
             bought_price = price
         elif filled_status == "cancelled":
-            #Double check in case the order was filled
-            for check_now in range(0, check_filled_if_cancelled_maxTries):
-                print("///Double checking if the order was actually fillled after cancelling")
-                print("Double check cnt: ", check_now)
-                time.sleep(1)
-                filled_status=check_order_status()
-                if filled_status == "filled":
-                    modify_entry_cnt = 0
-                    modify_entry_tries = 0
-                    # Set initial exit point
-                    ticker_holding_exit_point = (float(price) * (1 - ticker_holding_exit_offset))
-                    print("The initial exit point is: ", ticker_holding_exit_point)
-                    print("The buy Limit price was: ", price)
-                    holding_status = 1
-                    # Update P&L status
-                    bought_price = price
-                    break
+            #No double checking needed
+            pass
 
             if filled_status != "filled":
                 print("Buy cancelled - exiting the trade")
@@ -1778,16 +1401,8 @@ def pcps():
             ticker_sell_price = ticker_holding_price_value *(1-(pcps_order_addon/100))
             ticker_sell_price = ("%.2f" %ticker_sell_price)
             print("--Exiting trade with exit point routine")
-            if trade_mode == "r":
-                trade=trade_nordnet_watchlist(pcps_max_ticker,"s",ticker_sell_price,vol)
-                while trade == 1:
-                    trade = trade_nordnet_watchlist(pcps_max_ticker, "s", ticker_sell_price, vol)
-
-            elif trade_mode == "p":
-                trade=paper_trade(pcps_max_ticker,"s",ticker_sell_price,vol)
-                while trade == 1:
-                    trade = paper_trade(pcps_max_ticker, "s", ticker_sell_price, vol)
-
+            nordnet_functions.sell(ticker_holding_price_value)
+            nordnet_functions.open_order_status()
             #Set sample_periods to zero and break enter trade routine
             sample_periods = 0
             pcps_exit = 0
@@ -1799,17 +1414,8 @@ def pcps():
             ticker_sell_price = ticker_holding_price_value *(1-(pcps_order_addon/100))
             ticker_sell_price = ("%.2f" %ticker_sell_price)
             print("Exiting trade due to market closing soon...")
-            if trade_mode == "r":
-                trade=trade_nordnet_watchlist(pcps_max_ticker,"s",ticker_sell_price,vol)
-                while trade == 1:
-                    trade = trade_nordnet_watchlist(pcps_max_ticker, "s", ticker_sell_price, vol)
-
-            elif trade_mode == "p":
-                trade=paper_trade(pcps_max_ticker,"s",ticker_sell_price,vol)
-                while trade == 1:
-                    trade = paper_trade(pcps_max_ticker, "s", ticker_sell_price, vol)
-
-
+            nordnet_functions.sell(ticker_holding_price_value)
+            nordnet_functions.open_order_status()
             #Set sample_periods to zero and break enter trade routine
             sample_periods = 0
             pcps_exit = 0
@@ -1819,7 +1425,7 @@ def pcps():
     #Check if order was filled
     if trade_status == "s":
         modify_exit_cnt = 1
-        filled_status = check_order_status()
+        filled_status = nordnet_functions.check_order_status()
         if filled_status == "filled":
             modify_exit_cnt = 0
             print("Resetting trading parameters, trade done")
@@ -1937,26 +1543,13 @@ def trade_or_not():
         time.sleep(10)
 
 
-#Start trading type of strategy
-if trade_mode == "r":
-    while trade_cnt <= trade_cnt_real_max:
-        trade_or_not()
-        if trade_cnt == 1:
-            open_webull()
-            logon_webull()
-            login_nordnet()
-            time.sleep(sample_interval)
-            get_watchlist_tickers()
-        pcps()
-        trade_cnt+=1
-        print("the trade_cnt value is", trade_cnt)
-    print("Trading is over!")
-
-elif trade_mode =="p":
+#Start trading...
+if trade_mode =="r":
     trade_fail_cnt=0
     trade_successful_cnt=0
     open_webull()
     logon_webull()
+    nordnet_functions.login_nordnet()
     global_trader()
 
     while trade_successful_cnt <= trade_cnt_max:
@@ -1966,68 +1559,27 @@ elif trade_mode =="p":
             print("Still holding possition - waiting for sell order to complete")
             time.sleep(1)
 
-        #Start pcps trade
-        refresh()
-        trade_pcps=pcps()
-        if trade_pcps == 1:
-            cleanup_if_fail_purchase()
-            trade_fail_cnt+=1
-            print("Successful trades: ", trade_successful_cnt)
-            print("Trade failed, total fails: ",trade_fail_cnt)
-        elif trade_pcps == 5:
-            #Trading reached EOD - getting setup for tomorrow
-            pass
-        else:
-            #NOTE the successful cnt is incremented in the pcps function.
-            print("Successful trades: ", trade_successful_cnt)
-            print("Trade failed, total fails: ",trade_fail_cnt)
+            #Start pcps trade
+            refresh()
+            trade_pcps=pcps()
+            if trade_pcps == 1:
+                cleanup_if_fail_purchase()
+                trade_fail_cnt+=1
+                print("Successful trades: ", trade_successful_cnt)
+                print("Trade failed, total fails: ",trade_fail_cnt)
+            elif trade_pcps == 5:
+                #Trading reached EOD - getting setup for tomorrow
+                pass
+            else:
+                #NOTE the successful cnt is incremented in the pcps function.
+                print("Successful trades: ", trade_successful_cnt)
+                print("Trade failed, total fails: ",trade_fail_cnt)
 
     print("Daily trade cnt reached - stopping")
 
-elif trade_mode =="o":
-
-    while trade_cnt <= trade_cnt_max:
-        #trade_or_not()
-        if trade_cnt == 1:
-            open_webull()
-            logon_webull()
-            #login_nordnet()
-            get_watchlist_tickers()
-            fetch_prices()
-            pcps()
-        trade_cnt+=1
-        print("the trade_cnt value is", trade_cnt)
-    print("Trading is over today!")
-
-    #Check when it's a new day, then initialize trade_cnt
-    today = str(datetime.datetime.today().weekday())
-    new_day = today
-    while today == new_day:
-        print("checking when it's a new trading day")
-        time.sleep(3600)
-        new_day = str(datetime.datetime.today().weekday())
-    trade_cnt = 1
-
 else:
-    print("entering testmode")
-
-    trade_status = "b"
-    filled_status="unknown"
-
-    ticker_holding_price_value = 10.0
-    file_trade()
-    ticker_holding_price_value = 11.0
-    filled_status="filled"
-    file_trade()
-    ticker_holding_price_value = 12.0
-    file_trade()
-    trade_status = "s"
-    filled_status="unknown"
-    file_trade()
-    filled_status="filled"
-    file_trade()
-
-    plot_trade()
+    nordnet_functions.login_nordnet()
+    nordnet_functions.prefill_buy_order(str(1), str(vol))
 
 
 
