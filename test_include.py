@@ -1,5 +1,4 @@
 import importlib
+import nordnet_functions
 
-from nordnet_functions import *
-
-check_order_status()
+nordnet_functions.login_nordnet()

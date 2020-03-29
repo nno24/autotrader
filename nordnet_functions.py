@@ -10,69 +10,81 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import imaplib
 import nordnet_webelements
-import autotrader_linux
-import test_include
-
 driver2 = webdriver.Chrome('/usr/bin/chromedriver')
 time_now = str(datetime.datetime.now().time())
 
 #Trade parameters
 price=""
 ticker=""
-trading_cash_usd=2206
+trading_cash_usd=1500
 sell_order_timeout_udpate_price=15
 trade_state="READY"
+trade_status = ""
 
 
 def check_order_status():
  filled_status ="unknown"
  while filled_status != "filled":
-  try:
-   elem_order_exist = driver2.find_element_by_xpath(nordnet_webelements.e_order_exist)
+  while trade_status == "m":
    time_now = str(datetime.datetime.now().time())
-   print("Buy order not filled...", time_now)
+   print("Modify order in progress - filled routine waiting to check", time_now)
+  try:
+   elem_order_exist = driver2.find_element_by_xpath(nordnet_webelements.e_order_exist_2)
+   time_now = str(datetime.datetime.now().time())
+   print("Order not filled...", time_now)
   except:
-   if autotrader_linux.trade_status == "c":
-    print("BUY ORDER CANCELLED - NOT FILLED")
+   if trade_status == "c":
+    print("ORDER CANCELLED - NOT FILLED")
     filled_status = "cancelled"
     return filled_status
    else:
     time_now = str(datetime.datetime.now().time())
-    print("Buy order FILLED: ", time_now)
+    print("Order FILLED: ", time_now)
     filled_status = "filled"
     return filled_status
 
 def enter_watchlist():
  try:
   # enter watchlist in nordnet
-  elem_mine_sider = driver2.find_element_by_xpath(nordnet_webelements.e_mine_sider_1)
+  elem_mine_sider = driver2.find_element_by_xpath(nordnet_webelements.e_mine_sider_3)
   elem_mine_sider.click()
 
   # select watchlist
-  elem_watchlist = driver2.find_element_by_xpath(nordnet_webelements.e_watchlist_1)
+  elem_watchlist = driver2.find_element_by_xpath(nordnet_webelements.e_watchlist_3)
   elem_watchlist.click()
   return 0
  except:
   print("UNABLE TO ENTER WATCHLIST")
   return 1
 
+def ordre_mottatt_confirm():
+ try:
+  # ordren er mottatt - ok
+  elem_order_ok = driver2.find_element_by_xpath(nordnet_webelements.b_ordre_mottatt)
+  elem_order_ok.click()
+  time_now = str(datetime.datetime.now().time())
+  print("Ordre mottatt dialog - OK", time_now)
+ except:
+  print("Ordre mottatt dialog - ikke tilgjengelig")
+
+
 def prefill_buy_order(ticker, vol):
  try:
   if ticker == "1":
    # select buy on the first ticker in list
    time_now = str(datetime.datetime.now().time())
-   print("buying ticker 1", time_now)
+   print("prefilling buy order ticker 1", time_now)
    elem_buy_1 = driver2.find_element_by_xpath(nordnet_webelements.b_buy_ticker_1)
    elem_buy_1.click()
   elif ticker == "2":
    time_now = str(datetime.datetime.now().time())
-   print("buying ticker 2", time_now)
+   print("prefilling buy order ticker 2", time_now)
    # select 2nd ticker in watchlist
    elem_buy_2 = driver2.find_element_by_xpath(nordnet_webelements.b_buy_ticker_2)
    elem_buy_2.click()
   elif ticker == "3":
    time_now = str(datetime.datetime.now().time())
-   print("buying ticker 3", time_now)
+   print("prefilling by order ticker 3", time_now)
    # select 3rd ticker in watchlist
    elem_buy_3 = driver2.find_element_by_xpath(nordnet_webelements.b_buy_ticker_3)
    elem_buy_3.click()
@@ -92,8 +104,10 @@ def prefill_buy_order(ticker, vol):
 
   # enter price
   elem_price = driver2.find_element_by_id("price")
+  elem_price.clear()
   elem_price.click()
   elem_price.clear()
+  time.sleep(1)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
@@ -101,37 +115,38 @@ def prefill_buy_order(ticker, vol):
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
+
   return 0
  except:
   print("UNABLE TO PREFILL BUY ORDER")
   return 1
 
 def buy(price, vol):
+ global trade_status
  try:
   elem_price = driver2.find_element_by_id("price")
   elem_price.click()
   elem_price.send_keys(price)
-  #time.sleep(0.5)
+  time.sleep(0.2)
   # buy/sell button
   elem_buy_sell = driver2.find_element_by_xpath(nordnet_webelements.b_buy_sell_order)
   elem_buy_sell.click()
 
   time_now = str(datetime.datetime.now().time())
   print("buying: ", vol, "of: ", ticker, "at price: ", price, time_now)
-  time.sleep(1)
 
-  # ordren er mottatt - ok
-  elem_order_ok = driver2.find_element_by_xpath(nordnet_webelements.b_ordre_mottatt)
-  elem_order_ok.click()
-  time_now = str(datetime.datetime.now().time())
-  print("Ordre mottatt - ikke tilgjengelig", time_now)
-  autotrader_linux.trade_status = "b"
-  return 0
+  time.sleep(2)
+  ordre_mottatt_confirm()
+
+  trade_status = "b"
+  return trade_status
  except:
   print("UNABLE TO COMPLETE PURCHASE")
-  return 1
+  trade_status = "fail"
+  return trade_status
 
 def sell(price):
+ global trade_status
  try:
   # enter price
   elem_price = driver2.find_element_by_id("price")
@@ -147,29 +162,31 @@ def sell(price):
   time_now = str(datetime.datetime.now().time())
   print("selling:", price, time_now)
 
-  time.sleep(1)
+  time.sleep(2)
+  ordre_mottatt_confirm()
 
-  # Ordren er mottatt dialog - etter sender inn ordre
-  elem_order_ok = driver2.find_element_by_xpath(nordnet_webelements.b_ordre_mottatt)
-  elem_order_ok.click()
-  time_now = str(datetime.datetime.now().time())
-  print("Ordre mottatt - OK", time_now)
-  autotrader_linux.trade_status="s"
-  return 0
+  trade_status="s"
+  return trade_status
  except:
-  print("UNABLE TO COMPLETE SELL ORDER")
-  return 1
+  print("ASSUMING SELL ORDER COMPLETED MANUALLY")
+  trade_status = "s"
+  return trade_status
 
 def modify_sell_order(price):
+ global trade_status
+
+ trade_status = "m"
  try:
   # click the edit symbol under order
-  elem_edit = driver2.find_element_by_xpath(nordnet_webelements.b_modify_order_1)
+  elem_edit = driver2.find_element_by_xpath(nordnet_webelements.b_modify_order_2)
   elem_edit.click()
-  time.sleep(1)
-  # enter price
+  time.sleep(0.2)
+
+  # Enter price
   elem_price = driver2.find_element_by_id("price")
   elem_price.click()
   elem_price.clear()
+  time.sleep(0.2)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
@@ -177,26 +194,25 @@ def modify_sell_order(price):
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
-
   elem_price.send_keys(price)
 
-  time.sleep(0.3)
-
-  # Hit edit/submit: try in case the order was completed after clicking the change button and before i did change it again.
+  #SUBMIT
   elem_change = driver2.find_element_by_xpath(nordnet_webelements.b_modify_confirm)
   elem_change.click()
-  time_now = str(datetime.datetime.now().time())
-  print("Order already completed - no need to update price", time_now)
 
-  time.sleep(1)
+  time.sleep(2)
 
-  elem_order_ok = driver2.find_element_by_xpath(nordnet_webelements.b_ordre_mottatt)
-  elem_order_ok.click()
+  ordre_mottatt_confirm()
+  open_order_status()
+  trade_status = "s"
   time_now = str(datetime.datetime.now().time())
-  print("Ordre mottatt - ikke tilgjengelig", time_now)
+  print("MODIFY SELL COMPLETE", time_now)
   return 0
  except:
-  print("**** UNABLE TO MODIFY SELL ORDER *****")
+  ordre_mottatt_confirm()
+  trade_status = "s"
+  time_now = str(datetime.datetime.now().time())
+  print("**** UNABLE TO MODIFY SELL ORDER *****", time_now)
   return 1
 
 def prefill_sell_order(vol):
@@ -222,6 +238,7 @@ def prefill_sell_order(vol):
   elem_price = driver2.find_element_by_id("price")
   elem_price.click()
   elem_price.clear()
+  time.sleep(2)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(Keys.BACK_SPACE)
@@ -236,14 +253,22 @@ def prefill_sell_order(vol):
 
 
 def cancel_order():
- try:
-  # cancel buy order
-  elem_cancel_order = driver2.find_element_by_xpath(nordnet_webelements.b_cancel_order_1)
-  elem_cancel_order.click()
-  return 0
- except:
-  print("UNABLE TO CANCEL ORDER")
-  return 1
+ global trade_status
+  # Check if already manually cancelled
+ if trade_status == "c":
+   print("ORDER CANCELLED ALREADY!!! - exiting")
+   return trade_status
+ else:
+  try:
+   # cancel buy order
+   elem_cancel_order = driver2.find_element_by_xpath(nordnet_webelements.b_cancel_order_1)
+   elem_cancel_order.click()
+   trade_status = "c"
+   return trade_status
+  except:
+    print("UNABLE TO CANCEL ORDER")
+    trade_status = "fail"
+    return trade_status
 
 def open_order_status():
  try:
@@ -255,6 +280,14 @@ def open_order_status():
   print("UNABLE TO OPEN ORDER STATUS")
   return 1
 
+def drift_status_msg():
+ try:
+  # yellow pop message ( some times if imporatant info )
+  elem_yellow = driver2.find_element_by_xpath(nordnet_webelements.e_yellow_message)
+  elem_yellow.clear()
+ except:
+  pass
+
 
 def login_nordnet():
  try:
@@ -263,7 +296,7 @@ def login_nordnet():
   driver2.get("https://classic.nordnet.no/mux/login/startNO.html?clearEndpoint=0&intent=next")
 
   # Login
-  elem_login_b = driver2.find_element_by_class_name("button.primary.block")
+  elem_login_b = driver2.find_element_by_xpath(nordnet_webelements.b_logon_bankID_mobile)
   elem_login_b.click()
 
   elem_bd = driver2.find_element_by_id("birthDate")
@@ -274,7 +307,7 @@ def login_nordnet():
   elem_ph.clear()
   elem_ph.send_keys("46781037")
 
-  elem_login_b2 = driver2.find_element_by_class_name("button.primary.block")
+  elem_login_b2 = driver2.find_element_by_xpath(nordnet_webelements.b_logon)
   elem_login_b2.click()
 
   time.sleep(25)
@@ -285,197 +318,13 @@ def login_nordnet():
   #select OK to cockies warning
   elem_cockie = driver2.find_element_by_xpath(nordnet_webelements.b_cookie_warn)
   elem_cockie.click()
+
+  drift_status_msg()
+
   return 0
  except:
   print("UNABLE TO LOGIN TO NORDNET")
   return 1
-
-def trade_nordnet_watchlist(ticker, type, price, vol):
- global time_now
-
- if type == "b":
-  try:
-   if ticker == "1":
-    # select buy on the first ticker in list
-    time_now = str(datetime.datetime.now().time())
-    print("buying ticker 1", time_now)
-    elem_buy_1 = driver2.find_element_by_xpath(nordnet_webelements.b_buy_ticker_1)
-    elem_buy_1.click()
-   elif ticker == "2":
-    time_now = str(datetime.datetime.now().time())
-    print("buying ticker 2", time_now)
-    # select 2nd ticker in watchlist
-    elem_buy_2 = driver2.find_element_by_xpath(nordnet_webelements.b_buy_ticker_2)
-    elem_buy_2.click()
-   elif ticker == "3":
-    time_now = str(datetime.datetime.now().time())
-    print("buying ticker 3", time_now)
-    # select 3rd ticker in watchlist
-    elem_buy_3 = driver2.find_element_by_xpath(nordnet_webelements.b_buy_ticker_3)
-    elem_buy_3.click()
-   time.sleep(1)
-   # select dropdown account
-   elem_dropd = driver2.find_element_by_css_selector(nordnet_webelements.e_select_account_dropdown_css)
-   elem_dropd.click()
-
-   # select AF account
-   elem_account = driver2.find_element_by_xpath(nordnet_webelements.e_select_af_account)
-   elem_account.click()
-
-   # select volume
-   elem_volume = driver2.find_element_by_id("volume")
-   elem_volume.clear()
-   elem_volume.send_keys(vol)
-
-   # enter price
-   elem_price = driver2.find_element_by_id("price")
-   elem_price.click()
-   elem_price.clear()
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-
-   elem_price.send_keys(price)
-
-   time.sleep(0.5)
-
-   # buy/sell button
-   elem_buy_sell = driver2.find_element_by_xpath(nordnet_webelements.b_buy_sell_order)
-   elem_buy_sell.click()
-
-   time_now = str(datetime.datetime.now().time())
-   print("buying: ", vol, "of: ", ticker, "at price: ", price, time_now)
-   time.sleep(1)
-
-   # ordren er mottatt - ok
-   elem_order_ok = driver2.find_element_by_xpath(nordnet_webelements.b_ordre_mottatt)
-   elem_order_ok.click()
-   time_now = str(datetime.datetime.now().time())
-   print("Ordre mottatt - ikke tilgjengelig", time_now)
-
-   # PREFILL the sell order except the price
-   # Hit the sell button
-   elem_sell = driver2.find_element_by_xpath(nordnet_webelements.b_sell)
-   elem_sell.click()
-
-   # select dropdown account
-   elem_dropd = driver2.find_element_by_css_selector(nordnet_webelements.e_select_account_dropdown_css)
-   elem_dropd.click()
-
-   # select AF account
-   elem_account = driver2.find_element_by_xpath(nordnet_webelements.e_select_af_account)
-   elem_account.click()
-
-   # select volume
-   elem_volume = driver2.find_element_by_id("volume")
-   elem_volume.clear()
-   elem_volume.send_keys(vol)
-
-   # clear price
-   elem_price = driver2.find_element_by_id("price")
-   elem_price.click()
-   elem_price.clear()
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-
-   # open the order section to follow order execution status
-   elem_order = driver2.find_element_by_xpath(nordnet_webelements.e_status_order_1)
-   elem_order.click()
-   return 0
-  except:
-   print("UNABLE TO COMPLETE BUY ORDER -- OR PREFILL THE SELL ORDER")
-   return 1
- elif type == "s":
-  try:
-   # enter price
-   elem_price = driver2.find_element_by_id("price")
-   elem_price.click()
-   time.sleep(0.2)
-   elem_price.send_keys(price)
-
-   time.sleep(0.2)
-
-   # buy/sell button
-   elem_buy_sell = driver2.find_element_by_xpath(nordnet_webelements.b_buy_sell_order)
-   elem_buy_sell.click()
-   time_now = str(datetime.datetime.now().time())
-   print("selling: ", vol, "of: ", ticker, "at price: ", price, time_now)
-
-   time.sleep(1)
-
-   # ordren er mottatt dialog - etter sender inn ordre
-   elem_order_ok = driver2.find_element_by_xpath(nordnet_webelements.b_ordre_mottatt)
-   elem_order_ok.click()
-   time_now = str(datetime.datetime.now().time())
-   print("Ordre mottatt - ok eksisterer ikke på salg", time_now)
-
-   # reopen the order section to follow order execution status
-   elem_order = driver2.find_element_by_xpath(nordnet_webelements.e_status_order_1)
-   elem_order.click()
-   return 0
-  except:
-   print("UNABLE TO COMPLETE SELL")
-   return 1
-
-  time_now = str(datetime.datetime.now().time())
- elif type == "m":
-  try:
-   # click the edit symbol under order
-   elem_edit = driver2.find_element_by_xpath(nordnet_webelements.b_modify_order_1)
-   elem_edit.click()
-   time.sleep(1)
-   # enter price
-   elem_price = driver2.find_element_by_id("price")
-   elem_price.click()
-   elem_price.clear()
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-   elem_price.send_keys(Keys.BACK_SPACE)
-
-   elem_price.send_keys(price)
-
-   time.sleep(0.3)
-
-   # Hit edit/submit: try in case the order was completed after clicking the change button and before i did change it again.
-   elem_change = driver2.find_element_by_xpath(nordnet_webelements.b_modify_confirm)
-   elem_change.click()
-   time_now = str(datetime.datetime.now().time())
-   print("Order already completed - no need to update price", time_now)
-
-   time.sleep(1)
-
-   elem_order_ok = driver2.find_element_by_xpath(nordnet_webelements.b_ordre_mottatt)
-   elem_order_ok.click()
-   time_now = str(datetime.datetime.now().time())
-   print("Ordre mottatt - ikke tilgjengelig", time_now)
-
-   # open the order section to follow order execution status
-   elem_order = driver2.find_element_by_xpath(nordnet_webelements.e_status_order_1)
-   elem_order.click()
-   return 0
-  except:
-   print("**** UNABLE TO MODIFY SELL ORDER *****")
-   return 1
-
- elif type == "c":
-  #CANCEL buy order
-  cancel_order()
-  enter_watchlist()
-  print("buy order canceled", ticker, time_now)
-
 
 def find_volume(price):
  global time_now
@@ -483,4 +332,5 @@ def find_volume(price):
  time_now = str(datetime.datetime.now().time())
  print("calculated volum", vol, time_now)
  return vol
+
 
