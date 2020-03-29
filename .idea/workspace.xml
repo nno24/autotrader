@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76d85a71-021c-4f76-a27d-945dd91b4f34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/multiprocessor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sound_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_chrome.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yes_no_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yesno2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yesno3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_profill_scalper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrader_linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrader_linux.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordnet_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/nordnet_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordnet_webelements.py" beforeDir="false" afterPath="$PROJECT_DIR$/nordnet_webelements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_include.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_include.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +36,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/repos/datascience" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.autotrader_linux">
+  <component name="RunManager" selected="Python.test_profill_scalper">
     <configuration name="autotrader_linux" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotrader" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,27 +50,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/autotrader_linux.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="multiprocessor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="autotrader" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multiprocessor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,6 +100,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_profill_scalper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autotrader" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_profill_scalper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="yesno3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotrader" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -154,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_profill_scalper" />
         <item itemvalue="Python.autotrader_linux" />
         <item itemvalue="Python.test_chrome" />
         <item itemvalue="Python.yesno3" />
         <item itemvalue="Python.sound_test" />
-        <item itemvalue="Python.multiprocessor" />
       </list>
     </recent_temporary>
   </component>
@@ -192,29 +182,29 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="833" y="354" key="FileChooserDialogImpl/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1580933155705" />
-    <state width="1844" height="305" key="GridCell.Tab.0.bottom" timestamp="1585490434232">
+    <state width="1844" height="305" key="GridCell.Tab.0.bottom" timestamp="1585505364821">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.bottom/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442102" />
-    <state width="1844" height="305" key="GridCell.Tab.0.bottom/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585490434232" />
+    <state width="1844" height="305" key="GridCell.Tab.0.bottom/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585505364821" />
     <state width="1836" height="305" key="GridCell.Tab.0.bottom/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
-    <state width="1844" height="305" key="GridCell.Tab.0.center" timestamp="1585490434232">
+    <state width="1844" height="305" key="GridCell.Tab.0.center" timestamp="1585505364821">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.center/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442101" />
-    <state width="1844" height="305" key="GridCell.Tab.0.center/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585490434232" />
+    <state width="1844" height="305" key="GridCell.Tab.0.center/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585505364821" />
     <state width="1836" height="305" key="GridCell.Tab.0.center/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
-    <state width="1844" height="305" key="GridCell.Tab.0.left" timestamp="1585490434232">
+    <state width="1844" height="305" key="GridCell.Tab.0.left" timestamp="1585505364821">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.left/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442101" />
-    <state width="1844" height="305" key="GridCell.Tab.0.left/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585490434232" />
+    <state width="1844" height="305" key="GridCell.Tab.0.left/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585505364821" />
     <state width="1836" height="305" key="GridCell.Tab.0.left/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
-    <state width="1844" height="305" key="GridCell.Tab.0.right" timestamp="1585490434232">
+    <state width="1844" height="305" key="GridCell.Tab.0.right" timestamp="1585505364821">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.right/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442102" />
-    <state width="1844" height="305" key="GridCell.Tab.0.right/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585490434232" />
+    <state width="1844" height="305" key="GridCell.Tab.0.right/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1585505364821" />
     <state width="1836" height="305" key="GridCell.Tab.0.right/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
     <state x="415" y="186" key="SettingsEditor" timestamp="1585395484402">
       <screen x="57" y="21" width="1863" height="1059" />
