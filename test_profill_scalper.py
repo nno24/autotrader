@@ -1,15 +1,16 @@
-import playsound
+from playsound import playsound
 
 cash=1000
-kurtasje=3.75*2
+kurtasje=4*2
 break_even=(kurtasje/cash)*100
+diff=0.0
 
 print(break_even)
 
-p1=10.0
-p2=10.2
+buy_price=1.02
+holding_price=1.17
 
-diff=(1 - (p1/p2))*100
+diff=((float(holding_price) - float(buy_price))/float(buy_price))*100
+print(diff)
 
-if diff >= break_even:
-    playsound("just-saying.mp3")
+

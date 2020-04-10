@@ -14,22 +14,28 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pyautogui
 from playsound import playsound
-import nordnet_webelements
-import nordnet_functions
 
-driver = webdriver.Chrome('/usr/bin/chromedriver')
-#driver2 = webdriver.Chrome('/usr/bin/chromedriver')
 
 #Trade mode
 #r = real money
 #p = paper trade webull
 #o = offline paper trade outside market american market hours.
 #others: test mode - for testing new functions
-trade_mode = "r"
+trade_mode = "p"
+autotrader = "yes"  #if not left to "yes", manual mode is entered.
 trade_true = ""
 strategy_orb = "orb" #Opening range breakout
 strategy_pcps = "pcps" #Price change/s
-use_trade_strategy = strategy_orb
+strategy_15min_breakout="15min_breakout"
+use_trade_strategy = strategy_15min_breakout
+
+if trade_mode == "r":
+    import nordnet_webelements
+    import nordnet_functions
+    driver = webdriver.Chrome('/usr/bin/chromedriver')
+else:
+    import webull_webelements
+    import webull_paper_functions
 
 #Strategy pcps params
 oneminute_buysignal = 0.0 #if a one minute bullish candle are bigger than "oneminute_buysignal"%
@@ -48,11 +54,16 @@ ticker_2_pcps = 0.0
 ticker_3_pcps = 0.0
 
 #Daily trade parameters
-trading_cash_usd = 1000.0
+trading_cash_usd = 2500
 trade_cnt_real_max = 10
 trade_cnt_max = 10
 trade_cnt = 0
 trade_status ="na"
+kurtasje=3.75
+kurtasje_trade=kurtasje*2
+break_even=(kurtasje_trade/trading_cash_usd)*100
+break_even_or_greater=0.0
+price_buy=0.0
 
 #Other trade variables
 ticker_1_price_value_previous=0.0
@@ -110,11 +121,11 @@ ticker_holding_op = 0.0
 #Holding ticker exit point - will be updated according to 1 min closing prices
 ticker_holding_exit_point = 0.0
 #ticker_holding_exit_offset = 0.0125    #This is percent
-ticker_holding_exit_offset = 0.01    #This is percent
+ticker_holding_exit_offset = 0.015   #This is percent
 
 #counter for meausuring a bearish signal
 bear_cnt = 0
-bear_bailout_cnt_max = 3
+bear_bailout_cnt_max = 6
 bear_bailout_status = 0
 vol=0
 
@@ -136,18 +147,17 @@ h_buy_order_filled_time_now = 0.0
 h_sell_order_filled_time_now = 0.0
 h_trade_time_cnt = 0
 h_sold_timestamp = 0
-file_trade_completed_status = 1
 
 #Dates
 date_now =""
 
 #Modify order counters
 modify_entry_cnt=0
-modify_entry_cnt_max=15
+modify_entry_cnt_max=30
 modify_entry_tries=0
 modify_entry_tries_max=2
 modify_exit_cnt=0
-modify_exit_cnt_max=15
+modify_exit_cnt_max=30
 
 filled_status = "unknown"
 price=0.0
@@ -156,9 +166,9 @@ price=0.0
 trade_range_days = range(0, 7)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
-time_getReady = "15:30:00"
-time_lastCall = "21:55:00"
-time_lastCallExit = "21:57:00"
+time_getReady = "15:30:06"
+time_lastCall = "21:30:00"
+time_lastCallExit = "21:55:00"
 
 # P&L parameters
 bought_price = 0.0
@@ -167,7 +177,7 @@ PnL_total = 0.0
 PnL_this_trade = 0.0
 PnL_this_trade_w_fees = 0.0
 PnL_total_w_fees = 0.0
-Trade_fee_per_trade = 10
+Trade_fee_per_trade = 7.5
 
 cancel_cnt = 0
 cancel_cnt_max = 15
@@ -187,9 +197,31 @@ ticker2_prev_cp = 0
 ticker3_prev_cp = 0
 time_now_sec = 1
 time_now_min = 1
-orb_quality_check = 5
+orb_quality_check = 20
 bailout_of_entry_loop = 1
 check_filled_if_cancelled_maxTries = 25
+
+#15 min breakout parameters
+ticker1_prev_15min_candle = []
+ticker2_prev_15min_candle = []
+ticker3_prev_15min_candle = []
+ticker1_prev_15min_high = 0
+ticker2_prev_15min_high = 0
+ticker3_prev_15min_high = 0
+ticker1_prev_15min_low = 0
+ticker2_prev_15min_low = 0
+ticker3_prev_15min_low = 0
+ticker1_prev_15min_op = 0
+ticker2_prev_15min_op = 0
+ticker3_prev_15min_op = 0
+ticker1_prev_15min_cp = 0
+ticker2_prev_15min_cp = 0
+ticker3_prev_15min_cp = 0
+build_15min_candle=""
+current_minute=999   #iniial value, so that the 15 min can be built on open.
+profit_target=20.0   #if gain/trade (%) exceeds this, sell
+profit_target_daily=16   #if reached total (%) gain per day, finish for today.
+
 
 #pnl daily params -- keep track of only reporting once every 30 min
 pnl_daily_0_cnt = 0
@@ -200,42 +232,23 @@ buy_now = ""
 sell_now = ""
 cancel_now = ""
 
-def dailY_pnL_tracker(full_or_half):
-    global pnl_daily_0_cnt
-    global pnl_daily_30_cnt
+#pcps calc
+ticker_1_prev_price_value = 0.0
+ticker_2_prev_price_value = 0.0
+ticker_3_prev_price_value = 0.0
 
-    print("The hour is: ", full_or_half)
+ticker1_pcps_this_min_lst = []
+ticker2_pcps_this_min_lst = []
+ticker3_pcps_this_min_lst = []
+ticker1_a20pcps_0_19=0
+ticker2_a20pcps_0_19=0
+ticker3_a20pcps_0_19=0
+ticker1_a20freq_0_19=0
+ticker2_a20freq_0_19=0
+ticker3_a20freq_0_19=0
 
-    if full_or_half == "full":
-        pnl_daily_0_cnt+=1
-        pnl_daily_30_cnt = 0
-    elif full_or_half == "half":
-        pnl_daily_30_cnt+=1
-        pnl_daily_0_cnt = 0
-    #Get daily pnl
-    pnl_daily_elem=driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[6]/div[3]/div/div/div[5]/div[2]")
-    pnl_daily=pnl_daily_elem.text
-    print(pnl_daily)
-
-    subfolder = "/home/sjefen/Dropbox/log/PnL_daily"
-    tday = str(datetime.datetime.now().date())
-    time_n = datetime.datetime.now()
-    l_fileName = str(subfolder) + "/" + str(tday)
-
-    os.makedirs(subfolder, exist_ok=True)
-
-    l_file = open(l_fileName, "a")
-    l_file.write(str(time_n))
-    l_file.write("\n")
-    l_file.write("PnL daily:        ")
-    l_file.write(str(pnl_daily))
-    l_file.write("\n")
-    l_file.write("Trade cnt succ:   ")
-    l_file.write(str(trade_successful_cnt))
-    l_file.write("\n")
-    l_file.write("\n")
-    l_file.close()
-    print("****Successfully written to log file!!")
+a20pcps_0_19_threshold=0.04
+a20freq_0_19_threshold=0.4
 
 def refresh():
     global driver
@@ -243,16 +256,6 @@ def refresh():
         driver.refresh()
     except:
         print("Unable to refresh..")
-
-def get_gainers_watchlist():
-    global driver
-    # Get pre mkt top gainers
-    g_mkt = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[2]/div[1]/div[4]/i")
-    g_mkt.click()
-
-    g_exth = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[2]/div[2]/div[2]/div/div/div/div/div[2]")
-    g_exth.click()
-    time.sleep(1)
 
 def fetch_prices():
     global dictionary_price_open
@@ -277,6 +280,28 @@ def fetch_prices():
     except:
         print("UNABLE to fetch prices now:", date_now)
 
+def fetch_prices_paper():
+    global dictionary_price_open
+    global ticker_1_price_value
+    global ticker_2_price_value
+    global ticker_3_price_value
+    global date_now
+    global ticker_1_op
+    global ticker_2_op
+    global ticker_3_op
+
+    try:
+        # Get prices of tickers
+        ticker_1_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+        ticker_1_price_value = ticker_1_price.text
+        ticker_2_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+        ticker_2_price_value = ticker_2_price.text
+        ticker_3_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+        ticker_3_price_value = ticker_3_price.text
+        # Update the opening prices vs tickers
+        dictionary_price_open = {ticker_1_txt: ticker_1_op, ticker_2_txt: ticker_2_op, ticker_3_txt: ticker_3_op}
+    except:
+        print("UNABLE to fetch prices now:", date_now)
 def fetch_holding_price():
     global pcps_max_ticker
     global ticker_holding_price_value
@@ -286,76 +311,46 @@ def fetch_holding_price():
     global ticker_holding_op
     global dictionary_price_open
 
-    if pcps_max_ticker == ticker_1_txt:
-        ticker_holding_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
-        ticker_holding_price_value = float(ticker_holding_price.text)
-    elif pcps_max_ticker == ticker_2_txt:
-        ticker_holding_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
-        ticker_holding_price_value = float(ticker_holding_price.text)
-    elif pcps_max_ticker == ticker_3_txt:
-        ticker_holding_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
-        ticker_holding_price_value = float(ticker_holding_price.text)
+    try:
+        if pcps_max_ticker == ticker_1_txt:
+            ticker_holding_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
+            ticker_holding_price_value = float(ticker_holding_price.text)
+        elif pcps_max_ticker == ticker_2_txt:
+            ticker_holding_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
+            ticker_holding_price_value = float(ticker_holding_price.text)
+        elif pcps_max_ticker == ticker_3_txt:
+            ticker_holding_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
+            ticker_holding_price_value = float(ticker_holding_price.text)
 
-    ticker_holding_op = float(dictionary_price_open[pcps_max_ticker])
-    print(pcps_max_ticker, "Open: ", ticker_holding_op, "Price: ", ticker_holding_price_value)
+        ticker_holding_op = float(dictionary_price_open[pcps_max_ticker])
+        print(pcps_max_ticker, "Open: ", ticker_holding_op, "Price: ", ticker_holding_price_value)
+    except:
+        print("UNABLE TO FETCH HOLDING PRICE", date_now)
 
-def file_trade():
-    global h_ticker_holding_price
-    global h_trade_time_table
-    global h_buy_order_duration
-    global h_sell_order_duration
-    global h_buy_order_duration
-    global h_buy_order_filled_time_now
-    global h_sell_order_filled_time_now
-    global h_selling_time_now
-    global h_buying_time_now
-    global h_trade_time_cnt
-    global h_sold_timestamp
-    global file_trade_completed_status
+def fetch_holding_price_paper():
+    global pcps_max_ticker
+    global ticker_holding_price_value
+    global ticker_1_txt
+    global ticker_2_txt
+    global ticker_3_txt
+    global ticker_holding_op
+    global dictionary_price_open
 
-    h_trade_time_cnt+=1
-    h_ticker_holding_price.append(float(ticker_holding_price_value))
-    print("+-+-+FILiNG TRADE")
+    try:
+        if pcps_max_ticker == ticker_1_txt:
+            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+            ticker_holding_price_value = float(ticker_holding_price.text)
+        elif pcps_max_ticker == ticker_2_txt:
+            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+            ticker_holding_price_value = float(ticker_holding_price.text)
+        elif pcps_max_ticker == ticker_3_txt:
+            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+            ticker_holding_price_value = float(ticker_holding_price.text)
 
-    #Update only pirce and time from buying until order filled
-    if filled_status != "filled":
-        h_trade_time_table.append(h_trade_time_cnt)
-    elif filled_status == "filled":
-        h_trade_time_table.append("BF")
-        h_buy_order_duration = h_trade_time_cnt
-        h_trade_time_cnt = 0
-        file_trade_completed_status = 0
-
-
-def plot_trade():
-    global h_trade_time_table
-    global h_ticker_holding_price
-
-    #Prep saving files in subfolders depending on date
-    topdir="buyorders"
-    todays_date = datetime.datetime.today().date()
-    subdirectory = str(topdir) + "/" + str(todays_date)
-    file_path = str(topdir) + "/" + str(todays_date) + "/" + str(trade_successful_cnt)
-    os.makedirs(subdirectory, exist_ok=True)
-
-    #Prep title
-    time_this_trade = datetime.datetime.today().time()
-    time_now_this_trade = ("%.8s" % time_this_trade)
-    title_this_trade = str(pcps_max_ticker) + "  " + "Buy-filled:  " + str(time_this_trade) + "  " + "PnL-trade:" + "  " + str(PnL_this_trade)
-
-    plt.xticks(fontsize=6)
-    plt.plot(h_trade_time_table,h_ticker_holding_price)
-    plt.xlabel("Time (s)")
-    plt.ylabel("Price")
-    plt.title(str(title_this_trade))
-    plt.savefig(str(file_path))
-
-    #initialize tables and plot
-    h_trade_time_table.clear()
-    h_ticker_holding_price.clear()
-    plt.clf()
-    print("Plot trade lists iniitialized")
-
+        ticker_holding_op = float(dictionary_price_open[pcps_max_ticker])
+        print(pcps_max_ticker, "Open: ", ticker_holding_op, "Price: ", ticker_holding_price_value)
+    except:
+        print("UNABLE TO FETCH HOLDING PRICE", date_now)
 
 def bear_bailout():
     global ticker_holding_price_value
@@ -394,6 +389,291 @@ def bear_bailout():
 
     elif ticker_holding_price_value >= ticker_holding_op:
         bear_cnt=0
+
+def bear_bailout_paper():
+    global ticker_holding_price_value
+    global ticker_holding_op
+    global bear_cnt
+    global bear_bailout_status
+    global bear_bailout_cnt_max
+    global pcps_exit
+    global vol
+    global holding_status
+    global sample_periods
+    global trade_status
+    global modify_exit_cnt
+
+
+    # If price is bearish and holding for a certain period of time ( bear_bailout ) - also check that no pcps has not started exit routine
+    if ticker_holding_price_value < ticker_holding_op:
+        bear_cnt += 1
+        print("bear bail out cnt is: ", bear_cnt)
+        if bear_cnt == bear_bailout_cnt_max:
+            # Get the heck out
+            bear_cnt = 0
+            if pcps_exit == 0:
+                print("BAILING OUT!!! - bears are coming!!!")
+                bear_bailout_status = 1
+                price=update_price_before_sell_paper(pcps_max_ticker)
+                trade_status="s"
+                if trade_status == "s":
+                    print("Bailed out!!!")
+                else:
+                    print("Unable to bail out - sell order not completed..")
+
+            elif pcps_exit == 1:
+                print("bear bailout cancelled, due to exit performed by pcps: ", pcps_exit)
+
+    elif ticker_holding_price_value >= ticker_holding_op:
+        bear_cnt=0
+def append_pcps_this_min():
+    global ticker1_pcps_this_min_lst
+    global ticker2_pcps_this_min_lst
+    global ticker3_pcps_this_min_lst
+
+    ticker1_pcps_this_min_lst.append(ticker_1_pcps)
+    ticker2_pcps_this_min_lst.append(ticker_2_pcps)
+    ticker3_pcps_this_min_lst.append(ticker_3_pcps)
+
+def clear_pcps_lst_this_min():
+    global ticker1_pcps_this_min_lst
+    global ticker2_pcps_this_min_lst
+    global ticker3_pcps_this_min_lst
+
+    ticker1_pcps_this_min_lst = []
+    ticker2_pcps_this_min_lst = []
+    ticker3_pcps_this_min_lst = []
+def clear_20pcps_20freq():
+    global ticker1_a20pcps_0_19
+    global ticker2_a20pcps_0_19
+    global ticker3_a20pcps_0_19
+    global ticker1_a20freq_0_19
+    global ticker2_a20freq_0_19
+    global ticker3_a20freq_0_19
+
+    ticker1_a20pcps_0_19 = 0
+    ticker2_a20pcps_0_19 = 0
+    ticker3_a20pcps_0_19 = 0
+    ticker1_a20freq_0_19 = 0
+    ticker2_a20freq_0_19 = 0
+    ticker3_a20freq_0_19 = 0
+
+def global_get_prices():
+    global pcps_this_min_lst
+    threading.Timer(timer_interval, global_get_prices).start()
+    # Fetch prices of pcps_max_ticker: if bought, sold or holding
+    if trade_status == "b" or trade_status == "s" or holding_status == 1:
+        fetch_holding_price()
+    fetch_prices()
+    calc_pcps()
+    #Appned pcps values to list..
+    if time_now_sec == 0:
+        print(ticker_1_txt, "prev 1 min pcps lst:", ticker1_pcps_this_min_lst)
+        print(ticker_2_txt, "prev 1 min pcps lst:", ticker2_pcps_this_min_lst)
+        print(ticker_3_txt, "prev 1 min pcps lst:", ticker3_pcps_this_min_lst)
+        clear_pcps_lst_this_min()
+        clear_20pcps_20freq()
+    else:
+        append_pcps_this_min()
+
+    #Calculate a20pcps/freq
+    if time_now_sec == 20:
+        calc_a20_pcps()
+        calc_a20_freq()
+
+    save_prices()
+
+def global_get_prices_paper():
+    global pcps_this_min_lst
+    threading.Timer(timer_interval, global_get_prices_paper).start()
+    # Fetch prices of pcps_max_ticker: if bought, sold or holding
+    if trade_status == "b" or trade_status == "s" or holding_status == 1:
+        fetch_holding_price_paper()
+    fetch_prices_paper()
+    calc_pcps()
+    #Appned pcps values to list..
+    if time_now_sec == 0:
+        print(ticker_1_txt, "prev 1 min pcps lst:", ticker1_pcps_this_min_lst)
+        print(ticker_2_txt, "prev 1 min pcps lst:", ticker2_pcps_this_min_lst)
+        print(ticker_3_txt, "prev 1 min pcps lst:", ticker3_pcps_this_min_lst)
+        clear_pcps_lst_this_min()
+        clear_20pcps_20freq()
+    else:
+        append_pcps_this_min()
+
+    #Calculate a20pcps/freq
+    if time_now_sec == 20:
+        calc_a20_pcps()
+        calc_a20_freq()
+
+    save_prices()
+def calc_a20_pcps():
+    global ticker1_a20pcps_0_19
+    global ticker2_a20pcps_0_19
+    global ticker3_a20pcps_0_19
+    global ticker1_pcps_this_min_lst
+    global ticker2_pcps_this_min_lst
+    global ticker3_pcps_this_min_lst
+
+    if len(ticker1_pcps_this_min_lst) >= 20:
+        ticker1_a20pcps_0_19 = sum(ticker1_pcps_this_min_lst)/20
+        print(ticker_1_txt, "lengt of pcps_this_min", len(ticker1_pcps_this_min_lst))
+    else:
+        ticker1_a20pcps_0_19=0
+        print(ticker_1_txt, "lengt of pcps_this_min TOO SHORT", len(ticker1_pcps_this_min_lst))
+    if len(ticker2_pcps_this_min_lst) >= 20:
+        ticker2_a20pcps_0_19 = sum(ticker2_pcps_this_min_lst)/20
+        print(ticker_2_txt, "lengt of pcps_this_min", len(ticker2_pcps_this_min_lst))
+    else:
+        ticker2_a20pcps_0_19=0
+        print(ticker_2_txt, "lengt of pcps_this_min TOO SHORT", len(ticker2_pcps_this_min_lst))
+    if len(ticker3_pcps_this_min_lst) >= 20:
+        ticker3_a20pcps_0_19 = sum(ticker3_pcps_this_min_lst)/20
+        print(ticker_3_txt, "lengt of pcps_this_min", len(ticker3_pcps_this_min_lst))
+    else:
+        ticker3_a20pcps_0_19=0
+        print(ticker_3_txt, "lengt of pcps_this_min TOO SHORT", len(ticker3_pcps_this_min_lst))
+
+    print(ticker_1_txt, "a20pcpc_0_19", ticker1_a20pcps_0_19)
+    print(ticker_2_txt, "a20pcpc_0_19", ticker2_a20pcps_0_19)
+    print(ticker_3_txt, "a20pcpc_0_19", ticker3_a20pcps_0_19)
+
+
+def calc_a20_freq():
+    global ticker1_a20freq_0_19
+    global ticker2_a20freq_0_19
+    global ticker3_a20freq_0_19
+
+    index = 0
+    ticker1_freq_cnt=0
+    ticker2_freq_cnt=0
+    ticker3_freq_cnt=0
+    try:
+        while index > 18:
+            if ticker1_pcps_this_min_lst[index] != 0:
+                ticker1_freq_cnt+=1
+            if ticker2_pcps_this_min_lst[index] != 0:
+                ticker2_freq_cnt+=1
+            if ticker3_pcps_this_min_lst[index] != 0:
+                ticker3_freq_cnt+=1
+            index+=1
+
+        ticker1_a20freq_0_19 = float(ticker1_freq_cnt/20)
+        ticker2_a20freq_0_19 = float(ticker2_freq_cnt/20)
+        ticker3_a20freq_0_19 = float(ticker3_freq_cnt/20)
+
+        print(ticker_1_txt, "a20freq_0_19", ticker1_a20freq_0_19)
+        print(ticker_2_txt, "a20freq_0_19", ticker2_a20freq_0_19)
+        print(ticker_3_txt, "a20freq_0_19", ticker3_a20freq_0_19)
+    except IndexError as e:
+        print(e)
+        print("UNABLE TO CALCULATE a20freq")
+
+
+def calc_pcps():
+    global ticker_1_price_value
+    global ticker_2_price_value
+    global ticker_3_price_value
+    global ticker_1_prev_price_value
+    global ticker_2_prev_price_value
+    global ticker_3_prev_price_value
+    global ticker_1_pcps
+    global ticker_2_pcps
+    global ticker_3_pcps
+
+    try:
+        try:
+            ticker_1_pcps = (((float(ticker_1_price_value) - float(ticker_1_prev_price_value)) / float(ticker_1_prev_price_value)) * 100)/timer_interval
+            ticker_2_pcps = (((float(ticker_2_price_value) - float(ticker_2_prev_price_value)) / float(ticker_2_prev_price_value)) * 100)/timer_interval
+            ticker_3_pcps = (((float(ticker_3_price_value) - float(ticker_3_prev_price_value)) / float(ticker_3_prev_price_value)) * 100)/timer_interval
+        except ZeroDivisionError as e:
+            print(e)
+
+        ticker_1_prev_price_value = ticker_1_price_value
+        ticker_2_prev_price_value = ticker_2_price_value
+        ticker_3_prev_price_value = ticker_3_price_value
+    except:
+        print("UNABLE TO CALCULATE PCPS")
+
+def make_15_min_candle():
+    global ticker1_prev_15min_candle
+    global ticker2_prev_15min_candle
+    global ticker3_prev_15min_candle
+
+    try:
+        ticker1_prev_15min_candle.append(float(ticker_1_price_value))
+        ticker2_prev_15min_candle.append(float(ticker_2_price_value))
+        ticker3_prev_15min_candle.append(float(ticker_3_price_value))
+    except ValueError as e:
+        print(e)
+        print("Unable to append to 15 min candle..")
+
+def clear_15_min_candle():
+    global ticker1_prev_15min_candle
+    global ticker2_prev_15min_candle
+    global ticker3_prev_15min_candle
+    try:
+        print(ticker_1_txt,"Previous 15 min to be cleared", ticker1_prev_15min_candle)
+        print(ticker_2_txt,"Previous 15 min to be cleared", ticker2_prev_15min_candle)
+        print(ticker_3_txt,"Previous 15 min to be cleared", ticker3_prev_15min_candle)
+        print("\n")
+        print("\n")
+    except:
+        print("Unable to clear 15 min candles")
+
+    ticker1_prev_15min_candle = []
+    ticker2_prev_15min_candle = []
+    ticker3_prev_15min_candle = []
+
+def calc_15_min_candle():
+    global ticker1_prev_15min_high
+    global ticker2_prev_15min_high
+    global ticker3_prev_15min_high
+    global ticker1_prev_15min_low
+    global ticker2_prev_15min_low
+    global ticker3_prev_15min_low
+    global ticker1_prev_15min_op
+    global ticker2_prev_15min_op
+    global ticker3_prev_15min_op
+    global ticker1_prev_15min_cp
+    global ticker2_prev_15min_cp
+    global ticker3_prev_15min_cp
+    try:
+        ticker1_prev_15min_high = max(ticker1_prev_15min_candle)
+        ticker2_prev_15min_high = max(ticker2_prev_15min_candle)
+        ticker3_prev_15min_high = max(ticker3_prev_15min_candle)
+
+        ticker1_prev_15min_low = min(ticker1_prev_15min_candle)
+        ticker2_prev_15min_low = min(ticker2_prev_15min_candle)
+        ticker3_prev_15min_low = min(ticker3_prev_15min_candle)
+
+        ticker1_prev_15min_op = ticker1_prev_15min_candle[0]
+        ticker2_prev_15min_op = ticker2_prev_15min_candle[0]
+        ticker3_prev_15min_op = ticker3_prev_15min_candle[0]
+
+        ticker1_prev_15min_cp = ticker1_prev_15min_candle[len(ticker1_prev_15min_candle) - 1]
+        ticker2_prev_15min_cp = ticker2_prev_15min_candle[len(ticker2_prev_15min_candle) - 1]
+        ticker3_prev_15min_cp = ticker3_prev_15min_candle[len(ticker3_prev_15min_candle) - 1]
+
+        print(ticker_1_txt, "prev 15 high", ticker1_prev_15min_high)
+        print(ticker_1_txt, "prev 15 low", ticker1_prev_15min_low)
+        print(ticker_1_txt, "prev 15 open", ticker1_prev_15min_op)
+        print(ticker_1_txt, "prev 15 close", ticker1_prev_15min_cp)
+        print("\n")
+        print(ticker_2_txt, "prev 15 high", ticker2_prev_15min_high)
+        print(ticker_2_txt, "prev 15 low", ticker2_prev_15min_low)
+        print(ticker_2_txt, "prev 15 open", ticker2_prev_15min_op)
+        print(ticker_2_txt, "prev 15 close", ticker2_prev_15min_cp)
+        print("\n")
+        print(ticker_3_txt, "prev 15 high", ticker3_prev_15min_high)
+        print(ticker_3_txt, "prev 15 low", ticker3_prev_15min_low)
+        print(ticker_3_txt, "prev 15 open", ticker3_prev_15min_op)
+        print(ticker_3_txt, "prev 15 close", ticker3_prev_15min_cp)
+        print("\n")
+    except:
+        print("Unable to calculate 15 min candle..")
+
+
 
 def global_trader():
     global driver
@@ -456,6 +736,29 @@ def global_trader():
     global ticker3_prev_cp
 
     global cancel_now
+    global break_even_or_greater
+    global price_buy
+
+    global breakout_15min_cleared_status
+    global ticker1_prev_15min_candle
+    global ticker2_prev_15min_candle
+    global ticker3_prev_15min_candle
+
+    global ticker1_prev_15min_high
+    global ticker1_prev_15min_low
+    global ticker1_prev_15min_cp
+    global ticker1_prev_15min_op
+
+    global ticker2_prev_15min_high
+    global ticker2_prev_15min_low
+    global ticker2_prev_15min_cp
+    global ticker2_prev_15min_op
+
+    global ticker3_prev_15min_high
+    global ticker3_prev_15min_low
+    global ticker3_prev_15min_cp
+    global ticker3_prev_15min_op
+    global build_15min_candle
 
     #Start the global trader as a thread
     threading.Timer(timer_interval, global_trader).start()
@@ -483,8 +786,11 @@ def global_trader():
     ticker_1_prev_txt = ticker_1_txt
     ticker_2_prev_txt = ticker_2_txt
     ticker_3_prev_txt = ticker_3_txt
-    #Get the watchlist tickers - and fetch its prices
-    get_watchlist_tickers()
+    #Get the watchlist tickers
+    if trade_mode == "r":
+        get_watchlist_tickers()
+    else:
+        get_watchlist_tickers_paper()
 
     #Check if watchlist are different - if so set open prices to zero
     if ticker_1_txt != ticker_1_prev_txt:
@@ -492,33 +798,45 @@ def global_trader():
         ticker_1_op = 0.0
         ticker1_prev_high = 0
         ticker1_prev_1min_candle = []
+        ticker1_prev_15min_candle = []
+        ticker1_prev_15min_low = 0
+        ticker1_prev_15min_high = 0
+        ticker1_prev_15min_op = 0
+        ticker1_prev_15min_cp = 0
+        build_15min_candle = "no"
     if ticker_2_txt != ticker_2_prev_txt:
         print("Initializing 1 min open price of: ",ticker_2_txt," ..due to watchlist update")
         ticker_2_op = 0.0
         ticker2_prev_high = 0
         ticker2_prev_1min_candle = []
+        ticker2_prev_15min_candle = []
+        ticker2_prev_15min_low = 0
+        ticker2_prev_15min_high = 0
+        ticker2_prev_15min_op = 0
+        ticker2_prev_15min_cp = 0
+        build_15min_candle = "no"
     if ticker_3_txt != ticker_3_prev_txt:
         print("Initializing 1 min open price of: ",ticker_3_txt," ..due to watchlist update")
         ticker_3_op = 0.0
         ticker3_prev_high = 0
         ticker3_prev_1min_candle = []
-    fetch_prices()
+        ticker3_prev_15min_candle = []
+        ticker3_prev_15min_low = 0
+        ticker3_prev_15min_high = 0
+        ticker3_prev_15min_op = 0
+        ticker3_prev_15min_cp = 0
+        build_15min_candle = "no"
+
 
     #If BUY order yet not filled -  automatic cancel buy order
     if modify_entry_cnt == modify_entry_cnt_max and filled_status != "filled":
         print("CANCELLING order")
-        trade_status=nordnet_functions.cancel_order()
+        trade_status=webull_paper_functions.cancel_buy_order()
         if trade_status == "c":
             print("Success - CANCELLING ORDER OK")
-            nordnet_functions.enter_watchlist()
         else:
             print("ORDER FILLED - UNABLE TO CANCEL")
-            nordnet_functions.enter_watchlist()
-
-
-    #Fetch prices of pcps_max_ticker: if bought, sold or holding
-    if trade_status == "b" or trade_status == "s" or holding_status == 1:
-        fetch_holding_price()
+            modify_entry_cnt = 0
 
         #Store 1 min closing price of pcps_max_ticker
         if time_now_sec == 59:
@@ -529,20 +847,19 @@ def global_trader():
             print("the exit point is",ticker_holding_exit_point)
             print("the previous 1 min close of: ",pcps_max_ticker,"is",ticker_holding_pcp)
 
-    #File trade from BUY until buy order filled
-    if trade_status == "b" and file_trade_completed_status == 1:
-        file_trade()
-
     #If SELL order yet not filled - edit sell order
     if modify_exit_cnt == modify_exit_cnt_max and filled_status != "filled":
         print("MODIFYING SELL ORDER")
-        price=update_price_before_sell(pcps_max_ticker)
-        nordnet_functions.modify_sell_order(str(price))
+        price=update_price_before_sell_paper(pcps_max_ticker)
+        modify_status=webull_paper_functions.modify_sell_order(str(price))
         if modify_exit_cnt != 0:
             modify_exit_cnt=1
             print("Starting new exit_cnt: ",modify_exit_cnt)
         else:
             print("---Sell order already filled, no need to modify")
+        if modify_status != "success":
+            print("MODIFYING NOT SUCCESS...refreshing")
+            webull_paper_functions.refresh()
 
 
     #Get 1 min opening price of the tickers
@@ -611,60 +928,147 @@ def global_trader():
         except:
             print("Unable to store 1 min closing price..")
 
-    #pnl daily
-    if time_now_min == 0 and pnl_daily_0_cnt == 0 and trade_true == "yes":
-        print("DAILY PnL log getting filed on full..")
-        dailY_pnL_tracker("full")
-    elif time_now_min == 30 and pnl_daily_30_cnt == 0 and trade_true == "yes":
-        print("DAILY PnL log getting filed on half..")
-        dailY_pnL_tracker("half")
-
     if buy_now == "maybe":
         playsound("eventually.mp3")
+
+    if holding_status == 1:
+        # Inform if holding price is above break even
+        try:
+            break_even_or_greater = ((float(ticker_holding_price_value) - float(price_buy))/float(price_buy))*100
+            print("ticker holding price", ticker_holding_price_value)
+            print("ticker buy price", price_buy)
+            print("break even or greater: ", break_even_or_greater)
+            print("break even:", break_even)
+        except ZeroDivisionError as e:
+            print(e)
+            print("Unable to calc break even or greater")
+
+def timer_15min():
+    global build_15min_candle
+    global current_minute
+
+    threading.Timer(timer_interval, timer_15min).start()
+    interval15_startpoints=[0,15,30,45]
+
+    if current_minute != time_now_min or current_minute == 999:
+        if time_now_min in interval15_startpoints:
+            if build_15min_candle == "yes":
+                calc_15_min_candle()
+                set_15min_breakout_exit()
+            else:
+                print("Unable to calculate 15 min data -- candle not complete")
+            print("Starting new 15 min build of candle...")
+            clear_15_min_candle()
+            build_15min_candle = "yes"
+
+    if build_15min_candle == "yes":
+        make_15_min_candle()
+    else:
+        build_15min_candle="no"
+
+    current_minute = time_now_min
+
+
 
 def update_price_before_buy(pcps_max_ticker):
     global ticker_buy_price
     # 1. Get price now of holding ticker
+    try:
+        if pcps_max_ticker == ticker_1_txt:
+            ticker_buy_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
+            ticker_buy_price = float(ticker_buy_price.text)
+        elif pcps_max_ticker == ticker_2_txt:
+            ticker_buy_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
+            ticker_buy_price = float(ticker_buy_price.text)
+        elif pcps_max_ticker == ticker_3_txt:
+            ticker_buy_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
+            ticker_buy_price = float(ticker_buy_price.text)
 
-    if pcps_max_ticker == ticker_1_txt:
-        ticker_buy_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
-        ticker_buy_price = float(ticker_buy_price.text)
-    elif pcps_max_ticker == ticker_2_txt:
-        ticker_buy_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
-        ticker_buy_price = float(ticker_buy_price.text)
-    elif pcps_max_ticker == ticker_3_txt:
-        ticker_buy_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
-        ticker_buy_price = float(ticker_buy_price.text)
+        ticker_buy_price = ticker_buy_price * (1 + (pcps_order_addon / 100))
 
-    ticker_buy_price = ticker_buy_price * (1 + (pcps_order_addon / 100))
-
-    if ticker_buy_price < 1:
-        ticker_buy_price = ("%.4f" % ticker_buy_price)  # 4 decimals below 1
-    elif ticker_buy_price >1:
-        ticker_buy_price = ("%.2f" % ticker_buy_price)  # 2 decimals above 1
+        if ticker_buy_price < 1:
+            ticker_buy_price = ("%.4f" % ticker_buy_price)  # 4 decimals below 1
+        elif ticker_buy_price >1:
+            ticker_buy_price = ("%.2f" % ticker_buy_price)  # 2 decimals above 1
 
 
-    return ticker_buy_price
+        return ticker_buy_price
+    except:
+        print("Unable to update price before BUY")
+
+def update_price_before_buy_paper(pcps_max_ticker):
+    global ticker_buy_price
+    # 1. Get price now of holding ticker
+
+    try:
+
+        if pcps_max_ticker == ticker_1_txt:
+            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+            ticker_buy_price = float(ticker_buy_price.text)
+        elif pcps_max_ticker == ticker_2_txt:
+            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+            ticker_buy_price = float(ticker_buy_price.text)
+        elif pcps_max_ticker == ticker_3_txt:
+            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+            ticker_buy_price = float(ticker_buy_price.text)
+
+        ticker_buy_price = ticker_buy_price * (1 + (pcps_order_addon / 100))
+
+        if ticker_buy_price < 1:
+            ticker_buy_price = ("%.4f" % ticker_buy_price)  # 4 decimals below 1
+        elif ticker_buy_price >1:
+            ticker_buy_price = ("%.2f" % ticker_buy_price)  # 2 decimals above 1
+
+
+        return ticker_buy_price
+    except:
+        print("Unable to update price before BUY")
 
 def update_price_before_sell(pcps_max_ticker):
     global ticker_sell_price
-    # 1. Get price now of holding ticker
-    if pcps_max_ticker == ticker_1_txt:
-        ticker_sell_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
-        ticker_sell_price = float(ticker_sell_price.text)
-    elif pcps_max_ticker == ticker_2_txt:
-        ticker_sell_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
-        ticker_sell_price = float(ticker_sell_price.text)
-    elif pcps_max_ticker == ticker_3_txt:
-        ticker_sell_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
-        ticker_sell_price = float(ticker_sell_price.text)
+    try:
+        # 1. Get price now of holding ticker
+        if pcps_max_ticker == ticker_1_txt:
+            ticker_sell_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
+            ticker_sell_price = float(ticker_sell_price.text)
+        elif pcps_max_ticker == ticker_2_txt:
+            ticker_sell_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
+            ticker_sell_price = float(ticker_sell_price.text)
+        elif pcps_max_ticker == ticker_3_txt:
+            ticker_sell_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
+            ticker_sell_price = float(ticker_sell_price.text)
 
-    ticker_sell_price = ticker_sell_price * (1 - (pcps_order_addon / 100))
-    if ticker_sell_price < 1:
-        ticker_sell_price = ("%.4f" % ticker_sell_price)  # 4 decimals below 1
-    elif ticker_sell_price >1:
-        ticker_sell_price = ("%.2f" % ticker_sell_price)  # 2 decimals above 1 nordnet
-    return ticker_sell_price
+        ticker_sell_price = ticker_sell_price * (1 - (pcps_order_addon / 100))
+        if ticker_sell_price < 1:
+            ticker_sell_price = ("%.4f" % ticker_sell_price)  # 4 decimals below 1
+        elif ticker_sell_price >1:
+            ticker_sell_price = ("%.2f" % ticker_sell_price)  # 2 decimals above 1 nordnet
+        return ticker_sell_price
+    except:
+        print("Unable to upate price before sell..")
+
+def update_price_before_sell_paper(pcps_max_ticker):
+    global ticker_sell_price
+    try:
+        # 1. Get price now of holding ticker
+        if pcps_max_ticker == ticker_1_txt:
+            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+            ticker_sell_price = float(ticker_sell_price.text)
+        elif pcps_max_ticker == ticker_2_txt:
+            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+            ticker_sell_price = float(ticker_sell_price.text)
+        elif pcps_max_ticker == ticker_3_txt:
+            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+            ticker_sell_price = float(ticker_sell_price.text)
+
+        ticker_sell_price = ticker_sell_price * (1 - (pcps_order_addon / 100))
+        if ticker_sell_price < 1:
+            ticker_sell_price = ("%.4f" % ticker_sell_price)  # 4 decimals below 1
+        elif ticker_sell_price >1:
+            ticker_sell_price = ("%.2f" % ticker_sell_price)  # 2 decimals above 1 nordnet
+        return ticker_sell_price
+    except:
+        print("Unable to update price before sell..")
 def find_volume(price):
     global trading_cash_usd
     vol = int(trading_cash_usd/price)
@@ -686,6 +1090,26 @@ def get_watchlist_tickers():
 
         # Get watchlist ticker no3
         ticker_3 = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[1]/div[1]/span[1]")
+        ticker_3_txt = ticker_3.text
+    except:
+        print("Unable to fetch watchlist tickers...")
+
+def get_watchlist_tickers_paper():
+    global driver
+    global ticker_1_txt
+    global ticker_2_txt
+    global ticker_3_txt
+    try:
+        # Get watchlist ticker no 1
+        ticker_1 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_txt)
+        ticker_1_txt = ticker_1.text
+
+        # GET Watchlist ticker no2
+        ticker_2 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_txt)
+        ticker_2_txt = ticker_2.text
+
+        # Get watchlist ticker no3
+        ticker_3 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_txt)
         ticker_3_txt = ticker_3.text
     except:
         print("Unable to fetch watchlist tickers...")
@@ -722,19 +1146,17 @@ def logon_webull():
     elem_login_b = driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/div/form/input")
     elem_login_b.click()
 
-    logged_in = 1
-    while logged_in == 1:
+    w_ready=1
+    while w_ready == 1:
         try:
-            #Click the "all" section, so failures can not present itself in the "working" tab. Have seen errors on server side
-            elem_all = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[5]")
-            elem_all.click()
-            logged_in = 0
+            #Enter the stocks section
+            elem_stocks = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[2]/div[1]/div[3]/i")
+            elem_stocks.click()
+            print("Entered stocks - logon completed")
+            w_ready = 0
         except:
-            print("Waiting for server to login..")
-    elem_stocks = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[2]/div[1]/div[3]/i")
-    elem_stocks.click()
+            print("Entering stocks..")
 
-    #Open full screen
 
 def watch_ticker_1_quality_check():
     try:
@@ -759,17 +1181,64 @@ def watch_ticker_3_quality_check():
     except:
         print("Unable to watch ticker 3 on webull")
 
-def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, trade_succes_cnt, pcpsMax):
+def save_prices():
+    try:
+        subfolder = "/home/sjefen/Dropbox/log/prices"
+        tday = str(datetime.datetime.now().date())
+        time_n = datetime.datetime.now().time()
+        subfolder2 = str(subfolder) + "/" + str(tday)
+        os.makedirs(subfolder2, exist_ok=True)
+        fname_1 = str(subfolder2) + "/" + str(ticker_1_txt) + str(".txt")
+        fname_2 = str(subfolder2) + "/" + str(ticker_2_txt) + str(".txt")
+        fname_3 = str(subfolder2) + "/" + str(ticker_3_txt) + str(".txt")
+
+        a_fname_1 = open(fname_1, "a")
+        a_fname_1.write(str(time_n))
+        a_fname_1.write(" ")
+        a_fname_1.write(str(ticker_1_price_value))
+        a_fname_1.write(" ")
+        a_fname_1.write(str(ticker_1_pcps))
+        a_fname_1.write("\n")
+
+        a_fname_2 = open(fname_2, "a")
+        a_fname_2.write(str(time_n))
+        a_fname_2.write(" ")
+        a_fname_2.write(str(ticker_2_price_value))
+        a_fname_2.write(" ")
+        a_fname_2.write(str(ticker_2_pcps))
+        a_fname_2.write("\n")
+
+        a_fname_3 = open(fname_3, "a")
+        a_fname_3.write(str(time_n))
+        a_fname_3.write(" ")
+        a_fname_3.write(str(ticker_3_price_value))
+        a_fname_3.write(" ")
+        a_fname_3.write(str(ticker_3_pcps))
+        a_fname_3.write("\n")
+    except:
+        print("UNABLE TO SAVE PRICES")
+
+
+def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, trade_succes_cnt, a20pcps_0_19, a20freq_0_19, ticker,time_entry,time_exit):
 
     subfolder = "/home/sjefen/Dropbox/log/pcps_PnL"
     tday = str(datetime.datetime.now().date())
-    time_n = datetime.datetime.now()
     l_fileName = str(subfolder) + "/" + str(tday)
 
     os.makedirs(subfolder, exist_ok=True)
 
     l_file = open(l_fileName, "a")
-    l_file.write(str(time_n))
+    l_file.write("Time entry:       ")
+    l_file.write(str(time_entry))
+    l_file.write("\n")
+    l_file.write("Time exit:        ")
+    l_file.write(str(time_exit))
+    l_file.write("\n")
+    l_file.write("Ticker:           ")
+    l_file.write(str(ticker))
+    l_file.write("\n")
+    l_file.write("Size(USD):        ")
+    l_file.write(str(trading_cash_usd))
     l_file.write("\n")
     l_file.write("PnL trade:        ")
     l_file.write(str(pnl_this_trade))
@@ -786,21 +1255,15 @@ def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, 
     l_file.write("Trade cnt succ:   ")
     l_file.write(str(trade_succes_cnt))
     l_file.write("\n")
-    l_file.write("pcps value:       ")
-    l_file.write(str(pcpsMax))
+    l_file.write("a20pcps_0_19:     ")
+    l_file.write(str(a20pcps_0_19))
+    l_file.write("\n")
+    l_file.write("a20freq_0_19:     ")
+    l_file.write(str(a20freq_0_19))
     l_file.write("\n")
     l_file.write("\n")
     l_file.close()
     print("****Successfully written to log file!!")
-
-def clear_plot_history():
-    global h_trade_time_table
-    global h_ticker_holding_price
-    global h_trade_time_cnt
-    h_trade_time_table.clear()
-    h_ticker_holding_price.clear()
-    h_trade_time_cnt = 0
-    print("plot history cleared!!!")
 
 def pcps():
     global driver
@@ -871,11 +1334,12 @@ def pcps():
     global PnL_this_trade_w_fees
 
     global trade_successful_cnt
-    global file_trade_completed_status
 
     global buy_now
     global sell_now
     global cancel_now
+
+    global price_buy
 
 
     #Set time now minute
@@ -966,20 +1430,32 @@ def pcps():
                         nordnet_functions.prefill_buy_order(str(1), str(vol))
                         time.sleep(orb_quality_check)
                         if float(ticker_1_price_value) > float(ticker1_prev_high):
-                            buy_now = "maybe"
-                            buy_now=pyautogui.confirm("BUY NOW?", ticker_1_txt)
-                            if buy_now == "OK":
+                            if autotrader != "yes":
+                                buy_now = "maybe"
+                                buy_now=pyautogui.confirm("BUY NOW?", ticker_1_txt)
+                                if buy_now == "OK":
+                                    price = update_price_before_buy(ticker_1_txt)
+                                    price_buy=float(price)
+                                    trade_status=nordnet_functions.buy(str(price), str(vol))
+                                    nordnet_functions.prefill_sell_order(str(vol))
+                                    nordnet_functions.open_order_status()
+                                    pcps_max_ticker = ticker_1_txt
+                                    orb_breakout_true = "yes"
+                                    continue
+                                else:
+                                    print("Skipping trade..")
+                                    nordnet_functions.enter_watchlist()
+                                    time.sleep(5)
+                            else:
                                 price = update_price_before_buy(ticker_1_txt)
-                                trade_status=nordnet_functions.buy(str(price), str(vol))
+                                price_buy = float(price)
+                                trade_status = nordnet_functions.buy(str(price), str(vol))
                                 nordnet_functions.prefill_sell_order(str(vol))
                                 nordnet_functions.open_order_status()
                                 pcps_max_ticker = ticker_1_txt
                                 orb_breakout_true = "yes"
                                 continue
-                            else:
-                                print("Skipping trade..")
-                                nordnet_functions.enter_watchlist()
-                                time.sleep(5)
+
                         else:
                             print("Quality check not passed - not entering trade", ticker_1_txt)
                             nordnet_functions.enter_watchlist()
@@ -992,20 +1468,31 @@ def pcps():
                         time.sleep(orb_quality_check)
                         ##Get volume
                         if float(ticker_2_price_value) > float(ticker2_prev_high):
-                            buy_now = "maybe"
-                            buy_now=pyautogui.confirm("BUY NOW?", ticker_2_txt)
-                            if buy_now == "OK":
+                            if autotrader != "yes":
+                                buy_now = "maybe"
+                                buy_now=pyautogui.confirm("BUY NOW?", ticker_2_txt)
+                                if buy_now == "OK":
+                                    price = update_price_before_buy(ticker_2_txt)
+                                    price_buy=float(price)
+                                    trade_status=nordnet_functions.buy(str(price), str(vol))
+                                    nordnet_functions.prefill_sell_order(str(vol))
+                                    nordnet_functions.open_order_status()
+                                    pcps_max_ticker = ticker_2_txt
+                                    orb_breakout_true = "yes"
+                                    continue
+                                else:
+                                    print("Skipping trade..")
+                                    nordnet_functions.enter_watchlist()
+                                    time.sleep(5)
+                            else:
                                 price = update_price_before_buy(ticker_2_txt)
-                                trade_status=nordnet_functions.buy(str(price), str(vol))
+                                price_buy = float(price)
+                                trade_status = nordnet_functions.buy(str(price), str(vol))
                                 nordnet_functions.prefill_sell_order(str(vol))
                                 nordnet_functions.open_order_status()
                                 pcps_max_ticker = ticker_2_txt
                                 orb_breakout_true = "yes"
                                 continue
-                            else:
-                                print("Skipping trade..")
-                                nordnet_functions.enter_watchlist()
-                                time.sleep(5)
                         else:
                             print("Quality check not passed - not entering trade", ticker_2_txt)
                             nordnet_functions.enter_watchlist()
@@ -1017,20 +1504,31 @@ def pcps():
                         nordnet_functions.prefill_buy_order(str(3), str(vol))
                         time.sleep(orb_quality_check)
                         if float(ticker_3_price_value) > float(ticker3_prev_high):
-                            buy_now = "maybe"
-                            buy_now=pyautogui.confirm("BUY NOW?", ticker_3_txt)
-                            if buy_now == "OK":
+                            if autotrader != "yes":
+                                buy_now = "maybe"
+                                buy_now=pyautogui.confirm("BUY NOW?", ticker_3_txt)
+                                if buy_now == "OK":
+                                    price = update_price_before_buy(ticker_3_txt)
+                                    price_buy=float(price)
+                                    trade_status=nordnet_functions.buy(str(price), str(vol))
+                                    nordnet_functions.prefill_sell_order(str(vol))
+                                    nordnet_functions.open_order_status()
+                                    pcps_max_ticker = ticker_3_txt
+                                    orb_breakout_true = "yes"
+                                    continue
+                                else:
+                                    print("Skipping trade..")
+                                    nordnet_functions.enter_watchlist()
+                                    time.sleep(5)
+                            else:
                                 price = update_price_before_buy(ticker_3_txt)
-                                trade_status=nordnet_functions.buy(str(price), str(vol))
+                                price_buy = float(price)
+                                trade_status = nordnet_functions.buy(str(price), str(vol))
                                 nordnet_functions.prefill_sell_order(str(vol))
                                 nordnet_functions.open_order_status()
                                 pcps_max_ticker = ticker_3_txt
                                 orb_breakout_true = "yes"
                                 continue
-                            else:
-                                print("Skipping trade..")
-                                nordnet_functions.enter_watchlist()
-                                time.sleep(5)
                         else:
                             print("Quality check not passed - not entering trade: ", ticker_3_txt)
                             nordnet_functions.enter_watchlist()
@@ -1044,22 +1542,25 @@ def pcps():
     if trade_status == "b":
         modify_entry_cnt = 1
         filled_status="unknown"
-        cancel_now = pyautogui.confirm("CANCEL NOW?", pcps_max_ticker,timeout=modify_entry_cnt_max*1000)
-        if cancel_now == "OK":
-            print("CANCELLING order")
-            trade_status = nordnet_functions.cancel_order()
-            if trade_status == "c":
-                print("Success - CANCELLING ORDER OK")
-                nordnet_functions.enter_watchlist()
-            else:
-                print("UNABLE TO CANCEL")
-                nordnet_functions.enter_watchlist()
-        elif cancel_now == "Timeout":
-            print("MANUAL CANCEL TIMED OUT")
+        if autotrader != "yes":
+            cancel_now = pyautogui.confirm("CANCEL NOW?", pcps_max_ticker,timeout=modify_entry_cnt_max*1000)
+            if cancel_now == "OK":
+                print("CANCELLING order")
+                trade_status = nordnet_functions.cancel_order()
+                if trade_status == "c":
+                    print("Success - CANCELLING ORDER OK")
+                    nordnet_functions.enter_watchlist()
+                else:
+                    print("UNABLE TO CANCEL")
+                    nordnet_functions.enter_watchlist()
+            elif cancel_now == "Timeout":
+                print("MANUAL CANCEL TIMED OUT")
 
         #Check filled status
         filled_status=nordnet_functions.check_order_status()
         if filled_status == "filled":
+            modify_entry_cnt = 0
+            time.sleep(0.5)
             modify_entry_cnt = 0
             modify_entry_tries = 0
             # Set initial exit point
@@ -1075,12 +1576,13 @@ def pcps():
 
             if filled_status != "filled":
                 print("Buy cancelled - exiting the trade")
-                # initialize tables and plot
-                clear_plot_history()
                 #Initialize trade counters.
                 modify_entry_cnt = 0
                 modify_entry_tries = 0
                 return 1
+    else:
+        return 1
+        print("BUY FAILED --- EXITING")
 
     # Start the "Exit trade routine - if holding ticker AND bear bailout has not entered the exit"
     sell_now = "maybe"
@@ -1088,18 +1590,19 @@ def pcps():
         time.sleep(1)
         today = datetime.datetime.today().weekday()
         time_now = str(datetime.datetime.now().time())
-        #0. Manual input for selling ( first priority - Only asking 1 time)
-        if sell_now == "maybe":
-            sell_now = pyautogui.confirm("SELL NOW?", pcps_max_ticker)
-            if sell_now == "OK":
-                print("--Exiting trade manually..")
-                price=update_price_before_sell(pcps_max_ticker)
-                trade_status=nordnet_functions.sell(str(price))
-                nordnet_functions.open_order_status()
-                #Set sample_periods to zero and break enter trade routine
-                sample_periods = 0
-                pcps_exit = 0
-                break
+        if autotrader != "yes":
+            #0. Manual input for selling ( first priority - Only asking 1 time)
+            if sell_now == "maybe":
+                sell_now = pyautogui.confirm("SELL NOW?", pcps_max_ticker)
+                if sell_now == "OK":
+                    print("--Exiting trade manually..")
+                    price=update_price_before_sell(pcps_max_ticker)
+                    trade_status=nordnet_functions.sell(str(price))
+                    nordnet_functions.open_order_status()
+                    #Set sample_periods to zero and break enter trade routine
+                    sample_periods = 0
+                    pcps_exit = 0
+                    break
 
 
         #1. Call the bear bailout exit if holding ticker
@@ -1110,8 +1613,6 @@ def pcps():
         if ticker_holding_price_value <= ticker_holding_exit_point and bear_bailout_status == 0:
             #Say that we exit the trade, so not conflicting with other exit strategies
             pcps_exit = 1
-            ticker_sell_price = ticker_holding_price_value *(1-(pcps_order_addon/100))
-            ticker_sell_price = ("%.2f" %ticker_sell_price)
             print("--Exiting trade with exit point routine")
             price=update_price_before_sell(pcps_max_ticker)
             trade_status=nordnet_functions.sell(str(price))
@@ -1124,8 +1625,6 @@ def pcps():
         #3. Get out before closing in case holding
         elif time_now > time_lastCallExit:
             pcps_exit = 1
-            ticker_sell_price = ticker_holding_price_value *(1-(pcps_order_addon/100))
-            ticker_sell_price = ("%.2f" %ticker_sell_price)
             print("Exiting trade due to market closing soon...")
             price=update_price_before_sell(pcps_max_ticker)
             trade_status=nordnet_functions.sell(str(price))
@@ -1151,11 +1650,6 @@ def pcps():
             sample_periods = 0
             holding_status = 0
             trade_successful_cnt+=1
-            if file_trade_completed_status == 1:
-                file_trade()
-            else:
-                print("Skipping compliting file of trade, completed from global_trader thread")
-            file_trade_completed_status = 1
             trade_status = "na"
 
             #Update P&L
@@ -1169,8 +1663,6 @@ def pcps():
             #Update log file
             log_PnL(PnL_this_trade, PnL_total, PnL_this_trade_w_fees, PnL_total_w_fees, trade_successful_cnt, pcps_max)
 
-            #Plot the trade
-            plot_trade()
 
             print("")
             print(datetime.datetime.now())
@@ -1191,6 +1683,486 @@ def pcps():
     print("Success exited trade!!")
     return 0
 
+def pcps_paper():
+    global driver
+    global pcps_threshold
+    global pcps_threshold_s
+    global pcps_max_ticker
+    global sample_interval
+    global sample_periods
+    global holding_status
+
+    global ticker_1_pcps
+    global ticker_2_pcps
+    global ticker_3_pcps
+
+    global ticker_1_price_value
+    global ticker_2_price_value
+    global ticker_3_price_value
+    global ticker_buy_price
+    global ticker_sell_price
+
+    global ticker_1_price_value_previous
+    global ticker_2_price_value_previous
+    global ticker_3_price_value_previous
+
+    global ticker_1_txt
+    global ticker_2_txt
+    global ticker_3_txt
+
+    global ticker_holding_price
+    global ticker_holding_price_value
+    global ticker_holding_price_value_previous
+    global ticker_holding_pcps
+
+    global pcps_order_addon
+
+    global ticker_1_op
+    global ticker_2_op
+    global ticker_3_op
+    global ticker_holding_pcp
+    global ticker_holding_exit_point
+
+    global dictionary_price_open
+    global dictionary_price
+    global vol
+    global bear_bailout_status
+    global pcps_exit
+    global pcps_max
+    global h_pcps_entry
+    global trade_status
+
+    global modify_entry_cnt
+    global modify_entry_tries
+    global modify_exit_cnt
+    global modify_exit_cnt_max
+    global price
+    global bear_cnt
+    global filled_status
+
+    global today
+    global time_now
+
+    global bought_price
+    global sold_price
+    global PnL_total
+    global PnL_total_w_fees
+    global Trade_fee_per_trade
+    global PnL_this_trade
+    global PnL_this_trade_w_fees
+
+    global trade_successful_cnt
+
+    global buy_now
+    global sell_now
+    global cancel_now
+
+    global price_buy
+    global break_even_or_greater
+
+    val_a20pcps_0_19=0
+    val_a20freq_0_19=0
+
+
+
+    #Set time now minute
+    time_now_min_start = time_now_min
+
+    # Start the "Enter trade routine"
+    if use_trade_strategy == strategy_pcps:
+        while holding_status == 0:
+            #Relation between tickers and current price
+            dictionary_price ={ticker_1_txt:ticker_1_price_value,ticker_2_txt:ticker_2_price_value,ticker_3_txt:ticker_3_price_value}
+            #Relation between tickers and 1 min opening prices
+            dictionary_price_open ={ticker_1_txt:ticker_1_op,ticker_2_txt:ticker_2_op,ticker_3_txt:ticker_3_op}
+
+            #2. Wait "sample_interval" seconds
+            time.sleep(sample_interval)
+
+            #3.1 Get pcps between price now and previous price and find the ticker with best pcps.
+            if sample_periods != 0:
+                try:
+                    ticker_1_pcps = (float(ticker_1_price_value)/float(ticker_1_price_value_previous) -1)*100
+                    ticker_2_pcps = (float(ticker_2_price_value)/float(ticker_2_price_value_previous) -1)*100
+                    ticker_3_pcps = (float(ticker_3_price_value)/float(ticker_3_price_value_previous) -1)*100
+
+                except:
+                    print("Unable to calculate pcps values this time, waiting for next opportunity..")
+                try:
+                    #relation between tickers and its pcps
+                    dictionary_pcps = {ticker_1_pcps:ticker_1_txt,ticker_2_pcps:ticker_2_txt,ticker_3_pcps:ticker_3_txt}
+
+                    pcps_max = float(max(dictionary_pcps))
+                    pcps_max_ticker = dictionary_pcps.get(max(dictionary_pcps))
+
+                    #Find the price of best pcps ticker
+                    ticker_price = float(dictionary_price[pcps_max_ticker])
+                    ticker_buy_price = ticker_price * (1 + (pcps_order_addon / 100))
+                    ticker_buy_price = float(("%.4f" % ticker_buy_price))  # 4 decimals
+
+                    #Find what the 1 min open price of that ticker was
+                    ticker_open_1min = float(dictionary_price_open[pcps_max_ticker])
+                except:
+                    print("Unable to find price of best pcps ...coming back later ")
+                    continue
+
+                # Print: ticker, price, pcps and 1 min open of each ticker
+                print("")
+                print("T    ", "O    ", "C   ", "PCPS")
+                print(datetime.datetime.now())
+                print(ticker_1_txt, ticker_1_op, ticker_1_price_value, ticker_1_pcps)
+                print(ticker_2_txt, ticker_2_op, ticker_2_price_value, ticker_2_pcps)
+                print(ticker_3_txt, ticker_3_op, ticker_3_price_value, ticker_3_pcps)
+                print("")
+                print("Ticker with best pcps: ", pcps_max_ticker, pcps_max)
+                print("")
+
+
+                #3.2 Buy if pcps on best ticker is greater than pcps_threshold AND the current price is greater than the opening price and the opening price is not equal to zero
+                if pcps_max > pcps_threshold and ticker_buy_price > ticker_open_1min and ticker_open_1min != 0:
+                    #Get the volume
+                    vol = find_volume(float(ticker_buy_price))
+                    #Append pcps_max to history
+                    h_pcps_max = ("%.3f" % pcps_max)
+                    h_pcps_entry.append(h_pcps_max)
+                    #Buy now real or paper
+
+
+            #4. File previous price.
+            ticker_1_price_value_previous = ticker_1_price_value
+            ticker_2_price_value_previous = ticker_2_price_value
+            ticker_3_price_value_previous = ticker_3_price_value
+
+            sample_periods+=1
+    elif use_trade_strategy == strategy_orb:
+        while holding_status == 0:
+            #Check if any of the stocks break the high - and holds for a specified time.
+            orb_breakout_true = "no"
+            while orb_breakout_true == "no":
+                #Check time
+                time_now = str(datetime.datetime.now().time())
+                if time_now > time_lastCall:
+                    print("Trading reached EOD - exiting entry routine")
+                    return 5
+                try:
+                    if float(ticker_1_price_value) > float(ticker1_prev_high) and float(ticker1_prev_high) != 0 and float(ticker1_prev_cp) > float(ticker1_prev_op):
+                        print("Entered quality check on: ", ticker_1_txt)
+                        webull_paper_functions.watch_ticker_1_quality_check_paper()
+                        #Get BUY order ready in case of quality passes
+                        vol = find_volume(float(ticker_1_price_value))
+                        time.sleep(orb_quality_check)
+                        if float(ticker_1_price_value) > float(ticker1_prev_high) and float(ticker1_a20pcps_0_19) >= a20pcps_0_19_threshold and float(ticker1_a20freq_0_19) >= a20freq_0_19_threshold:
+                            price = update_price_before_buy_paper(ticker_1_txt)
+                            price_buy = float(price)
+                            time_now = str(datetime.datetime.now().time())
+                            time_entry=time_now
+                            trade_status = "b"
+                            pcps_max_ticker = ticker_1_txt
+                            val_a20pcps_0_19=ticker1_a20pcps_0_19
+                            val_a20freq_0_19=ticker1_a20freq_0_19
+                            orb_breakout_true = "yes"
+                            continue
+
+                        else:
+                            print("Quality check not passed - not entering trade", ticker_1_txt)
+                    if float(ticker_2_price_value) > float(ticker2_prev_high) and float(ticker2_prev_high) != 0 and float(ticker2_prev_cp) > float(ticker2_prev_op):
+                        print("Entered quality check on: ", ticker_2_txt)
+                        webull_paper_functions.watch_ticker_2_quality_check_paper()
+                        # Get BUY order ready in case of quality passes
+                        vol = find_volume(float(ticker_2_price_value))
+                        time.sleep(orb_quality_check)
+                        if float(ticker_2_price_value) > float(ticker2_prev_high) and float(ticker2_a20pcps_0_19) >= a20pcps_0_19_threshold and float(ticker2_a20freq_0_19) >= a20freq_0_19_threshold:
+                            price = update_price_before_buy_paper(ticker_2_txt)
+                            price_buy = float(price)
+                            time_now = str(datetime.datetime.now().time())
+                            time_entry=time_now
+                            trade_status = "b"
+                            pcps_max_ticker = ticker_2_txt
+                            val_a20pcps_0_19=ticker2_a20pcps_0_19
+                            val_a20freq_0_19=ticker2_a20freq_0_19
+                            orb_breakout_true = "yes"
+                            continue
+
+                        else:
+                            print("Quality check not passed - not entering trade", ticker_2_txt)
+                    if float(ticker_3_price_value) > float(ticker3_prev_high) and float(ticker3_prev_high) != 0 and float(ticker3_prev_cp) > float(ticker3_prev_op):
+                        print("Entered quality check on: ", ticker_3_txt)
+                        webull_paper_functions.watch_ticker_3_quality_check_paper()
+                        # Get BUY order ready in case of quality passes
+                        vol = find_volume(float(ticker_3_price_value))
+                        time.sleep(orb_quality_check)
+                        if float(ticker_3_price_value) > float(ticker3_prev_high) and float(ticker3_a20pcps_0_19) >= a20pcps_0_19_threshold and float(ticker3_a20freq_0_19) >= a20freq_0_19_threshold:
+                            price = update_price_before_buy_paper(ticker_3_txt)
+                            price_buy = float(price)
+                            time_now = str(datetime.datetime.now().time())
+                            time_entry=time_now
+                            trade_status = "b"
+                            pcps_max_ticker = ticker_3_txt
+                            val_a20pcps_0_19=ticker3_a20pcps_0_19
+                            val_a20freq_0_19=ticker3_a20freq_0_19
+                            orb_breakout_true = "yes"
+                            continue
+
+                        else:
+                            print("Quality check not passed - not entering trade", ticker_2_txt)
+                except:
+                    print("Unable to compare prices..retrying")
+
+            if orb_breakout_true == "yes":
+                print("Entering ORB - moving on to check if order was filled")
+                break
+    elif use_trade_strategy == strategy_15min_breakout:
+        while holding_status == 0:
+            try:
+                if float(ticker_1_price_value) > float(ticker1_prev_15min_high) and float(ticker1_prev_15min_high) != 0:
+                    webull_paper_functions.watch_ticker_1_quality_check_paper()
+                    vol = find_volume(float(ticker_1_price_value))
+                    price = update_price_before_buy_paper(ticker_1_txt)
+                    price_buy = float(price)
+                    time_entry = str(datetime.datetime.now().time())
+                    webull_paper_functions.prefill_buy_order(vol)
+                    trade_status = webull_paper_functions.buy(str(price))
+                    pcps_max_ticker = ticker_1_txt
+                    val_a20pcps_0_19 = ticker1_a20pcps_0_19
+                    val_a20freq_0_19 = ticker1_a20freq_0_19
+                    break
+                if float(ticker_2_price_value) > float(ticker2_prev_15min_high) and float(ticker2_prev_15min_high) != 0:
+                    webull_paper_functions.watch_ticker_2_quality_check_paper()
+                    vol = find_volume(float(ticker_2_price_value))
+                    price = update_price_before_buy_paper(ticker_2_txt)
+                    price_buy = float(price)
+                    time_entry = str(datetime.datetime.now().time())
+                    webull_paper_functions.prefill_buy_order(vol)
+                    trade_status = webull_paper_functions.buy(str(price))
+                    pcps_max_ticker = ticker_2_txt
+                    val_a20pcps_0_19 = ticker2_a20pcps_0_19
+                    val_a20freq_0_19 = ticker2_a20freq_0_19
+                    break
+                if float(ticker_3_price_value) > float(ticker3_prev_15min_high) and float(ticker3_prev_15min_high) != 0:
+                    webull_paper_functions.watch_ticker_3_quality_check_paper()
+                    vol = find_volume(float(ticker_3_price_value))
+                    price = update_price_before_buy_paper(ticker_3_txt)
+                    price_buy = float(price)
+                    time_entry = str(datetime.datetime.now().time())
+                    webull_paper_functions.prefill_buy_order(vol)
+                    trade_status = webull_paper_functions.buy(str(price))
+                    pcps_max_ticker = ticker_3_txt
+                    val_a20pcps_0_19 = ticker3_a20pcps_0_19
+                    val_a20freq_0_19 = ticker3_a20freq_0_19
+                    break
+            except ValueError as e:
+                print(e)
+                print("15min breakout: unable to compare prices...")
+
+    #Ask if manual cancel && Check if order was filled
+    if trade_status == "b":
+        modify_entry_cnt = 1
+        filled_status="unknown"
+        #Wait until the order is sent to exhange, if not it will look at the order bf
+        time.sleep(5)
+        #Check filled status
+        filled_status=webull_paper_functions.check_filled_status()
+        if filled_status == "filled":
+            modify_entry_cnt = 0
+            time.sleep(0.5)
+            modify_entry_cnt = 0
+            modify_entry_tries = 0
+            # Set initial exit point
+            if use_trade_strategy == strategy_15min_breakout:
+                set_15min_breakout_exit()
+            else:
+                ticker_holding_exit_point = (float(price) * (1 - ticker_holding_exit_offset))
+            print("The initial exit point is: ", ticker_holding_exit_point)
+            print("The buy Limit price was: ", price)
+            holding_status=1
+            #Update P&L status
+            bought_price = price
+        elif filled_status == "cancelled":
+            #Double check in case the order was filled
+            for check_now in range(0, check_filled_if_cancelled_maxTries):
+                print("///Double checking if the order was actually fillled after cancelling")
+                print("Double check cnt: ", check_now)
+                time.sleep(1)
+                filled_status=webull_paper_functions.check_filled_status()
+                if filled_status == "filled":
+                    modify_entry_cnt = 0
+                    modify_entry_tries = 0
+                    # Set initial exit point
+                    if use_trade_strategy == strategy_15min_breakout:
+                        set_15min_breakout_exit()
+                    else:
+                        ticker_holding_exit_point = (float(price) * (1 - ticker_holding_exit_offset))
+                    print("The initial exit point is: ", ticker_holding_exit_point)
+                    print("The buy Limit price was: ", price)
+                    holding_status = 1
+                    bought_price = price
+                    break
+
+            if filled_status != "filled":
+                print("Buy cancelled - exiting the trade")
+                #Initialize trade counters.
+                modify_entry_cnt = 0
+                modify_entry_tries = 0
+                return 1
+    else:
+        return 1
+        print("BUY FAILED --- EXITING")
+
+    # Start the "Exit" routine..
+    if use_trade_strategy == strategy_15min_breakout:
+        while holding_status == 1:
+            exit_now=exit_15min_breakout_stopout()
+            if exit_now == "yes":
+                webull_paper_functions.prefill_sell_order(vol)
+                price=update_price_before_sell_paper(pcps_max_ticker)
+                trade_status=webull_paper_functions.sell(str(price))
+                while trade_status != "s":
+                    print("UNABLE TO SELL _ TRYING AGAIN")
+                    webull_paper_functions.refresh()
+                    time.sleep(10)
+                    webull_paper_functions.prefill_sell_order(vol)
+                    price=update_price_before_sell_paper(pcps_max_ticker)
+                    trade_status=webull_paper_functions.sell(str(price))
+                break
+            exit_now=exit_15min_profit_limit()
+            if exit_now == "yes":
+                webull_paper_functions.prefill_sell_order(vol)
+                price=update_price_before_sell_paper(pcps_max_ticker)
+                trade_status=webull_paper_functions.sell(str(price))
+                while trade_status != "s":
+                    print("UNABLE TO SELL _ TRYING AGAIN")
+                    webull_paper_functions.refresh()
+                    time.sleep(10)
+                    webull_paper_functions.prefill_sell_order(vol)
+                    price=update_price_before_sell_paper(pcps_max_ticker)
+                    trade_status=webull_paper_functions.sell(str(price))
+                break
+    else:
+        while holding_status == 1 and bear_bailout_status == 0:
+            today = datetime.datetime.today().weekday()
+            time_now = str(datetime.datetime.now().time())
+
+            #1. Call the bear bailout exit if holding ticker
+            if holding_status == 1 and bear_bailout_status == 0 and pcps_exit == 0 and trade_status != "s":
+                bear_bailout()
+
+            #2. Sell if price shoots below exit point and bear bailout status is 0
+            if ticker_holding_price_value <= ticker_holding_exit_point and bear_bailout_status == 0:
+                #Say that we exit the trade, so not conflicting with other exit strategies
+                pcps_exit = 1
+                print("--Exiting trade with exit point routine")
+                price=update_price_before_sell_paper(pcps_max_ticker)
+                trade_status="s"
+                #Set sample_periods to zero and break enter trade routine
+                sample_periods = 0
+                pcps_exit = 0
+                break
+
+            #3. Get out before closing in case holding
+            elif time_now > time_lastCallExit:
+                pcps_exit = 1
+                print("Exiting trade due to market closing soon...")
+                price=update_price_before_sell_paper(pcps_max_ticker)
+                trade_status="s"
+                #Set sample_periods to zero and break enter trade routine
+                sample_periods = 0
+                pcps_exit = 0
+                break
+
+
+    #Check if order was filled
+    if trade_status == "s":
+        modify_exit_cnt = 1
+        filled_status="unknown"
+        #Wait until the order is sent to exhange, if not it will look at the order bf
+        time.sleep(7)
+        filled_status = webull_paper_functions.check_filled_status()
+        if filled_status == "filled":
+            modify_exit_cnt = 0
+            print("Resetting trading parameters, trade done")
+            print("the exit_cnt rest: ",modify_exit_cnt)
+            bear_bailout_status = 0
+            bear_cnt = 0
+            pcps_exit = 0
+            sample_periods = 0
+            holding_status = 0
+            break_even_or_greater = 0
+            trade_successful_cnt+=1
+            trade_status = "na"
+            time_now = str(datetime.datetime.now().time())
+            time_exit = time_now
+
+            #Update P&L
+            sold_price = price
+            PnL_this_trade = (float(sold_price) - float(bought_price))*int(vol)
+            PnL_this_trade = float("%.2f" % PnL_this_trade)
+            PnL_total = float(PnL_total) + float(PnL_this_trade)
+            PnL_this_trade_w_fees = float(PnL_this_trade) - float(Trade_fee_per_trade)
+            PnL_total_w_fees = float(PnL_total_w_fees) + float(PnL_this_trade_w_fees)
+
+            #Update log file
+            log_PnL(PnL_this_trade, PnL_total, PnL_this_trade_w_fees, PnL_total_w_fees, trade_successful_cnt, val_a20pcps_0_19, val_a20freq_0_19, pcps_max_ticker,time_entry,time_exit)
+
+
+            print("")
+            print(pcps_max_ticker)
+            print(datetime.datetime.now())
+            print("PnL this trade:        ",PnL_this_trade)
+            print("PnL total:             ",PnL_total)
+            print("PnL this trade w fees: ",PnL_this_trade_w_fees)
+            print("PnL total w fees:      ",PnL_total_w_fees)
+            print("Trade cnt:             ",trade_successful_cnt)
+            print("a20pcps_0_19:          ",val_a20pcps_0_19)
+            print("a20freq_0_19:          ",val_a20freq_0_19)
+            print("")
+
+    #Exit routine exited or bear bailout -wait until we dont hold the ticker anymore
+    while trade_status != "na":
+        time.sleep(1)
+    print("Success exited trade!!")
+    return 0
+
+def set_15min_breakout_exit():
+    global ticker_holding_exit_point
+
+    if pcps_max_ticker == ticker_1_txt and ticker1_prev_15min_op !=0:
+        ticker_holding_exit_point = float(ticker1_prev_15min_op)
+    elif pcps_max_ticker == ticker_2_txt and ticker2_prev_15min_op !=0:
+        ticker_holding_exit_point = float(ticker2_prev_15min_op)
+    elif pcps_max_ticker == ticker_3_txt and ticker3_prev_15min_op !=0:
+        ticker_holding_exit_point = float(ticker3_prev_15min_op)
+
+    print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
+    print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
+    print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
+
+def exit_15min_breakout_stopout():
+
+    if float(ticker_holding_price_value) < float(ticker_holding_exit_point):
+        print(pcps_max_ticker, " Exiting trade -- price broke low of previous 15min..")
+        print(pcps_max_ticker, "current price", ticker_holding_price_value)
+        print(pcps_max_ticker, "Exit point", ticker_holding_exit_point)
+        exit_now="yes"
+        return exit_now
+    else:
+        print(pcps_max_ticker, "current price", ticker_holding_price_value)
+        print(pcps_max_ticker, "Exit point", ticker_holding_exit_point)
+        exit_now="no"
+        return exit_now
+
+def exit_15min_profit_limit():
+    if float(break_even_or_greater) >= float(profit_target):
+        print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
+        print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
+        print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
+        print(pcps_max_ticker, "break even or greater: ", break_even_or_greater)
+        exit_now="yes"
+        return exit_now
+    else:
+        print(pcps_max_ticker, "break even or greater", break_even_or_greater)
+        print(pcps_max_ticker, "15min_breakout_profit limit", profit_target)
+        exit_now="no"
+        return exit_now
 
 def pcps_test():
     global driver
@@ -1261,11 +2233,12 @@ def pcps_test():
     global PnL_this_trade_w_fees
 
     global trade_successful_cnt
-    global file_trade_completed_status
 
     global buy_now
     global sell_now
     global cancel_now
+
+    global price_buy
 
 
     #Set time now minute
@@ -1358,20 +2331,32 @@ def pcps_test():
                         time.sleep(orb_quality_check)
                         #if float(ticker_1_price_value) > float(ticker1_prev_high):
                         if float(ticker_1_price_value) == float(ticker1_prev_high):
-                            buy_now = "maybe"
-                            buy_now=pyautogui.confirm("BUY NOW?", ticker_1_txt)
-                            if buy_now == "OK":
+                            if autotrader != "yes":
+                                buy_now = "maybe"
+                                buy_now=pyautogui.confirm("BUY NOW?", ticker_1_txt)
+                                if buy_now == "OK":
+                                    price = update_price_before_buy(ticker_1_txt)
+                                    price_buy=float(price)
+                                    trade_status=nordnet_functions.buy(str(price), str(vol))
+                                    nordnet_functions.prefill_sell_order(str(vol))
+                                    nordnet_functions.open_order_status()
+                                    pcps_max_ticker = ticker_1_txt
+                                    orb_breakout_true = "yes"
+                                    continue
+                                else:
+                                    print("Skipping trade..")
+                                    nordnet_functions.enter_watchlist()
+                                    time.sleep(5)
+                            else:
                                 price = update_price_before_buy(ticker_1_txt)
-                                trade_status=nordnet_functions.buy(str(price), str(vol))
+                                price_buy = float(price)
+                                trade_status = nordnet_functions.buy(str(price), str(vol))
                                 nordnet_functions.prefill_sell_order(str(vol))
                                 nordnet_functions.open_order_status()
                                 pcps_max_ticker = ticker_1_txt
                                 orb_breakout_true = "yes"
                                 continue
-                            else:
-                                print("Skipping trade..")
-                                nordnet_functions.enter_watchlist()
-                                time.sleep(5)
+
                         else:
                             print("Quality check not passed - not entering trade", ticker_1_txt)
                             nordnet_functions.enter_watchlist()
@@ -1386,20 +2371,31 @@ def pcps_test():
                         ##Get volume
                         #if float(ticker_2_price_value) > float(ticker2_prev_high):
                         if float(ticker_2_price_value) == float(ticker2_prev_high):
-                            buy_now = "maybe"
-                            buy_now=pyautogui.confirm("BUY NOW?", ticker_2_txt)
-                            if buy_now == "OK":
+                            if autotrader != "yes":
+                                buy_now = "maybe"
+                                buy_now=pyautogui.confirm("BUY NOW?", ticker_2_txt)
+                                if buy_now == "OK":
+                                    price = update_price_before_buy(ticker_2_txt)
+                                    price_buy=float(price)
+                                    trade_status=nordnet_functions.buy(str(price), str(vol))
+                                    nordnet_functions.prefill_sell_order(str(vol))
+                                    nordnet_functions.open_order_status()
+                                    pcps_max_ticker = ticker_2_txt
+                                    orb_breakout_true = "yes"
+                                    continue
+                                else:
+                                    print("Skipping trade..")
+                                    nordnet_functions.enter_watchlist()
+                                    time.sleep(5)
+                            else:
                                 price = update_price_before_buy(ticker_2_txt)
-                                trade_status=nordnet_functions.buy(str(price), str(vol))
+                                price_buy = float(price)
+                                trade_status = nordnet_functions.buy(str(price), str(vol))
                                 nordnet_functions.prefill_sell_order(str(vol))
                                 nordnet_functions.open_order_status()
                                 pcps_max_ticker = ticker_2_txt
                                 orb_breakout_true = "yes"
                                 continue
-                            else:
-                                print("Skipping trade..")
-                                nordnet_functions.enter_watchlist()
-                                time.sleep(5)
                         else:
                             print("Quality check not passed - not entering trade", ticker_2_txt)
                             nordnet_functions.enter_watchlist()
@@ -1413,20 +2409,32 @@ def pcps_test():
                         time.sleep(orb_quality_check)
                         #if float(ticker_3_price_value) > float(ticker3_prev_high):
                         if float(ticker_3_price_value) == float(ticker3_prev_high):
-                            buy_now = "maybe"
-                            buy_now=pyautogui.confirm("BUY NOW?", ticker_3_txt)
-                            if buy_now == "OK":
+                            if autotrader != "yes":
+                                buy_now = "maybe"
+                                buy_now=pyautogui.confirm("BUY NOW?", ticker_3_txt)
+                                if buy_now == "OK":
+                                    price = update_price_before_buy(ticker_3_txt)
+                                    price_buy=float(price)
+                                    trade_status=nordnet_functions.buy(str(price), str(vol))
+                                    nordnet_functions.prefill_sell_order(str(vol))
+                                    nordnet_functions.open_order_status()
+                                    pcps_max_ticker = ticker_3_txt
+                                    orb_breakout_true = "yes"
+                                    continue
+                                else:
+                                    print("Skipping trade..")
+                                    nordnet_functions.enter_watchlist()
+                                    time.sleep(5)
+                            else:
                                 price = update_price_before_buy(ticker_3_txt)
-                                trade_status=nordnet_functions.buy(str(price), str(vol))
+                                price_buy = float(price)
+                                trade_status = nordnet_functions.buy(str(price), str(vol))
                                 nordnet_functions.prefill_sell_order(str(vol))
                                 nordnet_functions.open_order_status()
                                 pcps_max_ticker = ticker_3_txt
                                 orb_breakout_true = "yes"
                                 continue
-                            else:
-                                print("Skipping trade..")
-                                nordnet_functions.enter_watchlist()
-                                time.sleep(5)
+
                         else:
                             print("Quality check not passed - not entering trade: ", ticker_3_txt)
                             nordnet_functions.enter_watchlist()
@@ -1440,18 +2448,19 @@ def pcps_test():
     if trade_status == "b":
         modify_entry_cnt = 1
         filled_status="unknown"
-        cancel_now = pyautogui.confirm("CANCEL NOW?", pcps_max_ticker,timeout=modify_entry_cnt_max*1000)
-        if cancel_now == "OK":
-            print("CANCELLING order")
-            trade_status = nordnet_functions.cancel_order()
-            if trade_status == "c":
-                print("Success - CANCELLING ORDER OK")
-                nordnet_functions.enter_watchlist()
-            else:
-                print("UNABLE TO CANCEL")
-                nordnet_functions.enter_watchlist()
-        elif cancel_now == "Timeout":
-            print("MANUAL CANCEL TIMED OUT")
+        if autotrader != "yes":
+            cancel_now = pyautogui.confirm("CANCEL NOW?", pcps_max_ticker,timeout=modify_entry_cnt_max*1000)
+            if cancel_now == "OK":
+                print("CANCELLING order")
+                trade_status = nordnet_functions.cancel_order()
+                if trade_status == "c":
+                    print("Success - CANCELLING ORDER OK")
+                    nordnet_functions.enter_watchlist()
+                else:
+                    print("UNABLE TO CANCEL")
+                    nordnet_functions.enter_watchlist()
+            elif cancel_now == "Timeout":
+                print("MANUAL CANCEL TIMED OUT")
 
         #Check filled status
         filled_status=nordnet_functions.check_order_status()
@@ -1471,8 +2480,6 @@ def pcps_test():
 
             if filled_status != "filled":
                 print("Buy cancelled - exiting the trade")
-                # initialize tables and plot
-                clear_plot_history()
                 #Initialize trade counters.
                 modify_entry_cnt = 0
                 modify_entry_tries = 0
@@ -1484,19 +2491,21 @@ def pcps_test():
         time.sleep(1)
         today = datetime.datetime.today().weekday()
         time_now = str(datetime.datetime.now().time())
-        #0. Manual input for selling ( first priority - Only asking 1 time)
-        if sell_now == "maybe":
-            sell_now = pyautogui.confirm("SELL NOW?", pcps_max_ticker)
-            if sell_now == "OK":
-                print("--Exiting trade manually..")
-                price=update_price_before_sell(pcps_max_ticker)
-                trade_status=nordnet_functions.sell(str(price))
-                nordnet_functions.open_order_status()
-                #Set sample_periods to zero and break enter trade routine
-                sample_periods = 0
-                pcps_exit = 0
-                break
+        if autotrader != "yes":
+            #0. Manual input for selling ( first priority - Only asking 1 time)
+            if sell_now == "maybe":
+                sell_now = pyautogui.confirm("SELL NOW?", pcps_max_ticker)
+                if sell_now == "OK":
+                    print("--Exiting trade manually..")
+                    price=update_price_before_sell(pcps_max_ticker)
+                    trade_status=nordnet_functions.sell(str(price))
+                    nordnet_functions.open_order_status()
+                    #Set sample_periods to zero and break enter trade routine
+                    sample_periods = 0
+                    pcps_exit = 0
+                    break
 
+        print("NOT SELLING MANUALLY!!!")
 
         #1. Call the bear bailout exit if holding ticker
         if holding_status == 1 and bear_bailout_status == 0 and pcps_exit == 0 and trade_status != "s":
@@ -1506,8 +2515,6 @@ def pcps_test():
         if ticker_holding_price_value <= ticker_holding_exit_point and bear_bailout_status == 0:
             #Say that we exit the trade, so not conflicting with other exit strategies
             pcps_exit = 1
-            ticker_sell_price = ticker_holding_price_value *(1-(pcps_order_addon/100))
-            ticker_sell_price = ("%.2f" %ticker_sell_price)
             print("--Exiting trade with exit point routine")
             price=update_price_before_sell(pcps_max_ticker)
             trade_status=nordnet_functions.sell(str(price))
@@ -1520,8 +2527,6 @@ def pcps_test():
         #3. Get out before closing in case holding
         elif time_now > time_lastCallExit:
             pcps_exit = 1
-            ticker_sell_price = ticker_holding_price_value *(1-(pcps_order_addon/100))
-            ticker_sell_price = ("%.2f" %ticker_sell_price)
             print("Exiting trade due to market closing soon...")
             price=update_price_before_sell(pcps_max_ticker)
             trade_status=nordnet_functions.sell(str(price))
@@ -1547,11 +2552,6 @@ def pcps_test():
             sample_periods = 0
             holding_status = 0
             trade_successful_cnt+=1
-            if file_trade_completed_status == 1:
-                file_trade()
-            else:
-                print("Skipping compliting file of trade, completed from global_trader thread")
-            file_trade_completed_status = 1
             trade_status = "na"
 
             #Update P&L
@@ -1564,9 +2564,6 @@ def pcps_test():
 
             #Update log file
             log_PnL(PnL_this_trade, PnL_total, PnL_this_trade_w_fees, PnL_total_w_fees, trade_successful_cnt, pcps_max)
-
-            #Plot the trade
-            plot_trade()
 
             print("")
             print(datetime.datetime.now())
@@ -1615,7 +2612,7 @@ def check_time_day():
         print("it's a weekday, let's go ahead and check the time")
         while time_now < time_getReady:
             #stand by - fetch the time every 60 sec.
-            time.sleep(10)
+            time.sleep(1)
             time_now = str(datetime.datetime.now().time())
 
         if time_now < time_lastCall and time_now > time_getReady:
@@ -1654,7 +2651,6 @@ def trade_or_not():
     while trade_now != "yes":
         print("checking time and day now..")
         trade_now = str(check_time_day())
-        time.sleep(10)
 
 
 #Start trading...
@@ -1665,6 +2661,7 @@ if trade_mode =="r":
     logon_webull()
     nordnet_functions.login_nordnet()
     global_trader()
+    global_get_prices()
 
     while trade_successful_cnt <= trade_cnt_max:
         trade_or_not()
@@ -1689,16 +2686,71 @@ if trade_mode =="r":
             print("Trade failed, total fails: ",trade_fail_cnt)
 
     print("Daily trade cnt reached - stopping")
+elif trade_mode =="p":
+    trade_fail_cnt=0
+    trade_successful_cnt=0
+    webull_paper_functions.open_webull()
+    webull_paper_functions.logon_webull()
+    trade_or_not()
+    webull_paper_functions.refresh()
+    get_watchlist_tickers_paper()
+    global_trader()
+    global_get_prices_paper()
+    timer_15min()
+
+    while trade_successful_cnt <= trade_cnt_max:
+        trade_or_not()
+        #Start new trade as long as previous trade was completed
+        while holding_status == 1:
+            print("Still holding possition - waiting for sell order to complete")
+            time.sleep(1)
+
+        #Start pcps trade
+        if trade_successful_cnt != 0:
+            webull_paper_functions.refresh()
+        else:
+            print("Skipping refresh..")
+        trade_pcps=pcps_paper()
+        if trade_pcps == 1:
+            trade_fail_cnt+=1
+            print("Successful trades: ", trade_successful_cnt)
+            print("Trade failed, total fails: ",trade_fail_cnt)
+        elif trade_pcps == 5:
+            #Trading reached EOD - getting setup for tomorrow
+            pass
+        else:
+            #NOTE the successful cnt is incremented in the pcps function.
+            print("Successful trades: ", trade_successful_cnt)
+            print("Trade failed, total fails: ",trade_fail_cnt)
+
+    print("Daily trade cnt reached - stopping")
 
 else:
-    open_webull()
-    logon_webull()
-    time.sleep(5)
-    watch_ticker_1_quality_check()
-    time.sleep(5)
-    watch_ticker_2_quality_check()
-    time.sleep(5)
-    watch_ticker_3_quality_check()
+    webull_paper_functions.open_webull()
+    webull_paper_functions.logon_webull()
+    time.sleep(10)
+    global_trader()
+    global_get_prices_paper()
+    timer_15min()
+    #pretend we hold
+    pcps_max_ticker=ticker_1_txt
+    holding_status=1
+    vol=1
+    modify_exit_cnt = 0
+    webull_paper_functions.prefill_sell_order(vol)
+    price=update_price_before_sell_paper(pcps_max_ticker)
+    trade_status = webull_paper_functions.sell(str(price))
+    while trade_status != "s":
+        print("UNABLE TO SELL _ TRYING AGAIN")
+        webull_paper_functions.refresh()
+        time.sleep(10)
+        webull_paper_functions.prefill_sell_order(vol)
+        price = update_price_before_sell_paper(pcps_max_ticker)
+        trade_status = webull_paper_functions.sell(str(price))
+    modify_exit_cnt = 1
+    webull_paper_functions.check_filled_status()
+
+
 
 
 

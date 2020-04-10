@@ -196,9 +196,19 @@ def modify_sell_order(price):
   elem_price.send_keys(Keys.BACK_SPACE)
   elem_price.send_keys(price)
 
-  #SUBMIT
-  elem_change = driver2.find_element_by_xpath(nordnet_webelements.b_modify_confirm)
-  elem_change.click()
+  try:
+   #SUBMIT
+   elem_change = driver2.find_element_by_xpath(nordnet_webelements.b_modify_confirm)
+   elem_change.click()
+  except:
+   print("SELL ORDER EITHER PARTIALLY COMPLETED, OR ALREADY FILLED")
+
+  #If partially filled
+  try:
+   elem_change = driver2.find_element_by_xpath(nordnet_webelements.b_modify_confirm_if_partially_filled)
+   elem_change.click()
+  except:
+   print("ORDER FILLED PROBABLY - UNABLE TO MODIFY")
 
   time.sleep(2)
 
@@ -267,7 +277,7 @@ def cancel_order():
    return trade_status
   except:
     print("UNABLE TO CANCEL ORDER")
-    trade_status = "fail"
+    trade_status = "b"
     return trade_status
 
 def open_order_status():

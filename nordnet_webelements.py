@@ -10,6 +10,7 @@ b_cancel_order_1 = "/html/body/div[1]/div/header/div/div/div[1]/div/div[2]/div/d
 b_cancel_order_2 = "/html/body/div[1]/div/header/div/div[2]/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[2]/span/span[2]/button"
 b_modify_order_1 = "/html/body/div[1]/div/header/div/div/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[2]/span/span[1]/a[2]"
 b_modify_order_2 = "/html/body/div[1]/div/header/div/div/div[1]/div/div[2]/div/div[2]/div/div/div/div[1]/div/ul/li/ul/li[2]/span/span[1]/a[1]/button"
+b_modify_confirm_if_partially_filled="/html/body/div[1]/div/div[3]/main/div[2]/div/div[1]/div[8]/div/div/div[1]/div/div/form/div/div[14]/div/div[2]/button"
 b_modify_confirm = "/html/body/div[1]/div/div[3]/main/div[2]/div/div[1]/div[8]/div/div/div[1]/div/div/form/div/div[13]/div/div[2]/button"
 b_logon_bankID_mobile = "/html/body/div[1]/section/section[2]/section/section/section/section/section/section/button[1]"
 b_logon = "/html/body/div[1]/section/section[2]/section/section/section/section/section/section/section/form/section[2]/section/div/button"
