@@ -34,7 +34,7 @@ if trade_mode == "r":
     import nordnet_functions
     driver = webdriver.Chrome('/usr/bin/chromedriver')
 else:
-    import webull_webelements
+    import webull_webelements_2
     import webull_paper_functions
 
 #Strategy pcps params
@@ -167,6 +167,7 @@ trade_range_days = range(0, 7)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
 time_getReady = "15:30:06"
+#time_getReady = "14:30:06"
 time_lastCall = "21:30:00"
 time_lastCallExit = "21:55:00"
 
@@ -250,6 +251,27 @@ ticker3_a20freq_0_19=0
 a20pcps_0_19_threshold=0.04
 a20freq_0_19_threshold=0.4
 
+def test_webelements_paper():
+    global pcps_max_ticker
+
+    webull_paper_functions.watch_ticker_1_quality_check_paper()
+    time.sleep(5)
+    webull_paper_functions.watch_ticker_2_quality_check_paper()
+    time.sleep(5)
+    webull_paper_functions.watch_ticker_3_quality_check_paper()
+    time.sleep(5)
+    webull_paper_functions.watch_ticker_1_quality_check_paper()
+    time.sleep(5)
+    # Do a purchase, and cancel it
+    pcps_max_ticker=ticker_1_txt
+    vol = 1
+    price=update_price_before_buy_paper(pcps_max_ticker)
+    webull_paper_functions.prefill_buy_order(1)
+    webull_paper_functions.buy(str(price))
+    time.sleep(10)
+    webull_paper_functions.cancel_buy_order()
+
+
 def refresh():
     global driver
     try:
@@ -267,18 +289,27 @@ def fetch_prices():
     global ticker_2_op
     global ticker_3_op
 
+    # Get prices of tickers
     try:
-        # Get prices of tickers
         ticker_1_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
         ticker_1_price_value = ticker_1_price.text
+    except:
+        print("Ticker 1 price not available..")
+    try:
         ticker_2_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
         ticker_2_price_value = ticker_2_price.text
+    except:
+        print("Ticker 2 price not available..")
+    try:
         ticker_3_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
         ticker_3_price_value = ticker_3_price.text
+    except:
+        print("Ticker 3 price not available..")
         # Update the opening prices vs tickers
+    try:
         dictionary_price_open = {ticker_1_txt: ticker_1_op, ticker_2_txt: ticker_2_op, ticker_3_txt: ticker_3_op}
     except:
-        print("UNABLE to fetch prices now:", date_now)
+        print("UNABLE to update 1 min opening prices to dictionary..", date_now)
 
 def fetch_prices_paper():
     global dictionary_price_open
@@ -290,18 +321,28 @@ def fetch_prices_paper():
     global ticker_2_op
     global ticker_3_op
 
+    # Get prices of tickers
     try:
-        # Get prices of tickers
-        ticker_1_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+        ticker_1_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_1_price)
         ticker_1_price_value = ticker_1_price.text
-        ticker_2_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+    except:
+        print("Ticker 1 price not available..")
+    try:
+        ticker_2_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_2_price)
         ticker_2_price_value = ticker_2_price.text
-        ticker_3_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+    except:
+        print("Ticker 2 price not available..")
+    try:
+        ticker_3_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_3_price)
         ticker_3_price_value = ticker_3_price.text
+    except:
+        print("Ticker 3 price not available..")
         # Update the opening prices vs tickers
+    try:
         dictionary_price_open = {ticker_1_txt: ticker_1_op, ticker_2_txt: ticker_2_op, ticker_3_txt: ticker_3_op}
     except:
-        print("UNABLE to fetch prices now:", date_now)
+        print("UNABLE to update 1 min opening prices to dictionary..", date_now)
+
 def fetch_holding_price():
     global pcps_max_ticker
     global ticker_holding_price_value
@@ -338,13 +379,13 @@ def fetch_holding_price_paper():
 
     try:
         if pcps_max_ticker == ticker_1_txt:
-            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_1_price)
             ticker_holding_price_value = float(ticker_holding_price.text)
         elif pcps_max_ticker == ticker_2_txt:
-            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_2_price)
             ticker_holding_price_value = float(ticker_holding_price.text)
         elif pcps_max_ticker == ticker_3_txt:
-            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+            ticker_holding_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_3_price)
             ticker_holding_price_value = float(ticker_holding_price.text)
 
         ticker_holding_op = float(dictionary_price_open[pcps_max_ticker])
@@ -430,19 +471,23 @@ def append_pcps_this_min():
     global ticker1_pcps_this_min_lst
     global ticker2_pcps_this_min_lst
     global ticker3_pcps_this_min_lst
-
-    ticker1_pcps_this_min_lst.append(ticker_1_pcps)
-    ticker2_pcps_this_min_lst.append(ticker_2_pcps)
-    ticker3_pcps_this_min_lst.append(ticker_3_pcps)
+    try:
+        ticker1_pcps_this_min_lst.append(ticker_1_pcps)
+        ticker2_pcps_this_min_lst.append(ticker_2_pcps)
+        ticker3_pcps_this_min_lst.append(ticker_3_pcps)
+    except:
+        print("Unable to append pcps 1min lst..")
 
 def clear_pcps_lst_this_min():
     global ticker1_pcps_this_min_lst
     global ticker2_pcps_this_min_lst
     global ticker3_pcps_this_min_lst
-
-    ticker1_pcps_this_min_lst = []
-    ticker2_pcps_this_min_lst = []
-    ticker3_pcps_this_min_lst = []
+    try:
+        ticker1_pcps_this_min_lst = []
+        ticker2_pcps_this_min_lst = []
+        ticker3_pcps_this_min_lst = []
+    except:
+        print("Unable to clear 1min pcps lst...")
 def clear_20pcps_20freq():
     global ticker1_a20pcps_0_19
     global ticker2_a20pcps_0_19
@@ -450,13 +495,15 @@ def clear_20pcps_20freq():
     global ticker1_a20freq_0_19
     global ticker2_a20freq_0_19
     global ticker3_a20freq_0_19
-
-    ticker1_a20pcps_0_19 = 0
-    ticker2_a20pcps_0_19 = 0
-    ticker3_a20pcps_0_19 = 0
-    ticker1_a20freq_0_19 = 0
-    ticker2_a20freq_0_19 = 0
-    ticker3_a20freq_0_19 = 0
+    try:
+        ticker1_a20pcps_0_19 = 0
+        ticker2_a20pcps_0_19 = 0
+        ticker3_a20pcps_0_19 = 0
+        ticker1_a20freq_0_19 = 0
+        ticker2_a20freq_0_19 = 0
+        ticker3_a20freq_0_19 = 0
+    except:
+        print("Unable to clear pcps_0_19 and freq_0_19..")
 
 def global_get_prices():
     global pcps_this_min_lst
@@ -514,29 +561,31 @@ def calc_a20_pcps():
     global ticker1_pcps_this_min_lst
     global ticker2_pcps_this_min_lst
     global ticker3_pcps_this_min_lst
+    try:
+        if len(ticker1_pcps_this_min_lst) > 18:
+            ticker1_a20pcps_0_19 = sum(ticker1_pcps_this_min_lst)/20
+            print(ticker_1_txt, "lengt of pcps_this_min", len(ticker1_pcps_this_min_lst))
+        else:
+            ticker1_a20pcps_0_19=0
+            print(ticker_1_txt, "lengt of pcps_this_min TOO SHORT", len(ticker1_pcps_this_min_lst))
+        if len(ticker2_pcps_this_min_lst) > 18:
+            ticker2_a20pcps_0_19 = sum(ticker2_pcps_this_min_lst)/20
+            print(ticker_2_txt, "lengt of pcps_this_min", len(ticker2_pcps_this_min_lst))
+        else:
+            ticker2_a20pcps_0_19=0
+            print(ticker_2_txt, "lengt of pcps_this_min TOO SHORT", len(ticker2_pcps_this_min_lst))
+        if len(ticker3_pcps_this_min_lst) > 18:
+            ticker3_a20pcps_0_19 = sum(ticker3_pcps_this_min_lst)/20
+            print(ticker_3_txt, "lengt of pcps_this_min", len(ticker3_pcps_this_min_lst))
+        else:
+            ticker3_a20pcps_0_19=0
+            print(ticker_3_txt, "lengt of pcps_this_min TOO SHORT", len(ticker3_pcps_this_min_lst))
 
-    if len(ticker1_pcps_this_min_lst) >= 20:
-        ticker1_a20pcps_0_19 = sum(ticker1_pcps_this_min_lst)/20
-        print(ticker_1_txt, "lengt of pcps_this_min", len(ticker1_pcps_this_min_lst))
-    else:
-        ticker1_a20pcps_0_19=0
-        print(ticker_1_txt, "lengt of pcps_this_min TOO SHORT", len(ticker1_pcps_this_min_lst))
-    if len(ticker2_pcps_this_min_lst) >= 20:
-        ticker2_a20pcps_0_19 = sum(ticker2_pcps_this_min_lst)/20
-        print(ticker_2_txt, "lengt of pcps_this_min", len(ticker2_pcps_this_min_lst))
-    else:
-        ticker2_a20pcps_0_19=0
-        print(ticker_2_txt, "lengt of pcps_this_min TOO SHORT", len(ticker2_pcps_this_min_lst))
-    if len(ticker3_pcps_this_min_lst) >= 20:
-        ticker3_a20pcps_0_19 = sum(ticker3_pcps_this_min_lst)/20
-        print(ticker_3_txt, "lengt of pcps_this_min", len(ticker3_pcps_this_min_lst))
-    else:
-        ticker3_a20pcps_0_19=0
-        print(ticker_3_txt, "lengt of pcps_this_min TOO SHORT", len(ticker3_pcps_this_min_lst))
-
-    print(ticker_1_txt, "a20pcpc_0_19", ticker1_a20pcps_0_19)
-    print(ticker_2_txt, "a20pcpc_0_19", ticker2_a20pcps_0_19)
-    print(ticker_3_txt, "a20pcpc_0_19", ticker3_a20pcps_0_19)
+        print(ticker_1_txt, "a20pcpc_0_19", ticker1_a20pcps_0_19)
+        print(ticker_2_txt, "a20pcpc_0_19", ticker2_a20pcps_0_19)
+        print(ticker_3_txt, "a20pcpc_0_19", ticker3_a20pcps_0_19)
+    except:
+        print("Unable to calcualte a20_pcps_0_19..")
 
 
 def calc_a20_freq():
@@ -618,12 +667,12 @@ def clear_15_min_candle():
         print(ticker_3_txt,"Previous 15 min to be cleared", ticker3_prev_15min_candle)
         print("\n")
         print("\n")
+        ticker1_prev_15min_candle = []
+        ticker2_prev_15min_candle = []
+        ticker3_prev_15min_candle = []
     except:
         print("Unable to clear 15 min candles")
 
-    ticker1_prev_15min_candle = []
-    ticker2_prev_15min_candle = []
-    ticker3_prev_15min_candle = []
 
 def calc_15_min_candle():
     global ticker1_prev_15min_high
@@ -1003,13 +1052,13 @@ def update_price_before_buy_paper(pcps_max_ticker):
     try:
 
         if pcps_max_ticker == ticker_1_txt:
-            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_1_price)
             ticker_buy_price = float(ticker_buy_price.text)
         elif pcps_max_ticker == ticker_2_txt:
-            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_2_price)
             ticker_buy_price = float(ticker_buy_price.text)
         elif pcps_max_ticker == ticker_3_txt:
-            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+            ticker_buy_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_3_price)
             ticker_buy_price = float(ticker_buy_price.text)
 
         ticker_buy_price = ticker_buy_price * (1 + (pcps_order_addon / 100))
@@ -1052,13 +1101,13 @@ def update_price_before_sell_paper(pcps_max_ticker):
     try:
         # 1. Get price now of holding ticker
         if pcps_max_ticker == ticker_1_txt:
-            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_price)
+            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_1_price)
             ticker_sell_price = float(ticker_sell_price.text)
         elif pcps_max_ticker == ticker_2_txt:
-            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_price)
+            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_2_price)
             ticker_sell_price = float(ticker_sell_price.text)
         elif pcps_max_ticker == ticker_3_txt:
-            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_price)
+            ticker_sell_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_3_price)
             ticker_sell_price = float(ticker_sell_price.text)
 
         ticker_sell_price = ticker_sell_price * (1 - (pcps_order_addon / 100))
@@ -1083,16 +1132,20 @@ def get_watchlist_tickers():
         # Get watchlist ticker no 1
         ticker_1 = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[1]/div[1]/span[1]")
         ticker_1_txt = ticker_1.text
-
+    except:
+        print("Ticker 1 not available")
+    try:
         # GET Watchlist ticker no2
         ticker_2 = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[1]/div[1]/span[1]")
         ticker_2_txt = ticker_2.text
-
+    except:
+        print("Ticker 2 not available")
+    try:
         # Get watchlist ticker no3
         ticker_3 = driver.find_element_by_xpath("/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[1]/div[1]/span[1]")
         ticker_3_txt = ticker_3.text
     except:
-        print("Unable to fetch watchlist tickers...")
+        print("Ticker 3 not available")
 
 def get_watchlist_tickers_paper():
     global driver
@@ -1101,18 +1154,24 @@ def get_watchlist_tickers_paper():
     global ticker_3_txt
     try:
         # Get watchlist ticker no 1
-        ticker_1 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_1_txt)
+        ticker_1 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_1_txt)
         ticker_1_txt = ticker_1.text
-
+    except:
+        print("Ticker 1 not available")
+    try:
         # GET Watchlist ticker no2
-        ticker_2 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_2_txt)
+        ticker_2 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_2_txt)
         ticker_2_txt = ticker_2.text
-
+    except:
+        print("Ticker 2 not available")
+    try:
         # Get watchlist ticker no3
-        ticker_3 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements.e_ticker_3_txt)
+        ticker_3 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_3_txt)
         ticker_3_txt = ticker_3.text
     except:
-        print("Unable to fetch watchlist tickers...")
+        print("Ticker 3 not available")
+
+
 def open_webull():
     global driver
 
@@ -1220,50 +1279,52 @@ def save_prices():
 
 
 def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, trade_succes_cnt, a20pcps_0_19, a20freq_0_19, ticker,time_entry,time_exit):
+    try:
+        subfolder = "/home/sjefen/Dropbox/log/pcps_PnL"
+        tday = str(datetime.datetime.now().date())
+        l_fileName = str(subfolder) + "/" + str(tday)
 
-    subfolder = "/home/sjefen/Dropbox/log/pcps_PnL"
-    tday = str(datetime.datetime.now().date())
-    l_fileName = str(subfolder) + "/" + str(tday)
+        os.makedirs(subfolder, exist_ok=True)
 
-    os.makedirs(subfolder, exist_ok=True)
-
-    l_file = open(l_fileName, "a")
-    l_file.write("Time entry:       ")
-    l_file.write(str(time_entry))
-    l_file.write("\n")
-    l_file.write("Time exit:        ")
-    l_file.write(str(time_exit))
-    l_file.write("\n")
-    l_file.write("Ticker:           ")
-    l_file.write(str(ticker))
-    l_file.write("\n")
-    l_file.write("Size(USD):        ")
-    l_file.write(str(trading_cash_usd))
-    l_file.write("\n")
-    l_file.write("PnL trade:        ")
-    l_file.write(str(pnl_this_trade))
-    l_file.write("\n")
-    l_file.write("PnL total:        ")
-    l_file.write(str(pnl_total))
-    l_file.write("\n")
-    l_file.write("PnL trade w fees: ")
-    l_file.write(str(pnl_this_trade_w_fees))
-    l_file.write("\n")
-    l_file.write("PnL total w fees: ")
-    l_file.write(str(pnl_total_w_fees))
-    l_file.write("\n")
-    l_file.write("Trade cnt succ:   ")
-    l_file.write(str(trade_succes_cnt))
-    l_file.write("\n")
-    l_file.write("a20pcps_0_19:     ")
-    l_file.write(str(a20pcps_0_19))
-    l_file.write("\n")
-    l_file.write("a20freq_0_19:     ")
-    l_file.write(str(a20freq_0_19))
-    l_file.write("\n")
-    l_file.write("\n")
-    l_file.close()
-    print("****Successfully written to log file!!")
+        l_file = open(l_fileName, "a")
+        l_file.write("Time entry:       ")
+        l_file.write(str(time_entry))
+        l_file.write("\n")
+        l_file.write("Time exit:        ")
+        l_file.write(str(time_exit))
+        l_file.write("\n")
+        l_file.write("Ticker:           ")
+        l_file.write(str(ticker))
+        l_file.write("\n")
+        l_file.write("Size(USD):        ")
+        l_file.write(str(trading_cash_usd))
+        l_file.write("\n")
+        l_file.write("PnL trade:        ")
+        l_file.write(str(pnl_this_trade))
+        l_file.write("\n")
+        l_file.write("PnL total:        ")
+        l_file.write(str(pnl_total))
+        l_file.write("\n")
+        l_file.write("PnL trade w fees: ")
+        l_file.write(str(pnl_this_trade_w_fees))
+        l_file.write("\n")
+        l_file.write("PnL total w fees: ")
+        l_file.write(str(pnl_total_w_fees))
+        l_file.write("\n")
+        l_file.write("Trade cnt succ:   ")
+        l_file.write(str(trade_succes_cnt))
+        l_file.write("\n")
+        l_file.write("a20pcps_0_19:     ")
+        l_file.write(str(a20pcps_0_19))
+        l_file.write("\n")
+        l_file.write("a20freq_0_19:     ")
+        l_file.write(str(a20freq_0_19))
+        l_file.write("\n")
+        l_file.write("\n")
+        l_file.close()
+        print("****Successfully written to log file!!")
+    except:
+        print("Unable to write to log file...")
 
 def pcps():
     global driver
@@ -2124,45 +2185,52 @@ def pcps_paper():
 
 def set_15min_breakout_exit():
     global ticker_holding_exit_point
+    try:
+        if pcps_max_ticker == ticker_1_txt and ticker1_prev_15min_op !=0:
+            ticker_holding_exit_point = float(ticker1_prev_15min_op)
+        elif pcps_max_ticker == ticker_2_txt and ticker2_prev_15min_op !=0:
+            ticker_holding_exit_point = float(ticker2_prev_15min_op)
+        elif pcps_max_ticker == ticker_3_txt and ticker3_prev_15min_op !=0:
+            ticker_holding_exit_point = float(ticker3_prev_15min_op)
 
-    if pcps_max_ticker == ticker_1_txt and ticker1_prev_15min_op !=0:
-        ticker_holding_exit_point = float(ticker1_prev_15min_op)
-    elif pcps_max_ticker == ticker_2_txt and ticker2_prev_15min_op !=0:
-        ticker_holding_exit_point = float(ticker2_prev_15min_op)
-    elif pcps_max_ticker == ticker_3_txt and ticker3_prev_15min_op !=0:
-        ticker_holding_exit_point = float(ticker3_prev_15min_op)
-
-    print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
-    print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
-    print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
+        print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
+        print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
+        print(pcps_max_ticker, "15min breakout exit point:",ticker_holding_exit_point)
+    except:
+        print("Unable to set 15min breakout exit point...")
 
 def exit_15min_breakout_stopout():
-
-    if float(ticker_holding_price_value) < float(ticker_holding_exit_point):
-        print(pcps_max_ticker, " Exiting trade -- price broke low of previous 15min..")
-        print(pcps_max_ticker, "current price", ticker_holding_price_value)
-        print(pcps_max_ticker, "Exit point", ticker_holding_exit_point)
-        exit_now="yes"
-        return exit_now
-    else:
-        print(pcps_max_ticker, "current price", ticker_holding_price_value)
-        print(pcps_max_ticker, "Exit point", ticker_holding_exit_point)
-        exit_now="no"
-        return exit_now
+    try:
+        if float(ticker_holding_price_value) < float(ticker_holding_exit_point):
+            print(pcps_max_ticker, " Exiting trade -- price broke low of previous 15min..")
+            print(pcps_max_ticker, "current price", ticker_holding_price_value)
+            print(pcps_max_ticker, "Exit point", ticker_holding_exit_point)
+            exit_now="yes"
+            return exit_now
+        else:
+            print(pcps_max_ticker, "current price", ticker_holding_price_value)
+            print(pcps_max_ticker, "Exit point", ticker_holding_exit_point)
+            exit_now="no"
+            return exit_now
+    except:
+        print("Unable to check 15min breakout stoppout yes/no")
 
 def exit_15min_profit_limit():
-    if float(break_even_or_greater) >= float(profit_target):
-        print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
-        print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
-        print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
-        print(pcps_max_ticker, "break even or greater: ", break_even_or_greater)
-        exit_now="yes"
-        return exit_now
-    else:
-        print(pcps_max_ticker, "break even or greater", break_even_or_greater)
-        print(pcps_max_ticker, "15min_breakout_profit limit", profit_target)
-        exit_now="no"
-        return exit_now
+    try:
+        if float(break_even_or_greater) >= float(profit_target):
+            print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
+            print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
+            print(pcps_max_ticker, "exiting trade --- reached PROFIT LIMIT..")
+            print(pcps_max_ticker, "break even or greater: ", break_even_or_greater)
+            exit_now="yes"
+            return exit_now
+        else:
+            print(pcps_max_ticker, "break even or greater", break_even_or_greater)
+            print(pcps_max_ticker, "15min_breakout_profit limit", profit_target)
+            exit_now="no"
+            return exit_now
+    except:
+        print("Unable to check 15min profit limit stoppout...")
 
 def pcps_test():
     global driver
@@ -2725,30 +2793,92 @@ elif trade_mode =="p":
 
     print("Daily trade cnt reached - stopping")
 
+
 else:
+    test_trade="s"
     webull_paper_functions.open_webull()
     webull_paper_functions.logon_webull()
     time.sleep(10)
+    webull_paper_functions.refresh()
     global_trader()
     global_get_prices_paper()
     timer_15min()
-    #pretend we hold
-    pcps_max_ticker=ticker_1_txt
-    holding_status=1
-    vol=1
-    modify_exit_cnt = 0
-    webull_paper_functions.prefill_sell_order(vol)
-    price=update_price_before_sell_paper(pcps_max_ticker)
-    trade_status = webull_paper_functions.sell(str(price))
-    while trade_status != "s":
-        print("UNABLE TO SELL _ TRYING AGAIN")
-        webull_paper_functions.refresh()
-        time.sleep(10)
+    if test_trade == "s":
+        #pretend we hold
+        pcps_max_ticker=ticker_1_txt
+        holding_status=1
+        vol=1
+        modify_exit_cnt = 0
         webull_paper_functions.prefill_sell_order(vol)
-        price = update_price_before_sell_paper(pcps_max_ticker)
+        price=update_price_before_sell_paper(pcps_max_ticker)
         trade_status = webull_paper_functions.sell(str(price))
-    modify_exit_cnt = 1
-    webull_paper_functions.check_filled_status()
+        while trade_status != "s":
+            print("UNABLE TO SELL _ TRYING AGAIN")
+            webull_paper_functions.refresh()
+            time.sleep(10)
+            webull_paper_functions.prefill_sell_order(vol)
+            price = update_price_before_sell_paper(pcps_max_ticker)
+            trade_status = webull_paper_functions.sell(str(price))
+        modify_exit_cnt = 1
+        webull_paper_functions.check_filled_status()
+    elif test_trade == "b":
+        #pretend we buy
+        webull_paper_functions.watch_ticker_1_quality_check_paper()
+        vol = find_volume(float(ticker_1_price_value))
+        price = update_price_before_buy_paper(ticker_1_txt)
+        price_buy = float(price)
+        webull_paper_functions.prefill_buy_order(vol)
+        trade_status = webull_paper_functions.buy(str(price))
+        pcps_max_ticker = ticker_1_txt
+        #Ask if manual cancel && Check if order was filled
+        if trade_status == "b":
+            modify_entry_cnt = 1
+            filled_status="unknown"
+            #Wait until the order is sent to exhange, if not it will look at the order bf
+            time.sleep(5)
+            #Check filled status
+            filled_status=webull_paper_functions.check_filled_status()
+            if filled_status == "filled":
+                modify_entry_cnt = 0
+                time.sleep(0.5)
+                modify_entry_cnt = 0
+                modify_entry_tries = 0
+                # Set initial exit point
+                if use_trade_strategy == strategy_15min_breakout:
+                    set_15min_breakout_exit()
+                else:
+                    ticker_holding_exit_point = (float(price) * (1 - ticker_holding_exit_offset))
+                print("The initial exit point is: ", ticker_holding_exit_point)
+                print("The buy Limit price was: ", price)
+                holding_status=1
+                #Update P&L status
+                bought_price = price
+            elif filled_status == "cancelled":
+                #Double check in case the order was filled
+                for check_now in range(0, check_filled_if_cancelled_maxTries):
+                    print("///Double checking if the order was actually fillled after cancelling")
+                    print("Double check cnt: ", check_now)
+                    time.sleep(1)
+                    filled_status=webull_paper_functions.check_filled_status()
+                    if filled_status == "filled":
+                        modify_entry_cnt = 0
+                        modify_entry_tries = 0
+                        # Set initial exit point
+                        if use_trade_strategy == strategy_15min_breakout:
+                            set_15min_breakout_exit()
+                        else:
+                            ticker_holding_exit_point = (float(price) * (1 - ticker_holding_exit_offset))
+                        print("The initial exit point is: ", ticker_holding_exit_point)
+                        print("The buy Limit price was: ", price)
+                        holding_status = 1
+                        bought_price = price
+                        break
+
+                if filled_status != "filled":
+                    print("Buy cancelled - exiting the trade")
+                    #Initialize trade counters.
+                    modify_entry_cnt = 0
+                    modify_entry_tries = 0
 
 
 
