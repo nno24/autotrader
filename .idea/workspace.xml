@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76d85a71-021c-4f76-a27d-945dd91b4f34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_threading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrader_linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrader_linux.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ttt.py" beforeDir="false" afterPath="$PROJECT_DIR$/ttt.py" afterDir="false" />
     </list>
@@ -38,7 +36,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/repos/datascience" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.autotrader_linux">
+  <component name="RunManager" selected="Python.ttt">
     <configuration name="autotrader_linux" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="autotrader" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.autotrader_linux" />
         <item itemvalue="Python.ttt" />
+        <item itemvalue="Python.autotrader_linux" />
         <item itemvalue="Python.test_threading" />
         <item itemvalue="Python.webull_paper_functions" />
         <item itemvalue="Python.query_pcps_freq" />
@@ -184,29 +182,29 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="833" y="354" key="FileChooserDialogImpl/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1580933155705" />
-    <state width="1844" height="175" key="GridCell.Tab.0.bottom" timestamp="1586899886035">
+    <state width="1844" height="175" key="GridCell.Tab.0.bottom" timestamp="1586900401818">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.bottom/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442102" />
-    <state width="1844" height="175" key="GridCell.Tab.0.bottom/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586899886035" />
+    <state width="1844" height="175" key="GridCell.Tab.0.bottom/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586900401818" />
     <state width="1836" height="305" key="GridCell.Tab.0.bottom/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
-    <state width="1844" height="175" key="GridCell.Tab.0.center" timestamp="1586899886035">
+    <state width="1844" height="175" key="GridCell.Tab.0.center" timestamp="1586900401818">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.center/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442101" />
-    <state width="1844" height="175" key="GridCell.Tab.0.center/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586899886035" />
+    <state width="1844" height="175" key="GridCell.Tab.0.center/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586900401818" />
     <state width="1836" height="305" key="GridCell.Tab.0.center/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
-    <state width="1844" height="175" key="GridCell.Tab.0.left" timestamp="1586899886035">
+    <state width="1844" height="175" key="GridCell.Tab.0.left" timestamp="1586900401818">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.left/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442101" />
-    <state width="1844" height="175" key="GridCell.Tab.0.left/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586899886035" />
+    <state width="1844" height="175" key="GridCell.Tab.0.left/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586900401818" />
     <state width="1836" height="305" key="GridCell.Tab.0.left/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
-    <state width="1844" height="175" key="GridCell.Tab.0.right" timestamp="1586899886035">
+    <state width="1844" height="175" key="GridCell.Tab.0.right" timestamp="1586900401818">
       <screen x="57" y="21" width="1863" height="1059" />
     </state>
     <state width="1302" height="296" key="GridCell.Tab.0.right/41.15.1325.753/1920.312.1366.768@41.15.1325.753" timestamp="1580493442102" />
-    <state width="1844" height="175" key="GridCell.Tab.0.right/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586899886035" />
+    <state width="1844" height="175" key="GridCell.Tab.0.right/57.21.1863.1059/1920.312.1366.768@57.21.1863.1059" timestamp="1586900401818" />
     <state width="1836" height="305" key="GridCell.Tab.0.right/65.24.1855.1056/1920.312.1366.768@65.24.1855.1056" timestamp="1581448510810" />
     <state x="446" y="212" key="SettingsEditor" timestamp="1586793028371">
       <screen x="57" y="21" width="1863" height="1059" />

@@ -163,7 +163,7 @@ filled_status = "unknown"
 price=0.0
 
 # monitor time and day
-trade_range_days = range(0, 7)
+trade_range_days = range(0, 5)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
 time_getReady = "15:30:06"

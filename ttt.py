@@ -1,9 +1,7 @@
 import threading, datetime, time
 
-x = 1
+x=5
 
-while x != 10:
-    while 1:
-        time.sleep(1)
-        x+=1
-        print(x)
+if x in range(0,5):
+    print("yes")
+
