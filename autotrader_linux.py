@@ -167,8 +167,7 @@ trade_range_days = range(0, 7)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
 time_getReady = "15:30:06"
-#time_getReady = "14:30:06"
-time_lastCall = "21:30:00"
+time_lastCall = "21:45:00"
 time_lastCallExit = "21:55:00"
 
 # P&L parameters
@@ -293,23 +292,13 @@ def fetch_prices():
     try:
         ticker_1_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[2]/div[1]')
         ticker_1_price_value = ticker_1_price.text
-    except:
-        print("Ticker 1 price not available..")
-    try:
         ticker_2_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[2]/div[1]')
         ticker_2_price_value = ticker_2_price.text
-    except:
-        print("Ticker 2 price not available..")
-    try:
         ticker_3_price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/div[1]/div[1]/div[2]/div/div[2]/div/div[2]/div/li[3]/div[2]/div[2]/div[1]')
         ticker_3_price_value = ticker_3_price.text
-    except:
-        print("Ticker 3 price not available..")
-        # Update the opening prices vs tickers
-    try:
         dictionary_price_open = {ticker_1_txt: ticker_1_op, ticker_2_txt: ticker_2_op, ticker_3_txt: ticker_3_op}
     except:
-        print("UNABLE to update 1 min opening prices to dictionary..", date_now)
+        print("UNABLE to fetch prices", date_now)
 
 def fetch_prices_paper():
     global dictionary_price_open
@@ -325,23 +314,13 @@ def fetch_prices_paper():
     try:
         ticker_1_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_1_price)
         ticker_1_price_value = ticker_1_price.text
-    except:
-        print("Ticker 1 price not available..")
-    try:
         ticker_2_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_2_price)
         ticker_2_price_value = ticker_2_price.text
-    except:
-        print("Ticker 2 price not available..")
-    try:
         ticker_3_price = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_3_price)
         ticker_3_price_value = ticker_3_price.text
-    except:
-        print("Ticker 3 price not available..")
-        # Update the opening prices vs tickers
-    try:
         dictionary_price_open = {ticker_1_txt: ticker_1_op, ticker_2_txt: ticker_2_op, ticker_3_txt: ticker_3_op}
     except:
-        print("UNABLE to update 1 min opening prices to dictionary..", date_now)
+        print("UNABLE to fetch prices..", date_now)
 
 def fetch_holding_price():
     global pcps_max_ticker
@@ -808,10 +787,43 @@ def global_trader():
     global ticker3_prev_15min_cp
     global ticker3_prev_15min_op
     global build_15min_candle
+    global time_now
 
     #Start the global trader as a thread
-    threading.Timer(timer_interval, global_trader).start()
+    t=threading.Timer(timer_interval, global_trader)
+    if time_now > time_lastCall:
+        t.cancel()
+        print("Initializing trading parameters for tomorrow...")
+        ticker_1_op = 0.0
+        ticker1_prev_high = 0
+        ticker1_prev_1min_candle = []
+        ticker1_prev_15min_candle = []
+        ticker1_prev_15min_low = 0
+        ticker1_prev_15min_high = 0
+        ticker1_prev_15min_op = 0
+        ticker1_prev_15min_cp = 0
+        ticker_2_op = 0.0
+        ticker2_prev_high = 0
+        ticker2_prev_1min_candle = []
+        ticker2_prev_15min_candle = []
+        ticker2_prev_15min_low = 0
+        ticker2_prev_15min_high = 0
+        ticker2_prev_15min_op = 0
+        ticker2_prev_15min_cp = 0
+        ticker_3_op = 0.0
+        ticker3_prev_high = 0
+        ticker3_prev_1min_candle = []
+        ticker3_prev_15min_candle = []
+        ticker3_prev_15min_low = 0
+        ticker3_prev_15min_high = 0
+        ticker3_prev_15min_op = 0
+        ticker3_prev_15min_cp = 0
+        build_15min_candle = "no"
+        return 0
+    t.start()
 
+    time_now = str(datetime.datetime.now().time())
+    print(time_now)
     #Increment counters
     timer_cnt+=1
     timer_cnt_sec+=1
@@ -840,6 +852,19 @@ def global_trader():
         get_watchlist_tickers()
     else:
         get_watchlist_tickers_paper()
+
+    #Fetch & prices
+    if trade_status == "b" or trade_status == "s" or holding_status == 1:
+        if trade_mode == "r":
+            fetch_holding_price()
+        else:
+            fetch_holding_price_paper()
+    if trade_mode == "r":
+        fetch_prices()
+    else:
+        fetch_prices_paper()
+
+    save_prices()
 
     #Check if watchlist are different - if so set open prices to zero
     if ticker_1_txt != ticker_1_prev_txt:
@@ -996,7 +1021,13 @@ def timer_15min():
     global build_15min_candle
     global current_minute
 
-    threading.Timer(timer_interval, timer_15min).start()
+    t15=threading.Timer(timer_interval, timer_15min)
+    if time_now > time_lastCall:
+        t15.cancel()
+        current_minute = 999
+        return 0
+    t15.start()
+    print(time_now)
     interval15_startpoints=[0,15,30,45]
 
     if current_minute != time_now_min or current_minute == 999:
@@ -1156,20 +1187,13 @@ def get_watchlist_tickers_paper():
         # Get watchlist ticker no 1
         ticker_1 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_1_txt)
         ticker_1_txt = ticker_1.text
-    except:
-        print("Ticker 1 not available")
-    try:
         # GET Watchlist ticker no2
         ticker_2 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_2_txt)
         ticker_2_txt = ticker_2.text
-    except:
-        print("Ticker 2 not available")
-    try:
-        # Get watchlist ticker no3
         ticker_3 = webull_paper_functions.driver.find_element_by_xpath(webull_webelements_2.e_ticker_3_txt)
         ticker_3_txt = ticker_3.text
     except:
-        print("Ticker 3 not available")
+        print("Tickers not available")
 
 
 def open_webull():
@@ -1403,8 +1427,6 @@ def pcps():
     global price_buy
 
 
-    #Set time now minute
-    time_now_min_start = time_now_min
 
     # Start the "Enter trade routine"
     if use_trade_strategy == strategy_pcps:
@@ -1478,7 +1500,6 @@ def pcps():
             orb_breakout_true = "no"
             while orb_breakout_true == "no":
                 #Check time
-                time_now = str(datetime.datetime.now().time())
                 if time_now > time_lastCall:
                     print("Trading reached EOD - exiting entry routine")
                     return 5
@@ -1650,7 +1671,6 @@ def pcps():
     while holding_status == 1 and bear_bailout_status == 0:
         time.sleep(1)
         today = datetime.datetime.today().weekday()
-        time_now = str(datetime.datetime.now().time())
         if autotrader != "yes":
             #0. Manual input for selling ( first priority - Only asking 1 time)
             if sell_now == "maybe":
@@ -1826,8 +1846,6 @@ def pcps_paper():
 
 
 
-    #Set time now minute
-    time_now_min_start = time_now_min
 
     # Start the "Enter trade routine"
     if use_trade_strategy == strategy_pcps:
@@ -1901,7 +1919,6 @@ def pcps_paper():
             orb_breakout_true = "no"
             while orb_breakout_true == "no":
                 #Check time
-                time_now = str(datetime.datetime.now().time())
                 if time_now > time_lastCall:
                     print("Trading reached EOD - exiting entry routine")
                     return 5
@@ -1915,7 +1932,6 @@ def pcps_paper():
                         if float(ticker_1_price_value) > float(ticker1_prev_high) and float(ticker1_a20pcps_0_19) >= a20pcps_0_19_threshold and float(ticker1_a20freq_0_19) >= a20freq_0_19_threshold:
                             price = update_price_before_buy_paper(ticker_1_txt)
                             price_buy = float(price)
-                            time_now = str(datetime.datetime.now().time())
                             time_entry=time_now
                             trade_status = "b"
                             pcps_max_ticker = ticker_1_txt
@@ -1935,7 +1951,6 @@ def pcps_paper():
                         if float(ticker_2_price_value) > float(ticker2_prev_high) and float(ticker2_a20pcps_0_19) >= a20pcps_0_19_threshold and float(ticker2_a20freq_0_19) >= a20freq_0_19_threshold:
                             price = update_price_before_buy_paper(ticker_2_txt)
                             price_buy = float(price)
-                            time_now = str(datetime.datetime.now().time())
                             time_entry=time_now
                             trade_status = "b"
                             pcps_max_ticker = ticker_2_txt
@@ -1955,7 +1970,6 @@ def pcps_paper():
                         if float(ticker_3_price_value) > float(ticker3_prev_high) and float(ticker3_a20pcps_0_19) >= a20pcps_0_19_threshold and float(ticker3_a20freq_0_19) >= a20freq_0_19_threshold:
                             price = update_price_before_buy_paper(ticker_3_txt)
                             price_buy = float(price)
-                            time_now = str(datetime.datetime.now().time())
                             time_entry=time_now
                             trade_status = "b"
                             pcps_max_ticker = ticker_3_txt
@@ -2011,6 +2025,9 @@ def pcps_paper():
                     val_a20pcps_0_19 = ticker3_a20pcps_0_19
                     val_a20freq_0_19 = ticker3_a20freq_0_19
                     break
+                if time_now > time_lastCall:
+                    print("Leaving pcps cause time limit reached for today..")
+                    return 3
             except ValueError as e:
                 print(e)
                 print("15min breakout: unable to compare prices...")
@@ -2098,10 +2115,22 @@ def pcps_paper():
                     price=update_price_before_sell_paper(pcps_max_ticker)
                     trade_status=webull_paper_functions.sell(str(price))
                 break
+            if time_now > time_lastCallExit:
+                print("Selling now -- reached time linim of today...")
+                webull_paper_functions.prefill_sell_order(vol)
+                price = update_price_before_sell_paper(pcps_max_ticker)
+                trade_status = webull_paper_functions.sell(str(price))
+                while trade_status != "s":
+                    print("UNABLE TO SELL _ TRYING AGAIN")
+                    webull_paper_functions.refresh()
+                    time.sleep(10)
+                    webull_paper_functions.prefill_sell_order(vol)
+                    price = update_price_before_sell_paper(pcps_max_ticker)
+                    trade_status = webull_paper_functions.sell(str(price))
+                break
     else:
         while holding_status == 1 and bear_bailout_status == 0:
             today = datetime.datetime.today().weekday()
-            time_now = str(datetime.datetime.now().time())
 
             #1. Call the bear bailout exit if holding ticker
             if holding_status == 1 and bear_bailout_status == 0 and pcps_exit == 0 and trade_status != "s":
@@ -2150,7 +2179,6 @@ def pcps_paper():
             break_even_or_greater = 0
             trade_successful_cnt+=1
             trade_status = "na"
-            time_now = str(datetime.datetime.now().time())
             time_exit = time_now
 
             #Update P&L
@@ -2309,8 +2337,6 @@ def pcps_test():
     global price_buy
 
 
-    #Set time now minute
-    time_now_min_start = time_now_min
 
     # Start the "Enter trade routine"
     if use_trade_strategy == strategy_pcps:
@@ -2384,7 +2410,6 @@ def pcps_test():
             orb_breakout_true = "no"
             while orb_breakout_true == "no":
                 #Check time
-                time_now = str(datetime.datetime.now().time())
                 if time_now > time_lastCall:
                     print("Trading reached EOD - exiting entry routine")
                     return 5
@@ -2558,7 +2583,6 @@ def pcps_test():
     while holding_status == 1 and bear_bailout_status == 0:
         time.sleep(1)
         today = datetime.datetime.today().weekday()
-        time_now = str(datetime.datetime.now().time())
         if autotrader != "yes":
             #0. Manual input for selling ( first priority - Only asking 1 time)
             if sell_now == "maybe":
@@ -2697,14 +2721,24 @@ def check_time_day():
             print("initialized trade_fail_cnt: ", trade_fail_cnt)
             print("initialized trade_successful cnt: ", trade_successful_cnt)
 
-            #Initialize intraday PnL values
-
             #Update P&L
             PnL_this_trade = 0.0
             PnL_this_trade = 0.0
             PnL_total = 0.0
             PnL_this_trade_w_fees = 0.0
             PnL_total_w_fees = 0.0
+
+            while time_now > time_lastCall or time_now < time_getReady:
+                time_now = str(datetime.datetime.now().time())
+                time.sleep(0.5)
+                print("Waiting to get ready..", time_now)
+
+            print("Getting ready..")
+            webull_paper_functions.refresh()
+            get_watchlist_tickers_paper()
+            global_trader()
+            timer_15min()
+            trade_true="yes"
     else:
         print("its weekend")
         trade_true = "no"
@@ -2763,10 +2797,9 @@ elif trade_mode =="p":
     webull_paper_functions.refresh()
     get_watchlist_tickers_paper()
     global_trader()
-    global_get_prices_paper()
     timer_15min()
 
-    while trade_successful_cnt <= trade_cnt_max:
+    while 1:
         trade_or_not()
         #Start new trade as long as previous trade was completed
         while holding_status == 1:
@@ -2783,15 +2816,12 @@ elif trade_mode =="p":
             trade_fail_cnt+=1
             print("Successful trades: ", trade_successful_cnt)
             print("Trade failed, total fails: ",trade_fail_cnt)
-        elif trade_pcps == 5:
-            #Trading reached EOD - getting setup for tomorrow
-            pass
+        elif trade_pcps == 3:
+            print("TRADING REACHED EOD -- getting ready for tomorrow..")
         else:
             #NOTE the successful cnt is incremented in the pcps function.
             print("Successful trades: ", trade_successful_cnt)
             print("Trade failed, total fails: ",trade_fail_cnt)
-
-    print("Daily trade cnt reached - stopping")
 
 
 else:
