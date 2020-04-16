@@ -2710,6 +2710,10 @@ def check_time_day():
 
         if time_now < time_lastCall and time_now > time_getReady:
             print("let' trade")
+            webull_paper_functions.refresh()
+            get_watchlist_tickers_paper()
+            global_trader()
+            timer_15min()
             trade_true = "yes"
         else:
             print("it's too late. waiting for tomorrow")
@@ -2734,16 +2738,22 @@ def check_time_day():
                 time.sleep(0.5)
                 print("Waiting to get ready..", time_now)
 
-            print("Getting ready..")
-            webull_paper_functions.refresh()
-            get_watchlist_tickers_paper()
-            global_trader()
-            timer_15min()
-            trade_true="yes"
+            if today in trade_range_days:
+                print("let' trade")
+                webull_paper_functions.refresh()
+                get_watchlist_tickers_paper()
+                global_trader()
+                timer_15min()
+                trade_true="yes"
+            else:
+                print("its weeknd..")
+                print(time_now)
+                trade_true="no"
     else:
         print("its weekend")
         trade_true = "no"
         time.sleep(3600)
+        time_now = str(datetime.datetime.now().time())
 
     return trade_true
 
@@ -2794,11 +2804,6 @@ elif trade_mode =="p":
     trade_successful_cnt=0
     webull_paper_functions.open_webull()
     webull_paper_functions.logon_webull()
-    trade_or_not()
-    webull_paper_functions.refresh()
-    get_watchlist_tickers_paper()
-    global_trader()
-    timer_15min()
 
     while 1:
         trade_or_not()
