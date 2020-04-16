@@ -791,7 +791,7 @@ def global_trader():
 
     #Start the global trader as a thread
     t=threading.Timer(timer_interval, global_trader)
-    if time_now > time_lastCall:
+    if time_now > time_lastCallExit:
         t.cancel()
         print("Initializing trading parameters for tomorrow...")
         ticker_1_op = 0.0
@@ -1022,7 +1022,7 @@ def timer_15min():
     global current_minute
 
     t15=threading.Timer(timer_interval, timer_15min)
-    if time_now > time_lastCall:
+    if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
         return 0
@@ -1266,7 +1266,7 @@ def watch_ticker_3_quality_check():
 
 def save_prices():
     try:
-        subfolder = "/home/sjefen/Dropbox/log/prices"
+        subfolder = "/home/autotrader/log/prices"
         tday = str(datetime.datetime.now().date())
         time_n = datetime.datetime.now().time()
         subfolder2 = str(subfolder) + "/" + str(tday)
@@ -1304,7 +1304,7 @@ def save_prices():
 
 def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, trade_succes_cnt, a20pcps_0_19, a20freq_0_19, ticker,time_entry,time_exit):
     try:
-        subfolder = "/home/sjefen/Dropbox/log/pcps_PnL"
+        subfolder = "/home/autotrader/log/pcps_PnL"
         tday = str(datetime.datetime.now().date())
         l_fileName = str(subfolder) + "/" + str(tday)
 
@@ -2089,6 +2089,7 @@ def pcps_paper():
     # Start the "Exit" routine..
     if use_trade_strategy == strategy_15min_breakout:
         while holding_status == 1:
+            print(time_now)
             exit_now=exit_15min_breakout_stopout()
             if exit_now == "yes":
                 webull_paper_functions.prefill_sell_order(vol)
@@ -2115,7 +2116,7 @@ def pcps_paper():
                     price=update_price_before_sell_paper(pcps_max_ticker)
                     trade_status=webull_paper_functions.sell(str(price))
                 break
-            if time_now > time_lastCallExit:
+            if time_now >= time_lastCallExit:
                 print("Selling now -- reached time linim of today...")
                 webull_paper_functions.prefill_sell_order(vol)
                 price = update_price_before_sell_paper(pcps_max_ticker)
@@ -2728,7 +2729,7 @@ def check_time_day():
             PnL_this_trade_w_fees = 0.0
             PnL_total_w_fees = 0.0
 
-            while time_now > time_lastCall or time_now < time_getReady:
+            while time_now > time_lastCallExit or time_now < time_getReady:
                 time_now = str(datetime.datetime.now().time())
                 time.sleep(0.5)
                 print("Waiting to get ready..", time_now)
