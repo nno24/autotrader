@@ -219,7 +219,7 @@ ticker2_prev_15min_cp = 0
 ticker3_prev_15min_cp = 0
 build_15min_candle=""
 current_minute=999   #iniial value, so that the 15 min can be built on open.
-profit_target=20.0   #if gain/trade (%) exceeds this, sell
+profit_target=3.0   #if gain/trade (%) exceeds this, sell
 profit_target_daily=16   #if reached total (%) gain per day, finish for today.
 
 
