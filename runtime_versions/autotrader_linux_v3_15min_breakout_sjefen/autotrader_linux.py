@@ -167,9 +167,9 @@ price=0.0
 trade_range_days = range(0, 5)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
-time_getReady = "09:30:06"
-time_lastCall = "15:45:00"
-time_lastCallExit = "15:55:00"
+time_getReady = "15:30:06"
+time_lastCall = "21:45:00"
+time_lastCallExit = "21:55:00"
 
 # P&L parameters
 bought_price = 0.0
@@ -1283,7 +1283,7 @@ def watch_ticker_3_quality_check():
 
 def save_prices():
     try:
-        subfolder = "/home/autotrader/log/prices"
+        subfolder = "/home/sjefen/log/prices"
         tday = str(datetime.datetime.now().date())
         time_n = datetime.datetime.now().time()
         subfolder2 = str(subfolder) + "/" + str(tday)
@@ -1321,7 +1321,7 @@ def save_prices():
 
 def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, trade_succes_cnt, a20pcps_0_19, a20freq_0_19, ticker,time_entry,time_exit):
     try:
-        subfolder = "/home/autotrader/log/pcps_PnL"
+        subfolder = "/home/sjefen/log/pcps_PnL"
         tday = str(datetime.datetime.now().date())
         l_fileName = str(subfolder) + "/" + str(tday)
 
