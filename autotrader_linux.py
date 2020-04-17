@@ -853,18 +853,6 @@ def global_trader():
     else:
         get_watchlist_tickers_paper()
 
-    #Fetch & prices
-    if trade_status == "b" or trade_status == "s" or holding_status == 1:
-        if trade_mode == "r":
-            fetch_holding_price()
-        else:
-            fetch_holding_price_paper()
-    if trade_mode == "r":
-        fetch_prices()
-    else:
-        fetch_prices_paper()
-
-    save_prices()
 
     #Check if watchlist are different - if so set open prices to zero
     if ticker_1_txt != ticker_1_prev_txt:
@@ -901,6 +889,18 @@ def global_trader():
         ticker3_prev_15min_cp = 0
         build_15min_candle = "no"
 
+    #Fetch & prices
+    if trade_status == "b" or trade_status == "s" or holding_status == 1:
+        if trade_mode == "r":
+            fetch_holding_price()
+        else:
+            fetch_holding_price_paper()
+    if trade_mode == "r":
+        fetch_prices()
+    else:
+        fetch_prices_paper()
+
+    save_prices()
 
     #If BUY order yet not filled -  automatic cancel buy order
     if modify_entry_cnt == modify_entry_cnt_max and filled_status != "filled":
