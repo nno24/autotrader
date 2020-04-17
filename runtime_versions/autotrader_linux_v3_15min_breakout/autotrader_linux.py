@@ -96,7 +96,8 @@ timer_cnt = 0
 timer_cnt_sec = 0
 timer_cnt_min = 0
 timer_cnt_hour = 0
-timer_interval = 1
+timer_global_trader_interval = 2
+timer_15min_interval = 3
 timer_pcps_cnt = 0
 prices_ticker_1 = []
 prices_ticker_2 = []
@@ -790,7 +791,7 @@ def global_trader():
     global time_now
 
     #Start the global trader as a thread
-    t=threading.Timer(timer_interval, global_trader)
+    t=threading.Timer(timer_global_trader_interval, global_trader)
     if time_now > time_lastCallExit:
         t.cancel()
         print("Initializing trading parameters for tomorrow...")
@@ -1021,7 +1022,7 @@ def timer_15min():
     global build_15min_candle
     global current_minute
 
-    t15=threading.Timer(timer_interval, timer_15min)
+    t15=threading.Timer(timer_15min_interval, timer_15min)
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
@@ -1029,6 +1030,37 @@ def timer_15min():
     t15.start()
     print(time_now)
     interval15_startpoints=[0,15,30,45]
+
+    if current_minute != time_now_min or current_minute == 999:
+        if time_now_min in interval15_startpoints:
+            if build_15min_candle == "yes":
+                calc_15_min_candle()
+                set_15min_breakout_exit()
+            else:
+                print("Unable to calculate 15 min data -- candle not complete")
+            print("Starting new 15 min build of candle...")
+            clear_15_min_candle()
+            build_15min_candle = "yes"
+
+    if build_15min_candle == "yes":
+        make_15_min_candle()
+    else:
+        build_15min_candle="no"
+
+    current_minute = time_now_min
+
+def timer_3min():
+    global build_15min_candle
+    global current_minute
+
+    t15=threading.Timer(timer_15min_interval, timer_3min)
+    if time_now > time_lastCallExit:
+        t15.cancel()
+        current_minute = 999
+        return 0
+    t15.start()
+    print(time_now)
+    interval15_startpoints=range(0,60,3)
 
     if current_minute != time_now_min or current_minute == 999:
         if time_now_min in interval15_startpoints:
@@ -2090,6 +2122,7 @@ def pcps_paper():
     if use_trade_strategy == strategy_15min_breakout:
         while holding_status == 1:
             print(time_now)
+            time.sleep(5)
             exit_now=exit_15min_breakout_stopout()
             if exit_now == "yes":
                 webull_paper_functions.prefill_sell_order(vol)
@@ -2713,7 +2746,7 @@ def check_time_day():
             webull_paper_functions.refresh()
             get_watchlist_tickers_paper()
             global_trader()
-            timer_15min()
+            timer_3min()
             trade_true = "yes"
         else:
             print("it's too late. waiting for tomorrow")
@@ -2743,7 +2776,7 @@ def check_time_day():
                 webull_paper_functions.refresh()
                 get_watchlist_tickers_paper()
                 global_trader()
-                timer_15min()
+                timer_3min()
                 trade_true="yes"
             else:
                 print("its weeknd..")
