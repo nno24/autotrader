@@ -96,8 +96,8 @@ timer_cnt = 0
 timer_cnt_sec = 0
 timer_cnt_min = 0
 timer_cnt_hour = 0
-timer_global_trader_interval = 2
-timer_15min_interval = 3
+timer_global_trader_interval = 1
+timer_15min_interval = 1
 timer_pcps_cnt = 0
 prices_ticker_1 = []
 prices_ticker_2 = []
@@ -164,12 +164,12 @@ filled_status = "unknown"
 price=0.0
 
 # monitor time and day
-trade_range_days = range(0, 5)
+trade_range_days = range(0, 7)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
-time_getReady = "09:30:06"
-time_lastCall = "15:45:00"
-time_lastCallExit = "15:55:00"
+time_getReady = "20:14:06"
+time_lastCall = "23:59:00"
+time_lastCallExit = "23:59:00"
 
 # P&L parameters
 bought_price = 0.0
@@ -250,6 +250,9 @@ ticker3_a20freq_0_19=0
 
 a20pcps_0_19_threshold=0.04
 a20freq_0_19_threshold=0.4
+
+#MClear up mem
+timer_cancel_interval = [27,57]
 
 def test_webelements_paper():
     global pcps_max_ticker
@@ -789,6 +792,7 @@ def global_trader():
     global ticker3_prev_15min_op
     global build_15min_candle
     global time_now
+    global timer_global_trader_cancel_status
 
     #Start the global trader as a thread
     t=threading.Timer(timer_global_trader_interval, global_trader)
@@ -940,6 +944,13 @@ def global_trader():
         except ZeroDivisionError as e:
             print(e)
             print("Unable to calc break even or greater")
+    #release thread mem
+    if time_now_sec in timer_cancel_interval:
+        t.cancel()
+        print("Celaning up mem globa trader..")
+        time.sleep(2)
+        global_trader()
+        return 0
 
 def timer_15min():
     global build_15min_candle
@@ -949,6 +960,11 @@ def timer_15min():
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
+        return 0
+    elif time_now_sec in timer_cancel_interval:
+        t15.cancel()
+        time.sleep(2)
+        timer_15min()
         return 0
     t15.start()
     print(time_now)
@@ -981,6 +997,11 @@ def timer_3min():
         t15.cancel()
         current_minute = 999
         return 0
+    elif time_now_sec in timer_cancel_interval:
+        t15.cancel()
+        time.sleep(2)
+        timer_3min()
+        return 0
     t15.start()
     print(time_now)
     interval15_startpoints=range(0,60,3)
@@ -1012,6 +1033,11 @@ def timer_2min():
         t15.cancel()
         current_minute = 999
         return 0
+    elif time_now_sec in timer_cancel_interval:
+        t15.cancel()
+        time.sleep(2)
+        timer_2min()
+        return 0
     t15.start()
     print(time_now)
     interval15_startpoints=range(0,60,2)
@@ -1042,6 +1068,12 @@ def timer_1min():
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
+        return 0
+    elif time_now_sec in timer_cancel_interval:
+        t15.cancel()
+        print("Celaning up mem...")
+        time.sleep(2)
+        timer_1min()
         return 0
     t15.start()
     print(time_now)
