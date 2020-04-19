@@ -96,8 +96,8 @@ timer_cnt = 0
 timer_cnt_sec = 0
 timer_cnt_min = 0
 timer_cnt_hour = 0
-timer_global_trader_interval = 1
-timer_15min_interval = 1
+timer_global_trader_interval = 5 
+timer_15min_interval = 5 
 timer_pcps_cnt = 0
 prices_ticker_1 = []
 prices_ticker_2 = []
@@ -167,9 +167,9 @@ price=0.0
 trade_range_days = range(0, 7)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
-time_getReady = "20:14:06"
-time_lastCall = "23:59:00"
-time_lastCallExit = "23:59:00"
+time_getReady = "09:30:06"
+time_lastCall = "15:45:00"
+time_lastCallExit = "15:55:00"
 
 # P&L parameters
 bought_price = 0.0
@@ -252,7 +252,7 @@ a20pcps_0_19_threshold=0.04
 a20freq_0_19_threshold=0.4
 
 #MClear up mem
-timer_cancel_interval = [27,57]
+timer_cancel_interval = [28,29,30,31,32]
 
 def test_webelements_paper():
     global pcps_max_ticker
@@ -796,6 +796,7 @@ def global_trader():
 
     #Start the global trader as a thread
     t=threading.Timer(timer_global_trader_interval, global_trader)
+    t.start()
     if time_now > time_lastCallExit:
         t.cancel()
         print("Initializing trading parameters for tomorrow...")
@@ -825,17 +826,17 @@ def global_trader():
         ticker3_prev_15min_cp = 0
         build_15min_candle = "no"
         return 0
-    t.start()
 
     time_now = str(datetime.datetime.now().time())
-    print(time_now)
+    print("Global trader: ",time_now)
+
     #Increment counters
     timer_cnt+=1
     timer_cnt_sec+=1
     timer_pcps_cnt+=1
     if modify_entry_cnt !=0:
-        modify_entry_cnt+=1
-        print("modify_entry: ",modify_entry_cnt)
+        modify_entry_cnt+=timer_global_trader_interval
+        print("cancel buy order cnt: ",modify_entry_cnt)
         print("max: ",modify_entry_cnt_max)
     elif modify_exit_cnt !=0:
         modify_exit_cnt+=1
@@ -905,10 +906,10 @@ def global_trader():
     else:
         fetch_prices_paper()
 
-    save_prices()
+    #save_prices()
 
     #If BUY order yet not filled -  automatic cancel buy order
-    if modify_entry_cnt == modify_entry_cnt_max and filled_status != "filled":
+    if modify_entry_cnt >= modify_entry_cnt_max and filled_status != "filled" and trade_status != "c":
         print("CANCELLING order")
         trade_status=webull_paper_functions.cancel_buy_order()
         if trade_status == "c":
@@ -944,30 +945,34 @@ def global_trader():
         except ZeroDivisionError as e:
             print(e)
             print("Unable to calc break even or greater")
+    '''
     #release thread mem
     if time_now_sec in timer_cancel_interval:
         t.cancel()
         print("Celaning up mem globa trader..")
-        time.sleep(2)
+        time.sleep(timer_global_trader_interval)
         global_trader()
         return 0
+    '''
 
 def timer_15min():
     global build_15min_candle
     global current_minute
 
     t15=threading.Timer(timer_15min_interval, timer_15min)
+    t15.start()
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
         return 0
+    '''
     elif time_now_sec in timer_cancel_interval:
         t15.cancel()
-        time.sleep(2)
+        print("Celaning up mem on xmin timer")
+        time.sleep(timer_15min_interval)
         timer_15min()
         return 0
-    t15.start()
-    print(time_now)
+    '''
     interval15_startpoints=[0,15,30,45]
 
     if current_minute != time_now_min or current_minute == 999:
@@ -988,23 +993,25 @@ def timer_15min():
 
     current_minute = time_now_min
 
-def timer_3min():
+def timer_5min():
     global build_15min_candle
     global current_minute
 
-    t15=threading.Timer(timer_15min_interval, timer_3min)
+    t15=threading.Timer(timer_15min_interval, timer_5min)
+    t15.start()
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
         return 0
+    '''
     elif time_now_sec in timer_cancel_interval:
         t15.cancel()
-        time.sleep(2)
+        print("Celaning up mem on xmin timer")
+        time.sleep(timer_15min_interval)
         timer_3min()
         return 0
-    t15.start()
-    print(time_now)
-    interval15_startpoints=range(0,60,3)
+    '''
+    interval15_startpoints=range(0,60,5)
 
     if current_minute != time_now_min or current_minute == 999:
         if time_now_min in interval15_startpoints:
@@ -1029,17 +1036,19 @@ def timer_2min():
     global current_minute
 
     t15=threading.Timer(timer_15min_interval, timer_2min)
+    t15.start()
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
         return 0
+    '''
     elif time_now_sec in timer_cancel_interval:
         t15.cancel()
-        time.sleep(2)
+        print("Celaning up mem on xmin timer")
+        time.sleep(timer_15min_interval)
         timer_2min()
         return 0
-    t15.start()
-    print(time_now)
+    '''
     interval15_startpoints=range(0,60,2)
 
     if current_minute != time_now_min or current_minute == 999:
@@ -1065,18 +1074,19 @@ def timer_1min():
     global current_minute
 
     t15=threading.Timer(timer_15min_interval, timer_1min)
+    t15.start()
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
         return 0
+    '''
     elif time_now_sec in timer_cancel_interval:
         t15.cancel()
-        print("Celaning up mem...")
-        time.sleep(2)
+        print("Celaning up mem on xmin timer")
+        time.sleep(timer_15min_interval)
         timer_1min()
         return 0
-    t15.start()
-    print(time_now)
+    '''
     interval15_startpoints=range(0,60,1)
 
     if current_minute != time_now_min or current_minute == 999:
@@ -1353,7 +1363,7 @@ def save_prices():
 
 def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, trade_succes_cnt, a20pcps_0_19, a20freq_0_19, ticker,time_entry,time_exit):
     try:
-        subfolder = "/home/autotrader/log/pcps_PnL"
+        subfolder = "/home/autotrader/log/pcps_PnL/15min_breakout"
         tday = str(datetime.datetime.now().date())
         l_fileName = str(subfolder) + "/" + str(tday)
 
@@ -2092,7 +2102,7 @@ def pcps_paper():
         #Wait until the order is sent to exhange, if not it will look at the order bf
         time.sleep(5)
         #Check filled status
-        filled_status=webull_paper_functions.check_filled_status()
+        filled_status=webull_paper_functions.check_filled_status(timer_global_trader_interval)
         if filled_status == "filled":
             modify_entry_cnt = 0
             time.sleep(0.5)
@@ -2114,7 +2124,7 @@ def pcps_paper():
                 print("///Double checking if the order was actually fillled after cancelling")
                 print("Double check cnt: ", check_now)
                 time.sleep(1)
-                filled_status=webull_paper_functions.check_filled_status()
+                filled_status=webull_paper_functions.check_filled_status(timer_global_trader_interval)
                 if filled_status == "filled":
                     modify_entry_cnt = 0
                     modify_entry_tries = 0
@@ -2197,7 +2207,7 @@ def pcps_paper():
         filled_status="unknown"
         #Wait until the order is sent to exhange, if not it will look at the order bf
         time.sleep(7)
-        filled_status = webull_paper_functions.check_filled_status()
+        filled_status = webull_paper_functions.check_filled_status(timer_global_trader_interval)
         if filled_status == "filled":
             modify_exit_cnt = 0
             print("Resetting trading parameters, trade done")
@@ -2741,9 +2751,11 @@ def check_time_day():
         if time_now < time_lastCall and time_now > time_getReady:
             print("let' trade")
             webull_paper_functions.refresh()
-            get_watchlist_tickers_paper()
-            global_trader()
-            timer_1min()
+            if trade_cnt == 0:
+                print("Starting up timers....")
+                get_watchlist_tickers_paper()
+                global_trader()
+                timer_15min()
             trade_true = "yes"
         else:
             print("it's too late. waiting for tomorrow")
@@ -2773,7 +2785,7 @@ def check_time_day():
                 webull_paper_functions.refresh()
                 get_watchlist_tickers_paper()
                 global_trader()
-                timer_1min()
+                timer_15min()
                 trade_true="yes"
             else:
                 print("its weeknd..")
@@ -2842,6 +2854,7 @@ elif trade_mode =="p":
             print("Still holding possition - waiting for sell order to complete")
             time.sleep(1)
         trade_pcps=pcps_paper()
+        trade_cnt+=1
         if trade_pcps == 1:
             trade_fail_cnt+=1
             print("Successful trades: ", trade_successful_cnt)
@@ -2852,6 +2865,7 @@ elif trade_mode =="p":
             #NOTE the successful cnt is incremented in the pcps function.
             print("Successful trades: ", trade_successful_cnt)
             print("Trade failed, total fails: ",trade_fail_cnt)
+            print("Total trade cnt:",trade_cnt)
 
 
 else:

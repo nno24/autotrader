@@ -13,6 +13,8 @@ b_continue_price_gap="/html/body/div[3]/div[2]/div[3]/button[2]"
 b_continue_price_gap_last_limit="/html/body/div[2]/div[2]/div[3]/button[2]"
 b_cancel_price_gap="/html/body/div[3]/div[2]/div[3]/button[1]"
 b_ok_price_increment="/html/body/div[2]/div[2]/div[3]/button"
+b_markets="/html/body/div/div/div[3]/div/div[2]/div[1]/div[4]/i"
+b_paper_account="/html/body/div/div/div[3]/div/div[2]/div[1]/div[8]/i"
 
 
 #ELEMENTS

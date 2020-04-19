@@ -23,9 +23,20 @@ def refresh():
             try:
                 elem_all_section = driver.find_element_by_xpath(webull_webelements_2.e_all_section)
                 elem_all_section.click()
-                wait = 0
+                #Check if refresh was ok -- by checking if the xpath of the all selector is available
+                try:
+                    elem_all_selector = driver.find_element_by_xpath(webull_webelements_2.b_all_selector)
+                    wait = 0
+                except:
+                    elem_markets=driver.find_element_by_xpath(webull_webelements_2.b_markets)
+                    elem_markets.click()
+                    time.sleep(2)
+                    elem_paccount=driver.find_element_by_xpath(webull_webelements_2.b_paper_account)
+                    elem_paccount.click()
+                    time.sleep(2)
             except:
                 print("Waiting refresh to complete...")
+
     except:
         print("Unable to refresh..")
 
@@ -51,12 +62,12 @@ def logon_webull():
     elem_login_uname = driver.find_element_by_xpath(webull_webelements_2.e_uname)
     elem_login_uname.clear()
     elem_login_uname.click()
-    elem_login_uname.send_keys("nicolai.norseng@gmail.com")
+    elem_login_uname.send_keys("autotrader326@yahoo.com")
     elem_login_uname.send_keys(Keys.TAB)
 
     elem_passwd = driver.switch_to_active_element()
     elem_passwd.clear()
-    elem_passwd.send_keys("Lwle17109")
+    elem_passwd.send_keys("Lwle171010")
     #login button
     elem_login_b = driver.find_element_by_xpath(webull_webelements_2.b_login)
     elem_login_b.click()
@@ -213,7 +224,7 @@ def sell(price):
         trade_status="fail"
         print("UNABLE TO SELL..")
 
-def check_filled_status():
+def check_filled_status(timer_global_trader_interval):
     filled_status="unknown"
     while filled_status != "filled":
         try:
@@ -233,6 +244,7 @@ def check_filled_status():
                 return filled_status
         except:
             print("UNABLE TO CHECK FILLED STATUS")
+        time.sleep(timer_global_trader_interval)
 
 def cancel_buy_order():
     global trade_status
