@@ -168,8 +168,8 @@ trade_range_days = range(0, 5)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
 time_getReady = "09:30:06"
-time_lastCall = "11:30:00"
-time_lastCallExit = "11:45:00"
+time_lastCall = "15:45:00"
+time_lastCallExit = "15:55:00"
 
 # P&L parameters
 bought_price = 0.0
@@ -220,8 +220,9 @@ ticker2_prev_15min_cp = 0
 ticker3_prev_15min_cp = 0
 build_15min_candle=""
 current_minute=999   #iniial value, so that the 15 min can be built on open.
-profit_target=5.0   #if gain/trade (%) exceeds this, sell
-profit_target_daily=16   #if reached total (%) gain per day, finish for today.
+profit_target=10.0   #if gain/trade (%) exceeds this, sell
+loss_limit=0
+profit_target_daily=5   #if reached total (%) gain per day, finish for today.
 
 
 #pnl daily params -- keep track of only reporting once every 30 min
@@ -250,6 +251,10 @@ ticker3_a20freq_0_19=0
 
 a20pcps_0_19_threshold=0.04
 a20freq_0_19_threshold=0.4
+
+ticker1_current_op=0
+ticker2_current_op=0
+ticker3_current_op=0
 
 #MClear up mem
 timer_cancel_interval = [28,29,30,31,32]
@@ -958,6 +963,9 @@ def global_trader():
 def timer_30min():
     global build_15min_candle
     global current_minute
+    global ticker1_current_op
+    global ticker2_current_op
+    global ticker3_current_op
 
     t15=threading.Timer(timer_15min_interval, timer_30min)
     t15.start()
@@ -985,6 +993,11 @@ def timer_30min():
             print("Starting new 15 min build of candle...")
             clear_15_min_candle()
             build_15min_candle = "yes"
+
+            #Set current opening price
+            ticker1_current_op = float(ticker_1_price_value)
+            ticker2_current_op = float(ticker_2_price_value)
+            ticker3_current_op = float(ticker_3_price_value)
 
     if build_15min_candle == "yes":
         make_15_min_candle()
@@ -1400,7 +1413,7 @@ def save_prices():
 
 def log_PnL(pnl_this_trade, pnl_total, pnl_this_trade_w_fees, pnl_total_w_fees, trade_succes_cnt, a20pcps_0_19, a20freq_0_19, ticker,time_entry,time_exit):
     try:
-        subfolder = "/home/autotrader/log/pcps_PnL/1min_breakout"
+        subfolder = "/home/autotrader/log/pcps_PnL/30min_breakout"
         tday = str(datetime.datetime.now().date())
         l_fileName = str(subfolder) + "/" + str(tday)
 
@@ -2190,7 +2203,7 @@ def pcps_paper():
     if use_trade_strategy == strategy_15min_breakout:
         while holding_status == 1:
             print(time_now)
-            time.sleep(5)
+            time.sleep(timer_global_trader_interval)
             exit_now=exit_15min_breakout_stopout()
             if exit_now == "yes":
                 print("Selling now - stopped out..")
@@ -2198,6 +2211,10 @@ def pcps_paper():
             exit_now=exit_15min_profit_limit()
             if exit_now == "yes":
                 print("Selling cause reached profit target on trade..")
+                break
+            exit_now=exit_15min_loss_limit()
+            if exit_now == "yes":
+                print("Selling cause loss limit reached..")
                 break
             if time_now >= time_lastCallExit:
                 print("Selling now -- reached time linim of today...")
@@ -2337,6 +2354,19 @@ def exit_15min_profit_limit():
             return exit_now
     except:
         print("Unable to check 15min profit limit stoppout...")
+
+def exit_15min_loss_limit():
+    try:
+        if float(break_even_or_greater) < loss_limit:
+            print(pcps_max_ticker, "exiting trade on loss limit: ", break_even_or_greater)
+            exit_now = "yes"
+            return exit_now
+        else:
+            exit_now = "no"
+            return exit_now
+    except:
+        print("Unable to check 15min loss limit..")
+
 
 def pcps_test():
     global driver

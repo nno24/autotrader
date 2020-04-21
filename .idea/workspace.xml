@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="76d85a71-021c-4f76-a27d-945dd91b4f34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrader_linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrader_linux.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime_versions/autotrader_linux_v3_30min_breakout/autotrader_linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/runtime_versions/autotrader_linux_v3_30min_breakout/autotrader_linux.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
