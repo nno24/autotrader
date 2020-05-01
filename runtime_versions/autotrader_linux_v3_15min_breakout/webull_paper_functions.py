@@ -14,6 +14,9 @@ time_now = str(datetime.datetime.now().time())
 
 trade_status=""
 
+def check_if_warnings():
+    elem_buy=driver.find_element_by_xpath(webull_webelements_2.b_buy)
+    elem_buy.click()
 
 def refresh():
     try:
@@ -164,9 +167,14 @@ def buy(price):
         elem_ptrade=driver.find_element_by_xpath(webull_webelements_2.b_paper_trade)
         elem_ptrade.click()
 
-        check_price_gap()
-        check_price_gap_last_vs_limit()
-        check_price_increment_buy()
+        #Check if any warnings first...
+        try:
+            time.sleep(5)
+            check_if_warnings()
+        except:
+            check_price_increment_buy()
+            check_price_gap_last_vs_limit()
+
         trade_status ="b"
         return trade_status
     except:
@@ -215,9 +223,14 @@ def sell(price):
 
         elem_close_order_ptrade=driver.find_element_by_xpath(webull_webelements_2.b_close_order_paper_trade)
         elem_close_order_ptrade.click()
-        check_price_gap()
-        check_price_gap_last_vs_limit()
-        check_price_increment_sell()
+        #Check if any warnings first...
+        try:
+            time.sleep(5)
+            check_if_warnings()
+        except:
+            check_price_increment_sell()
+            check_price_gap_last_vs_limit()
+
         trade_status ="s"
         return trade_status
     except:
@@ -269,7 +282,14 @@ def modify_sell_order(price):
         elem_all_selector.click()
 
         elem_modify=driver.find_element_by_xpath(webull_webelements_2.e_modify)
-        elem_modify.click()
+        elem_modify_txt = elem_modify.text
+        if elem_modify_txt != "Modify…":
+            print("already filled...exiting...not modifying")
+            elem_all_selector.click()
+            modify_status="success"
+            return modify_status
+        else:
+            elem_modify.click()
 
         elem_modify_price=driver.find_element_by_xpath(webull_webelements_2.e_modify_price)
         elem_modify_price.clear()
@@ -286,9 +306,15 @@ def modify_sell_order(price):
         elem_modify_paper_trade=driver.find_element_by_xpath(webull_webelements_2.b_modify_paper_trade)
         elem_modify_paper_trade.click()
 
-        check_price_gap()
-        check_price_gap_last_vs_limit()
-        check_price_increment_modify()
+        #Check if any warnings first...
+        try:
+            time.sleep(5)
+            check_if_warnings()
+        except:
+            check_price_increment_modify()
+            check_price_gap_last_vs_limit()
+        
+        #Check if the order already was filled..
         try:
             time.sleep(2)
             elem_close_dialogue=driver.find_element_by_xpath(webull_webelements_2.b_modify_close_dialogue)
