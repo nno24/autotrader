@@ -220,7 +220,7 @@ ticker2_prev_15min_cp = 0
 ticker3_prev_15min_cp = 0
 build_15min_candle=""
 current_minute=999   #iniial value, so that the 15 min can be built on open.
-profit_target=3.0   #if gain/trade (%) exceeds this, sell
+profit_target=10.0   #if gain/trade (%) exceeds this, sell
 profit_target_daily=16   #if reached total (%) gain per day, finish for today.
 
 
@@ -797,7 +797,7 @@ def global_trader():
     #Start the global trader as a thread
     t=threading.Timer(timer_global_trader_interval, global_trader)
     t.start()
-    if time_now > time_lastCallExit:
+    if time_now > time_lastCallExit and holding_status == 0:
         t.cancel()
         print("Initializing trading parameters for tomorrow...")
         ticker_1_op = 0.0
