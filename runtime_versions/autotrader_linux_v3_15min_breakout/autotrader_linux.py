@@ -158,7 +158,7 @@ modify_entry_cnt_max=30
 modify_entry_tries=0
 modify_entry_tries_max=2
 modify_exit_cnt=0
-modify_exit_cnt_max=30
+modify_exit_cnt_max=20
 
 filled_status = "unknown"
 price=0.0
@@ -931,7 +931,6 @@ def global_trader():
             print("---Sell order already filled, no need to modify")
         if modify_status != "success":
             print("MODIFYING NOT SUCCESS...refreshing")
-            webull_paper_functions.refresh()
 
 
     if holding_status == 1:
@@ -2750,7 +2749,6 @@ def check_time_day():
 
         if time_now < time_lastCall and time_now > time_getReady:
             print("let' trade")
-            webull_paper_functions.refresh()
             if trade_cnt == 0:
                 print("Starting up timers....")
                 get_watchlist_tickers_paper()
@@ -2782,7 +2780,6 @@ def check_time_day():
 
             if today in trade_range_days:
                 print("let' trade")
-                webull_paper_functions.refresh()
                 get_watchlist_tickers_paper()
                 global_trader()
                 timer_15min()

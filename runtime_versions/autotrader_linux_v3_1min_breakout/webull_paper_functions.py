@@ -269,7 +269,14 @@ def modify_sell_order(price):
         elem_all_selector.click()
 
         elem_modify=driver.find_element_by_xpath(webull_webelements_2.e_modify)
-        elem_modify.click()
+        elem_modify_txt = elem_modify.text
+        if elem_modify_txt != "Modify…":
+            print("already filled...exiting...not modifying")
+            elem_all_selector.click()
+            modify_status="success"
+            return modify_status
+        else:
+            elem_modify.click()
 
         elem_modify_price=driver.find_element_by_xpath(webull_webelements_2.e_modify_price)
         elem_modify_price.clear()

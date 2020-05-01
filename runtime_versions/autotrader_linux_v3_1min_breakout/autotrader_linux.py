@@ -96,8 +96,8 @@ timer_cnt = 0
 timer_cnt_sec = 0
 timer_cnt_min = 0
 timer_cnt_hour = 0
-timer_global_trader_interval = 5 
-timer_15min_interval = 5 
+timer_global_trader_interval = 1 
+timer_15min_interval = 1 
 timer_pcps_cnt = 0
 prices_ticker_1 = []
 prices_ticker_2 = []
@@ -158,7 +158,7 @@ modify_entry_cnt_max=30
 modify_entry_tries=0
 modify_entry_tries_max=2
 modify_exit_cnt=0
-modify_exit_cnt_max=30
+modify_exit_cnt_max=20
 
 filled_status = "unknown"
 price=0.0
@@ -931,7 +931,6 @@ def global_trader():
             print("---Sell order already filled, no need to modify")
         if modify_status != "success":
             print("MODIFYING NOT SUCCESS...refreshing")
-            webull_paper_functions.refresh()
 
 
     if holding_status == 1:
@@ -2202,49 +2201,54 @@ def pcps_paper():
 
 
     #Check if order was filled
-    if trade_status == "s":
-        modify_exit_cnt = 1
-        filled_status="unknown"
-        #Wait until the order is sent to exhange, if not it will look at the order bf
-        time.sleep(7)
-        filled_status = webull_paper_functions.check_filled_status(timer_global_trader_interval)
-        if filled_status == "filled":
-            modify_exit_cnt = 0
-            print("Resetting trading parameters, trade done")
-            print("the exit_cnt rest: ",modify_exit_cnt)
-            bear_bailout_status = 0
-            bear_cnt = 0
-            pcps_exit = 0
-            sample_periods = 0
-            holding_status = 0
-            break_even_or_greater = 0
-            trade_successful_cnt+=1
-            trade_status = "na"
-            time_exit = time_now
+    while holding_status == 1:
+        if trade_status == "s":
+            modify_exit_cnt = 1
+            filled_status="unknown"
+            #Wait until the order is sent to exhange, if not it will look at the order bf
+            time.sleep(7)
+            filled_status = webull_paper_functions.check_filled_status(timer_global_trader_interval)
+            if filled_status == "filled":
+                modify_exit_cnt = 0
+                print("Resetting trading parameters, trade done")
+                print("the exit_cnt rest: ",modify_exit_cnt)
+                bear_bailout_status = 0
+                bear_cnt = 0
+                pcps_exit = 0
+                sample_periods = 0
+                holding_status = 0
+                break_even_or_greater = 0
+                trade_successful_cnt+=1
+                trade_status = "na"
+                time_exit = time_now
 
-            #Update P&L
-            sold_price = price
-            PnL_this_trade = (float(sold_price) - float(bought_price))*int(vol)
-            PnL_this_trade = float("%.2f" % PnL_this_trade)
-            PnL_total = float(PnL_total) + float(PnL_this_trade)
-            PnL_this_trade_w_fees = float(PnL_this_trade) - float(Trade_fee_per_trade)
-            PnL_total_w_fees = float(PnL_total_w_fees) + float(PnL_this_trade_w_fees)
+                #Update P&L
+                sold_price = price
+                PnL_this_trade = (float(sold_price) - float(bought_price))*int(vol)
+                PnL_this_trade = float("%.2f" % PnL_this_trade)
+                PnL_total = float(PnL_total) + float(PnL_this_trade)
+                PnL_this_trade_w_fees = float(PnL_this_trade) - float(Trade_fee_per_trade)
+                PnL_total_w_fees = float(PnL_total_w_fees) + float(PnL_this_trade_w_fees)
 
-            #Update log file
-            log_PnL(PnL_this_trade, PnL_total, PnL_this_trade_w_fees, PnL_total_w_fees, trade_successful_cnt, val_a20pcps_0_19, val_a20freq_0_19, pcps_max_ticker,time_entry,time_exit)
+                #Update log file
+                log_PnL(PnL_this_trade, PnL_total, PnL_this_trade_w_fees, PnL_total_w_fees, trade_successful_cnt, val_a20pcps_0_19, val_a20freq_0_19, pcps_max_ticker,time_entry,time_exit)
 
 
-            print("")
-            print(pcps_max_ticker)
-            print(datetime.datetime.now())
-            print("PnL this trade:        ",PnL_this_trade)
-            print("PnL total:             ",PnL_total)
-            print("PnL this trade w fees: ",PnL_this_trade_w_fees)
-            print("PnL total w fees:      ",PnL_total_w_fees)
-            print("Trade cnt:             ",trade_successful_cnt)
-            print("a20pcps_0_19:          ",val_a20pcps_0_19)
-            print("a20freq_0_19:          ",val_a20freq_0_19)
-            print("")
+                print("")
+                print(pcps_max_ticker)
+                print(datetime.datetime.now())
+                print("PnL this trade:        ",PnL_this_trade)
+                print("PnL total:             ",PnL_total)
+                print("PnL this trade w fees: ",PnL_this_trade_w_fees)
+                print("PnL total w fees:      ",PnL_total_w_fees)
+                print("Trade cnt:             ",trade_successful_cnt)
+                print("a20pcps_0_19:          ",val_a20pcps_0_19)
+                print("a20freq_0_19:          ",val_a20freq_0_19)
+                print("")
+        else:
+            time.sleep(1)
+            print("Trade status not set to s yet..")
+
 
     #Exit routine exited or bear bailout -wait until we dont hold the ticker anymore
     while trade_status != "na":
@@ -2750,7 +2754,6 @@ def check_time_day():
 
         if time_now < time_lastCall and time_now > time_getReady:
             print("let' trade")
-            webull_paper_functions.refresh()
             if trade_cnt == 0:
                 print("Starting up timers....")
                 get_watchlist_tickers_paper()
@@ -2775,14 +2778,13 @@ def check_time_day():
             PnL_this_trade_w_fees = 0.0
             PnL_total_w_fees = 0.0
 
-            while time_now > time_lastCallExit or time_now < time_getReady:
+            while time_now > time_lastCall or time_now < time_getReady:
                 time_now = str(datetime.datetime.now().time())
                 time.sleep(0.5)
                 print("Waiting to get ready..", time_now)
 
             if today in trade_range_days:
                 print("let' trade")
-                webull_paper_functions.refresh()
                 get_watchlist_tickers_paper()
                 global_trader()
                 timer_1min()

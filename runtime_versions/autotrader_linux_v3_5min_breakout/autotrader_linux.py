@@ -96,8 +96,8 @@ timer_cnt = 0
 timer_cnt_sec = 0
 timer_cnt_min = 0
 timer_cnt_hour = 0
-timer_global_trader_interval = 5 
-timer_15min_interval = 5 
+timer_global_trader_interval = 1 
+timer_15min_interval = 1 
 timer_pcps_cnt = 0
 prices_ticker_1 = []
 prices_ticker_2 = []
@@ -158,13 +158,13 @@ modify_entry_cnt_max=30
 modify_entry_tries=0
 modify_entry_tries_max=2
 modify_exit_cnt=0
-modify_exit_cnt_max=30
+modify_exit_cnt_max=20
 
 filled_status = "unknown"
 price=0.0
 
 # monitor time and day
-trade_range_days = range(0, 7)
+trade_range_days = range(0, 5)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
 time_getReady = "09:30:06"
@@ -931,7 +931,6 @@ def global_trader():
             print("---Sell order already filled, no need to modify")
         if modify_status != "success":
             print("MODIFYING NOT SUCCESS...refreshing")
-            webull_paper_functions.refresh()
 
 
     if holding_status == 1:
@@ -2750,7 +2749,6 @@ def check_time_day():
 
         if time_now < time_lastCall and time_now > time_getReady:
             print("let' trade")
-            webull_paper_functions.refresh()
             if trade_cnt == 0:
                 print("Starting up timers....")
                 get_watchlist_tickers_paper()
@@ -2775,14 +2773,13 @@ def check_time_day():
             PnL_this_trade_w_fees = 0.0
             PnL_total_w_fees = 0.0
 
-            while time_now > time_lastCallExit or time_now < time_getReady:
+            while time_now > time_lastCall or time_now < time_getReady:
                 time_now = str(datetime.datetime.now().time())
                 time.sleep(0.5)
                 print("Waiting to get ready..", time_now)
 
             if today in trade_range_days:
                 print("let' trade")
-                webull_paper_functions.refresh()
                 get_watchlist_tickers_paper()
                 global_trader()
                 timer_5min()
