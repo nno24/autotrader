@@ -14,6 +14,9 @@ time_now = str(datetime.datetime.now().time())
 
 trade_status=""
 
+def check_if_warnings():
+    elem_buy=driver.find_element_by_xpath(webull_webelements_2.b_buy)
+    elem_buy.click()
 
 def refresh():
     try:
@@ -117,12 +120,19 @@ def check_price_gap():
 
 def check_price_gap_last_vs_limit():
     try:
-        elem_price_gap_last_limit = driver.find_element_by_xpath(webull_webelements_2.b_continue_price_gap_last_limit)
+        elem_price_gap_last_limit = driver.find_element_by_xpath(webull_webelements_2.b_continue_price_gap_last_limit_buy)
         elem_price_gap_last_limit.click()
         print("Continuing price gap last vs limit..")
     except:
         print("No price gap last vs. limit")
 
+def check_price_gap_last_vs_limit_sell():
+    try:
+        elem_price_gap_last_limit = driver.find_element_by_xpath(webull_webelements_2.b_continue_price_gap_last_limit_sell)
+        elem_price_gap_last_limit.click()
+        print("Continuing price gap last vs limit..")
+    except:
+        print("No price gap last vs. limit")
 
 def check_price_increment_buy():
     try:
@@ -164,9 +174,14 @@ def buy(price):
         elem_ptrade=driver.find_element_by_xpath(webull_webelements_2.b_paper_trade)
         elem_ptrade.click()
 
-        check_price_gap()
-        check_price_gap_last_vs_limit()
-        check_price_increment_buy()
+        #Check if any warnings first...
+        try:
+            time.sleep(5)
+            check_if_warnings()
+        except:
+            check_price_increment_buy()
+            check_price_gap_last_vs_limit()
+
         trade_status ="b"
         return trade_status
     except:
@@ -215,14 +230,20 @@ def sell(price):
 
         elem_close_order_ptrade=driver.find_element_by_xpath(webull_webelements_2.b_close_order_paper_trade)
         elem_close_order_ptrade.click()
-        check_price_gap()
-        check_price_gap_last_vs_limit()
-        check_price_increment_sell()
+        #Check if any warnings first...
+        try:
+            time.sleep(10)
+            check_if_warnings()
+        except:
+            check_price_increment_sell()
+            check_price_gap_last_vs_limit_sell()
+
         trade_status ="s"
         return trade_status
     except:
         trade_status="fail"
-        print("UNABLE TO SELL..")
+        print("SELL PERFORMED WITH FAIL..")
+        return trade_status
 
 def check_filled_status(timer_global_trader_interval):
     filled_status="unknown"
@@ -293,9 +314,15 @@ def modify_sell_order(price):
         elem_modify_paper_trade=driver.find_element_by_xpath(webull_webelements_2.b_modify_paper_trade)
         elem_modify_paper_trade.click()
 
-        check_price_gap()
-        check_price_gap_last_vs_limit()
-        check_price_increment_modify()
+        #Check if any warnings first...
+        try:
+            time.sleep(5)
+            check_if_warnings()
+        except:
+            check_price_increment_modify()
+            check_price_gap_last_vs_limit_sell()
+        
+        #Check if the order already was filled..
         try:
             time.sleep(2)
             elem_close_dialogue=driver.find_element_by_xpath(webull_webelements_2.b_modify_close_dialogue)

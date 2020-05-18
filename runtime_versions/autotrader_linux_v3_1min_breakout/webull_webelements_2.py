@@ -1,6 +1,7 @@
 #BUTTONS
 b_release_confirm = "/html/body/div[2]/div[2]/div/div[1]/div/div[3]/button"
-b_login="/html/body/div[2]/div[2]/div/div/form/input"
+b_login_old="/html/body/div[2]/div[2]/div/div/form/input"
+b_login="/html/body/div[2]/div[2]/div/div/div/input"
 b_buy="/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[4]/div[3]/div/div/div[1]/div[1]/div[2]/div[1]"
 b_paper_trade="/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[4]/div[3]/div/div/div[4]/button"
 b_close_order_paper_trade="/html/body/div[2]/div[2]/div[2]/div[1]/div/div[6]/button"
@@ -10,16 +11,19 @@ b_cancel_confirm="/html/body/div[2]/div[2]/div[3]/button[2]"
 b_modify_paper_trade="/html/body/div[2]/div[2]/div[2]/div[1]/div/div[6]/button"
 b_modify_close_dialogue="/html/body/div[2]/div[2]/div[1]/i"
 b_continue_price_gap="/html/body/div[3]/div[2]/div[3]/button[2]"
-b_continue_price_gap_last_limit="/html/body/div[2]/div[2]/div[3]/button[2]"
+b_continue_price_gap_last_limit_buy="/html/body/div[2]/div[2]/div[3]/button[2]"
+b_continue_price_gap_last_limit_sell="/html/body/div[3]/div[2]/div[3]/button[2]"
 b_cancel_price_gap="/html/body/div[3]/div[2]/div[3]/button[1]"
 b_ok_price_increment="/html/body/div[2]/div[2]/div[3]/button"
 b_markets="/html/body/div/div/div[3]/div/div[2]/div[1]/div[4]/i"
 b_paper_account="/html/body/div/div/div[3]/div/div[2]/div[1]/div[8]/i"
 
 
+
 #ELEMENTS
 e_login="/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[3]/div[3]/div/div"
-e_uname="/html/body/div[2]/div[2]/div/div/form/div[2]/div[1]/div/input"
+e_uname_old="/html/body/div[2]/div[2]/div/div/form/div[2]/div[1]/div/input"
+e_uname="/html/body/div[2]/div[2]/div/div/div/div[2]/div[1]/div/input"
 e_all_section="/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[6]/div[1]/div/div/div/div/div[5]"
 e_ticker_1_txt="/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[2]/div[3]/div/div[2]/div/div[2]/div/li[1]/div[2]/div[1]/div[1]/span[1]"
 e_ticker_2_txt="/html/body/div/div/div[3]/div/div[1]/div/div[2]/div/div/div[1]/div[2]/div[3]/div/div[2]/div/div[2]/div/li[2]/div[2]/div[1]/div[1]/span[1]"

@@ -120,12 +120,19 @@ def check_price_gap():
 
 def check_price_gap_last_vs_limit():
     try:
-        elem_price_gap_last_limit = driver.find_element_by_xpath(webull_webelements_2.b_continue_price_gap_last_limit)
+        elem_price_gap_last_limit = driver.find_element_by_xpath(webull_webelements_2.b_continue_price_gap_last_limit_buy)
         elem_price_gap_last_limit.click()
         print("Continuing price gap last vs limit..")
     except:
         print("No price gap last vs. limit")
 
+def check_price_gap_last_vs_limit_sell():
+    try:
+        elem_price_gap_last_limit = driver.find_element_by_xpath(webull_webelements_2.b_continue_price_gap_last_limit_sell)
+        elem_price_gap_last_limit.click()
+        print("Continuing price gap last vs limit..")
+    except:
+        print("No price gap last vs. limit")
 
 def check_price_increment_buy():
     try:
@@ -229,7 +236,7 @@ def sell(price):
             check_if_warnings()
         except:
             check_price_increment_sell()
-            check_price_gap_last_vs_limit()
+            check_price_gap_last_vs_limit_sell()
 
         trade_status ="s"
         return trade_status
@@ -312,7 +319,7 @@ def modify_sell_order(price):
             check_if_warnings()
         except:
             check_price_increment_modify()
-            check_price_gap_last_vs_limit()
+            check_price_gap_last_vs_limit_sell()
         
         #Check if the order already was filled..
         try:

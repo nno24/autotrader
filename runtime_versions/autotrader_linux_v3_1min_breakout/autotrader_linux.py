@@ -220,7 +220,7 @@ ticker2_prev_15min_cp = 0
 ticker3_prev_15min_cp = 0
 build_15min_candle=""
 current_minute=999   #iniial value, so that the 15 min can be built on open.
-profit_target=3.0   #if gain/trade (%) exceeds this, sell
+profit_target=5.0   #if gain/trade (%) exceeds this, sell
 profit_target_daily=16   #if reached total (%) gain per day, finish for today.
 
 
@@ -797,7 +797,8 @@ def global_trader():
     #Start the global trader as a thread
     t=threading.Timer(timer_global_trader_interval, global_trader)
     t.start()
-    if time_now > time_lastCallExit:
+    #Cancel thread when time reached EOD and last sell order is filled..
+    if time_now > time_lastCallExit and holding_status == 0:
         t.cancel()
         print("Initializing trading parameters for tomorrow...")
         ticker_1_op = 0.0
@@ -1074,6 +1075,7 @@ def timer_1min():
 
     t15=threading.Timer(timer_15min_interval, timer_1min)
     t15.start()
+    #Cancel thread if time reached EOD
     if time_now > time_lastCallExit:
         t15.cancel()
         current_minute = 999
@@ -2162,7 +2164,7 @@ def pcps_paper():
                 print("Selling cause reached profit target on trade..")
                 break
             if time_now >= time_lastCallExit:
-                print("Selling now -- reached time linim of today...")
+                print("Selling now -- reached time limit of today...")
                 break
         #Perform the sale..
         webull_paper_functions.prefill_sell_order(vol)
@@ -2200,54 +2202,53 @@ def pcps_paper():
                 break
 
 
-    #Check if order was filled
-    while holding_status == 1:
-        if trade_status == "s":
-            modify_exit_cnt = 1
-            filled_status="unknown"
-            #Wait until the order is sent to exhange, if not it will look at the order bf
-            time.sleep(7)
-            filled_status = webull_paper_functions.check_filled_status(timer_global_trader_interval)
-            if filled_status == "filled":
-                modify_exit_cnt = 0
-                print("Resetting trading parameters, trade done")
-                print("the exit_cnt rest: ",modify_exit_cnt)
-                bear_bailout_status = 0
-                bear_cnt = 0
-                pcps_exit = 0
-                sample_periods = 0
-                holding_status = 0
-                break_even_or_greater = 0
-                trade_successful_cnt+=1
-                trade_status = "na"
-                time_exit = time_now
+    #Wait until the order is sent to exhange, if not it will look at the order bf
+    time.sleep(5)
+    #Check if order was filled - disregard if trade status is "fail" from sell routine.
+    if trade_status == "s" or trade_status == "fail":
+        modify_exit_cnt = 1
+        filled_status="unknown"
+        filled_status = webull_paper_functions.check_filled_status(timer_global_trader_interval)
+        if filled_status == "filled":
+            modify_exit_cnt = 0
+            print("Resetting trading parameters, trade done")
+            print("the exit_cnt rest: ",modify_exit_cnt)
+            bear_bailout_status = 0
+            bear_cnt = 0
+            pcps_exit = 0
+            sample_periods = 0
+            holding_status = 0
+            break_even_or_greater = 0
+            trade_successful_cnt+=1
+            trade_status = "na"
+            time_exit = time_now
 
-                #Update P&L
-                sold_price = price
-                PnL_this_trade = (float(sold_price) - float(bought_price))*int(vol)
-                PnL_this_trade = float("%.2f" % PnL_this_trade)
-                PnL_total = float(PnL_total) + float(PnL_this_trade)
-                PnL_this_trade_w_fees = float(PnL_this_trade) - float(Trade_fee_per_trade)
-                PnL_total_w_fees = float(PnL_total_w_fees) + float(PnL_this_trade_w_fees)
+            #Update P&L
+            sold_price = price
+            PnL_this_trade = (float(sold_price) - float(bought_price))*int(vol)
+            PnL_this_trade = float("%.2f" % PnL_this_trade)
+            PnL_total = float(PnL_total) + float(PnL_this_trade)
+            PnL_this_trade_w_fees = float(PnL_this_trade) - float(Trade_fee_per_trade)
+            PnL_total_w_fees = float(PnL_total_w_fees) + float(PnL_this_trade_w_fees)
 
-                #Update log file
-                log_PnL(PnL_this_trade, PnL_total, PnL_this_trade_w_fees, PnL_total_w_fees, trade_successful_cnt, val_a20pcps_0_19, val_a20freq_0_19, pcps_max_ticker,time_entry,time_exit)
+            #Update log file
+            log_PnL(PnL_this_trade, PnL_total, PnL_this_trade_w_fees, PnL_total_w_fees, trade_successful_cnt, val_a20pcps_0_19, val_a20freq_0_19, pcps_max_ticker,time_entry,time_exit)
 
 
-                print("")
-                print(pcps_max_ticker)
-                print(datetime.datetime.now())
-                print("PnL this trade:        ",PnL_this_trade)
-                print("PnL total:             ",PnL_total)
-                print("PnL this trade w fees: ",PnL_this_trade_w_fees)
-                print("PnL total w fees:      ",PnL_total_w_fees)
-                print("Trade cnt:             ",trade_successful_cnt)
-                print("a20pcps_0_19:          ",val_a20pcps_0_19)
-                print("a20freq_0_19:          ",val_a20freq_0_19)
-                print("")
-        else:
-            time.sleep(1)
-            print("Trade status not set to s yet..")
+            print("")
+            print(pcps_max_ticker)
+            print(datetime.datetime.now())
+            print("PnL this trade:        ",PnL_this_trade)
+            print("PnL total:             ",PnL_total)
+            print("PnL this trade w fees: ",PnL_this_trade_w_fees)
+            print("PnL total w fees:      ",PnL_total_w_fees)
+            print("Trade cnt:             ",trade_successful_cnt)
+            print("a20pcps_0_19:          ",val_a20pcps_0_19)
+            print("a20freq_0_19:          ",val_a20freq_0_19)
+            print("")
+    else:
+        time.sleep(1)
+        print("Trade status not set to s yet..")
 
 
     #Exit routine exited or bear bailout -wait until we dont hold the ticker anymore
