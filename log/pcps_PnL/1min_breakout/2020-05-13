@@ -1,0 +1,1284 @@
+Time entry:       09:32:39.420813
+Time exit:        09:33:26.932515
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -13.64
+PnL total:        -13.64
+PnL trade w fees: -21.14
+PnL total w fees: -21.14
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:39:11.278550
+Time exit:        09:41:27.423597
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        33.5
+PnL total:        19.86
+PnL trade w fees: 26.0
+PnL total w fees: 4.859999999999999
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:42:30.409098
+Time exit:        09:43:22.028881
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -25.25
+PnL total:        -5.390000000000001
+PnL trade w fees: -32.75
+PnL total w fees: -27.89
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:55.398624
+Time exit:        09:47:42.024909
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        151.5
+PnL total:        146.11
+PnL trade w fees: 144.0
+PnL total w fees: 116.11
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:43.448385
+Time exit:        09:48:17.057291
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        146.11
+PnL trade w fees: -7.5
+PnL total w fees: 108.61
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:18.843789
+Time exit:        09:49:40.117825
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -73.36
+PnL total:        72.75000000000001
+PnL trade w fees: -80.86
+PnL total w fees: 27.75
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:51:15.624556
+Time exit:        09:54:17.173468
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        29.41
+PnL total:        102.16000000000001
+PnL trade w fees: 21.91
+PnL total w fees: 49.66
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:46.123257
+Time exit:        09:56:16.498220
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        1.04
+PnL total:        103.20000000000002
+PnL trade w fees: -6.46
+PnL total w fees: 43.199999999999996
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:24.214667
+Time exit:        09:57:47.634688
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -13.29
+PnL total:        89.91000000000003
+PnL trade w fees: -20.79
+PnL total w fees: 22.409999999999997
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:07.500272
+Time exit:        09:59:42.882555
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        89.91000000000003
+PnL trade w fees: -7.5
+PnL total w fees: 14.909999999999997
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:54.385314
+Time exit:        10:01:06.046741
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -26.03
+PnL total:        63.880000000000024
+PnL trade w fees: -33.53
+PnL total w fees: -18.620000000000005
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:44.373941
+Time exit:        10:06:17.581486
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        12.15
+PnL total:        76.03000000000003
+PnL trade w fees: 4.65
+PnL total w fees: -13.970000000000004
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:01.979511
+Time exit:        10:10:17.642698
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        14.91
+PnL total:        90.94000000000003
+PnL trade w fees: 7.41
+PnL total w fees: -6.560000000000004
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:18.152138
+Time exit:        10:11:17.678305
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -27.2
+PnL total:        63.74000000000002
+PnL trade w fees: -34.7
+PnL total w fees: -41.260000000000005
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:19.271332
+Time exit:        10:16:27.944887
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        21.88
+PnL total:        85.62000000000002
+PnL trade w fees: 14.379999999999999
+PnL total w fees: -26.880000000000006
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:57.866620
+Time exit:        10:18:18.272010
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -8.62
+PnL total:        77.00000000000001
+PnL trade w fees: -16.119999999999997
+PnL total w fees: -43.0
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:48.716620
+Time exit:        10:21:17.158664
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        89.42
+PnL total:        166.42000000000002
+PnL trade w fees: 81.92
+PnL total w fees: 38.92
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:18.252186
+Time exit:        10:24:13.251563
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -20.08
+PnL total:        146.34000000000003
+PnL trade w fees: -27.58
+PnL total w fees: 11.340000000000003
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:31.278349
+Time exit:        10:27:21.609826
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -13.39
+PnL total:        132.95000000000005
+PnL trade w fees: -20.89
+PnL total w fees: -9.549999999999997
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:17.229357
+Time exit:        10:30:07.706089
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -72.8
+PnL total:        60.15000000000005
+PnL trade w fees: -80.3
+PnL total w fees: -89.85
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:30:09.326458
+Time exit:        10:32:17.806653
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        2.04
+PnL total:        62.19000000000005
+PnL trade w fees: -5.46
+PnL total w fees: -95.30999999999999
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:32:19.068105
+Time exit:        10:33:29.847560
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -36.68
+PnL total:        25.510000000000048
+PnL trade w fees: -44.18
+PnL total w fees: -139.48999999999998
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:33:30.298964
+Time exit:        10:34:17.878244
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -28.12
+PnL total:        -2.6099999999999532
+PnL trade w fees: -35.620000000000005
+PnL total w fees: -175.10999999999999
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:34:46.536133
+Time exit:        10:36:08.159506
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -38.7
+PnL total:        -41.30999999999996
+PnL trade w fees: -46.2
+PnL total w fees: -221.31
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:39:30.067019
+Time exit:        10:41:17.535469
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -14.5
+PnL total:        -55.80999999999996
+PnL trade w fees: -22.0
+PnL total w fees: -243.31
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:41:40.269341
+Time exit:        10:43:14.775761
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        21.0
+PnL total:        -34.80999999999996
+PnL trade w fees: 13.5
+PnL total w fees: -229.81
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:43:15.759915
+Time exit:        10:44:51.817775
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -46.44
+PnL total:        -81.24999999999996
+PnL trade w fees: -53.94
+PnL total w fees: -283.75
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:44:58.421406
+Time exit:        10:46:27.906425
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        7.21
+PnL total:        -74.03999999999996
+PnL trade w fees: -0.29000000000000004
+PnL total w fees: -284.04
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:48:04.282184
+Time exit:        10:50:37.876765
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        15.75
+PnL total:        -58.289999999999964
+PnL trade w fees: 8.25
+PnL total w fees: -275.79
+Trade cnt succ:   29
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:50:59.441000
+Time exit:        10:52:17.107125
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -35.98
+PnL total:        -94.26999999999995
+PnL trade w fees: -43.48
+PnL total w fees: -319.27000000000004
+Trade cnt succ:   30
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:52:18.346858
+Time exit:        10:54:13.170951
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -6.32
+PnL total:        -100.58999999999995
+PnL trade w fees: -13.82
+PnL total w fees: -333.09000000000003
+Trade cnt succ:   31
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:54:33.894195
+Time exit:        10:57:37.451397
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        46.36
+PnL total:        -54.22999999999995
+PnL trade w fees: 38.86
+PnL total w fees: -294.23
+Trade cnt succ:   32
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:58:28.384919
+Time exit:        10:59:07.959128
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -0.31
+PnL total:        -54.53999999999995
+PnL trade w fees: -7.81
+PnL total w fees: -302.04
+Trade cnt succ:   33
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:59:10.544552
+Time exit:        11:00:28.031205
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -32.58
+PnL total:        -87.11999999999995
+PnL trade w fees: -40.08
+PnL total w fees: -342.12
+Trade cnt succ:   34
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:01:37.525682
+Time exit:        11:02:42.177802
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -20.21
+PnL total:        -107.32999999999996
+PnL trade w fees: -27.71
+PnL total w fees: -369.83
+Trade cnt succ:   35
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:02:42.789565
+Time exit:        11:05:42.265572
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -13.97
+PnL total:        -121.29999999999995
+PnL trade w fees: -21.47
+PnL total w fees: -391.29999999999995
+Trade cnt succ:   36
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:05:43.044794
+Time exit:        11:07:28.312328
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -51.12
+PnL total:        -172.41999999999996
+PnL trade w fees: -58.62
+PnL total w fees: -449.91999999999996
+Trade cnt succ:   37
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:07:28.737381
+Time exit:        11:10:08.397913
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -11.46
+PnL total:        -183.87999999999997
+PnL trade w fees: -18.96
+PnL total w fees: -468.87999999999994
+Trade cnt succ:   38
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:12:24.282332
+Time exit:        11:14:47.786107
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -22.72
+PnL total:        -206.59999999999997
+PnL trade w fees: -30.22
+PnL total w fees: -499.0999999999999
+Trade cnt succ:   39
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:15:51.793020
+Time exit:        11:17:18.867095
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -18.67
+PnL total:        -225.26999999999998
+PnL trade w fees: -26.17
+PnL total w fees: -525.2699999999999
+Trade cnt succ:   40
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:18:55.327247
+Time exit:        11:20:46.826229
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -17.71
+PnL total:        -242.98
+PnL trade w fees: -25.21
+PnL total w fees: -550.4799999999999
+Trade cnt succ:   41
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:25:37.325095
+Time exit:        11:30:18.029618
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        6.0
+PnL total:        -236.98
+PnL trade w fees: -1.5
+PnL total w fees: -551.9799999999999
+Trade cnt succ:   42
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:31:22.190846
+Time exit:        11:37:27.792700
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        77.26
+PnL total:        -159.71999999999997
+PnL trade w fees: 69.76
+PnL total w fees: -482.2199999999999
+Trade cnt succ:   43
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:37:29.011508
+Time exit:        11:41:18.899009
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        31.0
+PnL total:        -128.71999999999997
+PnL trade w fees: 23.5
+PnL total w fees: -458.7199999999999
+Trade cnt succ:   44
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:41:39.692206
+Time exit:        11:43:19.132751
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -88.39
+PnL total:        -217.10999999999996
+PnL trade w fees: -95.89
+PnL total w fees: -554.6099999999999
+Trade cnt succ:   45
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:44:18.186067
+Time exit:        11:47:18.733436
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        27.15
+PnL total:        -189.95999999999995
+PnL trade w fees: 19.65
+PnL total w fees: -534.9599999999999
+Trade cnt succ:   46
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:47:18.959849
+Time exit:        11:49:18.823512
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        17.47
+PnL total:        -172.48999999999995
+PnL trade w fees: 9.969999999999999
+PnL total w fees: -524.9899999999999
+Trade cnt succ:   47
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:49:53.589461
+Time exit:        11:50:28.161274
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -14.17
+PnL total:        -186.65999999999994
+PnL trade w fees: -21.67
+PnL total w fees: -546.6599999999999
+Trade cnt succ:   48
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:50:29.433373
+Time exit:        11:55:28.299661
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        40.57
+PnL total:        -146.08999999999995
+PnL trade w fees: 33.07
+PnL total w fees: -513.5899999999998
+Trade cnt succ:   49
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:56:29.779043
+Time exit:        11:57:18.359747
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -6.37
+PnL total:        -152.45999999999995
+PnL trade w fees: -13.870000000000001
+PnL total w fees: -527.4599999999998
+Trade cnt succ:   50
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:59:47.334711
+Time exit:        12:06:48.949321
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        36.84
+PnL total:        -115.61999999999995
+PnL trade w fees: 29.340000000000003
+PnL total w fees: -498.1199999999998
+Trade cnt succ:   51
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:07:25.729062
+Time exit:        12:10:28.377779
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        30.35
+PnL total:        -85.26999999999995
+PnL trade w fees: 22.85
+PnL total w fees: -475.26999999999975
+Trade cnt succ:   52
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:10:29.290860
+Time exit:        12:11:18.402025
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -23.8
+PnL total:        -109.06999999999995
+PnL trade w fees: -31.3
+PnL total w fees: -506.56999999999977
+Trade cnt succ:   53
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:13:31.993733
+Time exit:        12:15:18.676011
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        59.9
+PnL total:        -49.16999999999995
+PnL trade w fees: 52.4
+PnL total w fees: -454.1699999999998
+Trade cnt succ:   54
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:17:45.985336
+Time exit:        12:19:18.569633
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -2.12
+PnL total:        -51.28999999999995
+PnL trade w fees: -9.620000000000001
+PnL total w fees: -463.7899999999998
+Trade cnt succ:   55
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:21:01.474826
+Time exit:        12:22:17.984242
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -6.34
+PnL total:        -57.62999999999995
+PnL trade w fees: -13.84
+PnL total w fees: -477.62999999999977
+Trade cnt succ:   56
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:22:19.278482
+Time exit:        12:23:04.006851
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -17.85
+PnL total:        -75.47999999999996
+PnL trade w fees: -25.35
+PnL total w fees: -502.9799999999998
+Trade cnt succ:   57
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:23:25.864496
+Time exit:        12:24:18.255609
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -9.43
+PnL total:        -84.90999999999997
+PnL trade w fees: -16.93
+PnL total w fees: -519.9099999999997
+Trade cnt succ:   58
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:24:34.907859
+Time exit:        12:26:48.455250
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -2.6
+PnL total:        -87.50999999999996
+PnL trade w fees: -10.1
+PnL total w fees: -530.0099999999998
+Trade cnt succ:   59
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:26:49.592920
+Time exit:        12:29:49.551963
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        5.94
+PnL total:        -81.56999999999996
+PnL trade w fees: -1.5599999999999996
+PnL total w fees: -531.5699999999997
+Trade cnt succ:   60
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:29:51.257997
+Time exit:        12:33:48.682189
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        33.33
+PnL total:        -48.23999999999997
+PnL trade w fees: 25.83
+PnL total w fees: -505.7399999999997
+Trade cnt succ:   61
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:34:03.395924
+Time exit:        12:35:12.849446
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -11.68
+PnL total:        -59.919999999999966
+PnL trade w fees: -19.18
+PnL total w fees: -524.9199999999997
+Trade cnt succ:   62
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:35:13.802533
+Time exit:        12:37:28.919543
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -5.82
+PnL total:        -65.73999999999997
+PnL trade w fees: -13.32
+PnL total w fees: -538.2399999999998
+Trade cnt succ:   63
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:43:02.014653
+Time exit:        12:49:29.654873
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        59.22
+PnL total:        -6.519999999999968
+PnL trade w fees: 51.72
+PnL total w fees: -486.51999999999975
+Trade cnt succ:   64
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:49:30.273579
+Time exit:        12:51:28.723079
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -0.66
+PnL total:        -7.179999999999968
+PnL trade w fees: -8.16
+PnL total w fees: -494.6799999999998
+Trade cnt succ:   65
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:52:00.476699
+Time exit:        12:53:29.088670
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -41.6
+PnL total:        -48.77999999999997
+PnL trade w fees: -49.1
+PnL total w fees: -543.7799999999997
+Trade cnt succ:   66
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:53:30.356580
+Time exit:        12:55:59.173446
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -6.0
+PnL total:        -54.77999999999997
+PnL trade w fees: -13.5
+PnL total w fees: -557.2799999999997
+Trade cnt succ:   67
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:56:00.196195
+Time exit:        12:57:20.223508
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        9.3
+PnL total:        -45.479999999999976
+PnL trade w fees: 1.8000000000000007
+PnL total w fees: -555.4799999999998
+Trade cnt succ:   68
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:00:30.279496
+Time exit:        13:02:18.967895
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        3.06
+PnL total:        -42.41999999999997
+PnL trade w fees: -4.4399999999999995
+PnL total w fees: -559.9199999999998
+Trade cnt succ:   69
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:03:27.094309
+Time exit:        13:03:58.598256
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -12.58
+PnL total:        -54.99999999999997
+PnL trade w fees: -20.08
+PnL total w fees: -579.9999999999999
+Trade cnt succ:   70
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:05:20.558561
+Time exit:        13:09:22.913749
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        7.16
+PnL total:        -47.839999999999975
+PnL trade w fees: -0.33999999999999986
+PnL total w fees: -580.3399999999999
+Trade cnt succ:   71
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:19:05.546685
+Time exit:        13:20:09.131356
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -18.33
+PnL total:        -66.16999999999997
+PnL trade w fees: -25.83
+PnL total w fees: -606.17
+Trade cnt succ:   72
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:20:09.799507
+Time exit:        13:22:29.197737
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -0.65
+PnL total:        -66.81999999999998
+PnL trade w fees: -8.15
+PnL total w fees: -614.3199999999999
+Trade cnt succ:   73
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:23:01.460748
+Time exit:        13:25:38.562920
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -28.93
+PnL total:        -95.74999999999997
+PnL trade w fees: -36.43
+PnL total w fees: -650.7499999999999
+Trade cnt succ:   74
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:29:12.971335
+Time exit:        13:34:19.725888
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        3.62
+PnL total:        -92.12999999999997
+PnL trade w fees: -3.88
+PnL total w fees: -654.6299999999999
+Trade cnt succ:   75
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:34:38.346761
+Time exit:        13:36:48.994014
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -15.58
+PnL total:        -107.70999999999997
+PnL trade w fees: -23.08
+PnL total w fees: -677.7099999999999
+Trade cnt succ:   76
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:37:39.011686
+Time exit:        13:39:19.459599
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -12.8
+PnL total:        -120.50999999999996
+PnL trade w fees: -20.3
+PnL total w fees: -698.0099999999999
+Trade cnt succ:   77
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:39:32.124487
+Time exit:        13:43:19.674863
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        50.16
+PnL total:        -70.34999999999997
+PnL trade w fees: 42.66
+PnL total w fees: -655.3499999999999
+Trade cnt succ:   78
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:49:06.829587
+Time exit:        13:52:19.423681
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        6.44
+PnL total:        -63.90999999999997
+PnL trade w fees: -1.0599999999999996
+PnL total w fees: -656.4099999999999
+Trade cnt succ:   79
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:52:20.405640
+Time exit:        13:54:59.511508
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -6.39
+PnL total:        -70.29999999999997
+PnL trade w fees: -13.89
+PnL total w fees: -670.2999999999998
+Trade cnt succ:   80
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:58:32.742886
+Time exit:        14:00:09.448509
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -70.29999999999997
+PnL trade w fees: -7.5
+PnL total w fees: -677.7999999999998
+Trade cnt succ:   81
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:01:25.711951
+Time exit:        14:03:14.227765
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -27.71
+PnL total:        -98.00999999999996
+PnL trade w fees: -35.21
+PnL total w fees: -713.0099999999999
+Trade cnt succ:   82
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:03:14.792196
+Time exit:        14:05:20.278879
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -11.86
+PnL total:        -109.86999999999996
+PnL trade w fees: -19.36
+PnL total w fees: -732.3699999999999
+Trade cnt succ:   83
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:10:02.843234
+Time exit:        14:12:54.393716
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -2.18
+PnL total:        -112.04999999999997
+PnL trade w fees: -9.68
+PnL total w fees: -742.0499999999998
+Trade cnt succ:   84
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:16:10.518100
+Time exit:        14:18:59.195038
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -1.57
+PnL total:        -113.61999999999996
+PnL trade w fees: -9.07
+PnL total w fees: -751.1199999999999
+Trade cnt succ:   85
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:25:34.810049
+Time exit:        14:27:19.295515
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -28.43
+PnL total:        -142.04999999999995
+PnL trade w fees: -35.93
+PnL total w fees: -787.0499999999998
+Trade cnt succ:   86
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:29:33.526020
+Time exit:        14:33:30.092449
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        22.09
+PnL total:        -119.95999999999995
+PnL trade w fees: 14.59
+PnL total w fees: -772.4599999999998
+Trade cnt succ:   87
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:36:15.877036
+Time exit:        14:38:29.605444
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -45.57
+PnL total:        -165.52999999999994
+PnL trade w fees: -53.07
+PnL total w fees: -825.5299999999999
+Trade cnt succ:   88
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:40:24.681098
+Time exit:        14:41:39.183182
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -0.94
+PnL total:        -166.46999999999994
+PnL trade w fees: -8.44
+PnL total w fees: -833.9699999999999
+Trade cnt succ:   89
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:41:40.451962
+Time exit:        14:45:30.310455
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -15.97
+PnL total:        -182.43999999999994
+PnL trade w fees: -23.47
+PnL total w fees: -857.4399999999999
+Trade cnt succ:   90
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:49:43.146657
+Time exit:        14:50:19.612740
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -21.92
+PnL total:        -204.35999999999996
+PnL trade w fees: -29.42
+PnL total w fees: -886.8599999999999
+Trade cnt succ:   91
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:52:31.729463
+Time exit:        14:54:19.365715
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        6.52
+PnL total:        -197.83999999999995
+PnL trade w fees: -0.9800000000000004
+PnL total w fees: -887.8399999999999
+Trade cnt succ:   92
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:54:20.259777
+Time exit:        14:54:49.378199
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -12.98
+PnL total:        -210.81999999999994
+PnL trade w fees: -20.48
+PnL total w fees: -908.3199999999999
+Trade cnt succ:   93
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:54:50.966324
+Time exit:        14:56:30.435713
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -9.52
+PnL total:        -220.33999999999995
+PnL trade w fees: -17.02
+PnL total w fees: -925.3399999999999
+Trade cnt succ:   94
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:56:32.965365
+Time exit:        14:57:48.494811
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -25.72
+PnL total:        -246.05999999999995
+PnL trade w fees: -33.22
+PnL total w fees: -958.56
+Trade cnt succ:   95
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:57:49.689200
+Time exit:        14:59:15.544248
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -2.21
+PnL total:        -248.26999999999995
+PnL trade w fees: -9.71
+PnL total w fees: -968.27
+Trade cnt succ:   96
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:00:02.059206
+Time exit:        15:05:59.127085
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        29.49
+PnL total:        -218.77999999999994
+PnL trade w fees: 21.99
+PnL total w fees: -946.28
+Trade cnt succ:   97
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:07:18.994792
+Time exit:        15:09:20.408863
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        15.12
+PnL total:        -203.65999999999994
+PnL trade w fees: 7.619999999999999
+PnL total w fees: -938.66
+Trade cnt succ:   98
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:12:08.990645
+Time exit:        15:13:30.465302
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        -6.45
+PnL total:        -210.10999999999993
+PnL trade w fees: -13.95
+PnL total w fees: -952.61
+Trade cnt succ:   99
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:14:29.332326
+Time exit:        15:16:44.054273
+Ticker:           SIF
+Size(USD):        2500
+PnL trade:        12.88
+PnL total:        -197.22999999999993
+PnL trade w fees: 5.380000000000001
+PnL total w fees: -947.23
+Trade cnt succ:   100
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:17:07.795284
+Time exit:        15:22:14.403116
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        138.88
+PnL total:        -58.34999999999994
+PnL trade w fees: 131.38
+PnL total w fees: -815.85
+Trade cnt succ:   101
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:22:15.354239
+Time exit:        15:24:54.493946
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -33.26
+PnL total:        -91.60999999999993
+PnL trade w fees: -40.76
+PnL total w fees: -856.61
+Trade cnt succ:   102
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:27:32.425863
+Time exit:        15:30:22.046741
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        1.09
+PnL total:        -90.51999999999992
+PnL trade w fees: -6.41
+PnL total w fees: -863.02
+Trade cnt succ:   103
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:37:23.853343
+Time exit:        15:39:21.400200
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        -2.24
+PnL total:        -92.75999999999992
+PnL trade w fees: -9.74
+PnL total w fees: -872.76
+Trade cnt succ:   104
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:39:21.602717
+Time exit:        15:41:17.459502
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        7.83
+PnL total:        -84.92999999999992
+PnL trade w fees: 0.33000000000000007
+PnL total w fees: -872.43
+Trade cnt succ:   105
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:41:57.368525
+Time exit:        15:42:40.831649
+Ticker:           ARPO
+Size(USD):        2500
+PnL trade:        -11.48
+PnL total:        -96.40999999999993
+PnL trade w fees: -18.98
+PnL total w fees: -891.41
+Trade cnt succ:   106
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:44:04.633420
+Time exit:        15:47:21.169263
+Ticker:           JCP
+Size(USD):        2500
+PnL trade:        54.93
+PnL total:        -41.479999999999926
+PnL trade w fees: 47.43
+PnL total w fees: -843.98
+Trade cnt succ:   107
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

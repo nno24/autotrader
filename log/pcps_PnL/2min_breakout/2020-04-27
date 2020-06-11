@@ -1,0 +1,756 @@
+Time entry:       09:36:16.445607
+Time exit:        09:43:21.377361
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -253.54
+PnL total:        -253.54
+PnL trade w fees: -261.03999999999996
+PnL total w fees: -261.03999999999996
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:27.154723
+Time exit:        09:45:52.068485
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -87.25
+PnL total:        -340.78999999999996
+PnL trade w fees: -94.75
+PnL total w fees: -355.78999999999996
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:05.177839
+Time exit:        09:49:34.608528
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -22.75
+PnL total:        -363.53999999999996
+PnL trade w fees: -30.25
+PnL total w fees: -386.03999999999996
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:38.351855
+Time exit:        09:51:09.228638
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        104.15
+PnL total:        -259.39
+PnL trade w fees: 96.65
+PnL total w fees: -289.39
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:11.562593
+Time exit:        09:57:52.386206
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -9.0
+PnL total:        -268.39
+PnL trade w fees: -16.5
+PnL total w fees: -305.89
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:14.658747
+Time exit:        09:59:58.716483
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -147.2
+PnL total:        -415.59
+PnL trade w fees: -154.7
+PnL total w fees: -460.59
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:18.050989
+Time exit:        10:05:53.138255
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -23.58
+PnL total:        -439.16999999999996
+PnL trade w fees: -31.08
+PnL total w fees: -491.66999999999996
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:56.516476
+Time exit:        10:08:44.071429
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -439.16999999999996
+PnL trade w fees: -7.5
+PnL total w fees: -499.16999999999996
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:29.812466
+Time exit:        10:13:06.225097
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -67.12
+PnL total:        -506.28999999999996
+PnL trade w fees: -74.62
+PnL total w fees: -573.79
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:15:46.728516
+Time exit:        10:18:48.039421
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -48.22
+PnL total:        -554.51
+PnL trade w fees: -55.72
+PnL total w fees: -629.51
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:06.609763
+Time exit:        10:21:35.046703
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        46.39
+PnL total:        -508.12
+PnL trade w fees: 38.89
+PnL total w fees: -590.62
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:36.213915
+Time exit:        10:25:59.490464
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -29.44
+PnL total:        -537.5600000000001
+PnL trade w fees: -36.94
+PnL total w fees: -627.56
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:00.825057
+Time exit:        10:29:15.748744
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -40.54
+PnL total:        -578.1
+PnL trade w fees: -48.04
+PnL total w fees: -675.5999999999999
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:30:03.358256
+Time exit:        10:32:32.701416
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -21.61
+PnL total:        -599.71
+PnL trade w fees: -29.11
+PnL total w fees: -704.7099999999999
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:34:56.484516
+Time exit:        10:36:44.980714
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        99.0
+PnL total:        -500.71000000000004
+PnL trade w fees: 91.5
+PnL total w fees: -613.2099999999999
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:36:45.693228
+Time exit:        10:38:44.154677
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -47.6
+PnL total:        -548.3100000000001
+PnL trade w fees: -55.1
+PnL total w fees: -668.31
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:39:44.636716
+Time exit:        10:41:44.102309
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -94.32
+PnL total:        -642.6300000000001
+PnL trade w fees: -101.82
+PnL total w fees: -770.1299999999999
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:45:29.284918
+Time exit:        10:47:54.729982
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -62.43
+PnL total:        -705.0600000000001
+PnL trade w fees: -69.93
+PnL total w fees: -840.06
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:52:05.398292
+Time exit:        10:58:34.086330
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        75.9
+PnL total:        -629.1600000000001
+PnL trade w fees: 68.4
+PnL total w fees: -771.66
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:59:09.460873
+Time exit:        11:02:18.996049
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        69.12
+PnL total:        -560.0400000000001
+PnL trade w fees: 61.620000000000005
+PnL total w fees: -710.04
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:03:47.215539
+Time exit:        11:07:28.321298
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -17.57
+PnL total:        -577.6100000000001
+PnL trade w fees: -25.07
+PnL total w fees: -735.11
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:08:02.088765
+Time exit:        11:09:42.804135
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -14.82
+PnL total:        -592.4300000000002
+PnL trade w fees: -22.32
+PnL total w fees: -757.4300000000001
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:11:11.709308
+Time exit:        11:17:12.183791
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -8.93
+PnL total:        -601.3600000000001
+PnL trade w fees: -16.43
+PnL total w fees: -773.86
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:20:09.112091
+Time exit:        11:26:43.240785
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        8.84
+PnL total:        -592.5200000000001
+PnL trade w fees: 1.3399999999999999
+PnL total w fees: -772.52
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:30:02.027523
+Time exit:        11:35:13.430196
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        12.22
+PnL total:        -580.3000000000001
+PnL trade w fees: 4.720000000000001
+PnL total w fees: -767.8
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:38:11.909162
+Time exit:        11:39:38.676716
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -12.5
+PnL total:        -592.8000000000001
+PnL trade w fees: -20.0
+PnL total w fees: -787.8
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:41:09.621352
+Time exit:        11:43:09.152857
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        50.0
+PnL total:        -542.8000000000001
+PnL trade w fees: 42.5
+PnL total w fees: -745.3
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:43:09.877862
+Time exit:        11:47:02.555125
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -24.65
+PnL total:        -567.45
+PnL trade w fees: -32.15
+PnL total w fees: -777.4499999999999
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:47:18.209206
+Time exit:        11:48:59.757455
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -10.36
+PnL total:        -577.8100000000001
+PnL trade w fees: -17.86
+PnL total w fees: -795.31
+Trade cnt succ:   29
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:50:56.805333
+Time exit:        11:58:44.522739
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        25.22
+PnL total:        -552.59
+PnL trade w fees: 17.72
+PnL total w fees: -777.5899999999999
+Trade cnt succ:   30
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:58:45.107996
+Time exit:        12:03:15.729459
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -12.63
+PnL total:        -565.22
+PnL trade w fees: -20.130000000000003
+PnL total w fees: -797.7199999999999
+Trade cnt succ:   31
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:03:28.163061
+Time exit:        12:07:33.073840
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -11.36
+PnL total:        -576.58
+PnL trade w fees: -18.86
+PnL total w fees: -816.5799999999999
+Trade cnt succ:   32
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:07:33.544111
+Time exit:        12:10:40.227138
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -1.35
+PnL total:        -577.9300000000001
+PnL trade w fees: -8.85
+PnL total w fees: -825.43
+Trade cnt succ:   33
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:10:40.992721
+Time exit:        12:16:01.657023
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        0.25
+PnL total:        -577.6800000000001
+PnL trade w fees: -7.25
+PnL total w fees: -832.68
+Trade cnt succ:   34
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:18:12.375013
+Time exit:        12:28:41.672544
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        20.02
+PnL total:        -557.6600000000001
+PnL trade w fees: 12.52
+PnL total w fees: -820.16
+Trade cnt succ:   35
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:28:56.622812
+Time exit:        12:30:26.130655
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -35.75
+PnL total:        -593.4100000000001
+PnL trade w fees: -43.25
+PnL total w fees: -863.41
+Trade cnt succ:   36
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:32:01.364572
+Time exit:        12:33:27.361168
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        2.6
+PnL total:        -590.8100000000001
+PnL trade w fees: -4.9
+PnL total w fees: -868.31
+Trade cnt succ:   37
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:34:59.145639
+Time exit:        12:38:20.006517
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -24.0
+PnL total:        -614.8100000000001
+PnL trade w fees: -31.5
+PnL total w fees: -899.81
+Trade cnt succ:   38
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:40:14.815723
+Time exit:        12:43:43.593594
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -34.63
+PnL total:        -649.44
+PnL trade w fees: -42.13
+PnL total w fees: -941.9399999999999
+Trade cnt succ:   39
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:44:27.245795
+Time exit:        12:45:52.835196
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -3.64
+PnL total:        -653.08
+PnL trade w fees: -11.14
+PnL total w fees: -953.0799999999999
+Trade cnt succ:   40
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:45:53.828970
+Time exit:        12:47:26.347855
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -7.02
+PnL total:        -660.1
+PnL trade w fees: -14.52
+PnL total w fees: -967.5999999999999
+Trade cnt succ:   41
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:50:08.591590
+Time exit:        12:54:54.049533
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -2.08
+PnL total:        -662.1800000000001
+PnL trade w fees: -9.58
+PnL total w fees: -977.18
+Trade cnt succ:   42
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:56:02.321784
+Time exit:        13:00:46.955871
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -23.98
+PnL total:        -686.1600000000001
+PnL trade w fees: -31.48
+PnL total w fees: -1008.66
+Trade cnt succ:   43
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:00:47.934759
+Time exit:        13:03:41.369880
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -23.23
+PnL total:        -709.3900000000001
+PnL trade w fees: -30.73
+PnL total w fees: -1039.3899999999999
+Trade cnt succ:   44
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:04:41.196248
+Time exit:        13:08:51.356500
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -4.16
+PnL total:        -713.5500000000001
+PnL trade w fees: -11.66
+PnL total w fees: -1051.05
+Trade cnt succ:   45
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:12:48.081416
+Time exit:        13:16:45.396511
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        3.64
+PnL total:        -709.9100000000001
+PnL trade w fees: -3.86
+PnL total w fees: -1054.9099999999999
+Trade cnt succ:   46
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:21:13.792893
+Time exit:        13:22:39.497915
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -53.76
+PnL total:        -763.6700000000001
+PnL trade w fees: -61.26
+PnL total w fees: -1116.1699999999998
+Trade cnt succ:   47
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:24:13.224028
+Time exit:        13:28:04.686548
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        -23.81
+PnL total:        -787.48
+PnL trade w fees: -31.31
+PnL total w fees: -1147.4799999999998
+Trade cnt succ:   48
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:28:12.679548
+Time exit:        13:29:47.152694
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -54.07
+PnL total:        -841.5500000000001
+PnL trade w fees: -61.57
+PnL total w fees: -1209.0499999999997
+Trade cnt succ:   49
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:31:18.456657
+Time exit:        13:35:06.759655
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        81.02
+PnL total:        -760.5300000000001
+PnL trade w fees: 73.52
+PnL total w fees: -1135.5299999999997
+Trade cnt succ:   50
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:35:07.630153
+Time exit:        13:39:18.292770
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -26.04
+PnL total:        -786.57
+PnL trade w fees: -33.54
+PnL total w fees: -1169.0699999999997
+Trade cnt succ:   51
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:41:14.412855
+Time exit:        13:42:41.551704
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -51.56
+PnL total:        -838.1300000000001
+PnL trade w fees: -59.06
+PnL total w fees: -1228.1299999999997
+Trade cnt succ:   52
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:43:06.667088
+Time exit:        13:47:26.282236
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        1.3
+PnL total:        -836.8300000000002
+PnL trade w fees: -6.2
+PnL total w fees: -1234.3299999999997
+Trade cnt succ:   53
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:51:42.680938
+Time exit:        13:55:25.159997
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -52.98
+PnL total:        -889.8100000000002
+PnL trade w fees: -60.48
+PnL total w fees: -1294.8099999999997
+Trade cnt succ:   54
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:55:40.911026
+Time exit:        14:00:53.555511
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        12.74
+PnL total:        -877.0700000000002
+PnL trade w fees: 5.24
+PnL total w fees: -1289.5699999999997
+Trade cnt succ:   55
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:01:55.639259
+Time exit:        14:03:36.283690
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -8.32
+PnL total:        -885.3900000000002
+PnL trade w fees: -15.82
+PnL total w fees: -1305.3899999999996
+Trade cnt succ:   56
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:03:46.763873
+Time exit:        14:05:40.558382
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        6.5
+PnL total:        -878.8900000000002
+PnL trade w fees: -1.0
+PnL total w fees: -1306.3899999999996
+Trade cnt succ:   57
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:05:52.281398
+Time exit:        14:07:29.766463
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -2.86
+PnL total:        -881.7500000000002
+PnL trade w fees: -10.36
+PnL total w fees: -1316.7499999999995
+Trade cnt succ:   58
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:07:41.347645
+Time exit:        14:10:43.092522
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -3.5
+PnL total:        -885.2500000000002
+PnL trade w fees: -11.0
+PnL total w fees: -1327.7499999999995
+Trade cnt succ:   59
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:11:49.254767
+Time exit:        14:23:13.613918
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        40.0
+PnL total:        -845.2500000000002
+PnL trade w fees: 32.5
+PnL total w fees: -1295.2499999999995
+Trade cnt succ:   60
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:23:27.281442
+Time exit:        14:29:20.055354
+Ticker:           DFFN
+Size(USD):        2500
+PnL trade:        89.18
+PnL total:        -756.0700000000002
+PnL trade w fees: 81.68
+PnL total w fees: -1213.5699999999995
+Trade cnt succ:   61
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:29:46.566447
+Time exit:        14:32:50.525354
+Ticker:           NAKD
+Size(USD):        2500
+PnL trade:        -23.81
+PnL total:        -779.8800000000001
+PnL trade w fees: -31.31
+PnL total w fees: -1244.8799999999994
+Trade cnt succ:   62
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:33:02.726820
+Time exit:        14:35:14.666057
+Ticker:           AXSM
+Size(USD):        2500
+PnL trade:        -19.25
+PnL total:        -799.1300000000001
+PnL trade w fees: -26.75
+PnL total w fees: -1271.6299999999994
+Trade cnt succ:   63
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

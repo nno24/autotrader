@@ -1,0 +1,96 @@
+Time entry:       10:24:34.371814
+Time exit:        10:27:00.181748
+Ticker:           BWEN
+Size(USD):        2500
+PnL trade:        -53.44
+PnL total:        -53.44
+PnL trade w fees: -60.94
+PnL total w fees: -60.94
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:32.884321
+Time exit:        10:30:08.651374
+Ticker:           BWEN
+Size(USD):        2500
+PnL trade:        -66.8
+PnL total:        -120.24
+PnL trade w fees: -74.3
+PnL total w fees: -135.24
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:15:43.735204
+Time exit:        12:25:59.753307
+Ticker:           IBIO
+Size(USD):        2500
+PnL trade:        -19.6
+PnL total:        -139.84
+PnL trade w fees: -27.1
+PnL total w fees: -162.34
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:40:13.767502
+Time exit:        12:41:56.091645
+Ticker:           BWEN
+Size(USD):        2500
+PnL trade:        -70.6
+PnL total:        -210.44
+PnL trade w fees: -78.1
+PnL total w fees: -240.44
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:34:04.539584
+Time exit:        13:41:02.092238
+Ticker:           IBIO
+Size(USD):        2500
+PnL trade:        -63.54
+PnL total:        -273.98
+PnL trade w fees: -71.03999999999999
+PnL total w fees: -311.48
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:36:58.664382
+Time exit:        15:00:41.762541
+Ticker:           IBIO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -273.98
+PnL trade w fees: -7.5
+PnL total w fees: -318.98
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:18:09.548657
+Time exit:        15:27:51.518938
+Ticker:           BWEN
+Size(USD):        2500
+PnL trade:        77.6
+PnL total:        -196.38000000000002
+PnL trade w fees: 70.1
+PnL total w fees: -248.88000000000002
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:27:52.121293
+Time exit:        15:53:29.032575
+Ticker:           BWEN
+Size(USD):        2500
+PnL trade:        -60.24
+PnL total:        -256.62
+PnL trade w fees: -67.74000000000001
+PnL total w fees: -316.62
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

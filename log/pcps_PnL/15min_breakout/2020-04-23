@@ -1,0 +1,204 @@
+Time entry:       12:00:00.752005
+Time exit:        12:01:24.194765
+Ticker:           CPAH
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        0.0
+PnL trade w fees: -7.5
+PnL total w fees: -7.5
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:05:17.806847
+Time exit:        12:14:55.437959
+Ticker:           CPAH
+Size(USD):        2500
+PnL trade:        -78.8
+PnL total:        -78.8
+PnL trade w fees: -86.3
+PnL total w fees: -93.8
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:20:32.893564
+Time exit:        12:24:59.603492
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        88.74
+PnL total:        9.939999999999998
+PnL trade w fees: 81.24
+PnL total w fees: -12.560000000000002
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:25:00.374377
+Time exit:        12:32:53.932692
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        -146.88
+PnL total:        -136.94
+PnL trade w fees: -154.38
+PnL total w fees: -166.94
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:02:18.477894
+Time exit:        13:04:11.823504
+Ticker:           WLL
+Size(USD):        2500
+PnL trade:        -75.3
+PnL total:        -212.24
+PnL trade w fees: -82.8
+PnL total w fees: -249.74
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:04:37.740461
+Time exit:        13:10:19.764486
+Ticker:           WLL
+Size(USD):        2500
+PnL trade:        -90.54
+PnL total:        -302.78000000000003
+PnL trade w fees: -98.04
+PnL total w fees: -347.78000000000003
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:13:53.868963
+Time exit:        13:21:33.814860
+Ticker:           WLL
+Size(USD):        2500
+PnL trade:        -150.6
+PnL total:        -453.38
+PnL trade w fees: -158.1
+PnL total w fees: -505.88
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:35:07.353916
+Time exit:        13:48:03.717345
+Ticker:           CPAH
+Size(USD):        2500
+PnL trade:        -43.4
+PnL total:        -496.78
+PnL trade w fees: -50.9
+PnL total w fees: -556.78
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:48:04.788443
+Time exit:        13:56:02.318724
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        -60.13
+PnL total:        -556.91
+PnL trade w fees: -67.63
+PnL total w fees: -624.41
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:57:35.563613
+Time exit:        14:00:43.453331
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        -32.58
+PnL total:        -589.49
+PnL trade w fees: -40.08
+PnL total w fees: -664.49
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:02:31.310799
+Time exit:        14:16:24.191836
+Ticker:           WLL
+Size(USD):        2500
+PnL trade:        -109.34
+PnL total:        -698.83
+PnL trade w fees: -116.84
+PnL total w fees: -781.33
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:16:25.591511
+Time exit:        14:19:30.477044
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        83.56
+PnL total:        -615.27
+PnL trade w fees: 76.06
+PnL total w fees: -705.27
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:19:42.957036
+Time exit:        14:37:41.096601
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        71.39
+PnL total:        -543.88
+PnL trade w fees: 63.89
+PnL total w fees: -641.38
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:37:41.941103
+Time exit:        14:45:03.980373
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        75.1
+PnL total:        -468.78
+PnL trade w fees: 67.6
+PnL total w fees: -573.78
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:45:04.953070
+Time exit:        14:59:54.532905
+Ticker:           OAS
+Size(USD):        2500
+PnL trade:        -162.4
+PnL total:        -631.18
+PnL trade w fees: -169.9
+PnL total w fees: -743.68
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:02:00.379934
+Time exit:        15:14:54.733719
+Ticker:           CPAH
+Size(USD):        2500
+PnL trade:        -17.92
+PnL total:        -649.0999999999999
+PnL trade w fees: -25.42
+PnL total w fees: -769.0999999999999
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:14:57.230977
+Time exit:        15:19:30.491034
+Ticker:           CPAH
+Size(USD):        2500
+PnL trade:        -80.91
+PnL total:        -730.0099999999999
+PnL trade w fees: -88.41
+PnL total w fees: -857.5099999999999
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

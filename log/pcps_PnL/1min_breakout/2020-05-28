@@ -1,0 +1,324 @@
+Time entry:       09:31:14.007172
+Time exit:        09:33:32.525195
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        -13.62
+PnL total:        -13.62
+PnL trade w fees: -21.119999999999997
+PnL total w fees: -21.119999999999997
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:17.021711
+Time exit:        09:36:31.547407
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        -123.6
+PnL total:        -137.22
+PnL trade w fees: -131.1
+PnL total w fees: -152.22
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:36:59.263523
+Time exit:        09:37:43.842931
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        133.2
+PnL total:        -4.02000000000001
+PnL trade w fees: 125.69999999999999
+PnL total w fees: -26.52000000000001
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:44.716819
+Time exit:        09:38:27.859012
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        158.5
+PnL total:        154.48
+PnL trade w fees: 151.0
+PnL total w fees: 124.47999999999999
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:28.263809
+Time exit:        09:44:34.016046
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        74.75
+PnL total:        229.23
+PnL trade w fees: 67.25
+PnL total w fees: 191.73
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:04.860484
+Time exit:        09:46:48.307620
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        136.16
+PnL total:        365.39
+PnL trade w fees: 128.66
+PnL total w fees: 320.39
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:00.974466
+Time exit:        09:48:01.474513
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        -172.98
+PnL total:        192.41
+PnL trade w fees: -180.48
+PnL total w fees: 139.91
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:20.758940
+Time exit:        09:50:01.223438
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        -39.78
+PnL total:        152.63
+PnL trade w fees: -47.28
+PnL total w fees: 92.63
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:33.202448
+Time exit:        09:53:14.652105
+Ticker:           HX
+Size(USD):        2500
+PnL trade:        -39.36
+PnL total:        113.27
+PnL trade w fees: -46.86
+PnL total w fees: 45.769999999999996
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:12.679474
+Time exit:        09:57:32.260720
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        -38.64
+PnL total:        74.63
+PnL trade w fees: -46.14
+PnL total w fees: -0.37000000000000455
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:57:41.798129
+Time exit:        09:58:42.360938
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        -29.7
+PnL total:        44.92999999999999
+PnL trade w fees: -37.2
+PnL total w fees: -37.57000000000001
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:50.934050
+Time exit:        10:01:12.500296
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        -53.84
+PnL total:        -8.91000000000001
+PnL trade w fees: -61.34
+PnL total w fees: -98.91000000000001
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:56.867020
+Time exit:        10:03:36.455870
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        -27.12
+PnL total:        -36.030000000000015
+PnL trade w fees: -34.620000000000005
+PnL total w fees: -133.53000000000003
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:42.598506
+Time exit:        10:06:35.092271
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        -6.48
+PnL total:        -42.51000000000002
+PnL trade w fees: -13.98
+PnL total w fees: -147.51000000000002
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:36.661572
+Time exit:        10:09:52.188853
+Ticker:           TCCO
+Size(USD):        2500
+PnL trade:        -27.4
+PnL total:        -69.91000000000003
+PnL trade w fees: -34.9
+PnL total w fees: -182.41000000000003
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:23.402182
+Time exit:        10:12:17.246705
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -69.91000000000003
+PnL trade w fees: -7.5
+PnL total w fees: -189.91000000000003
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:18.404079
+Time exit:        10:14:19.311593
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        21.77
+PnL total:        -48.14000000000003
+PnL trade w fees: 14.27
+PnL total w fees: -175.64000000000001
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:21.826812
+Time exit:        10:14:54.359891
+Ticker:           HX
+Size(USD):        2500
+PnL trade:        -74.0
+PnL total:        -122.14000000000003
+PnL trade w fees: -81.5
+PnL total w fees: -257.14
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:15:04.962702
+Time exit:        10:16:39.500159
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        118.95
+PnL total:        -3.190000000000026
+PnL trade w fees: 111.45
+PnL total w fees: -145.69
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:41.935013
+Time exit:        10:18:29.557237
+Ticker:           HX
+Size(USD):        2500
+PnL trade:        -38.8
+PnL total:        -41.99000000000002
+PnL trade w fees: -46.3
+PnL total w fees: -191.99
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:09.333114
+Time exit:        10:22:40.027546
+Ticker:           HX
+Size(USD):        2500
+PnL trade:        213.4
+PnL total:        171.40999999999997
+PnL trade w fees: 205.9
+PnL total w fees: 13.909999999999997
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:41.290978
+Time exit:        10:23:24.056466
+Ticker:           HX
+Size(USD):        2500
+PnL trade:        -36.76
+PnL total:        134.64999999999998
+PnL trade w fees: -44.26
+PnL total w fees: -30.35
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:25.145238
+Time exit:        10:25:14.102747
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        94.24
+PnL total:        228.89
+PnL trade w fees: 86.74
+PnL total w fees: 56.38999999999999
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:14.544469
+Time exit:        10:27:17.151272
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        93.2
+PnL total:        322.09
+PnL trade w fees: 85.7
+PnL total w fees: 142.09
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:18.579802
+Time exit:        10:28:06.182765
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        -53.76
+PnL total:        268.33
+PnL trade w fees: -61.26
+PnL total w fees: 80.83000000000001
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:10.639454
+Time exit:        10:29:00.239102
+Ticker:           ABIO
+Size(USD):        2500
+PnL trade:        -99.45
+PnL total:        168.88
+PnL trade w fees: -106.95
+PnL total w fees: -26.11999999999999
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:00.562728
+Time exit:        10:31:04.289601
+Ticker:           HX
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        168.88
+PnL trade w fees: -7.5
+PnL total w fees: -33.61999999999999
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

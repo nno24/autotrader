@@ -1,0 +1,324 @@
+Time entry:       09:32:12.622637
+Time exit:        09:33:39.342798
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        -74.85
+PnL total:        -74.85
+PnL trade w fees: -82.35
+PnL total w fees: -82.35
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:14.076845
+Time exit:        09:35:45.681777
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        148.35
+PnL total:        73.5
+PnL trade w fees: 140.85
+PnL total w fees: 58.5
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:46.739793
+Time exit:        09:39:34.784582
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        -128.88
+PnL total:        -55.379999999999995
+PnL trade w fees: -136.38
+PnL total w fees: -77.88
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:39:36.180848
+Time exit:        09:40:10.798409
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        -29.64
+PnL total:        -85.02
+PnL trade w fees: -37.14
+PnL total w fees: -115.02
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:07.734672
+Time exit:        09:41:56.319575
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        120.15
+PnL total:        35.13000000000001
+PnL trade w fees: 112.65
+PnL total w fees: -2.3699999999999903
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:56.998257
+Time exit:        09:48:55.484009
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        35.13000000000001
+PnL trade w fees: -7.5
+PnL total w fees: -9.86999999999999
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:29.176768
+Time exit:        09:50:01.814663
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        -44.64
+PnL total:        -9.509999999999991
+PnL trade w fees: -52.14
+PnL total w fees: -62.00999999999999
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:20.493993
+Time exit:        09:51:09.001464
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        -14.08
+PnL total:        -23.58999999999999
+PnL trade w fees: -21.58
+PnL total w fees: -83.58999999999999
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:13.049577
+Time exit:        09:53:20.603363
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -23.58999999999999
+PnL trade w fees: -7.5
+PnL total w fees: -91.08999999999999
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:26.163665
+Time exit:        09:56:21.712201
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        8.75
+PnL total:        -14.83999999999999
+PnL trade w fees: 1.25
+PnL total w fees: -89.83999999999999
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:45.469434
+Time exit:        09:59:31.066503
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        -22.75
+PnL total:        -37.58999999999999
+PnL trade w fees: -30.25
+PnL total w fees: -120.08999999999999
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:31.770655
+Time exit:        10:03:20.155736
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        48.62
+PnL total:        11.030000000000008
+PnL trade w fees: 41.12
+PnL total w fees: -78.97
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:35.679904
+Time exit:        10:05:46.365598
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        117.9
+PnL total:        128.93
+PnL trade w fees: 110.4
+PnL total w fees: 31.430000000000007
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:46.861003
+Time exit:        10:07:21.409361
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        22.62
+PnL total:        151.55
+PnL trade w fees: 15.120000000000001
+PnL total w fees: 46.55000000000001
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:42.665264
+Time exit:        10:09:56.209747
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        -59.76
+PnL total:        91.79000000000002
+PnL trade w fees: -67.25999999999999
+PnL total w fees: -20.70999999999998
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:57.608155
+Time exit:        10:11:46.262713
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        131.52
+PnL total:        223.31000000000003
+PnL trade w fees: 124.02000000000001
+PnL total w fees: 103.31000000000003
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:47.194676
+Time exit:        10:13:47.318582
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        124.95
+PnL total:        348.26000000000005
+PnL trade w fees: 117.45
+PnL total w fees: 220.76000000000005
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:47.712625
+Time exit:        10:14:39.339138
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        -51.0
+PnL total:        297.26000000000005
+PnL trade w fees: -58.5
+PnL total w fees: 162.26000000000005
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:15:12.123355
+Time exit:        10:17:44.701154
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        137.13
+PnL total:        434.39000000000004
+PnL trade w fees: 129.63
+PnL total w fees: 291.89000000000004
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:18:47.292808
+Time exit:        10:20:21.765038
+Ticker:           HTZ
+Size(USD):        2500
+PnL trade:        -35.2
+PnL total:        399.19000000000005
+PnL trade w fees: -42.7
+PnL total w fees: 249.19000000000005
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:28.349302
+Time exit:        10:21:01.836922
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        -18.1
+PnL total:        381.09000000000003
+PnL trade w fees: -25.6
+PnL total w fees: 223.59000000000006
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:08.366528
+Time exit:        10:21:59.916233
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        -83.3
+PnL total:        297.79
+PnL trade w fees: -90.8
+PnL total w fees: 132.79000000000008
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:00.797214
+Time exit:        10:23:26.949810
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        297.79
+PnL trade w fees: -7.5
+PnL total w fees: 125.29000000000008
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:42.529543
+Time exit:        10:24:20.098480
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        -50.67
+PnL total:        247.12
+PnL trade w fees: -58.17
+PnL total w fees: 67.12000000000008
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:55.900245
+Time exit:        10:26:00.465565
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        -47.79
+PnL total:        199.33
+PnL trade w fees: -55.29
+PnL total w fees: 11.830000000000076
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:11.029579
+Time exit:        10:27:18.601493
+Ticker:           GRNQ
+Size(USD):        2500
+PnL trade:        -34.0
+PnL total:        165.33
+PnL trade w fees: -41.5
+PnL total w fees: -29.669999999999924
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:19.476458
+Time exit:        10:30:22.684726
+Ticker:           MRSN
+Size(USD):        2500
+PnL trade:        34.01
+PnL total:        199.34
+PnL trade w fees: 26.509999999999998
+PnL total w fees: -3.1599999999999255
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

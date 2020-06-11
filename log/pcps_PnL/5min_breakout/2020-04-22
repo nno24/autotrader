@@ -1,0 +1,456 @@
+Time entry:       09:50:53.259651
+Time exit:        09:52:23.498033
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        38.48
+PnL total:        38.48
+PnL trade w fees: 30.979999999999997
+PnL total w fees: 30.979999999999997
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:37.442475
+Time exit:        09:54:56.424842
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -64.9
+PnL total:        -26.42000000000001
+PnL trade w fees: -72.4
+PnL total w fees: -41.42000000000001
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:55:03.207398
+Time exit:        09:56:44.746727
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        156.24
+PnL total:        129.82
+PnL trade w fees: 148.74
+PnL total w fees: 107.32
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:53.762585
+Time exit:        10:01:35.886557
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        -293.74
+PnL total:        -163.92000000000002
+PnL trade w fees: -301.24
+PnL total w fees: -193.92000000000002
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:51.234752
+Time exit:        10:09:00.109413
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -140.61
+PnL total:        -304.53000000000003
+PnL trade w fees: -148.11
+PnL total w fees: -342.03000000000003
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:38.654869
+Time exit:        10:11:08.954518
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        68.6
+PnL total:        -235.93000000000004
+PnL trade w fees: 61.099999999999994
+PnL total w fees: -280.93000000000006
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:16.747711
+Time exit:        10:12:59.577316
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -9.5
+PnL total:        -245.43000000000004
+PnL trade w fees: -17.0
+PnL total w fees: -297.93000000000006
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:04.559520
+Time exit:        10:15:56.386695
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -140.4
+PnL total:        -385.83000000000004
+PnL trade w fees: -147.9
+PnL total w fees: -445.83000000000004
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:09.792920
+Time exit:        10:17:55.256917
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -174.72
+PnL total:        -560.5500000000001
+PnL trade w fees: -182.22
+PnL total w fees: -628.0500000000001
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:57.849021
+Time exit:        10:22:28.568919
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -56.58
+PnL total:        -617.1300000000001
+PnL trade w fees: -64.08
+PnL total w fees: -692.1300000000001
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:04.764452
+Time exit:        10:25:33.752638
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -9.5
+PnL total:        -626.6300000000001
+PnL trade w fees: -17.0
+PnL total w fees: -709.1300000000001
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:10:33.342175
+Time exit:        11:13:18.469626
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -10.65
+PnL total:        -10.65
+PnL trade w fees: -18.15
+PnL total w fees: -18.15
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:13:56.058121
+Time exit:        11:20:52.119383
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -19.76
+PnL total:        -30.410000000000004
+PnL trade w fees: -27.26
+PnL total w fees: -45.41
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:25:14.077042
+Time exit:        11:30:57.369678
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        92.16
+PnL total:        61.74999999999999
+PnL trade w fees: 84.66
+PnL total w fees: 39.25
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:31:01.489459
+Time exit:        11:34:13.615621
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -122.76
+PnL total:        -61.01000000000001
+PnL trade w fees: -130.26
+PnL total w fees: -91.00999999999999
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:34:17.711263
+Time exit:        11:38:22.051408
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        -45.64
+PnL total:        -106.65
+PnL trade w fees: -53.14
+PnL total w fees: -144.14999999999998
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:46:37.746009
+Time exit:        11:48:07.101569
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        52.95
+PnL total:        -53.7
+PnL trade w fees: 45.45
+PnL total w fees: -98.69999999999997
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:48:11.677502
+Time exit:        11:50:39.357571
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        -45.44
+PnL total:        -99.14
+PnL trade w fees: -52.94
+PnL total w fees: -151.64
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:52:23.236551
+Time exit:        11:54:48.042773
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -79.0
+PnL total:        -178.14
+PnL trade w fees: -86.5
+PnL total w fees: -238.14
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:13:49.150251
+Time exit:        12:21:38.434493
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        -34.86
+PnL total:        -213.0
+PnL trade w fees: -42.36
+PnL total w fees: -280.5
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:25:02.801960
+Time exit:        12:28:55.377029
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -133.56
+PnL total:        -346.56
+PnL trade w fees: -141.06
+PnL total w fees: -421.56
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:36:43.714013
+Time exit:        12:38:28.244921
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -25.5
+PnL total:        -372.06
+PnL trade w fees: -33.0
+PnL total w fees: -454.56
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:45:33.797944
+Time exit:        12:55:10.232481
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -64.65
+PnL total:        -436.71000000000004
+PnL trade w fees: -72.15
+PnL total w fees: -526.71
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:55:17.121802
+Time exit:        13:12:37.264448
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        103.86
+PnL total:        -332.85
+PnL trade w fees: 96.36
+PnL total w fees: -430.35
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:26:55.413469
+Time exit:        13:29:58.263127
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -81.34
+PnL total:        -414.19000000000005
+PnL trade w fees: -88.84
+PnL total w fees: -519.19
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:30:04.668490
+Time exit:        13:36:24.984474
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -37.44
+PnL total:        -451.63000000000005
+PnL trade w fees: -44.94
+PnL total w fees: -564.1300000000001
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:44:23.981412
+Time exit:        13:48:20.950984
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        78.47
+PnL total:        -373.1600000000001
+PnL trade w fees: 70.97
+PnL total w fees: -493.1600000000001
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:48:24.846283
+Time exit:        14:00:42.831101
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -10.89
+PnL total:        -384.05000000000007
+PnL trade w fees: -18.39
+PnL total w fees: -511.55000000000007
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:00:47.241739
+Time exit:        14:02:48.972028
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -12.36
+PnL total:        -396.4100000000001
+PnL trade w fees: -19.86
+PnL total w fees: -531.4100000000001
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:02:54.719590
+Time exit:        14:06:08.299287
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -87.78
+PnL total:        -484.19000000000005
+PnL trade w fees: -95.28
+PnL total w fees: -626.69
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:14:28.785247
+Time exit:        14:30:40.559063
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        -12.01
+PnL total:        -496.20000000000005
+PnL trade w fees: -19.509999999999998
+PnL total w fees: -646.2
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:33:40.133493
+Time exit:        14:46:37.636192
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        32.88
+PnL total:        -463.32000000000005
+PnL trade w fees: 25.380000000000003
+PnL total w fees: -620.82
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:53:50.907331
+Time exit:        15:01:01.885206
+Ticker:           ATIF
+Size(USD):        2500
+PnL trade:        -82.74
+PnL total:        -546.0600000000001
+PnL trade w fees: -90.24
+PnL total w fees: -711.0600000000001
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:09:28.351230
+Time exit:        15:13:50.032932
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -147.18
+PnL total:        -693.24
+PnL trade w fees: -154.68
+PnL total w fees: -865.74
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:20:27.223458
+Time exit:        15:25:21.816110
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        141.36
+PnL total:        -551.88
+PnL trade w fees: 133.86
+PnL total w fees: -731.88
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:25:28.914965
+Time exit:        15:29:08.164913
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        82.2
+PnL total:        -469.68
+PnL trade w fees: 74.7
+PnL total w fees: -657.18
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:29:13.120359
+Time exit:        15:35:40.564260
+Ticker:           PECK
+Size(USD):        2500
+PnL trade:        -28.63
+PnL total:        -498.31
+PnL trade w fees: -36.129999999999995
+PnL total w fees: -693.31
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:42:35.062413
+Time exit:        15:50:42.592933
+Ticker:           SAEX
+Size(USD):        2500
+PnL trade:        -22.42
+PnL total:        -520.73
+PnL trade w fees: -29.92
+PnL total w fees: -723.2299999999999
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

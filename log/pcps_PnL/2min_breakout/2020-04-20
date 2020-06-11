@@ -1,0 +1,312 @@
+Time entry:       09:32:07.883004
+Time exit:        09:35:16.111625
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        -1.84
+PnL total:        -1.84
+PnL trade w fees: -9.34
+PnL total w fees: -9.34
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:27.368178
+Time exit:        09:37:11.443506
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -89.88
+PnL total:        -91.72
+PnL trade w fees: -97.38
+PnL total w fees: -106.72
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:08.256550
+Time exit:        09:43:32.638939
+Ticker:           BRQS
+Size(USD):        2500
+PnL trade:        -39.13
+PnL total:        -130.85
+PnL trade w fees: -46.63
+PnL total w fees: -153.35
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:32.746345
+Time exit:        09:46:52.998429
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -128.8
+PnL total:        -259.65
+PnL trade w fees: -136.3
+PnL total w fees: -289.65
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:07.038047
+Time exit:        09:48:43.213484
+Ticker:           BRQS
+Size(USD):        2500
+PnL trade:        -34.08
+PnL total:        -293.72999999999996
+PnL trade w fees: -41.58
+PnL total w fees: -331.22999999999996
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:56.727897
+Time exit:        09:50:43.490457
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        -4.4
+PnL total:        -298.12999999999994
+PnL trade w fees: -11.9
+PnL total w fees: -343.12999999999994
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:01.647528
+Time exit:        09:56:14.737719
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -130.68
+PnL total:        -428.80999999999995
+PnL trade w fees: -138.18
+PnL total w fees: -481.30999999999995
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:27.301748
+Time exit:        09:59:10.135988
+Ticker:           BRQS
+Size(USD):        2500
+PnL trade:        -11.82
+PnL total:        -440.62999999999994
+PnL trade w fees: -19.32
+PnL total w fees: -500.62999999999994
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:41.422598
+Time exit:        10:04:15.853892
+Ticker:           BRQS
+Size(USD):        2500
+PnL trade:        88.2
+PnL total:        -352.42999999999995
+PnL trade w fees: 80.7
+PnL total w fees: -419.92999999999995
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:23.908102
+Time exit:        10:06:41.162962
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        -0.72
+PnL total:        -353.15
+PnL trade w fees: -8.22
+PnL total w fees: -428.15
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:23.411796
+Time exit:        10:09:47.058060
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -116.85
+PnL total:        -470.0
+PnL trade w fees: -124.35
+PnL total w fees: -552.5
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:56.966131
+Time exit:        10:14:57.700002
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        6.72
+PnL total:        -463.28
+PnL trade w fees: -0.7800000000000002
+PnL total w fees: -553.28
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:29.143137
+Time exit:        10:19:53.469745
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -108.0
+PnL total:        -571.28
+PnL trade w fees: -115.5
+PnL total w fees: -668.78
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:58.300563
+Time exit:        10:22:43.569269
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        -1.12
+PnL total:        -572.4
+PnL trade w fees: -8.620000000000001
+PnL total w fees: -677.4
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:57.021526
+Time exit:        10:27:18.914801
+Ticker:           BRQS
+Size(USD):        2500
+PnL trade:        102.56
+PnL total:        -469.84
+PnL trade w fees: 95.06
+PnL total w fees: -582.3399999999999
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:57.604595
+Time exit:        10:30:19.023349
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        108.6
+PnL total:        -361.24
+PnL trade w fees: 101.1
+PnL total w fees: -481.2399999999999
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:30:25.594688
+Time exit:        10:32:44.164741
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -89.96
+PnL total:        -451.2
+PnL trade w fees: -97.46
+PnL total w fees: -578.6999999999999
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:34:00.036687
+Time exit:        10:35:54.521287
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        -2.56
+PnL total:        -453.76
+PnL trade w fees: -10.06
+PnL total w fees: -588.7599999999999
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:37:05.397868
+Time exit:        10:40:44.887729
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        -3.12
+PnL total:        -456.88
+PnL trade w fees: -10.620000000000001
+PnL total w fees: -599.3799999999999
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:42:56.300526
+Time exit:        10:45:10.826347
+Ticker:           BRQS
+Size(USD):        2500
+PnL trade:        -24.72
+PnL total:        -481.6
+PnL trade w fees: -32.22
+PnL total w fees: -631.5999999999999
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:46:55.274562
+Time exit:        10:50:56.091429
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        1.28
+PnL total:        -480.32000000000005
+PnL trade w fees: -6.22
+PnL total w fees: -637.8199999999999
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:56:43.312952
+Time exit:        10:58:42.696845
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        -2.08
+PnL total:        -482.40000000000003
+PnL trade w fees: -9.58
+PnL total w fees: -647.4
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:00:44.038122
+Time exit:        11:02:03.564114
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -16.72
+PnL total:        -499.12
+PnL trade w fees: -24.22
+PnL total w fees: -671.62
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:02:15.760674
+Time exit:        11:08:54.557708
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        3.36
+PnL total:        -495.76
+PnL trade w fees: -4.140000000000001
+PnL total w fees: -675.76
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:13:18.585234
+Time exit:        11:15:40.865507
+Ticker:           BRQS
+Size(USD):        2500
+PnL trade:        -32.4
+PnL total:        -528.16
+PnL trade w fees: -39.9
+PnL total w fees: -715.66
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:19:48.555097
+Time exit:        11:26:03.462041
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        1.6
+PnL total:        -526.56
+PnL trade w fees: -5.9
+PnL total w fees: -721.56
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

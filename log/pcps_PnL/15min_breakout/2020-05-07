@@ -1,0 +1,204 @@
+Time entry:       10:15:01.872497
+Time exit:        10:18:47.597235
+Ticker:           TTPH
+Size(USD):        2500
+PnL trade:        -146.08
+PnL total:        -146.08
+PnL trade w fees: -153.58
+PnL total w fees: -153.58
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:25.476919
+Time exit:        10:25:06.211240
+Ticker:           TTPH
+Size(USD):        2500
+PnL trade:        257.32
+PnL total:        111.23999999999998
+PnL trade w fees: 249.82
+PnL total w fees: 96.23999999999998
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:07.049391
+Time exit:        10:30:25.371224
+Ticker:           TTPH
+Size(USD):        2500
+PnL trade:        263.5
+PnL total:        374.74
+PnL trade w fees: 256.0
+PnL total w fees: 352.24
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:30:26.118130
+Time exit:        10:45:15.932124
+Ticker:           TTPH
+Size(USD):        2500
+PnL trade:        -256.08
+PnL total:        118.66000000000003
+PnL trade w fees: -263.58
+PnL total w fees: 88.66000000000003
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:52:19.593523
+Time exit:        11:00:42.266407
+Ticker:           IO
+Size(USD):        2500
+PnL trade:        -131.07
+PnL total:        -12.409999999999968
+PnL trade w fees: -138.57
+PnL total w fees: -49.90999999999997
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:11:05.677565
+Time exit:        11:15:52.196400
+Ticker:           TTPH
+Size(USD):        2500
+PnL trade:        -194.64
+PnL total:        -207.04999999999995
+PnL trade w fees: -202.14
+PnL total w fees: -252.04999999999995
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:20:13.149052
+Time exit:        11:30:23.221905
+Ticker:           RMBL
+Size(USD):        2500
+PnL trade:        -98.83
+PnL total:        -305.87999999999994
+PnL trade w fees: -106.33
+PnL total w fees: -358.37999999999994
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:47:22.369174
+Time exit:        11:48:02.797654
+Ticker:           IO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -305.87999999999994
+PnL trade w fees: -7.5
+PnL total w fees: -365.87999999999994
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:48:03.494761
+Time exit:        11:53:23.967553
+Ticker:           IO
+Size(USD):        2500
+PnL trade:        -125.63
+PnL total:        -431.50999999999993
+PnL trade w fees: -133.13
+PnL total w fees: -499.00999999999993
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:32:26.360246
+Time exit:        12:54:43.348005
+Ticker:           TTPH
+Size(USD):        2500
+PnL trade:        -87.12
+PnL total:        -518.6299999999999
+PnL trade w fees: -94.62
+PnL total w fees: -593.6299999999999
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:54:44.077434
+Time exit:        13:15:14.865894
+Ticker:           IO
+Size(USD):        2500
+PnL trade:        -57.54
+PnL total:        -576.1699999999998
+PnL trade w fees: -65.03999999999999
+PnL total w fees: -658.6699999999998
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:50:20.589864
+Time exit:        14:15:48.708767
+Ticker:           TTPH
+Size(USD):        2500
+PnL trade:        56.16
+PnL total:        -520.0099999999999
+PnL trade w fees: 48.66
+PnL total w fees: -610.0099999999999
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:23:46.616417
+Time exit:        14:24:46.036738
+Ticker:           IO
+Size(USD):        2500
+PnL trade:        -34.12
+PnL total:        -554.1299999999999
+PnL trade w fees: -41.62
+PnL total w fees: -651.6299999999999
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:24:47.186460
+Time exit:        14:25:25.058719
+Ticker:           IO
+Size(USD):        2500
+PnL trade:        -17.16
+PnL total:        -571.2899999999998
+PnL trade w fees: -24.66
+PnL total w fees: -676.2899999999998
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:32:28.372617
+Time exit:        14:34:34.958254
+Ticker:           RMBL
+Size(USD):        2500
+PnL trade:        -43.1
+PnL total:        -614.3899999999999
+PnL trade w fees: -50.6
+PnL total w fees: -726.8899999999999
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:34:35.416092
+Time exit:        14:38:05.051119
+Ticker:           RMBL
+Size(USD):        2500
+PnL trade:        -25.61
+PnL total:        -639.9999999999999
+PnL trade w fees: -33.11
+PnL total w fees: -759.9999999999999
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:41:57.562562
+Time exit:        14:43:44.232318
+Ticker:           RMBL
+Size(USD):        2500
+PnL trade:        -40.97
+PnL total:        -680.9699999999999
+PnL trade w fees: -48.47
+PnL total w fees: -808.4699999999999
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

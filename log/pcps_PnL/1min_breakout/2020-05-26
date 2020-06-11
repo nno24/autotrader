@@ -1,0 +1,312 @@
+Time entry:       09:32:15.008192
+Time exit:        09:32:58.485294
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -45.25
+PnL total:        -45.25
+PnL trade w fees: -52.75
+PnL total w fees: -52.75
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:32:59.947133
+Time exit:        09:34:25.535237
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -45.25
+PnL trade w fees: -7.5
+PnL total w fees: -60.25
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:26.622163
+Time exit:        09:36:47.592183
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        -41.8
+PnL total:        -87.05
+PnL trade w fees: -49.3
+PnL total w fees: -109.55
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:20.199386
+Time exit:        09:43:21.645801
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -51.2
+PnL total:        -138.25
+PnL trade w fees: -58.7
+PnL total w fees: -168.25
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:44.273255
+Time exit:        09:46:32.899654
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -71.4
+PnL total:        -209.65
+PnL trade w fees: -78.9
+PnL total w fees: -247.15
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:38.487930
+Time exit:        09:50:57.055800
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        35.1
+PnL total:        -174.55
+PnL trade w fees: 27.6
+PnL total w fees: -219.55
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:58.866438
+Time exit:        09:53:06.129727
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -64.32
+PnL total:        -238.87
+PnL trade w fees: -71.82
+PnL total w fees: -291.37
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:53.583268
+Time exit:        09:56:43.144035
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -31.5
+PnL total:        -270.37
+PnL trade w fees: -39.0
+PnL total w fees: -330.37
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:04.391481
+Time exit:        10:01:52.944983
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        21.18
+PnL total:        -249.19
+PnL trade w fees: 13.68
+PnL total w fees: -316.69
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:57.166061
+Time exit:        10:07:13.656289
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -22.12
+PnL total:        -271.31
+PnL trade w fees: -29.62
+PnL total w fees: -346.31
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:31.918026
+Time exit:        10:09:05.375830
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        -20.55
+PnL total:        -291.86
+PnL trade w fees: -28.05
+PnL total w fees: -374.36
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:58.406172
+Time exit:        10:11:23.869221
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -33.51
+PnL total:        -325.37
+PnL trade w fees: -41.01
+PnL total w fees: -415.37
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:15.571855
+Time exit:        10:14:43.932594
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        -20.65
+PnL total:        -346.02
+PnL trade w fees: -28.15
+PnL total w fees: -443.52
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:15:21.670297
+Time exit:        10:19:23.399987
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        33.28
+PnL total:        -312.74
+PnL trade w fees: 25.78
+PnL total w fees: -417.74
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:05.139944
+Time exit:        10:20:37.787322
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        -4.09
+PnL total:        -316.83
+PnL trade w fees: -11.59
+PnL total w fees: -429.33
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:38.533162
+Time exit:        10:22:23.835544
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        22.92
+PnL total:        -293.90999999999997
+PnL trade w fees: 15.420000000000002
+PnL total w fees: -413.90999999999997
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:04.682304
+Time exit:        10:29:23.411554
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        22.62
+PnL total:        -271.28999999999996
+PnL trade w fees: 15.120000000000001
+PnL total w fees: -398.78999999999996
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:35.620450
+Time exit:        10:31:44.481923
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        -8.22
+PnL total:        -279.51
+PnL trade w fees: -15.72
+PnL total w fees: -414.51
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:31:45.338576
+Time exit:        10:33:16.530385
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -55.8
+PnL total:        -335.31
+PnL trade w fees: -63.3
+PnL total w fees: -477.81
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:34:23.610534
+Time exit:        10:36:21.182506
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -33.48
+PnL total:        -368.79
+PnL trade w fees: -40.98
+PnL total w fees: -518.79
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:41:53.643055
+Time exit:        10:43:21.199065
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -11.5
+PnL total:        -380.29
+PnL trade w fees: -19.0
+PnL total w fees: -537.79
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:44:05.062216
+Time exit:        10:45:23.675879
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -34.38
+PnL total:        -414.67
+PnL trade w fees: -41.88
+PnL total w fees: -579.67
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:48:18.595472
+Time exit:        10:49:44.257978
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -22.92
+PnL total:        -437.59000000000003
+PnL trade w fees: -30.42
+PnL total w fees: -610.0899999999999
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:49:48.854300
+Time exit:        10:51:26.367177
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        4.22
+PnL total:        -433.37
+PnL trade w fees: -3.2800000000000002
+PnL total w fees: -613.3699999999999
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:53:01.134034
+Time exit:        10:54:24.233036
+Ticker:           MTC
+Size(USD):        2500
+PnL trade:        -11.62
+PnL total:        -444.99
+PnL trade w fees: -19.119999999999997
+PnL total w fees: -632.4899999999999
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:55:05.179176
+Time exit:        10:57:07.676359
+Ticker:           EVFM
+Size(USD):        2500
+PnL trade:        -8.38
+PnL total:        -453.37
+PnL trade w fees: -15.88
+PnL total w fees: -648.3699999999999
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

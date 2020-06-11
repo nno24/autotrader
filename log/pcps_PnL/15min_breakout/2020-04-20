@@ -1,0 +1,24 @@
+Time entry:       09:45:01.233911
+Time exit:        09:46:45.142790
+Ticker:           AVCT
+Size(USD):        2500
+PnL trade:        -341.03
+PnL total:        -341.03
+PnL trade w fees: -348.53
+PnL total w fees: -348.53
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:53.417002
+Time exit:        11:00:48.155894
+Ticker:           AAPL
+Size(USD):        2500
+PnL trade:        8.0
+PnL total:        -333.03
+PnL trade w fees: 0.5
+PnL total w fees: -348.03
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

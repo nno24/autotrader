@@ -1,0 +1,276 @@
+Time entry:       15:27:14.431277
+Time exit:        15:55:00.562730
+Ticker:           ITP
+Size(USD):        2500
+PnL trade:        2.82
+PnL total:        23.72999999999997
+PnL trade w fees: -4.68
+PnL total w fees: -171.27
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:05.002873
+Time exit:        10:21:14.520586
+Ticker:           QEP
+Size(USD):        2500
+PnL trade:        -95.2
+PnL total:        -95.2
+PnL trade w fees: -102.7
+PnL total w fees: -102.7
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:38.380893
+Time exit:        10:27:44.023038
+Ticker:           QEP
+Size(USD):        2500
+PnL trade:        -95.2
+PnL total:        -190.4
+PnL trade w fees: -102.7
+PnL total w fees: -205.4
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:30:35.400345
+Time exit:        10:39:17.141538
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        -265.51
+PnL total:        -455.90999999999997
+PnL trade w fees: -273.01
+PnL total w fees: -478.40999999999997
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:39:17.638011
+Time exit:        11:00:44.490028
+Ticker:           QEP
+Size(USD):        2500
+PnL trade:        -136.32
+PnL total:        -592.23
+PnL trade w fees: -143.82
+PnL total w fees: -622.23
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:33:02.033918
+Time exit:        11:35:53.623613
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        -60.8
+PnL total:        -653.03
+PnL trade w fees: -68.3
+PnL total w fees: -690.53
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:36:04.282062
+Time exit:        11:40:10.386350
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        85.32
+PnL total:        -567.71
+PnL trade w fees: 77.82
+PnL total w fees: -612.71
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:40:11.381632
+Time exit:        11:53:33.392376
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        57.83
+PnL total:        -509.88000000000005
+PnL trade w fees: 50.33
+PnL total w fees: -562.38
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:53:33.662148
+Time exit:        11:57:50.662957
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        68.31
+PnL total:        -441.57000000000005
+PnL trade w fees: 60.81
+PnL total w fees: -501.57
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:57:51.041207
+Time exit:        12:08:02.230869
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        -333.25
+PnL total:        -774.82
+PnL trade w fees: -340.75
+PnL total w fees: -842.3199999999999
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:31:32.689379
+Time exit:        12:45:43.888939
+Ticker:           UAVS
+Size(USD):        2500
+PnL trade:        -229.67
+PnL total:        -1004.49
+PnL trade w fees: -237.17
+PnL total w fees: -1079.49
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:45:44.365293
+Time exit:        13:01:35.531585
+Ticker:           QEP
+Size(USD):        2500
+PnL trade:        -32.47
+PnL total:        -1036.96
+PnL trade w fees: -39.97
+PnL total w fees: -1119.46
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:45:01.595402
+Time exit:        13:46:32.019543
+Ticker:           UAVS
+Size(USD):        2500
+PnL trade:        -88.65
+PnL total:        -1125.6100000000001
+PnL trade w fees: -96.15
+PnL total w fees: -1215.6100000000001
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:59:45.241286
+Time exit:        14:18:41.334980
+Ticker:           QEP
+Size(USD):        2500
+PnL trade:        79.61
+PnL total:        -1046.0000000000002
+PnL trade w fees: 72.11
+PnL total w fees: -1143.5000000000002
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:18:42.269748
+Time exit:        14:29:57.739678
+Ticker:           QEP
+Size(USD):        2500
+PnL trade:        51.02
+PnL total:        -994.9800000000002
+PnL trade w fees: 43.52
+PnL total w fees: -1099.9800000000002
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:29:58.557892
+Time exit:        14:45:54.273139
+Ticker:           QEP
+Size(USD):        2500
+PnL trade:        -24.8
+PnL total:        -1019.7800000000002
+PnL trade w fees: -32.3
+PnL total w fees: -1132.2800000000002
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:45:55.078965
+Time exit:        14:53:20.511213
+Ticker:           UAVS
+Size(USD):        2500
+PnL trade:        122.36
+PnL total:        -897.4200000000002
+PnL trade w fees: 114.86
+PnL total w fees: -1017.4200000000002
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:53:21.212973
+Time exit:        14:55:41.604020
+Ticker:           UAVS
+Size(USD):        2500
+PnL trade:        101.64
+PnL total:        -795.7800000000002
+PnL trade w fees: 94.14
+PnL total w fees: -923.2800000000002
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:55:42.172087
+Time exit:        15:01:27.800183
+Ticker:           UAVS
+Size(USD):        2500
+PnL trade:        83.3
+PnL total:        -712.4800000000002
+PnL trade w fees: 75.8
+PnL total w fees: -847.4800000000002
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:01:33.234318
+Time exit:        15:15:43.454782
+Ticker:           UAVS
+Size(USD):        2500
+PnL trade:        -96.78
+PnL total:        -809.2600000000002
+PnL trade w fees: -104.28
+PnL total w fees: -951.7600000000002
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:31:27.851131
+Time exit:        15:36:18.506379
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        82.73
+PnL total:        -726.5300000000002
+PnL trade w fees: 75.23
+PnL total w fees: -876.5300000000002
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:36:18.905767
+Time exit:        15:44:28.767183
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        137.91
+PnL total:        -588.6200000000002
+PnL trade w fees: 130.41
+PnL total w fees: -746.1200000000002
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:44:29.916251
+Time exit:        15:46:14.824670
+Ticker:           XELA
+Size(USD):        2500
+PnL trade:        78.29
+PnL total:        -510.3300000000002
+PnL trade w fees: 70.79
+PnL total w fees: -675.3300000000003
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

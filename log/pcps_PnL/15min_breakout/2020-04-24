@@ -1,0 +1,48 @@
+Time entry:       12:17:26.858710
+Time exit:        12:21:42.582590
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        49.28
+PnL total:        49.28
+PnL trade w fees: 41.78
+PnL total w fees: 41.78
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:21:43.276430
+Time exit:        12:27:23.921251
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -115.91
+PnL total:        -66.63
+PnL trade w fees: -123.41
+PnL total w fees: -81.63
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:35:32.534262
+Time exit:        12:39:18.116672
+Ticker:           ENSV
+Size(USD):        2500
+PnL trade:        85.45
+PnL total:        18.820000000000007
+PnL trade w fees: 77.95
+PnL total w fees: -3.6799999999999926
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:39:18.443670
+Time exit:        13:03:39.307617
+Ticker:           ENSV
+Size(USD):        2500
+PnL trade:        -81.96
+PnL total:        -63.139999999999986
+PnL trade w fees: -89.46
+PnL total w fees: -93.13999999999999
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

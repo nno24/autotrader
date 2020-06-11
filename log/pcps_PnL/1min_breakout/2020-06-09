@@ -1,0 +1,288 @@
+Time entry:       09:31:00.876650
+Time exit:        09:31:58.331147
+Ticker:           IDEX
+Size(USD):        2500
+PnL trade:        119.6
+PnL total:        119.6
+PnL trade w fees: 112.1
+PnL total w fees: 112.1
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:33:15.005470
+Time exit:        09:34:19.522614
+Ticker:           IZEA
+Size(USD):        2500
+PnL trade:        -131.04
+PnL total:        -11.439999999999998
+PnL trade w fees: -138.54
+PnL total w fees: -26.439999999999998
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:01.468141
+Time exit:        09:35:58.907331
+Ticker:           IZEA
+Size(USD):        2500
+PnL trade:        -101.1
+PnL total:        -112.53999999999999
+PnL trade w fees: -108.6
+PnL total w fees: -135.04
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:02.518119
+Time exit:        09:40:20.099308
+Ticker:           IDEX
+Size(USD):        2500
+PnL trade:        27.46
+PnL total:        -85.07999999999998
+PnL trade w fees: 19.96
+PnL total w fees: -115.07999999999998
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:01.978850
+Time exit:        09:42:19.504384
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        0.46
+PnL total:        -84.61999999999999
+PnL trade w fees: -7.04
+PnL total w fees: -122.11999999999999
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:42:20.379509
+Time exit:        09:43:44.538856
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        -88.07
+PnL total:        -172.69
+PnL trade w fees: -95.57
+PnL total w fees: -217.69
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:40.598139
+Time exit:        09:46:28.115506
+Ticker:           IZEA
+Size(USD):        2500
+PnL trade:        -34.14
+PnL total:        -206.82999999999998
+PnL trade w fees: -41.64
+PnL total w fees: -259.33
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:28.515771
+Time exit:        09:49:38.193756
+Ticker:           IDEX
+Size(USD):        2500
+PnL trade:        160.9
+PnL total:        -45.92999999999998
+PnL trade w fees: 153.4
+PnL total w fees: -105.92999999999998
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:38.598683
+Time exit:        09:50:31.217193
+Ticker:           IZEA
+Size(USD):        2500
+PnL trade:        -33.09
+PnL total:        -79.01999999999998
+PnL trade w fees: -40.59
+PnL total w fees: -146.51999999999998
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:06.921356
+Time exit:        09:54:57.616291
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        6.91
+PnL total:        -72.10999999999999
+PnL trade w fees: -0.5899999999999999
+PnL total w fees: -147.10999999999999
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:16.697883
+Time exit:        09:57:35.358104
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        -2.46
+PnL total:        -74.56999999999998
+PnL trade w fees: -9.96
+PnL total w fees: -157.07
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:12.933092
+Time exit:        10:01:50.342171
+Ticker:           IDEX
+Size(USD):        2500
+PnL trade:        -3.65
+PnL total:        -78.21999999999998
+PnL trade w fees: -11.15
+PnL total w fees: -168.22
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:18.026039
+Time exit:        10:04:00.609224
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        -33.47
+PnL total:        -111.68999999999998
+PnL trade w fees: -40.97
+PnL total w fees: -209.19
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:19.468417
+Time exit:        10:07:39.895484
+Ticker:           IZEA
+Size(USD):        2500
+PnL trade:        -35.7
+PnL total:        -147.39
+PnL trade w fees: -43.2
+PnL total w fees: -252.39
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:50.692975
+Time exit:        10:11:28.127167
+Ticker:           IDEX
+Size(USD):        2500
+PnL trade:        197.9
+PnL total:        50.51000000000002
+PnL trade w fees: 190.4
+PnL total w fees: -61.98999999999998
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:28.939085
+Time exit:        10:13:17.177527
+Ticker:           IZEA
+Size(USD):        2500
+PnL trade:        11.62
+PnL total:        62.13000000000002
+PnL trade w fees: 4.119999999999999
+PnL total w fees: -57.86999999999998
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:04.052742
+Time exit:        10:14:49.620100
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        -35.47
+PnL total:        26.660000000000018
+PnL trade w fees: -42.97
+PnL total w fees: -100.83999999999997
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:50.449803
+Time exit:        10:16:17.655031
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        26.16
+PnL total:        52.82000000000002
+PnL trade w fees: 18.66
+PnL total w fees: -82.17999999999998
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:32.282727
+Time exit:        10:17:04.815389
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        -22.78
+PnL total:        30.04000000000002
+PnL trade w fees: -30.28
+PnL total w fees: -112.45999999999998
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:18:35.174820
+Time exit:        10:20:27.702181
+Ticker:           IDEX
+Size(USD):        2500
+PnL trade:        12.5
+PnL total:        42.54000000000002
+PnL trade w fees: 5.0
+PnL total w fees: -107.45999999999998
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:39.276638
+Time exit:        10:23:48.892865
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        140.43
+PnL total:        182.97000000000003
+PnL trade w fees: 132.93
+PnL total w fees: 25.470000000000027
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:49.347978
+Time exit:        10:24:31.911081
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        -81.26
+PnL total:        101.71000000000002
+PnL trade w fees: -88.76
+PnL total w fees: -63.28999999999998
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:19.237466
+Time exit:        10:28:19.940023
+Ticker:           SQBG
+Size(USD):        2500
+PnL trade:        1.1
+PnL total:        102.81000000000002
+PnL trade w fees: -6.4
+PnL total w fees: -69.68999999999998
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:50.714278
+Time exit:        10:33:01.330745
+Ticker:           IDEX
+Size(USD):        2500
+PnL trade:        85.62
+PnL total:        188.43
+PnL trade w fees: 78.12
+PnL total w fees: 8.430000000000021
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
