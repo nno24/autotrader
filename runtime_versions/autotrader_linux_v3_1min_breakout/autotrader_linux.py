@@ -168,8 +168,8 @@ trade_range_days = range(0, 5)
 today = datetime.datetime.today().weekday()
 time_now = str(datetime.datetime.now().time())
 time_getReady = "09:30:06"
-time_lastCall = "15:45:00"
-time_lastCallExit = "15:55:00"
+time_lastCall = "10:30:00"
+time_lastCallExit = "10:45:00"
 
 # P&L parameters
 bought_price = 0.0
@@ -907,7 +907,9 @@ def global_trader():
     else:
         fetch_prices_paper()
 
-    #save_prices()
+    #Calc pcps and save prices
+    #calc_pcps()
+    save_prices()
 
     #If BUY order yet not filled -  automatic cancel buy order
     if modify_entry_cnt >= modify_entry_cnt_max and filled_status != "filled" and trade_status != "c":
@@ -1339,24 +1341,18 @@ def save_prices():
         a_fname_1.write(str(time_n))
         a_fname_1.write(" ")
         a_fname_1.write(str(ticker_1_price_value))
-        a_fname_1.write(" ")
-        a_fname_1.write(str(ticker_1_pcps))
         a_fname_1.write("\n")
 
         a_fname_2 = open(fname_2, "a")
         a_fname_2.write(str(time_n))
         a_fname_2.write(" ")
         a_fname_2.write(str(ticker_2_price_value))
-        a_fname_2.write(" ")
-        a_fname_2.write(str(ticker_2_pcps))
         a_fname_2.write("\n")
 
         a_fname_3 = open(fname_3, "a")
         a_fname_3.write(str(time_n))
         a_fname_3.write(" ")
         a_fname_3.write(str(ticker_3_price_value))
-        a_fname_3.write(" ")
-        a_fname_3.write(str(ticker_3_pcps))
         a_fname_3.write("\n")
     except:
         print("UNABLE TO SAVE PRICES")
