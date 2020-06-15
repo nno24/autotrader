@@ -2751,6 +2751,7 @@ def check_time_day():
 
         if time_now < time_lastCall and time_now > time_getReady:
             print("let' trade")
+            print("trade cnt is:",trade_cnt)
             if trade_cnt == 0:
                 print("Starting up timers....")
                 get_watchlist_tickers_paper()
@@ -2780,6 +2781,7 @@ def check_time_day():
                 time.sleep(0.5)
                 print("Waiting to get ready..", time_now)
 
+            today = datetime.datetime.today().weekday()
             if today in trade_range_days:
                 print("let' trade")
                 get_watchlist_tickers_paper()
