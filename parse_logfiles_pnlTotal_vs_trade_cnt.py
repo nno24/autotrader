@@ -7,7 +7,7 @@ pnl_total_lst = []
 trade_cnt_lst = []
 trade_cnt = 1
 
-path="/home/sjefen/Dropbox/log/pcps_PnL"
+path="log/pcps_PnL/1min_breakout"
 
 filenames = os.listdir(path)
 for fname in filenames:

@@ -6,7 +6,7 @@ import os
 pnl_trade_lst = []
 pcps_lst = []
 
-path="log/pcps_PnL"
+path="log/pcps_PnL/1min_breakout"
 
 filenames = os.listdir(path)
 with open('pcps_concat', 'w') as outfile:
