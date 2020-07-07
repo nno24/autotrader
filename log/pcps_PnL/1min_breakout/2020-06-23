@@ -1,0 +1,156 @@
+Time entry:       09:31:00.947097
+Time exit:        09:35:56.467516
+Ticker:           THTX
+Size(USD):        2500
+PnL trade:        -11.06
+PnL total:        -11.06
+PnL trade w fees: -18.560000000000002
+PnL total w fees: -18.560000000000002
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:58.197694
+Time exit:        09:37:34.504305
+Ticker:           SINT
+Size(USD):        2500
+PnL trade:        16.12
+PnL total:        5.0600000000000005
+PnL trade w fees: 8.620000000000001
+PnL total w fees: -9.940000000000001
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:49.013927
+Time exit:        09:40:19.684307
+Ticker:           THTX
+Size(USD):        2500
+PnL trade:        -22.62
+PnL total:        -17.560000000000002
+PnL trade w fees: -30.12
+PnL total w fees: -40.06
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:29.195688
+Time exit:        09:42:39.830756
+Ticker:           SINT
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -17.560000000000002
+PnL trade w fees: -7.5
+PnL total w fees: -47.56
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:02.506608
+Time exit:        09:52:42.298476
+Ticker:           THTX
+Size(USD):        2500
+PnL trade:        11.25
+PnL total:        -6.310000000000002
+PnL trade w fees: 3.75
+PnL total w fees: -43.81
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:37.545513
+Time exit:        09:58:19.882240
+Ticker:           SINT
+Size(USD):        2500
+PnL trade:        -87.4
+PnL total:        -93.71000000000001
+PnL trade w fees: -94.9
+PnL total w fees: -138.71
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:21.143778
+Time exit:        10:05:57.795787
+Ticker:           THTX
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -93.71000000000001
+PnL trade w fees: -7.5
+PnL total w fees: -146.21
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:50.686403
+Time exit:        10:10:23.357991
+Ticker:           THTX
+Size(USD):        2500
+PnL trade:        -22.32
+PnL total:        -116.03
+PnL trade w fees: -29.82
+PnL total w fees: -176.03
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:41.597747
+Time exit:        10:16:32.221143
+Ticker:           SINT
+Size(USD):        2500
+PnL trade:        131.18
+PnL total:        15.150000000000006
+PnL trade w fees: 123.68
+PnL total w fees: -52.349999999999994
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:35.044019
+Time exit:        10:19:43.338701
+Ticker:           EVOK
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        15.150000000000006
+PnL trade w fees: -7.5
+PnL total w fees: -59.849999999999994
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:12.035341
+Time exit:        10:23:19.754615
+Ticker:           EVOK
+Size(USD):        2500
+PnL trade:        21.3
+PnL total:        36.45
+PnL trade w fees: 13.8
+PnL total w fees: -46.05
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:57.530407
+Time exit:        10:26:03.157761
+Ticker:           THTX
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        36.45
+PnL trade w fees: -7.5
+PnL total w fees: -53.55
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:17.676469
+Time exit:        10:32:05.452213
+Ticker:           EVOK
+Size(USD):        2500
+PnL trade:        -21.03
+PnL total:        15.420000000000002
+PnL trade w fees: -28.53
+PnL total w fees: -82.08
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

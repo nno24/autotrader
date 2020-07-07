@@ -1,0 +1,288 @@
+Time entry:       09:31:06.716957
+Time exit:        09:32:53.298553
+Ticker:           FAMI
+Size(USD):        2500
+PnL trade:        184.32
+PnL total:        184.32
+PnL trade w fees: 176.82
+PnL total w fees: 176.82
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:32:54.188082
+Time exit:        09:34:55.345645
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        -116.19
+PnL total:        68.13
+PnL trade w fees: -123.69
+PnL total w fees: 53.129999999999995
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:19.060045
+Time exit:        09:36:27.580653
+Ticker:           FAMI
+Size(USD):        2500
+PnL trade:        176.96
+PnL total:        245.09
+PnL trade w fees: 169.46
+PnL total w fees: 222.59
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:36:28.614491
+Time exit:        09:37:03.595979
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        -240.24
+PnL total:        4.849999999999994
+PnL trade w fees: -247.74
+PnL total w fees: -25.150000000000006
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:42:31.833341
+Time exit:        09:43:05.389645
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        -195.52
+PnL total:        -190.67000000000002
+PnL trade w fees: -203.02
+PnL total w fees: -228.17000000000002
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:05.692375
+Time exit:        09:44:18.417482
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        -60.96
+PnL total:        -251.63000000000002
+PnL trade w fees: -68.46000000000001
+PnL total w fees: -296.63
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:19.014961
+Time exit:        09:46:51.484736
+Ticker:           FAMI
+Size(USD):        2500
+PnL trade:        177.8
+PnL total:        -73.83000000000001
+PnL trade w fees: 170.3
+PnL total w fees: -126.32999999999998
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:51.950348
+Time exit:        09:49:24.547457
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        137.97
+PnL total:        64.13999999999999
+PnL trade w fees: 130.47
+PnL total w fees: 4.140000000000015
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:25.328605
+Time exit:        09:50:23.581449
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        132.3
+PnL total:        196.44
+PnL trade w fees: 124.80000000000001
+PnL total w fees: 128.94000000000003
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:24.038837
+Time exit:        09:52:21.629036
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        -92.54
+PnL total:        103.89999999999999
+PnL trade w fees: -100.04
+PnL total w fees: 28.90000000000002
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:22.677476
+Time exit:        09:57:20.346664
+Ticker:           FAMI
+Size(USD):        2500
+PnL trade:        -36.76
+PnL total:        67.13999999999999
+PnL trade w fees: -44.26
+PnL total w fees: -15.359999999999978
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:57:21.450582
+Time exit:        09:59:02.387486
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        121.68
+PnL total:        188.82
+PnL trade w fees: 114.18
+PnL total w fees: 98.82000000000002
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:14.009228
+Time exit:        10:03:43.652529
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        32.11
+PnL total:        220.93
+PnL trade w fees: 24.61
+PnL total w fees: 123.43000000000002
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:37.112353
+Time exit:        10:06:13.652587
+Ticker:           FAMI
+Size(USD):        2500
+PnL trade:        -52.8
+PnL total:        168.13
+PnL trade w fees: -60.3
+PnL total w fees: 63.130000000000024
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:26.261665
+Time exit:        10:08:18.805854
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        -20.08
+PnL total:        148.05
+PnL trade w fees: -27.58
+PnL total w fees: 35.550000000000026
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:19.711057
+Time exit:        10:10:24.855830
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        -44.94
+PnL total:        103.11000000000001
+PnL trade w fees: -52.44
+PnL total w fees: -16.889999999999972
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:25.731318
+Time exit:        10:11:23.899767
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        -71.4
+PnL total:        31.710000000000008
+PnL trade w fees: -78.9
+PnL total w fees: -95.78999999999998
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:28.916187
+Time exit:        10:14:21.541280
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        -30.64
+PnL total:        1.0700000000000074
+PnL trade w fees: -38.14
+PnL total w fees: -133.92999999999998
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:19.407878
+Time exit:        10:18:19.133773
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        -4.92
+PnL total:        -3.8499999999999925
+PnL trade w fees: -12.42
+PnL total w fees: -146.34999999999997
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:18:19.973559
+Time exit:        10:19:38.181885
+Ticker:           FAMI
+Size(USD):        2500
+PnL trade:        -85.8
+PnL total:        -89.64999999999999
+PnL trade w fees: -93.3
+PnL total w fees: -239.64999999999998
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:20.044335
+Time exit:        10:21:29.600451
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        -50.82
+PnL total:        -140.47
+PnL trade w fees: -58.32
+PnL total w fees: -297.96999999999997
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:58.945988
+Time exit:        10:26:02.538993
+Ticker:           FAMI
+Size(USD):        2500
+PnL trade:        88.88
+PnL total:        -51.59
+PnL trade w fees: 81.38
+PnL total w fees: -216.58999999999997
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:12.102212
+Time exit:        10:29:04.696545
+Ticker:           ALPN
+Size(USD):        2500
+PnL trade:        21.44
+PnL total:        -30.150000000000002
+PnL trade w fees: 13.940000000000001
+PnL total w fees: -202.64999999999998
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:15.274179
+Time exit:        10:31:17.839393
+Ticker:           HUSN
+Size(USD):        2500
+PnL trade:        -17.5
+PnL total:        -47.650000000000006
+PnL trade w fees: -25.0
+PnL total w fees: -227.64999999999998
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
