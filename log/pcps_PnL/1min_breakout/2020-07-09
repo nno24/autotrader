@@ -1,0 +1,228 @@
+Time entry:       09:31:04.943492
+Time exit:        09:33:56.633360
+Ticker:           NNVC
+Size(USD):        2500
+PnL trade:        25.12
+PnL total:        25.12
+PnL trade w fees: 17.62
+PnL total w fees: 17.62
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:33:57.373705
+Time exit:        09:35:08.660558
+Ticker:           NGHC
+Size(USD):        2500
+PnL trade:        -2.19
+PnL total:        22.93
+PnL trade w fees: -9.69
+PnL total w fees: 7.9300000000000015
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:36:00.450497
+Time exit:        09:37:19.142253
+Ticker:           NGHC
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        22.93
+PnL trade w fees: -7.5
+PnL total w fees: 0.4300000000000015
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:45.744613
+Time exit:        09:41:19.467252
+Ticker:           NGHC
+Size(USD):        2500
+PnL trade:        6.57
+PnL total:        29.5
+PnL trade w fees: -0.9299999999999997
+PnL total w fees: -0.4999999999999982
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:19.924572
+Time exit:        09:44:27.546895
+Ticker:           NNVC
+Size(USD):        2500
+PnL trade:        24.72
+PnL total:        54.22
+PnL trade w fees: 17.22
+PnL total w fees: 16.72
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:33.193932
+Time exit:        09:49:49.756579
+Ticker:           NGHC
+Size(USD):        2500
+PnL trade:        -1.46
+PnL total:        52.76
+PnL trade w fees: -8.96
+PnL total w fees: 7.759999999999998
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:51.405921
+Time exit:        09:51:39.797146
+Ticker:           AIHS
+Size(USD):        2500
+PnL trade:        -27.32
+PnL total:        25.439999999999998
+PnL trade w fees: -34.82
+PnL total w fees: -27.060000000000002
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:01.425706
+Time exit:        09:53:28.015549
+Ticker:           NNVC
+Size(USD):        2500
+PnL trade:        -12.16
+PnL total:        13.279999999999998
+PnL trade w fees: -19.66
+PnL total w fees: -46.72
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:31.503585
+Time exit:        09:55:37.089441
+Ticker:           NGHC
+Size(USD):        2500
+PnL trade:        -0.73
+PnL total:        12.549999999999997
+PnL trade w fees: -8.23
+PnL total w fees: -54.95
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:03.455742
+Time exit:        10:01:30.054160
+Ticker:           AIHS
+Size(USD):        2500
+PnL trade:        -29.14
+PnL total:        -16.590000000000003
+PnL trade w fees: -36.64
+PnL total w fees: -91.59
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:38.676686
+Time exit:        10:05:28.218106
+Ticker:           NNVC
+Size(USD):        2500
+PnL trade:        3.09
+PnL total:        -13.500000000000004
+PnL trade w fees: -4.41
+PnL total w fees: -96.0
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:28.911118
+Time exit:        10:07:37.265722
+Ticker:           NGHC
+Size(USD):        2500
+PnL trade:        -0.73
+PnL total:        -14.230000000000004
+PnL trade w fees: -8.23
+PnL total w fees: -104.23
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:02.948489
+Time exit:        10:11:57.616284
+Ticker:           NNVC
+Size(USD):        2500
+PnL trade:        -24.72
+PnL total:        -38.95
+PnL trade w fees: -32.22
+PnL total w fees: -136.45
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:09.207047
+Time exit:        10:13:19.757723
+Ticker:           AIHS
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -38.95
+PnL trade w fees: -7.5
+PnL total w fees: -143.95
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:40.321680
+Time exit:        10:16:18.018539
+Ticker:           AIHS
+Size(USD):        2500
+PnL trade:        -45.45
+PnL total:        -84.4
+PnL trade w fees: -52.95
+PnL total w fees: -196.89999999999998
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:08.013201
+Time exit:        10:19:37.528919
+Ticker:           NNVC
+Size(USD):        2500
+PnL trade:        -9.3
+PnL total:        -93.7
+PnL trade w fees: -16.8
+PnL total w fees: -213.7
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:00.167080
+Time exit:        10:23:32.838036
+Ticker:           NGHC
+Size(USD):        2500
+PnL trade:        0.73
+PnL total:        -92.97
+PnL trade w fees: -6.77
+PnL total w fees: -220.47
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:04.114438
+Time exit:        10:25:49.687289
+Ticker:           AIHS
+Size(USD):        2500
+PnL trade:        -91.98
+PnL total:        -184.95
+PnL trade w fees: -99.48
+PnL total w fees: -319.95
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:02.887792
+Time exit:        10:29:49.555775
+Ticker:           AIHS
+Size(USD):        2500
+PnL trade:        -15.62
+PnL total:        -200.57
+PnL trade w fees: -23.119999999999997
+PnL total w fees: -343.07
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
