@@ -1,0 +1,312 @@
+Time entry:       09:33:30.815445
+Time exit:        09:34:25.379946
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -144.0
+PnL total:        -144.0
+PnL trade w fees: -151.5
+PnL total w fees: -151.5
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:06.408623
+Time exit:        09:39:21.369361
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -40.17
+PnL total:        -184.17000000000002
+PnL trade w fees: -47.67
+PnL total w fees: -199.17000000000002
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:18.332559
+Time exit:        09:40:50.934780
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        -55.65
+PnL total:        -239.82000000000002
+PnL trade w fees: -63.15
+PnL total w fees: -262.32
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:51.223664
+Time exit:        09:42:58.999002
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        10.48
+PnL total:        -229.34000000000003
+PnL trade w fees: 2.9800000000000004
+PnL total w fees: -259.34
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:15.574580
+Time exit:        09:45:21.190162
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -6.24
+PnL total:        -235.58000000000004
+PnL trade w fees: -13.74
+PnL total w fees: -273.08
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:33.632427
+Time exit:        09:47:21.367216
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -6.1
+PnL total:        -241.68000000000004
+PnL trade w fees: -13.6
+PnL total w fees: -286.68
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:23.657981
+Time exit:        09:49:59.447408
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        -93.89
+PnL total:        -335.57000000000005
+PnL trade w fees: -101.39
+PnL total w fees: -388.07
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:00.964243
+Time exit:        09:53:33.032128
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        -5.82
+PnL total:        -341.39000000000004
+PnL trade w fees: -13.32
+PnL total w fees: -401.39
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:34.013365
+Time exit:        09:54:21.059339
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        -5.82
+PnL total:        -347.21000000000004
+PnL trade w fees: -13.32
+PnL total w fees: -414.71
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:55:14.013767
+Time exit:        09:56:21.576891
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -6.48
+PnL total:        -353.69000000000005
+PnL trade w fees: -13.98
+PnL total w fees: -428.69
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:34.177959
+Time exit:        09:59:20.790443
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        42.48
+PnL total:        -311.21000000000004
+PnL trade w fees: 34.98
+PnL total w fees: -393.71
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:34.300586
+Time exit:        10:02:09.980454
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        106.69
+PnL total:        -204.52000000000004
+PnL trade w fees: 99.19
+PnL total w fees: -294.52
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:35.703164
+Time exit:        10:03:31.242030
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        -11.98
+PnL total:        -216.50000000000003
+PnL trade w fees: -19.48
+PnL total w fees: -314.0
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:03.826269
+Time exit:        10:06:05.557817
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        -17.88
+PnL total:        -234.38000000000002
+PnL trade w fees: -25.38
+PnL total w fees: -339.38
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:07:35.886397
+Time exit:        10:08:39.477058
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        147.2
+PnL total:        -87.18000000000004
+PnL trade w fees: 139.7
+PnL total w fees: -199.68
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:40.230653
+Time exit:        10:09:21.496005
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        -73.44
+PnL total:        -160.62000000000003
+PnL trade w fees: -80.94
+PnL total w fees: -280.62
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:34.088203
+Time exit:        10:11:09.675355
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -78.4
+PnL total:        -239.02000000000004
+PnL trade w fees: -85.9
+PnL total w fees: -366.52
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:31.300137
+Time exit:        10:12:56.915443
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        -11.84
+PnL total:        -250.86000000000004
+PnL trade w fees: -19.34
+PnL total w fees: -385.85999999999996
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:03.338688
+Time exit:        10:13:59.985007
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -17.28
+PnL total:        -268.14000000000004
+PnL trade w fees: -24.78
+PnL total w fees: -410.64
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:00.790094
+Time exit:        10:16:34.069848
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        121.38
+PnL total:        -146.76000000000005
+PnL trade w fees: 113.88
+PnL total w fees: -296.76
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:34.935253
+Time exit:        10:17:11.112127
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        -125.4
+PnL total:        -272.1600000000001
+PnL trade w fees: -132.9
+PnL total w fees: -429.65999999999997
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:25.416767
+Time exit:        10:21:12.000082
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        -6.08
+PnL total:        -278.24000000000007
+PnL trade w fees: -13.58
+PnL total w fees: -443.23999999999995
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:08.914952
+Time exit:        10:22:40.561795
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -278.24000000000007
+PnL trade w fees: -7.5
+PnL total w fees: -450.73999999999995
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:41.553315
+Time exit:        10:23:53.599716
+Ticker:           SPPI
+Size(USD):        2500
+PnL trade:        -30.4
+PnL total:        -308.64000000000004
+PnL trade w fees: -37.9
+PnL total w fees: -488.63999999999993
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:05.138798
+Time exit:        10:27:29.816333
+Ticker:           KODK
+Size(USD):        2500
+PnL trade:        61.36
+PnL total:        -247.28000000000003
+PnL trade w fees: 53.86
+PnL total w fees: -434.7799999999999
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:07.637958
+Time exit:        10:30:11.191770
+Ticker:           FRAN
+Size(USD):        2500
+PnL trade:        -33.7
+PnL total:        -280.98
+PnL trade w fees: -41.2
+PnL total w fees: -475.9799999999999
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

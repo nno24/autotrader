@@ -1,0 +1,396 @@
+Time entry:       09:31:00.807011
+Time exit:        09:32:35.264805
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        -26.64
+PnL total:        -26.64
+PnL trade w fees: -34.14
+PnL total w fees: -34.14
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:32:45.874145
+Time exit:        09:34:05.382906
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -76.27
+PnL total:        -102.91
+PnL trade w fees: -83.77
+PnL total w fees: -117.91
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:43.621091
+Time exit:        09:36:37.283622
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        154.58
+PnL total:        51.670000000000016
+PnL trade w fees: 147.08
+PnL total w fees: 29.170000000000016
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:37.514941
+Time exit:        09:38:37.344767
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        -33.75
+PnL total:        17.920000000000016
+PnL trade w fees: -41.25
+PnL total w fees: -12.079999999999984
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:48.861468
+Time exit:        09:40:10.476316
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -36.74
+PnL total:        -18.819999999999986
+PnL trade w fees: -44.24
+PnL total w fees: -56.319999999999986
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:11.899747
+Time exit:        09:40:55.503596
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        99.0
+PnL total:        80.18
+PnL trade w fees: 91.5
+PnL total w fees: 35.180000000000014
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:56.513415
+Time exit:        09:42:19.543891
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -134.4
+PnL total:        -54.22
+PnL trade w fees: -141.9
+PnL total w fees: -106.72
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:42:20.185659
+Time exit:        09:44:11.588258
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        133.6
+PnL total:        79.38
+PnL trade w fees: 126.1
+PnL total w fees: 19.379999999999995
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:50.295796
+Time exit:        09:45:36.942515
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        -25.28
+PnL total:        54.099999999999994
+PnL trade w fees: -32.78
+PnL total w fees: -13.400000000000006
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:38.124589
+Time exit:        09:46:09.954398
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -33.3
+PnL total:        20.799999999999997
+PnL trade w fees: -40.8
+PnL total w fees: -54.2
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:13.893723
+Time exit:        09:48:25.585404
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -22.96
+PnL total:        -2.1600000000000037
+PnL trade w fees: -30.46
+PnL total w fees: -84.66
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:25.965030
+Time exit:        09:50:19.632870
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -45.39
+PnL total:        -47.550000000000004
+PnL trade w fees: -52.89
+PnL total w fees: -137.55
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:19.947339
+Time exit:        09:52:05.682419
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -82.68
+PnL total:        -130.23000000000002
+PnL trade w fees: -90.18
+PnL total w fees: -227.73000000000002
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:52.582431
+Time exit:        09:54:17.143283
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -130.23000000000002
+PnL trade w fees: -7.5
+PnL total w fees: -235.23000000000002
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:17.942670
+Time exit:        09:55:56.190447
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        -57.0
+PnL total:        -187.23000000000002
+PnL trade w fees: -64.5
+PnL total w fees: -299.73
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:57:11.574943
+Time exit:        09:58:46.412405
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -52.6
+PnL total:        -239.83
+PnL trade w fees: -60.1
+PnL total w fees: -359.83000000000004
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:48.834538
+Time exit:        10:00:45.481869
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -30.6
+PnL total:        -270.43
+PnL trade w fees: -38.1
+PnL total w fees: -397.93000000000006
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:00:47.639248
+Time exit:        10:02:25.533057
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -24.03
+PnL total:        -294.46000000000004
+PnL trade w fees: -31.53
+PnL total w fees: -429.46000000000004
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:30.110420
+Time exit:        10:03:07.599136
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -10.05
+PnL total:        -304.51000000000005
+PnL trade w fees: -17.55
+PnL total w fees: -447.01000000000005
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:13.113174
+Time exit:        10:05:28.709994
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        119.6
+PnL total:        -184.91000000000005
+PnL trade w fees: 112.1
+PnL total w fees: -334.9100000000001
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:29.528151
+Time exit:        10:07:21.758026
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        51.66
+PnL total:        -133.25000000000006
+PnL trade w fees: 44.16
+PnL total w fees: -290.7500000000001
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:06.133708
+Time exit:        10:10:38.241049
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        27.75
+PnL total:        -105.50000000000006
+PnL trade w fees: 20.25
+PnL total w fees: -270.5000000000001
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:11.013002
+Time exit:        10:12:03.567839
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -17.76
+PnL total:        -123.26000000000006
+PnL trade w fees: -25.26
+PnL total w fees: -295.7600000000001
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:04.750069
+Time exit:        10:13:16.611119
+Ticker:           CNDT
+Size(USD):        2500
+PnL trade:        -54.3
+PnL total:        -177.56000000000006
+PnL trade w fees: -61.8
+PnL total w fees: -357.5600000000001
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:51.999550
+Time exit:        10:15:27.530322
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -25.55
+PnL total:        -203.11000000000007
+PnL trade w fees: -33.05
+PnL total w fees: -390.6100000000001
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:15:28.183841
+Time exit:        10:17:25.576755
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -30.1
+PnL total:        -233.21000000000006
+PnL trade w fees: -37.6
+PnL total w fees: -428.21000000000015
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:36.085094
+Time exit:        10:19:02.721246
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -26.11
+PnL total:        -259.32000000000005
+PnL trade w fees: -33.61
+PnL total w fees: -461.82000000000016
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:07.143907
+Time exit:        10:21:07.818729
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -21.21
+PnL total:        -280.53000000000003
+PnL trade w fees: -28.71
+PnL total w fees: -490.53000000000014
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:13.302816
+Time exit:        10:22:52.914087
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -37.2
+PnL total:        -317.73
+PnL trade w fees: -44.7
+PnL total w fees: -535.2300000000001
+Trade cnt succ:   29
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:53.291922
+Time exit:        10:24:54.965721
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -6.08
+PnL total:        -323.81
+PnL trade w fees: -13.58
+PnL total w fees: -548.8100000000002
+Trade cnt succ:   30
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:58.381792
+Time exit:        10:26:20.033830
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        -29.92
+PnL total:        -353.73
+PnL trade w fees: -37.42
+PnL total w fees: -586.2300000000001
+Trade cnt succ:   31
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:58.295525
+Time exit:        10:29:05.956613
+Ticker:           ANPC
+Size(USD):        2500
+PnL trade:        -27.54
+PnL total:        -381.27000000000004
+PnL trade w fees: -35.04
+PnL total w fees: -621.2700000000001
+Trade cnt succ:   32
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:35.787526
+Time exit:        10:32:54.348142
+Ticker:           KZIA
+Size(USD):        2500
+PnL trade:        7.4
+PnL total:        -373.87000000000006
+PnL trade w fees: -0.09999999999999964
+PnL total w fees: -621.3700000000001
+Trade cnt succ:   33
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

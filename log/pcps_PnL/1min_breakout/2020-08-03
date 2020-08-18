@@ -1,0 +1,276 @@
+Time entry:       09:32:00.470496
+Time exit:        09:33:41.052465
+Ticker:           ADT
+Size(USD):        2500
+PnL trade:        -39.38
+PnL total:        -39.38
+PnL trade w fees: -46.88
+PnL total w fees: -46.88
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:07.835814
+Time exit:        09:41:49.472182
+Ticker:           ADT
+Size(USD):        2500
+PnL trade:        161.92
+PnL total:        122.53999999999999
+PnL trade w fees: 154.42
+PnL total w fees: 107.53999999999999
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:56.975823
+Time exit:        09:44:51.599338
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -30.24
+PnL total:        92.3
+PnL trade w fees: -37.739999999999995
+PnL total w fees: 69.8
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:52.517635
+Time exit:        09:46:15.631011
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -103.11
+PnL total:        -10.810000000000002
+PnL trade w fees: -110.61
+PnL total w fees: -40.81
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:15.909697
+Time exit:        09:50:22.736514
+Ticker:           HIHO
+Size(USD):        2500
+PnL trade:        176.68
+PnL total:        165.87
+PnL trade w fees: 169.18
+PnL total w fees: 128.37
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:23.300112
+Time exit:        09:51:30.765678
+Ticker:           HIHO
+Size(USD):        2500
+PnL trade:        -89.7
+PnL total:        76.17
+PnL trade w fees: -97.2
+PnL total w fees: 31.17
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:03.916963
+Time exit:        09:53:59.630798
+Ticker:           HIHO
+Size(USD):        2500
+PnL trade:        -98.24
+PnL total:        -22.069999999999993
+PnL trade w fees: -105.74
+PnL total w fees: -74.57
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:09.115906
+Time exit:        09:55:22.771775
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -29.0
+PnL total:        -51.06999999999999
+PnL trade w fees: -36.5
+PnL total w fees: -111.07
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:37.370338
+Time exit:        09:59:21.063572
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -85.95
+PnL total:        -137.01999999999998
+PnL trade w fees: -93.45
+PnL total w fees: -204.51999999999998
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:00:44.199568
+Time exit:        10:02:07.866818
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -39.97
+PnL total:        -176.98999999999998
+PnL trade w fees: -47.47
+PnL total w fees: -251.98999999999998
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:20.471369
+Time exit:        10:03:40.009386
+Ticker:           ADT
+Size(USD):        2500
+PnL trade:        -20.8
+PnL total:        -197.79
+PnL trade w fees: -28.3
+PnL total w fees: -280.28999999999996
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:47.503000
+Time exit:        10:05:20.139771
+Ticker:           ADT
+Size(USD):        2500
+PnL trade:        -45.53
+PnL total:        -243.32
+PnL trade w fees: -53.03
+PnL total w fees: -333.31999999999994
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:12.987400
+Time exit:        10:08:20.656937
+Ticker:           HIHO
+Size(USD):        2500
+PnL trade:        -7.04
+PnL total:        -250.35999999999999
+PnL trade w fees: -14.54
+PnL total w fees: -347.85999999999996
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:02.421964
+Time exit:        10:10:01.082719
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        11.92
+PnL total:        -238.44
+PnL trade w fees: 4.42
+PnL total w fees: -343.43999999999994
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:09.519548
+Time exit:        10:11:48.204785
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -104.76
+PnL total:        -343.2
+PnL trade w fees: -112.26
+PnL total w fees: -455.69999999999993
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:48.466295
+Time exit:        10:14:17.271947
+Ticker:           HIHO
+Size(USD):        2500
+PnL trade:        14.2
+PnL total:        -329.0
+PnL trade w fees: 6.699999999999999
+PnL total w fees: -448.99999999999994
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:43.953351
+Time exit:        10:16:41.574656
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -5.98
+PnL total:        -334.98
+PnL trade w fees: -13.48
+PnL total w fees: -462.47999999999996
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:41.943852
+Time exit:        10:18:40.643275
+Ticker:           ADT
+Size(USD):        2500
+PnL trade:        -40.25
+PnL total:        -375.23
+PnL trade w fees: -47.75
+PnL total w fees: -510.22999999999996
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:11.287122
+Time exit:        10:22:24.023523
+Ticker:           ADT
+Size(USD):        2500
+PnL trade:        19.36
+PnL total:        -355.87
+PnL trade w fees: 11.86
+PnL total w fees: -498.36999999999995
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:02.796729
+Time exit:        10:24:20.383398
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        -23.96
+PnL total:        -379.83
+PnL trade w fees: -31.46
+PnL total w fees: -529.8299999999999
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:20.621703
+Time exit:        10:25:40.413645
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        112.67
+PnL total:        -267.15999999999997
+PnL trade w fees: 105.17
+PnL total w fees: -424.6599999999999
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:41.513053
+Time exit:        10:28:29.489431
+Ticker:           DTSS
+Size(USD):        2500
+PnL trade:        22.92
+PnL total:        -244.23999999999995
+PnL trade w fees: 15.420000000000002
+PnL total w fees: -409.2399999999999
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:33.951448
+Time exit:        10:31:10.604542
+Ticker:           HIHO
+Size(USD):        2500
+PnL trade:        -29.68
+PnL total:        -273.91999999999996
+PnL trade w fees: -37.18
+PnL total w fees: -446.4199999999999
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

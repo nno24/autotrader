@@ -1,0 +1,60 @@
+Time entry:       09:31:09.920107
+Time exit:        09:35:10.712757
+Ticker:           INWK
+Size(USD):        2500
+PnL trade:        -8.77
+PnL total:        -8.77
+PnL trade w fees: -16.27
+PnL total w fees: -16.27
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:17.036894
+Time exit:        09:42:24.579871
+Ticker:           ACIU
+Size(USD):        2500
+PnL trade:        -17.3
+PnL total:        -26.07
+PnL trade w fees: -24.8
+PnL total w fees: -41.07
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:32.277571
+Time exit:        10:07:11.857341
+Ticker:           INWK
+Size(USD):        2500
+PnL trade:        -8.83
+PnL total:        -34.9
+PnL trade w fees: -16.33
+PnL total w fees: -57.4
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:28.495307
+Time exit:        10:14:31.263568
+Ticker:           INWK
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -34.9
+PnL trade w fees: -7.5
+PnL total w fees: -64.9
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:08.891852
+Time exit:        10:25:31.614232
+Ticker:           INWK
+Size(USD):        2500
+PnL trade:        8.8
+PnL total:        -26.099999999999998
+PnL trade w fees: 1.3000000000000007
+PnL total w fees: -63.60000000000001
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

@@ -1,0 +1,228 @@
+Time entry:       09:34:16.971807
+Time exit:        09:37:31.640349
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        31.2
+PnL total:        31.2
+PnL trade w fees: 23.7
+PnL total w fees: 23.7
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:09.272648
+Time exit:        09:38:52.991668
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        -33.55
+PnL total:        -2.349999999999998
+PnL trade w fees: -41.05
+PnL total w fees: -17.349999999999998
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:53.938457
+Time exit:        09:41:31.079423
+Ticker:           ENTX
+Size(USD):        2500
+PnL trade:        -12.98
+PnL total:        -15.329999999999998
+PnL trade w fees: -20.48
+PnL total w fees: -37.83
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:32.281654
+Time exit:        09:42:23.129785
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        -9.15
+PnL total:        -24.479999999999997
+PnL trade w fees: -16.65
+PnL total w fees: -54.48
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:40.001381
+Time exit:        09:46:27.391987
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        9.03
+PnL total:        -15.449999999999998
+PnL trade w fees: 1.5299999999999994
+PnL total w fees: -52.949999999999996
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:50.402149
+Time exit:        09:51:22.717798
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        2.93
+PnL total:        -12.519999999999998
+PnL trade w fees: -4.57
+PnL total w fees: -57.519999999999996
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:10.177067
+Time exit:        09:54:51.803415
+Ticker:           ENTX
+Size(USD):        2500
+PnL trade:        -13.47
+PnL total:        -25.99
+PnL trade w fees: -20.97
+PnL total w fees: -78.49
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:52.307575
+Time exit:        09:55:29.823479
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        -62.92
+PnL total:        -88.91
+PnL trade w fees: -70.42
+PnL total w fees: -148.91
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:41.474636
+Time exit:        09:59:14.086014
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        -17.52
+PnL total:        -106.42999999999999
+PnL trade w fees: -25.02
+PnL total w fees: -173.93
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:00:28.223753
+Time exit:        10:06:00.897827
+Ticker:           ENTX
+Size(USD):        2500
+PnL trade:        -27.12
+PnL total:        -133.54999999999998
+PnL trade w fees: -34.620000000000005
+PnL total w fees: -208.55
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:11.480867
+Time exit:        10:07:39.039158
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        -11.76
+PnL total:        -145.30999999999997
+PnL trade w fees: -19.259999999999998
+PnL total w fees: -227.81
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:40.645574
+Time exit:        10:10:31.126314
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        -23.36
+PnL total:        -168.66999999999996
+PnL trade w fees: -30.86
+PnL total w fees: -258.67
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:02.049837
+Time exit:        10:13:02.003760
+Ticker:           YVR
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -168.66999999999996
+PnL trade w fees: -7.5
+PnL total w fees: -266.17
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:02.242021
+Time exit:        10:14:55.071103
+Ticker:           YVR
+Size(USD):        2500
+PnL trade:        -27.26
+PnL total:        -195.92999999999995
+PnL trade w fees: -34.760000000000005
+PnL total w fees: -300.93
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:56.767783
+Time exit:        10:16:22.122101
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -195.92999999999995
+PnL trade w fees: -7.5
+PnL total w fees: -308.43
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:35.542025
+Time exit:        10:19:08.324122
+Ticker:           MIST
+Size(USD):        2500
+PnL trade:        2.94
+PnL total:        -192.98999999999995
+PnL trade w fees: -4.5600000000000005
+PnL total w fees: -312.99
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:17.851615
+Time exit:        10:22:31.505055
+Ticker:           YVR
+Size(USD):        2500
+PnL trade:        -27.32
+PnL total:        -220.30999999999995
+PnL trade w fees: -34.82
+PnL total w fees: -347.81
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:01.170256
+Time exit:        10:24:11.826447
+Ticker:           YVR
+Size(USD):        2500
+PnL trade:        -13.66
+PnL total:        -233.96999999999994
+PnL trade w fees: -21.16
+PnL total w fees: -368.97
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:17.812427
+Time exit:        10:34:40.662290
+Ticker:           ENTX
+Size(USD):        2500
+PnL trade:        27.92
+PnL total:        -206.04999999999995
+PnL trade w fees: 20.42
+PnL total w fees: -348.55
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
