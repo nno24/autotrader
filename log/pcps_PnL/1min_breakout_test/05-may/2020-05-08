@@ -1,0 +1,300 @@
+Time entry:       09:42:00.530142
+Time exit:        09:42:32.090042
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -190.62
+PnL total:        -190.62
+PnL trade w fees: -198.12
+PnL total w fees: -198.12
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:18.976901
+Time exit:        09:46:12.580382
+Ticker:           PAR
+Size(USD):        2500
+PnL trade:        -17.51
+PnL total:        -208.13
+PnL trade w fees: -25.01
+PnL total w fees: -223.13
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:01.136904
+Time exit:        09:50:16.616052
+Ticker:           PVAC
+Size(USD):        2500
+PnL trade:        -14.88
+PnL total:        -223.01
+PnL trade w fees: -22.380000000000003
+PnL total w fees: -245.51
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:31.839029
+Time exit:        09:53:41.346299
+Ticker:           PVAC
+Size(USD):        2500
+PnL trade:        -14.84
+PnL total:        -237.85
+PnL trade w fees: -22.34
+PnL total w fees: -267.84999999999997
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:32.344693
+Time exit:        09:57:16.872652
+Ticker:           PAR
+Size(USD):        2500
+PnL trade:        -14.98
+PnL total:        -252.82999999999998
+PnL trade w fees: -22.48
+PnL total w fees: -290.33
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:11.462335
+Time exit:        10:02:22.990899
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -46.72
+PnL total:        -299.54999999999995
+PnL trade w fees: -54.22
+PnL total w fees: -344.54999999999995
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:24.001636
+Time exit:        10:04:24.042008
+Ticker:           PAR
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -299.54999999999995
+PnL trade w fees: -7.5
+PnL total w fees: -352.04999999999995
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:39.637908
+Time exit:        10:06:47.200864
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -46.94
+PnL total:        -346.48999999999995
+PnL trade w fees: -54.44
+PnL total w fees: -406.48999999999995
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:35.992388
+Time exit:        10:11:20.716125
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        188.64
+PnL total:        -157.84999999999997
+PnL trade w fees: 181.14
+PnL total w fees: -225.34999999999997
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:21.361549
+Time exit:        10:13:17.763984
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -66.36
+PnL total:        -224.20999999999998
+PnL trade w fees: -73.86
+PnL total w fees: -299.21
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:27.770243
+Time exit:        10:16:27.468508
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -224.20999999999998
+PnL trade w fees: -7.5
+PnL total w fees: -306.71
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:46.106303
+Time exit:        10:18:23.669488
+Ticker:           PVAC
+Size(USD):        2500
+PnL trade:        -7.42
+PnL total:        -231.62999999999997
+PnL trade w fees: -14.92
+PnL total w fees: -321.63
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:18:24.859155
+Time exit:        10:19:14.697889
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -86.56
+PnL total:        -318.18999999999994
+PnL trade w fees: -94.06
+PnL total w fees: -415.69
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:17.256056
+Time exit:        10:24:33.836972
+Ticker:           PAR
+Size(USD):        2500
+PnL trade:        -21.8
+PnL total:        -339.98999999999995
+PnL trade w fees: -29.3
+PnL total w fees: -444.99
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:34.516817
+Time exit:        10:25:08.852951
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -67.86
+PnL total:        -407.84999999999997
+PnL trade w fees: -75.36
+PnL total w fees: -520.35
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:19.884206
+Time exit:        10:28:17.579717
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -45.44
+PnL total:        -453.28999999999996
+PnL trade w fees: -52.94
+PnL total w fees: -573.29
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:18.217202
+Time exit:        10:29:13.602666
+Ticker:           PVAC
+Size(USD):        2500
+PnL trade:        -11.19
+PnL total:        -464.47999999999996
+PnL trade w fees: -18.689999999999998
+PnL total w fees: -591.98
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:39.293265
+Time exit:        10:30:13.846869
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -45.62
+PnL total:        -510.09999999999997
+PnL trade w fees: -53.12
+PnL total w fees: -645.1
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:32:59.687514
+Time exit:        10:34:24.334999
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -510.09999999999997
+PnL trade w fees: -7.5
+PnL total w fees: -652.6
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:36:16.843725
+Time exit:        10:39:28.387464
+Ticker:           PVAC
+Size(USD):        2500
+PnL trade:        -15.28
+PnL total:        -525.38
+PnL trade w fees: -22.78
+PnL total w fees: -675.38
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:40:18.322506
+Time exit:        10:42:17.879661
+Ticker:           FTEK
+Size(USD):        2500
+PnL trade:        -23.36
+PnL total:        -548.74
+PnL trade w fees: -30.86
+PnL total w fees: -706.24
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:46:16.901729
+Time exit:        10:47:27.548765
+Ticker:           PVAC
+Size(USD):        2500
+PnL trade:        -23.04
+PnL total:        -571.78
+PnL trade w fees: -30.54
+PnL total w fees: -736.78
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:47:28.044559
+Time exit:        10:49:23.593645
+Ticker:           PAR
+Size(USD):        2500
+PnL trade:        -8.88
+PnL total:        -580.66
+PnL trade w fees: -16.380000000000003
+PnL total w fees: -753.16
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:49:25.300011
+Time exit:        10:50:17.642823
+Ticker:           PVAC
+Size(USD):        2500
+PnL trade:        -11.55
+PnL total:        -592.2099999999999
+PnL trade w fees: -19.05
+PnL total w fees: -772.2099999999999
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:51:15.620100
+Time exit:        10:55:30.274360
+Ticker:           PAR
+Size(USD):        2500
+PnL trade:        -7.84
+PnL total:        -600.05
+PnL trade w fees: -15.34
+PnL total w fees: -787.55
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

@@ -1,0 +1,408 @@
+Time entry:       10:04:40.690463
+Time exit:        10:20:34.202761
+Ticker:           MDGS
+Size(USD):        2500
+PnL trade:        102.19
+PnL total:        102.19
+PnL trade w fees: 94.69
+PnL total w fees: 94.69
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:38:00.841522
+Time exit:        11:39:20.412361
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -9.15
+PnL total:        -9.15
+PnL trade w fees: -16.65
+PnL total w fees: -16.65
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:39:21.659340
+Time exit:        11:43:41.529123
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -3.74
+PnL total:        -12.89
+PnL trade w fees: -11.24
+PnL total w fees: -27.89
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:43:42.712287
+Time exit:        11:45:42.575293
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -1.82
+PnL total:        -14.71
+PnL trade w fees: -9.32
+PnL total w fees: -37.21
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:45:43.571104
+Time exit:        11:47:48.627416
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        108.6
+PnL total:        93.88999999999999
+PnL trade w fees: 101.1
+PnL total w fees: 63.88999999999999
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:47:49.316158
+Time exit:        11:49:41.676167
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -78.68
+PnL total:        15.20999999999998
+PnL trade w fees: -86.18
+PnL total w fees: -22.290000000000013
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:49:42.750935
+Time exit:        11:51:17.820185
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -12.25
+PnL total:        2.9599999999999795
+PnL trade w fees: -19.75
+PnL total w fees: -42.04000000000001
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:51:19.548709
+Time exit:        11:54:14.955999
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        40.32
+PnL total:        43.27999999999998
+PnL trade w fees: 32.82
+PnL total w fees: -9.220000000000013
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:55:24.676533
+Time exit:        11:57:39.759016
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        2.19
+PnL total:        45.46999999999998
+PnL trade w fees: -5.3100000000000005
+PnL total w fees: -14.530000000000014
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:58:29.964313
+Time exit:        12:02:10.659978
+Ticker:           MDGS
+Size(USD):        2500
+PnL trade:        9.88
+PnL total:        55.34999999999998
+PnL trade w fees: 2.380000000000001
+PnL total w fees: -12.150000000000013
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:02:11.682648
+Time exit:        12:03:32.798068
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -61.64
+PnL total:        -6.2900000000000205
+PnL trade w fees: -69.14
+PnL total w fees: -81.29000000000002
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:04:01.622948
+Time exit:        12:06:42.513571
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        6.54
+PnL total:        0.24999999999997957
+PnL trade w fees: -0.96
+PnL total w fees: -82.25000000000001
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:06:42.990181
+Time exit:        12:08:43.718128
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -1.79
+PnL total:        -1.5400000000000205
+PnL trade w fees: -9.29
+PnL total w fees: -91.54000000000002
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:08:44.540584
+Time exit:        12:10:29.877856
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -19.58
+PnL total:        -21.12000000000002
+PnL trade w fees: -27.08
+PnL total w fees: -118.62000000000002
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:11:07.882886
+Time exit:        12:14:43.899358
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        41.86
+PnL total:        20.73999999999998
+PnL trade w fees: 34.36
+PnL total w fees: -84.26000000000002
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:14:44.640416
+Time exit:        12:16:49.140962
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -32.28
+PnL total:        -11.54000000000002
+PnL trade w fees: -39.78
+PnL total w fees: -124.04000000000002
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:16:49.744506
+Time exit:        12:20:20.306310
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        70.8
+PnL total:        59.25999999999998
+PnL trade w fees: 63.3
+PnL total w fees: -60.74000000000002
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:20:20.968259
+Time exit:        12:22:41.471730
+Ticker:           MDGS
+Size(USD):        2500
+PnL trade:        20.16
+PnL total:        79.41999999999997
+PnL trade w fees: 12.66
+PnL total w fees: -48.08000000000003
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:24:05.750540
+Time exit:        12:25:46.334464
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -6.96
+PnL total:        72.45999999999998
+PnL trade w fees: -14.46
+PnL total w fees: -62.54000000000003
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:25:48.979010
+Time exit:        12:28:15.616553
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        2.05
+PnL total:        74.50999999999998
+PnL trade w fees: -5.45
+PnL total w fees: -67.99000000000002
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:29:06.010321
+Time exit:        12:32:25.531717
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -19.47
+PnL total:        55.03999999999998
+PnL trade w fees: -26.97
+PnL total w fees: -94.96000000000002
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:32:40.962151
+Time exit:        12:35:42.370950
+Ticker:           MDGS
+Size(USD):        2500
+PnL trade:        20.66
+PnL total:        75.69999999999997
+PnL trade w fees: 13.16
+PnL total w fees: -81.80000000000003
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:36:21.175869
+Time exit:        12:40:23.872759
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        84.26
+PnL total:        159.95999999999998
+PnL trade w fees: 76.76
+PnL total w fees: -5.0400000000000205
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:40:24.154958
+Time exit:        12:41:43.915203
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -33.79
+PnL total:        126.16999999999999
+PnL trade w fees: -41.29
+PnL total w fees: -46.33000000000002
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:43:25.188277
+Time exit:        12:45:40.003541
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -35.61
+PnL total:        90.55999999999999
+PnL trade w fees: -43.11
+PnL total w fees: -89.44000000000003
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:48:10.001523
+Time exit:        12:50:40.669939
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -14.08
+PnL total:        76.47999999999999
+PnL trade w fees: -21.58
+PnL total w fees: -111.02000000000002
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:51:09.501592
+Time exit:        12:52:39.991615
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -7.12
+PnL total:        69.35999999999999
+PnL trade w fees: -14.620000000000001
+PnL total w fees: -125.64000000000003
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:52:47.580923
+Time exit:        12:55:09.461681
+Ticker:           MDGS
+Size(USD):        2500
+PnL trade:        -10.42
+PnL total:        58.93999999999998
+PnL trade w fees: -17.92
+PnL total w fees: -143.56000000000003
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:55:19.899759
+Time exit:        12:58:14.705688
+Ticker:           MDGS
+Size(USD):        2500
+PnL trade:        -10.41
+PnL total:        48.52999999999999
+PnL trade w fees: -17.91
+PnL total w fees: -161.47000000000003
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:58:33.380809
+Time exit:        13:00:03.931362
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -10.56
+PnL total:        37.969999999999985
+PnL trade w fees: -18.060000000000002
+PnL total w fees: -179.53000000000003
+Trade cnt succ:   29
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:00:51.842266
+Time exit:        13:02:12.449292
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -15.4
+PnL total:        22.569999999999986
+PnL trade w fees: -22.9
+PnL total w fees: -202.43000000000004
+Trade cnt succ:   30
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:04:08.817986
+Time exit:        13:06:40.617561
+Ticker:           MESO
+Size(USD):        2500
+PnL trade:        -12.39
+PnL total:        10.179999999999986
+PnL trade w fees: -19.89
+PnL total w fees: -222.32000000000005
+Trade cnt succ:   31
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:08:45.754747
+Time exit:        13:11:41.427325
+Ticker:           MDGS
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        10.179999999999986
+PnL trade w fees: -7.5
+PnL total w fees: -229.82000000000005
+Trade cnt succ:   32
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:11:42.707076
+Time exit:        13:13:22.208725
+Ticker:           AXAS
+Size(USD):        2500
+PnL trade:        -21.89
+PnL total:        -11.710000000000015
+PnL trade w fees: -29.39
+PnL total w fees: -259.21000000000004
+Trade cnt succ:   33
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

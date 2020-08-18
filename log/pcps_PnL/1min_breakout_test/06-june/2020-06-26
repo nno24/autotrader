@@ -1,0 +1,36 @@
+Time entry:       09:31:00.886221
+Time exit:        09:32:34.432195
+Ticker:           VXRT
+Size(USD):        2500
+PnL trade:        -60.6
+PnL total:        -60.6
+PnL trade w fees: -68.1
+PnL total w fees: -68.1
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:33:07.151016
+Time exit:        09:35:25.792551
+Ticker:           MDCA
+Size(USD):        2500
+PnL trade:        -89.2
+PnL total:        -149.8
+PnL trade w fees: -96.7
+PnL total w fees: -164.8
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:27.424202
+Time exit:        09:37:18.857043
+Ticker:           IBIO
+Size(USD):        2500
+PnL trade:        10.12
+PnL total:        -139.68
+PnL trade w fees: 2.619999999999999
+PnL total w fees: -162.18
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

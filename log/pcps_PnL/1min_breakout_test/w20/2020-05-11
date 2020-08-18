@@ -1,0 +1,1392 @@
+Time entry:       09:44:09.592151
+Time exit:        09:45:16.113406
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -149.35
+PnL total:        -149.35
+PnL trade w fees: -156.85
+PnL total w fees: -156.85
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:51.939220
+Time exit:        09:46:26.442159
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -24.48
+PnL total:        -173.82999999999998
+PnL trade w fees: -31.98
+PnL total w fees: -188.82999999999998
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:27.342715
+Time exit:        09:48:02.478734
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -50.58
+PnL total:        -224.40999999999997
+PnL trade w fees: -58.08
+PnL total w fees: -246.90999999999997
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:39.137314
+Time exit:        09:49:16.787258
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -27.95
+PnL total:        -252.35999999999996
+PnL trade w fees: -35.45
+PnL total w fees: -282.35999999999996
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:20.350322
+Time exit:        09:51:16.860221
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -73.8
+PnL total:        -326.15999999999997
+PnL trade w fees: -81.3
+PnL total w fees: -363.65999999999997
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:51:43.570075
+Time exit:        09:52:17.104942
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -7.92
+PnL total:        -334.08
+PnL trade w fees: -15.42
+PnL total w fees: -379.08
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:18.032908
+Time exit:        09:53:33.133858
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -75.6
+PnL total:        -409.67999999999995
+PnL trade w fees: -83.1
+PnL total w fees: -462.17999999999995
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:36.608059
+Time exit:        09:55:06.211271
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -69.63
+PnL total:        -479.30999999999995
+PnL trade w fees: -77.13
+PnL total w fees: -539.31
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:55:09.752205
+Time exit:        09:56:29.280270
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        113.3
+PnL total:        -366.00999999999993
+PnL trade w fees: 105.8
+PnL total w fees: -433.50999999999993
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:31.108413
+Time exit:        09:58:46.353495
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -29.04
+PnL total:        -395.04999999999995
+PnL trade w fees: -36.54
+PnL total w fees: -470.04999999999995
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:52.911888
+Time exit:        10:01:34.480004
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -15.5
+PnL total:        -410.54999999999995
+PnL trade w fees: -23.0
+PnL total w fees: -493.04999999999995
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:43.947852
+Time exit:        10:04:26.626810
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        3.0
+PnL total:        -407.54999999999995
+PnL trade w fees: -4.5
+PnL total w fees: -497.54999999999995
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:30.163668
+Time exit:        10:04:59.665136
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -34.08
+PnL total:        -441.62999999999994
+PnL trade w fees: -41.58
+PnL total w fees: -539.13
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:01.660191
+Time exit:        10:08:37.278407
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        163.0
+PnL total:        -278.62999999999994
+PnL trade w fees: 155.5
+PnL total w fees: -383.63
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:38.424074
+Time exit:        10:10:07.325376
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -80.73
+PnL total:        -359.35999999999996
+PnL trade w fees: -88.23
+PnL total w fees: -471.86
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:58.857002
+Time exit:        10:12:28.294212
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -88.0
+PnL total:        -447.35999999999996
+PnL trade w fees: -95.5
+PnL total w fees: -567.36
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:42.931817
+Time exit:        10:14:17.440681
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -26.75
+PnL total:        -474.10999999999996
+PnL trade w fees: -34.25
+PnL total w fees: -601.61
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:21.999251
+Time exit:        10:17:36.547701
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        140.25
+PnL total:        -333.85999999999996
+PnL trade w fees: 132.75
+PnL total w fees: -468.86
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:37.391840
+Time exit:        10:19:38.606243
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -58.5
+PnL total:        -392.35999999999996
+PnL trade w fees: -66.0
+PnL total w fees: -534.86
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:43.159769
+Time exit:        10:21:17.688312
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -3.84
+PnL total:        -396.19999999999993
+PnL trade w fees: -11.34
+PnL total w fees: -546.2
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:00.683683
+Time exit:        10:23:55.118262
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -52.9
+PnL total:        -449.0999999999999
+PnL trade w fees: -60.4
+PnL total w fees: -606.6
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:37.577447
+Time exit:        10:31:18.182274
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        17.25
+PnL total:        -431.8499999999999
+PnL trade w fees: 9.75
+PnL total w fees: -596.85
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:32:16.221553
+Time exit:        10:34:16.776918
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        38.92
+PnL total:        -392.9299999999999
+PnL trade w fees: 31.42
+PnL total w fees: -565.4300000000001
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:35:12.823594
+Time exit:        10:38:16.339951
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -40.74
+PnL total:        -433.6699999999999
+PnL trade w fees: -48.24
+PnL total w fees: -613.6700000000001
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:38:17.254598
+Time exit:        10:39:17.370710
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -41.44
+PnL total:        -475.1099999999999
+PnL trade w fees: -48.94
+PnL total w fees: -662.6100000000001
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:40:52.598946
+Time exit:        10:41:52.269328
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -69.03
+PnL total:        -544.1399999999999
+PnL trade w fees: -76.53
+PnL total w fees: -739.1400000000001
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:42:53.745974
+Time exit:        10:44:27.329875
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -16.56
+PnL total:        -560.6999999999998
+PnL trade w fees: -24.06
+PnL total w fees: -763.2
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:44:28.181945
+Time exit:        10:46:18.388820
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -5.41
+PnL total:        -566.1099999999998
+PnL trade w fees: -12.91
+PnL total w fees: -776.11
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:46:28.954703
+Time exit:        10:49:48.556628
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        3.25
+PnL total:        -562.8599999999998
+PnL trade w fees: -4.25
+PnL total w fees: -780.36
+Trade cnt succ:   29
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:51:37.911640
+Time exit:        10:53:18.533821
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -5.28
+PnL total:        -568.1399999999998
+PnL trade w fees: -12.780000000000001
+PnL total w fees: -793.14
+Trade cnt succ:   30
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:54:21.116345
+Time exit:        10:55:47.608132
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -3.84
+PnL total:        -571.9799999999998
+PnL trade w fees: -11.34
+PnL total w fees: -804.48
+Trade cnt succ:   31
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:55:48.705144
+Time exit:        10:57:48.660683
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -5.09
+PnL total:        -577.0699999999998
+PnL trade w fees: -12.59
+PnL total w fees: -817.07
+Trade cnt succ:   32
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:58:20.358086
+Time exit:        11:00:29.987962
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -25.15
+PnL total:        -602.2199999999998
+PnL trade w fees: -32.65
+PnL total w fees: -849.72
+Trade cnt succ:   33
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:03:27.615988
+Time exit:        11:03:58.037339
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -6.25
+PnL total:        -608.4699999999998
+PnL trade w fees: -13.75
+PnL total w fees: -863.47
+Trade cnt succ:   34
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:08:11.750587
+Time exit:        11:09:41.301975
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -11.12
+PnL total:        -619.5899999999998
+PnL trade w fees: -18.619999999999997
+PnL total w fees: -882.09
+Trade cnt succ:   35
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:10:09.011237
+Time exit:        11:10:48.568715
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -2.88
+PnL total:        -622.4699999999998
+PnL trade w fees: -10.379999999999999
+PnL total w fees: -892.47
+Trade cnt succ:   36
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:10:49.492767
+Time exit:        11:11:18.589988
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -4.8
+PnL total:        -627.2699999999998
+PnL trade w fees: -12.3
+PnL total w fees: -904.77
+Trade cnt succ:   37
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:11:20.063298
+Time exit:        11:12:39.638601
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -44.4
+PnL total:        -671.6699999999997
+PnL trade w fees: -51.9
+PnL total w fees: -956.67
+Trade cnt succ:   38
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:13:15.450139
+Time exit:        11:13:57.984483
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -17.04
+PnL total:        -688.7099999999997
+PnL trade w fees: -24.54
+PnL total w fees: -981.2099999999999
+Trade cnt succ:   39
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:13:58.933225
+Time exit:        11:14:59.007729
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -7.44
+PnL total:        -696.1499999999997
+PnL trade w fees: -14.940000000000001
+PnL total w fees: -996.15
+Trade cnt succ:   40
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:15:09.563833
+Time exit:        11:16:29.140764
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -38.92
+PnL total:        -735.0699999999997
+PnL trade w fees: -46.42
+PnL total w fees: -1042.57
+Trade cnt succ:   41
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:18:44.376664
+Time exit:        11:20:11.865736
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -28.05
+PnL total:        -763.1199999999997
+PnL trade w fees: -35.55
+PnL total w fees: -1078.12
+Trade cnt succ:   42
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:22:09.669589
+Time exit:        11:23:32.431237
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -10.08
+PnL total:        -773.1999999999997
+PnL trade w fees: -17.58
+PnL total w fees: -1095.6999999999998
+Trade cnt succ:   43
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:24:07.252220
+Time exit:        11:24:57.761143
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -40.11
+PnL total:        -813.3099999999997
+PnL trade w fees: -47.61
+PnL total w fees: -1143.3099999999997
+Trade cnt succ:   44
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:25:29.429730
+Time exit:        11:27:14.084814
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -11.44
+PnL total:        -824.7499999999998
+PnL trade w fees: -18.939999999999998
+PnL total w fees: -1162.2499999999998
+Trade cnt succ:   45
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:28:20.215676
+Time exit:        11:33:28.818362
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -14.32
+PnL total:        -839.0699999999998
+PnL trade w fees: -21.82
+PnL total w fees: -1184.0699999999997
+Trade cnt succ:   46
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:35:54.465010
+Time exit:        11:38:47.174005
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        9.36
+PnL total:        -829.7099999999998
+PnL trade w fees: 1.8599999999999994
+PnL total w fees: -1182.2099999999998
+Trade cnt succ:   47
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:38:48.742530
+Time exit:        11:40:39.219376
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -5.93
+PnL total:        -835.6399999999998
+PnL trade w fees: -13.43
+PnL total w fees: -1195.6399999999999
+Trade cnt succ:   48
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:40:44.775039
+Time exit:        11:41:47.289207
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -11.04
+PnL total:        -846.6799999999997
+PnL trade w fees: -18.54
+PnL total w fees: -1214.1799999999998
+Trade cnt succ:   49
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:42:04.832974
+Time exit:        11:43:08.479166
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -10.56
+PnL total:        -857.2399999999997
+PnL trade w fees: -18.060000000000002
+PnL total w fees: -1232.2399999999998
+Trade cnt succ:   50
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:43:25.144873
+Time exit:        11:45:28.676687
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -857.2399999999997
+PnL trade w fees: -7.5
+PnL total w fees: -1239.7399999999998
+Trade cnt succ:   51
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:46:23.678088
+Time exit:        11:48:18.221517
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.24
+PnL total:        -857.4799999999997
+PnL trade w fees: -7.74
+PnL total w fees: -1247.4799999999998
+Trade cnt succ:   52
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:48:22.708599
+Time exit:        11:52:35.380170
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        59.1
+PnL total:        -798.3799999999997
+PnL trade w fees: 51.6
+PnL total w fees: -1195.8799999999999
+Trade cnt succ:   53
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:54:29.253192
+Time exit:        11:55:18.884326
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -2.4
+PnL total:        -800.7799999999996
+PnL trade w fees: -9.9
+PnL total w fees: -1205.78
+Trade cnt succ:   54
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:55:19.605585
+Time exit:        11:57:18.951180
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -5.89
+PnL total:        -806.6699999999996
+PnL trade w fees: -13.39
+PnL total w fees: -1219.17
+Trade cnt succ:   55
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:59:53.627140
+Time exit:        12:01:19.314968
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -806.6699999999996
+PnL trade w fees: -7.5
+PnL total w fees: -1226.67
+Trade cnt succ:   56
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:01:20.044407
+Time exit:        12:02:15.336286
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -4.8
+PnL total:        -811.4699999999996
+PnL trade w fees: -12.3
+PnL total w fees: -1238.97
+Trade cnt succ:   57
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:03:25.480801
+Time exit:        12:05:59.094222
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -811.4699999999996
+PnL trade w fees: -7.5
+PnL total w fees: -1246.47
+Trade cnt succ:   58
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:05:59.918183
+Time exit:        12:06:39.125454
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -41.37
+PnL total:        -852.8399999999996
+PnL trade w fees: -48.87
+PnL total w fees: -1295.34
+Trade cnt succ:   59
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:08:10.350346
+Time exit:        12:09:18.981413
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -11.94
+PnL total:        -864.7799999999996
+PnL trade w fees: -19.439999999999998
+PnL total w fees: -1314.78
+Trade cnt succ:   60
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:12:39.715825
+Time exit:        12:14:09.300866
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -3.12
+PnL total:        -867.8999999999996
+PnL trade w fees: -10.620000000000001
+PnL total w fees: -1325.3999999999999
+Trade cnt succ:   61
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:18:07.379803
+Time exit:        12:21:47.005788
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        6.03
+PnL total:        -861.8699999999997
+PnL trade w fees: -1.4699999999999998
+PnL total w fees: -1326.87
+Trade cnt succ:   62
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:21:47.864453
+Time exit:        12:24:03.078652
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -4.32
+PnL total:        -866.1899999999997
+PnL trade w fees: -11.82
+PnL total w fees: -1338.6899999999998
+Trade cnt succ:   63
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:26:12.575613
+Time exit:        12:26:49.205839
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -12.96
+PnL total:        -879.1499999999997
+PnL trade w fees: -20.46
+PnL total w fees: -1359.1499999999999
+Trade cnt succ:   64
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:29:11.518028
+Time exit:        12:31:19.053264
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.48
+PnL total:        -879.6299999999998
+PnL trade w fees: -7.98
+PnL total w fees: -1367.1299999999999
+Trade cnt succ:   65
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:33:28.276632
+Time exit:        12:35:18.741734
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -23.8
+PnL total:        -903.4299999999997
+PnL trade w fees: -31.3
+PnL total w fees: -1398.4299999999998
+Trade cnt succ:   66
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:36:31.222599
+Time exit:        12:37:19.894927
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -29.5
+PnL total:        -932.9299999999997
+PnL trade w fees: -37.0
+PnL total w fees: -1435.4299999999998
+Trade cnt succ:   67
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:38:31.027846
+Time exit:        12:39:09.542659
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -3.6
+PnL total:        -936.5299999999997
+PnL trade w fees: -11.1
+PnL total w fees: -1446.5299999999997
+Trade cnt succ:   68
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:42:00.528518
+Time exit:        12:43:10.069135
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -7.25
+PnL total:        -943.7799999999997
+PnL trade w fees: -14.75
+PnL total w fees: -1461.2799999999997
+Trade cnt succ:   69
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:44:02.998572
+Time exit:        12:45:04.610024
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -6.0
+PnL total:        -949.7799999999997
+PnL trade w fees: -13.5
+PnL total w fees: -1474.7799999999997
+Trade cnt succ:   70
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:47:59.998316
+Time exit:        12:49:49.701842
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.75
+PnL total:        -950.5299999999997
+PnL trade w fees: -8.25
+PnL total w fees: -1483.0299999999997
+Trade cnt succ:   71
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:51:48.799843
+Time exit:        12:53:29.355593
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.5
+PnL total:        -951.0299999999997
+PnL trade w fees: -8.0
+PnL total w fees: -1491.0299999999997
+Trade cnt succ:   72
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:53:29.981152
+Time exit:        12:56:13.426748
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -41.93
+PnL total:        -992.9599999999997
+PnL trade w fees: -49.43
+PnL total w fees: -1540.4599999999998
+Trade cnt succ:   73
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:56:16.944410
+Time exit:        12:57:43.488620
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -1.92
+PnL total:        -994.8799999999997
+PnL trade w fees: -9.42
+PnL total w fees: -1549.8799999999999
+Trade cnt succ:   74
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       12:58:21.529190
+Time exit:        13:02:55.994970
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        23.92
+PnL total:        -970.9599999999997
+PnL trade w fees: 16.42
+PnL total w fees: -1533.4599999999998
+Trade cnt succ:   75
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:03:10.577195
+Time exit:        13:04:20.141161
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.75
+PnL total:        -971.7099999999997
+PnL trade w fees: -8.25
+PnL total w fees: -1541.7099999999998
+Trade cnt succ:   76
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:05:06.024774
+Time exit:        13:06:09.562957
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -29.4
+PnL total:        -1001.1099999999997
+PnL trade w fees: -36.9
+PnL total w fees: -1578.61
+Trade cnt succ:   77
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:07:31.267651
+Time exit:        13:09:50.838994
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.25
+PnL total:        -1001.3599999999997
+PnL trade w fees: -7.75
+PnL total w fees: -1586.36
+Trade cnt succ:   78
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:10:02.366142
+Time exit:        13:13:00.026357
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        2.16
+PnL total:        -999.1999999999997
+PnL trade w fees: -5.34
+PnL total w fees: -1591.6999999999998
+Trade cnt succ:   79
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:14:04.975059
+Time exit:        13:15:18.629916
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -3.84
+PnL total:        -1003.0399999999997
+PnL trade w fees: -11.34
+PnL total w fees: -1603.0399999999997
+Trade cnt succ:   80
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:16:13.537290
+Time exit:        13:17:44.186765
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -3.84
+PnL total:        -1006.8799999999998
+PnL trade w fees: -11.34
+PnL total w fees: -1614.3799999999997
+Trade cnt succ:   81
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:21:13.441485
+Time exit:        13:23:24.033362
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        5.93
+PnL total:        -1000.9499999999998
+PnL trade w fees: -1.5700000000000003
+PnL total w fees: -1615.9499999999996
+Trade cnt succ:   82
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:23:24.738225
+Time exit:        13:26:10.113867
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -5.9
+PnL total:        -1006.8499999999998
+PnL trade w fees: -13.4
+PnL total w fees: -1629.3499999999997
+Trade cnt succ:   83
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:27:14.267931
+Time exit:        13:29:09.727438
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -3.12
+PnL total:        -1009.9699999999998
+PnL trade w fees: -10.620000000000001
+PnL total w fees: -1639.9699999999996
+Trade cnt succ:   84
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:29:10.588406
+Time exit:        13:36:20.902740
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        9.0
+PnL total:        -1000.9699999999998
+PnL trade w fees: 1.5
+PnL total w fees: -1638.4699999999996
+Trade cnt succ:   85
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:38:12.319176
+Time exit:        13:39:09.962334
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -4.56
+PnL total:        -1005.5299999999997
+PnL trade w fees: -12.059999999999999
+PnL total w fees: -1650.5299999999995
+Trade cnt succ:   86
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:40:03.068347
+Time exit:        13:42:50.544288
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -1005.5299999999997
+PnL trade w fees: -7.5
+PnL total w fees: -1658.0299999999995
+Trade cnt succ:   87
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:42:51.130311
+Time exit:        13:44:43.602858
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -29.6
+PnL total:        -1035.1299999999997
+PnL trade w fees: -37.1
+PnL total w fees: -1695.1299999999994
+Trade cnt succ:   88
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:45:00.269818
+Time exit:        13:47:29.821652
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        0.24
+PnL total:        -1034.8899999999996
+PnL trade w fees: -7.26
+PnL total w fees: -1702.3899999999994
+Trade cnt succ:   89
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:48:12.644189
+Time exit:        13:52:40.331430
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        2.64
+PnL total:        -1032.2499999999995
+PnL trade w fees: -4.859999999999999
+PnL total w fees: -1707.2499999999993
+Trade cnt succ:   90
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:52:41.789318
+Time exit:        13:54:20.388718
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        6.08
+PnL total:        -1026.1699999999996
+PnL trade w fees: -1.42
+PnL total w fees: -1708.6699999999994
+Trade cnt succ:   91
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:55:05.338165
+Time exit:        13:55:49.797403
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -2.5
+PnL total:        -1028.6699999999996
+PnL trade w fees: -10.0
+PnL total w fees: -1718.6699999999994
+Trade cnt succ:   92
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       13:58:12.105584
+Time exit:        14:00:14.600205
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -1.2
+PnL total:        -1029.8699999999997
+PnL trade w fees: -8.7
+PnL total w fees: -1727.3699999999994
+Trade cnt succ:   93
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:00:19.239023
+Time exit:        14:02:14.678309
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        6.05
+PnL total:        -1023.8199999999997
+PnL trade w fees: -1.4500000000000002
+PnL total w fees: -1728.8199999999995
+Trade cnt succ:   94
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:10:39.050996
+Time exit:        14:12:10.643756
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -20.64
+PnL total:        -1044.4599999999998
+PnL trade w fees: -28.14
+PnL total w fees: -1756.9599999999996
+Trade cnt succ:   95
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:14:01.290057
+Time exit:        14:15:14.654231
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.25
+PnL total:        -1044.7099999999998
+PnL trade w fees: -7.75
+PnL total w fees: -1764.7099999999996
+Trade cnt succ:   96
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:15:15.796423
+Time exit:        14:16:50.694355
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -18.12
+PnL total:        -1062.8299999999997
+PnL trade w fees: -25.62
+PnL total w fees: -1790.3299999999995
+Trade cnt succ:   97
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:17:53.300481
+Time exit:        14:20:50.817429
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        11.75
+PnL total:        -1051.0799999999997
+PnL trade w fees: 4.25
+PnL total w fees: -1786.0799999999995
+Trade cnt succ:   98
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:21:53.248532
+Time exit:        14:25:46.990787
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -6.9
+PnL total:        -1057.9799999999998
+PnL trade w fees: -14.4
+PnL total w fees: -1800.4799999999996
+Trade cnt succ:   99
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:28:00.629330
+Time exit:        14:29:20.165319
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -18.69
+PnL total:        -1076.6699999999998
+PnL trade w fees: -26.19
+PnL total w fees: -1826.6699999999996
+Trade cnt succ:   100
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:29:21.142718
+Time exit:        14:29:51.176757
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -18.54
+PnL total:        -1095.2099999999998
+PnL trade w fees: -26.04
+PnL total w fees: -1852.7099999999996
+Trade cnt succ:   101
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:29:51.402086
+Time exit:        14:31:20.211148
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -12.36
+PnL total:        -1107.5699999999997
+PnL trade w fees: -19.86
+PnL total w fees: -1872.5699999999995
+Trade cnt succ:   102
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:33:59.122472
+Time exit:        14:43:50.905867
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -6.9
+PnL total:        -1114.4699999999998
+PnL trade w fees: -14.4
+PnL total w fees: -1886.9699999999996
+Trade cnt succ:   103
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:51:05.690134
+Time exit:        14:52:31.289066
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -4.75
+PnL total:        -1119.2199999999998
+PnL trade w fees: -12.25
+PnL total w fees: -1899.2199999999996
+Trade cnt succ:   104
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       14:56:13.748558
+Time exit:        15:00:21.383348
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        59.49
+PnL total:        -1059.7299999999998
+PnL trade w fees: 51.99
+PnL total w fees: -1847.2299999999996
+Trade cnt succ:   105
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:02:00.823866
+Time exit:        15:03:31.355200
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.5
+PnL total:        -1060.2299999999998
+PnL trade w fees: -8.0
+PnL total w fees: -1855.2299999999996
+Trade cnt succ:   106
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:07:08.789566
+Time exit:        15:09:51.851493
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -1060.2299999999998
+PnL trade w fees: -7.5
+PnL total w fees: -1862.7299999999996
+Trade cnt succ:   107
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:09:52.550992
+Time exit:        15:11:16.887313
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -12.34
+PnL total:        -1072.5699999999997
+PnL trade w fees: -19.84
+PnL total w fees: -1882.5699999999995
+Trade cnt succ:   108
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:14:03.908195
+Time exit:        15:18:45.515869
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        5.46
+PnL total:        -1067.1099999999997
+PnL trade w fees: -2.04
+PnL total w fees: -1884.6099999999994
+Trade cnt succ:   109
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:19:19.360176
+Time exit:        15:20:14.874749
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -12.28
+PnL total:        -1079.3899999999996
+PnL trade w fees: -19.78
+PnL total w fees: -1904.3899999999994
+Trade cnt succ:   110
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:20:53.670284
+Time exit:        15:31:31.502004
+Ticker:           CMT
+Size(USD):        2500
+PnL trade:        -20.58
+PnL total:        -1099.9699999999996
+PnL trade w fees: -28.08
+PnL total w fees: -1932.4699999999993
+Trade cnt succ:   111
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:32:25.437552
+Time exit:        15:34:45.044816
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -1.56
+PnL total:        -1101.5299999999995
+PnL trade w fees: -9.06
+PnL total w fees: -1941.5299999999993
+Trade cnt succ:   112
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:34:46.202421
+Time exit:        15:36:42.091619
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        -12.56
+PnL total:        -1114.0899999999995
+PnL trade w fees: -20.060000000000002
+PnL total w fees: -1961.5899999999992
+Trade cnt succ:   113
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:39:12.917468
+Time exit:        15:40:51.451339
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -2.6
+PnL total:        -1116.6899999999994
+PnL trade w fees: -10.1
+PnL total w fees: -1971.6899999999991
+Trade cnt succ:   114
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:40:52.575848
+Time exit:        15:42:15.484846
+Ticker:           APOP
+Size(USD):        2500
+PnL trade:        30.85
+PnL total:        -1085.8399999999995
+PnL trade w fees: 23.35
+PnL total w fees: -1948.3399999999992
+Trade cnt succ:   115
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       15:43:02.334531
+Time exit:        15:45:20.945199
+Ticker:           MYOK
+Size(USD):        2500
+PnL trade:        -0.26
+PnL total:        -1086.0999999999995
+PnL trade w fees: -7.76
+PnL total w fees: -1956.0999999999992
+Trade cnt succ:   116
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

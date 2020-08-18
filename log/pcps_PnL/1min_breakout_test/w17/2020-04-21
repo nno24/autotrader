@@ -1,0 +1,60 @@
+Time entry:       10:03:46.314850
+Time exit:        10:30:52.330078
+Ticker:           VXRT
+Size(USD):        2500
+PnL trade:        -106.12
+PnL total:        -106.12
+PnL trade w fees: -113.62
+PnL total w fees: -113.62
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:33:07.447873
+Time exit:        10:42:23.122346
+Ticker:           WATT
+Size(USD):        2500
+PnL trade:        103.6
+PnL total:        -2.5200000000000102
+PnL trade w fees: 96.1
+PnL total w fees: -17.52000000000001
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:42:28.440316
+Time exit:        10:57:49.578718
+Ticker:           WATT
+Size(USD):        2500
+PnL trade:        113.58
+PnL total:        111.05999999999999
+PnL trade w fees: 106.08
+PnL total w fees: 88.55999999999999
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:57:55.121254
+Time exit:        11:16:41.953944
+Ticker:           WATT
+Size(USD):        2500
+PnL trade:        -391.01
+PnL total:        -279.95
+PnL trade w fees: -398.51
+PnL total w fees: -309.95
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       11:30:44.564622
+Time exit:        11:45:00.026426
+Ticker:           VXRT
+Size(USD):        2500
+PnL trade:        -16.44
+PnL total:        -16.44
+PnL trade w fees: -23.94
+PnL total w fees: -23.94
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

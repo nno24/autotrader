@@ -1,0 +1,396 @@
+Time entry:       09:31:21.304647
+Time exit:        09:31:54.804543
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -174.37
+PnL total:        -174.37
+PnL trade w fees: -181.87
+PnL total w fees: -181.87
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:32:09.347265
+Time exit:        09:33:08.978143
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -222.0
+PnL total:        -396.37
+PnL trade w fees: -229.5
+PnL total w fees: -411.37
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:33:12.624032
+Time exit:        09:34:03.029265
+Ticker:           KBSF
+Size(USD):        2500
+PnL trade:        -127.82
+PnL total:        -524.19
+PnL trade w fees: -135.32
+PnL total w fees: -546.69
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:33.732294
+Time exit:        09:36:02.327761
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        205.52
+PnL total:        -318.6700000000001
+PnL trade w fees: 198.02
+PnL total w fees: -348.6700000000001
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:36:38.105551
+Time exit:        09:37:41.668601
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        184.8
+PnL total:        -133.87000000000006
+PnL trade w fees: 177.3
+PnL total w fees: -171.37000000000006
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:42.675517
+Time exit:        09:39:57.741080
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -87.29
+PnL total:        -221.16000000000008
+PnL trade w fees: -94.79
+PnL total w fees: -266.1600000000001
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:03.288649
+Time exit:        09:43:50.933582
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        200.32
+PnL total:        -20.84000000000009
+PnL trade w fees: 192.82
+PnL total w fees: -73.34000000000009
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:51.381552
+Time exit:        09:45:18.975972
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        -356.58
+PnL total:        -377.4200000000001
+PnL trade w fees: -364.08
+PnL total w fees: -437.4200000000001
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:35.666489
+Time exit:        09:47:13.168135
+Ticker:           KBSF
+Size(USD):        2500
+PnL trade:        -42.84
+PnL total:        -420.2600000000001
+PnL trade w fees: -50.34
+PnL total w fees: -487.7600000000001
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:33.874439
+Time exit:        09:48:51.401684
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -111.94
+PnL total:        -532.2
+PnL trade w fees: -119.44
+PnL total w fees: -607.2
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:52.391174
+Time exit:        09:50:07.435459
+Ticker:           KBSF
+Size(USD):        2500
+PnL trade:        101.25
+PnL total:        -430.95000000000005
+PnL trade w fees: 93.75
+PnL total w fees: -513.45
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:19.049211
+Time exit:        09:51:24.582937
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -50.83
+PnL total:        -481.78000000000003
+PnL trade w fees: -58.33
+PnL total w fees: -571.7800000000001
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:21.596540
+Time exit:        09:57:52.193455
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        141.75
+PnL total:        -340.03000000000003
+PnL trade w fees: 134.25
+PnL total w fees: -437.5300000000001
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:01.759797
+Time exit:        09:58:39.292936
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        3.85
+PnL total:        -336.18
+PnL trade w fees: -3.65
+PnL total w fees: -441.18000000000006
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:40.044836
+Time exit:        09:59:30.319574
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        151.6
+PnL total:        -184.58
+PnL trade w fees: 144.1
+PnL total w fees: -297.08000000000004
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:30.645063
+Time exit:        10:00:10.337595
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        195.8
+PnL total:        11.219999999999999
+PnL trade w fees: 188.3
+PnL total w fees: -108.78000000000003
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:00:11.784055
+Time exit:        10:01:20.379861
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -38.4
+PnL total:        -27.18
+PnL trade w fees: -45.9
+PnL total w fees: -154.68000000000004
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:21.680525
+Time exit:        10:02:25.430816
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        -13.78
+PnL total:        -40.96
+PnL trade w fees: -21.28
+PnL total w fees: -175.96000000000004
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:26.943303
+Time exit:        10:03:36.486296
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        -47.04
+PnL total:        -88.0
+PnL trade w fees: -54.54
+PnL total w fees: -230.50000000000003
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:36.949332
+Time exit:        10:04:25.523163
+Ticker:           KBSF
+Size(USD):        2500
+PnL trade:        -122.93
+PnL total:        -210.93
+PnL trade w fees: -130.43
+PnL total w fees: -360.93000000000006
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:07:28.764145
+Time exit:        10:08:35.162391
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        -179.52
+PnL total:        -390.45000000000005
+PnL trade w fees: -187.02
+PnL total w fees: -547.95
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:36.033134
+Time exit:        10:10:19.220641
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -20.0
+PnL total:        -410.45000000000005
+PnL trade w fees: -27.5
+PnL total w fees: -575.45
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:21.597686
+Time exit:        10:11:35.270180
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        97.75
+PnL total:        -312.70000000000005
+PnL trade w fees: 90.25
+PnL total w fees: -485.20000000000005
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:35.987848
+Time exit:        10:12:49.299099
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        246.0
+PnL total:        -66.70000000000005
+PnL trade w fees: 238.5
+PnL total w fees: -246.70000000000005
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:49.953540
+Time exit:        10:14:36.354350
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        192.64
+PnL total:        125.93999999999994
+PnL trade w fees: 185.14
+PnL total w fees: -61.56000000000006
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:36.689334
+Time exit:        10:15:09.366208
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        -220.48
+PnL total:        -94.54000000000005
+PnL trade w fees: -227.98
+PnL total w fees: -289.5400000000001
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:25.070088
+Time exit:        10:18:15.571458
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -8.16
+PnL total:        -102.70000000000005
+PnL trade w fees: -15.66
+PnL total w fees: -305.2000000000001
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:46.875197
+Time exit:        10:21:35.467386
+Ticker:           KBSF
+Size(USD):        2500
+PnL trade:        -15.82
+PnL total:        -118.52000000000004
+PnL trade w fees: -23.32
+PnL total w fees: -328.5200000000001
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:53.007502
+Time exit:        10:23:23.676095
+Ticker:           KBSF
+Size(USD):        2500
+PnL trade:        134.47
+PnL total:        15.94999999999996
+PnL trade w fees: 126.97
+PnL total w fees: -201.5500000000001
+Trade cnt succ:   29
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:14.628468
+Time exit:        10:24:52.163525
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -44.44
+PnL total:        -28.490000000000038
+PnL trade w fees: -51.94
+PnL total w fees: -253.4900000000001
+Trade cnt succ:   30
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:53.043999
+Time exit:        10:26:21.203355
+Ticker:           KBSF
+Size(USD):        2500
+PnL trade:        -71.8
+PnL total:        -100.29000000000003
+PnL trade w fees: -79.3
+PnL total w fees: -332.7900000000001
+Trade cnt succ:   31
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:01.404946
+Time exit:        10:29:43.756585
+Ticker:           CHNR
+Size(USD):        2500
+PnL trade:        -84.84
+PnL total:        -185.13000000000005
+PnL trade w fees: -92.34
+PnL total w fees: -425.1300000000001
+Trade cnt succ:   32
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:59.383396
+Time exit:        10:31:51.964835
+Ticker:           CTIB
+Size(USD):        2500
+PnL trade:        -47.41
+PnL total:        -232.54000000000005
+PnL trade w fees: -54.91
+PnL total w fees: -480.0400000000001
+Trade cnt succ:   33
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

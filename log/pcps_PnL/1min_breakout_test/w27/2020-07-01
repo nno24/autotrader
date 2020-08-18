@@ -1,0 +1,408 @@
+Time entry:       09:31:30.078055
+Time exit:        09:33:17.568843
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        -11.26
+PnL total:        -11.26
+PnL trade w fees: -18.759999999999998
+PnL total w fees: -18.759999999999998
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:33:18.401841
+Time exit:        09:35:44.654106
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -196.84
+PnL total:        -208.1
+PnL trade w fees: -204.34
+PnL total w fees: -223.1
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:04.790472
+Time exit:        09:38:26.474757
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -11.6
+PnL total:        -219.7
+PnL trade w fees: -19.1
+PnL total w fees: -242.2
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:39:35.623418
+Time exit:        09:41:38.174569
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        -24.02
+PnL total:        -243.72
+PnL trade w fees: -31.52
+PnL total w fees: -273.71999999999997
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:42:02.870637
+Time exit:        09:44:58.458387
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        8.29
+PnL total:        -235.43
+PnL trade w fees: 0.7899999999999991
+PnL total w fees: -272.92999999999995
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:59.441192
+Time exit:        09:45:43.475793
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        133.98
+PnL total:        -101.45000000000002
+PnL trade w fees: 126.47999999999999
+PnL total w fees: -146.44999999999996
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:09.250763
+Time exit:        09:48:16.756800
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        -8.33
+PnL total:        -109.78000000000002
+PnL trade w fees: -15.83
+PnL total w fees: -162.27999999999997
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:21.321764
+Time exit:        09:49:57.858985
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -98.01
+PnL total:        -207.79000000000002
+PnL trade w fees: -105.51
+PnL total w fees: -267.78999999999996
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:07.280650
+Time exit:        09:51:44.985968
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        122.36
+PnL total:        -85.43000000000002
+PnL trade w fees: 114.86
+PnL total w fees: -152.92999999999995
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:53.835759
+Time exit:        09:54:22.416501
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        235.19
+PnL total:        149.76
+PnL trade w fees: 227.69
+PnL total w fees: 74.76000000000005
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:23.138176
+Time exit:        09:55:02.439539
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -149.8
+PnL total:        -0.040000000000020464
+PnL trade w fees: -157.3
+PnL total w fees: -82.53999999999996
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:55:12.050893
+Time exit:        09:55:46.539414
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -0.040000000000020464
+PnL trade w fees: -7.5
+PnL total w fees: -90.03999999999996
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:55:55.993815
+Time exit:        09:59:53.755543
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        39.93
+PnL total:        39.88999999999998
+PnL trade w fees: 32.43
+PnL total w fees: -57.609999999999964
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:54.714765
+Time exit:        10:03:27.845622
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        137.92
+PnL total:        177.80999999999997
+PnL trade w fees: 130.42
+PnL total w fees: 72.81000000000003
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:38.427152
+Time exit:        10:05:34.989569
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        7.83
+PnL total:        185.64
+PnL trade w fees: 0.33000000000000007
+PnL total w fees: 73.14000000000003
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:35.815555
+Time exit:        10:06:25.013677
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        160.93
+PnL total:        346.57
+PnL trade w fees: 153.43
+PnL total w fees: 226.57000000000005
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:25.731673
+Time exit:        10:07:39.050130
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        144.18
+PnL total:        490.75
+PnL trade w fees: 136.68
+PnL total w fees: 363.25000000000006
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:07:39.355223
+Time exit:        10:09:17.089738
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -44.46
+PnL total:        446.29
+PnL trade w fees: -51.96
+PnL total w fees: 311.2900000000001
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:57.464824
+Time exit:        10:12:55.076437
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        131.75
+PnL total:        578.04
+PnL trade w fees: 124.25
+PnL total w fees: 435.5400000000001
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:56.076064
+Time exit:        10:14:19.107184
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        -93.99
+PnL total:        484.04999999999995
+PnL trade w fees: -101.49
+PnL total w fees: 334.05000000000007
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:20.603840
+Time exit:        10:16:18.164628
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        484.04999999999995
+PnL trade w fees: -7.5
+PnL total w fees: 326.55000000000007
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:18.968162
+Time exit:        10:16:52.176476
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        -45.54
+PnL total:        438.50999999999993
+PnL trade w fees: -53.04
+PnL total w fees: 273.51000000000005
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:52.594684
+Time exit:        10:17:32.205234
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        -12.69
+PnL total:        425.81999999999994
+PnL trade w fees: -20.189999999999998
+PnL total w fees: 253.32000000000005
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:18:54.426468
+Time exit:        10:19:36.986249
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -56.63
+PnL total:        369.18999999999994
+PnL trade w fees: -64.13
+PnL total w fees: 189.19000000000005
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:44.405519
+Time exit:        10:20:17.067353
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -63.84
+PnL total:        305.3499999999999
+PnL trade w fees: -71.34
+PnL total w fees: 117.85000000000005
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:26.470176
+Time exit:        10:21:09.153779
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -23.79
+PnL total:        281.5599999999999
+PnL trade w fees: -31.29
+PnL total w fees: 86.56000000000006
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:59.027942
+Time exit:        10:22:36.596128
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        -56.35
+PnL total:        225.2099999999999
+PnL trade w fees: -63.85
+PnL total w fees: 22.710000000000058
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:55.247770
+Time exit:        10:23:30.805140
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        -12.94
+PnL total:        212.2699999999999
+PnL trade w fees: -20.439999999999998
+PnL total w fees: 2.27000000000006
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:31.253130
+Time exit:        10:24:13.823312
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -64.48
+PnL total:        147.7899999999999
+PnL trade w fees: -71.98
+PnL total w fees: -69.70999999999995
+Trade cnt succ:   29
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:19.337704
+Time exit:        10:24:56.875561
+Ticker:           TTOO
+Size(USD):        2500
+PnL trade:        -25.78
+PnL total:        122.0099999999999
+PnL trade w fees: -33.28
+PnL total w fees: -102.98999999999995
+Trade cnt succ:   30
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:57.605196
+Time exit:        10:26:04.916118
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        144.18
+PnL total:        266.18999999999994
+PnL trade w fees: 136.68
+PnL total w fees: 33.690000000000055
+Trade cnt succ:   31
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:05.850004
+Time exit:        10:28:08.976705
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -28.96
+PnL total:        237.22999999999993
+PnL trade w fees: -36.46
+PnL total w fees: -2.7699999999999463
+Trade cnt succ:   32
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:09.304145
+Time exit:        10:28:57.010821
+Ticker:           MYOS
+Size(USD):        2500
+PnL trade:        -87.72
+PnL total:        149.50999999999993
+PnL trade w fees: -95.22
+PnL total w fees: -97.98999999999995
+Trade cnt succ:   33
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:59.144002
+Time exit:        10:32:17.097431
+Ticker:           YRCW
+Size(USD):        2500
+PnL trade:        8.25
+PnL total:        157.75999999999993
+PnL trade w fees: 0.75
+PnL total w fees: -97.23999999999995
+Trade cnt succ:   34
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

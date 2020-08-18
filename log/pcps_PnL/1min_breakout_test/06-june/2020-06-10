@@ -1,0 +1,312 @@
+Time entry:       09:31:19.890287
+Time exit:        09:32:18.374195
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        -130.38
+PnL total:        -130.38
+PnL trade w fees: -137.88
+PnL total w fees: -137.88
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:33:22.559266
+Time exit:        09:34:32.990793
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        -127.92
+PnL total:        -258.3
+PnL trade w fees: -135.42000000000002
+PnL total w fees: -273.3
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:37.508877
+Time exit:        09:35:51.070502
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        -45.86
+PnL total:        -304.16
+PnL trade w fees: -53.36
+PnL total w fees: -326.66
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:06.148506
+Time exit:        09:39:38.840612
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        145.62
+PnL total:        -158.54000000000002
+PnL trade w fees: 138.12
+PnL total w fees: -188.54000000000002
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:39:39.451111
+Time exit:        09:41:21.883640
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -158.54000000000002
+PnL trade w fees: -7.5
+PnL total w fees: -196.04000000000002
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:22.712966
+Time exit:        09:42:50.930085
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        139.0
+PnL total:        -19.54000000000002
+PnL trade w fees: 131.5
+PnL total w fees: -64.54000000000002
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:42:51.364158
+Time exit:        09:43:32.948416
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        225.0
+PnL total:        205.45999999999998
+PnL trade w fees: 217.5
+PnL total w fees: 152.95999999999998
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:33.315375
+Time exit:        09:45:21.000532
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        -78.12
+PnL total:        127.33999999999997
+PnL trade w fees: -85.62
+PnL total w fees: 67.33999999999997
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:23.448435
+Time exit:        09:47:23.066013
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        171.38
+PnL total:        298.71999999999997
+PnL trade w fees: 163.88
+PnL total w fees: 231.21999999999997
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:37.590662
+Time exit:        09:49:22.260561
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        298.71999999999997
+PnL trade w fees: -7.5
+PnL total w fees: 223.71999999999997
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:51:53.197200
+Time exit:        09:53:57.737043
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        -21.35
+PnL total:        277.36999999999995
+PnL trade w fees: -28.85
+PnL total w fees: 194.86999999999998
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:44.708169
+Time exit:        09:55:53.189966
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        205.8
+PnL total:        483.16999999999996
+PnL trade w fees: 198.3
+PnL total w fees: 393.16999999999996
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:55:53.594138
+Time exit:        09:57:54.244936
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        -12.84
+PnL total:        470.33
+PnL trade w fees: -20.34
+PnL total w fees: 372.83
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:14.977457
+Time exit:        09:59:39.443366
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        146.54
+PnL total:        616.87
+PnL trade w fees: 139.04
+PnL total w fees: 511.87
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:40.596525
+Time exit:        10:00:45.476846
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        126.15
+PnL total:        743.02
+PnL trade w fees: 118.65
+PnL total w fees: 630.52
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:00:45.813663
+Time exit:        10:02:19.518877
+Ticker:           DPW
+Size(USD):        2500
+PnL trade:        -129.28
+PnL total:        613.74
+PnL trade w fees: -136.78
+PnL total w fees: 493.74
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:07.169877
+Time exit:        10:05:20.553949
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        -8.92
+PnL total:        604.82
+PnL trade w fees: -16.42
+PnL total w fees: 477.32
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:04.427255
+Time exit:        10:07:24.985838
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        97.24
+PnL total:        702.0600000000001
+PnL trade w fees: 89.74
+PnL total w fees: 567.06
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:07:25.613492
+Time exit:        10:10:03.047661
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        12.5
+PnL total:        714.5600000000001
+PnL trade w fees: 5.0
+PnL total w fees: 572.06
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:18.847087
+Time exit:        10:15:02.339719
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        -35.68
+PnL total:        678.8800000000001
+PnL trade w fees: -43.18
+PnL total w fees: 528.88
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:16:56.960008
+Time exit:        10:18:10.424246
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        -25.8
+PnL total:        653.0800000000002
+PnL trade w fees: -33.3
+PnL total w fees: 495.58
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:18:21.915153
+Time exit:        10:19:37.562676
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        -10.37
+PnL total:        642.7100000000002
+PnL trade w fees: -17.869999999999997
+PnL total w fees: 477.71
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:45.119837
+Time exit:        10:22:18.704124
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        28.56
+PnL total:        671.2700000000001
+PnL trade w fees: 21.06
+PnL total w fees: 498.77
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:04.122867
+Time exit:        10:24:44.727309
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        -9.67
+PnL total:        661.6000000000001
+PnL trade w fees: -17.17
+PnL total w fees: 481.59999999999997
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:46.358222
+Time exit:        10:27:02.814690
+Ticker:           CRIS
+Size(USD):        2500
+PnL trade:        -28.95
+PnL total:        632.6500000000001
+PnL trade w fees: -36.45
+PnL total w fees: 445.15
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:12.458065
+Time exit:        10:31:16.011577
+Ticker:           TEUM
+Size(USD):        2500
+PnL trade:        14.88
+PnL total:        647.5300000000001
+PnL trade w fees: 7.380000000000001
+PnL total w fees: 452.53
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
