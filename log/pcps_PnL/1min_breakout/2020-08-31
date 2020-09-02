@@ -1,0 +1,252 @@
+Time entry:       09:31:02.132735
+Time exit:        09:32:18.661051
+Ticker:           AIMT
+Size(USD):        2500
+PnL trade:        -1.46
+PnL total:        -1.46
+PnL trade w fees: -8.96
+PnL total w fees: -8.96
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:03.075427
+Time exit:        09:35:18.652080
+Ticker:           AKCA
+Size(USD):        2500
+PnL trade:        -29.67
+PnL total:        -31.130000000000003
+PnL trade w fees: -37.17
+PnL total w fees: -46.13
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:07.597406
+Time exit:        09:44:20.434779
+Ticker:           AIMT
+Size(USD):        2500
+PnL trade:        3.65
+PnL total:        -27.480000000000004
+PnL trade w fees: -3.85
+PnL total w fees: -49.980000000000004
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:20.898624
+Time exit:        09:45:08.463160
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        -16.32
+PnL total:        -43.800000000000004
+PnL trade w fees: -23.82
+PnL total w fees: -73.80000000000001
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:01.504464
+Time exit:        09:47:23.996357
+Ticker:           AIMT
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -43.800000000000004
+PnL trade w fees: -7.5
+PnL total w fees: -81.30000000000001
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:34.573861
+Time exit:        09:49:27.165888
+Ticker:           AKCA
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -43.800000000000004
+PnL trade w fees: -7.5
+PnL total w fees: -88.80000000000001
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:39.677839
+Time exit:        09:51:56.335439
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        -25.14
+PnL total:        -68.94
+PnL trade w fees: -32.64
+PnL total w fees: -121.44000000000001
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:21.811026
+Time exit:        09:53:38.615785
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        -49.68
+PnL total:        -118.62
+PnL trade w fees: -57.18
+PnL total w fees: -178.62
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:16.118414
+Time exit:        10:00:28.765902
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        -17.0
+PnL total:        -135.62
+PnL trade w fees: -24.5
+PnL total w fees: -203.12
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:00:38.255136
+Time exit:        10:03:23.931978
+Ticker:           AKCA
+Size(USD):        2500
+PnL trade:        5.44
+PnL total:        -130.18
+PnL trade w fees: -2.0599999999999996
+PnL total w fees: -205.18
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:24.337309
+Time exit:        10:08:04.061321
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        8.55
+PnL total:        -121.63000000000001
+PnL trade w fees: 1.0500000000000007
+PnL total w fees: -204.13
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:04.467234
+Time exit:        10:10:27.126926
+Ticker:           AKCA
+Size(USD):        2500
+PnL trade:        1.36
+PnL total:        -120.27000000000001
+PnL trade w fees: -6.14
+PnL total w fees: -210.26999999999998
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:40.704999
+Time exit:        10:13:21.335707
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -120.27000000000001
+PnL trade w fees: -7.5
+PnL total w fees: -217.76999999999998
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:13:37.917242
+Time exit:        10:14:20.515415
+Ticker:           AIMT
+Size(USD):        2500
+PnL trade:        -0.73
+PnL total:        -121.00000000000001
+PnL trade w fees: -8.23
+PnL total w fees: -225.99999999999997
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:20.780286
+Time exit:        10:16:57.582963
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        -24.48
+PnL total:        -145.48000000000002
+PnL trade w fees: -31.98
+PnL total w fees: -257.97999999999996
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:08.080538
+Time exit:        10:18:03.708066
+Ticker:           AKCA
+Size(USD):        2500
+PnL trade:        -4.08
+PnL total:        -149.56000000000003
+PnL trade w fees: -11.58
+PnL total w fees: -269.55999999999995
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:18:05.172859
+Time exit:        10:19:18.742942
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        -8.14
+PnL total:        -157.70000000000005
+PnL trade w fees: -15.64
+PnL total w fees: -285.19999999999993
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:30.800419
+Time exit:        10:22:24.478068
+Ticker:           AIMT
+Size(USD):        2500
+PnL trade:        -1.46
+PnL total:        -159.16000000000005
+PnL trade w fees: -8.96
+PnL total w fees: -294.1599999999999
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:22:31.826623
+Time exit:        10:24:38.585805
+Ticker:           AIMT
+Size(USD):        2500
+PnL trade:        -0.73
+PnL total:        -159.89000000000004
+PnL trade w fees: -8.23
+PnL total w fees: -302.38999999999993
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:21.414922
+Time exit:        10:27:19.023901
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        -24.66
+PnL total:        -184.55000000000004
+PnL trade w fees: -32.16
+PnL total w fees: -334.54999999999995
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:12.424394
+Time exit:        10:33:57.191172
+Ticker:           GNW
+Size(USD):        2500
+PnL trade:        41.55
+PnL total:        -143.00000000000006
+PnL trade w fees: 34.05
+PnL total w fees: -300.49999999999994
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

@@ -1,0 +1,300 @@
+Time entry:       09:31:02.774191
+Time exit:        09:31:40.274782
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        192.78
+PnL total:        192.78
+PnL trade w fees: 185.28
+PnL total w fees: 185.28
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:31:41.147218
+Time exit:        09:33:25.326988
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        113.04
+PnL total:        305.82
+PnL trade w fees: 105.54
+PnL total w fees: 290.82
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:33:29.791651
+Time exit:        09:35:58.430748
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        -47.36
+PnL total:        258.46
+PnL trade w fees: -54.86
+PnL total w fees: 235.95999999999998
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:02.457058
+Time exit:        09:37:45.054514
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        158.47
+PnL total:        416.92999999999995
+PnL trade w fees: 150.97
+PnL total w fees: 386.92999999999995
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:38:46.970032
+Time exit:        09:40:41.134475
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        -104.1
+PnL total:        312.8299999999999
+PnL trade w fees: -111.6
+PnL total w fees: 275.3299999999999
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:41:43.017208
+Time exit:        09:43:21.211236
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        -0.48
+PnL total:        312.3499999999999
+PnL trade w fees: -7.98
+PnL total w fees: 267.3499999999999
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:21.610706
+Time exit:        09:44:39.258651
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        153.12
+PnL total:        465.4699999999999
+PnL trade w fees: 145.62
+PnL total w fees: 412.9699999999999
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:40.633596
+Time exit:        09:48:18.366469
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        0.47
+PnL total:        465.93999999999994
+PnL trade w fees: -7.03
+PnL total w fees: 405.93999999999994
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:20.785883
+Time exit:        09:50:29.434447
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        465.93999999999994
+PnL trade w fees: -7.5
+PnL total w fees: 398.43999999999994
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:45.845589
+Time exit:        09:51:25.609699
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        350.88
+PnL total:        816.8199999999999
+PnL trade w fees: 343.38
+PnL total w fees: 741.8199999999999
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:51:26.585629
+Time exit:        09:52:11.643026
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        162.36
+PnL total:        979.18
+PnL trade w fees: 154.86
+PnL total w fees: 896.68
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:52:12.741700
+Time exit:        09:54:30.711168
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        -0.94
+PnL total:        978.2399999999999
+PnL trade w fees: -8.44
+PnL total w fees: 888.2399999999999
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:31.277089
+Time exit:        09:56:18.751690
+Ticker:           BDR
+Size(USD):        2500
+PnL trade:        -133.38
+PnL total:        844.8599999999999
+PnL trade w fees: -140.88
+PnL total w fees: 747.3599999999999
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:56:36.360611
+Time exit:        10:01:16.037095
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        -3.34
+PnL total:        841.5199999999999
+PnL trade w fees: -10.84
+PnL total w fees: 736.5199999999999
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:43.891790
+Time exit:        10:04:59.514062
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        -0.94
+PnL total:        840.5799999999998
+PnL trade w fees: -8.44
+PnL total w fees: 728.0799999999998
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:00.175527
+Time exit:        10:06:42.554805
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        -3.33
+PnL total:        837.2499999999998
+PnL trade w fees: -10.83
+PnL total w fees: 717.2499999999998
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:07:28.337164
+Time exit:        10:10:06.066495
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        837.2499999999998
+PnL trade w fees: -7.5
+PnL total w fees: 709.7499999999998
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:25.144113
+Time exit:        10:14:21.859431
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        0.94
+PnL total:        838.1899999999998
+PnL trade w fees: -6.5600000000000005
+PnL total w fees: 703.1899999999998
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:15:13.809481
+Time exit:        10:17:49.425040
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        838.1899999999998
+PnL trade w fees: -7.5
+PnL total w fees: 695.6899999999998
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:59.706600
+Time exit:        10:21:47.216484
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        -1.41
+PnL total:        836.7799999999999
+PnL trade w fees: -8.91
+PnL total w fees: 686.7799999999999
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:53.718843
+Time exit:        10:23:21.317901
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        -3.33
+PnL total:        833.4499999999998
+PnL trade w fees: -10.83
+PnL total w fees: 675.9499999999998
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:56.952987
+Time exit:        10:25:31.192533
+Ticker:           MNTA
+Size(USD):        2500
+PnL trade:        -1.41
+PnL total:        832.0399999999998
+PnL trade w fees: -8.91
+PnL total w fees: 667.0399999999998
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:08.971722
+Time exit:        10:27:06.570595
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        -6.66
+PnL total:        825.3799999999999
+PnL trade w fees: -14.16
+PnL total w fees: 652.8799999999999
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:56.354582
+Time exit:        10:29:19.074227
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        -6.64
+PnL total:        818.7399999999999
+PnL trade w fees: -14.14
+PnL total w fees: 638.7399999999999
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:28.488919
+Time exit:        10:31:16.213154
+Ticker:           HUD
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        818.7399999999999
+PnL trade w fees: -7.5
+PnL total w fees: 631.2399999999999
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

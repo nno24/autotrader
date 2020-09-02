@@ -1,0 +1,300 @@
+Time entry:       09:31:31.049080
+Time exit:        09:32:27.625128
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -256.83
+PnL total:        -256.83
+PnL trade w fees: -264.33
+PnL total w fees: -264.33
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:05.569192
+Time exit:        09:35:29.022389
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -185.92
+PnL total:        -442.75
+PnL trade w fees: -193.42
+PnL total w fees: -457.75
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:35:30.027981
+Time exit:        09:36:20.050680
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -162.43
+PnL total:        -605.1800000000001
+PnL trade w fees: -169.93
+PnL total w fees: -627.6800000000001
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:36:47.701055
+Time exit:        09:38:20.367294
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -116.5
+PnL total:        -721.6800000000001
+PnL trade w fees: -124.0
+PnL total w fees: -751.6800000000001
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:08.433771
+Time exit:        09:41:57.871954
+Ticker:           MOXC
+Size(USD):        2500
+PnL trade:        -34.64
+PnL total:        -756.32
+PnL trade w fees: -42.14
+PnL total w fees: -793.82
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:01.461327
+Time exit:        09:45:33.116413
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -146.19
+PnL total:        -902.51
+PnL trade w fees: -153.69
+PnL total w fees: -947.51
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:34.397965
+Time exit:        09:48:34.199587
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        7.35
+PnL total:        -895.16
+PnL trade w fees: -0.15000000000000036
+PnL total w fees: -947.66
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:49:00.867365
+Time exit:        09:50:33.479223
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -26.64
+PnL total:        -921.8
+PnL trade w fees: -34.14
+PnL total w fees: -981.8
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:51:04.185706
+Time exit:        09:53:23.817092
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        154.2
+PnL total:        -767.5999999999999
+PnL trade w fees: 146.7
+PnL total w fees: -835.0999999999999
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:24.721324
+Time exit:        09:54:21.840836
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -217.26
+PnL total:        -984.8599999999999
+PnL trade w fees: -224.76
+PnL total w fees: -1059.86
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:04.511776
+Time exit:        10:00:06.945554
+Ticker:           MOXC
+Size(USD):        2500
+PnL trade:        -47.85
+PnL total:        -1032.7099999999998
+PnL trade w fees: -55.35
+PnL total w fees: -1115.2099999999998
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:03.997190
+Time exit:        10:01:43.510914
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -76.44
+PnL total:        -1109.1499999999999
+PnL trade w fees: -83.94
+PnL total w fees: -1199.1499999999999
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:56.009424
+Time exit:        10:02:44.635777
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -68.1
+PnL total:        -1177.2499999999998
+PnL trade w fees: -75.6
+PnL total w fees: -1274.7499999999998
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:03:01.279544
+Time exit:        10:04:26.823610
+Ticker:           MOXC
+Size(USD):        2500
+PnL trade:        9.46
+PnL total:        -1167.7899999999997
+PnL trade w fees: 1.9600000000000009
+PnL total w fees: -1272.7899999999997
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:43.659199
+Time exit:        10:09:16.199448
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -16.56
+PnL total:        -1184.3499999999997
+PnL trade w fees: -24.06
+PnL total w fees: -1296.8499999999997
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:16.541325
+Time exit:        10:11:24.249097
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -10.7
+PnL total:        -1195.0499999999997
+PnL trade w fees: -18.2
+PnL total w fees: -1315.0499999999997
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:24.625658
+Time exit:        10:14:17.336486
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        29.4
+PnL total:        -1165.6499999999996
+PnL trade w fees: 21.9
+PnL total w fees: -1293.1499999999996
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:44.998440
+Time exit:        10:17:15.658255
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        125.21
+PnL total:        -1040.4399999999996
+PnL trade w fees: 117.71
+PnL total w fees: -1175.4399999999996
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:16.405339
+Time exit:        10:18:18.682787
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -14.4
+PnL total:        -1054.8399999999997
+PnL trade w fees: -21.9
+PnL total w fees: -1197.3399999999997
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:19:11.534561
+Time exit:        10:21:00.272351
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -42.99
+PnL total:        -1097.8299999999997
+PnL trade w fees: -50.49
+PnL total w fees: -1247.8299999999997
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:21:01.515068
+Time exit:        10:22:36.318476
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -41.43
+PnL total:        -1139.2599999999998
+PnL trade w fees: -48.93
+PnL total w fees: -1296.7599999999998
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:23:06.999607
+Time exit:        10:24:51.656155
+Ticker:           MOXC
+Size(USD):        2500
+PnL trade:        -42.28
+PnL total:        -1181.5399999999997
+PnL trade w fees: -49.78
+PnL total w fees: -1346.5399999999997
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:03.092536
+Time exit:        10:25:51.764744
+Ticker:           PED
+Size(USD):        2500
+PnL trade:        -27.62
+PnL total:        -1209.1599999999996
+PnL trade w fees: -35.120000000000005
+PnL total w fees: -1381.6599999999999
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:32.522548
+Time exit:        10:27:14.145344
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -25.14
+PnL total:        -1234.2999999999997
+PnL trade w fees: -32.64
+PnL total w fees: -1414.3
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:31.642265
+Time exit:        10:29:14.359777
+Ticker:           PER
+Size(USD):        2500
+PnL trade:        -43.93
+PnL total:        -1278.2299999999998
+PnL trade w fees: -51.43
+PnL total w fees: -1465.73
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

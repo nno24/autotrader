@@ -1,0 +1,336 @@
+Time entry:       09:34:46.631240
+Time exit:        09:36:22.196039
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -24.01
+PnL total:        -24.01
+PnL trade w fees: -31.51
+PnL total w fees: -31.51
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:36:22.636639
+Time exit:        09:37:15.228373
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        157.46
+PnL total:        133.45000000000002
+PnL trade w fees: 149.96
+PnL total w fees: 118.45
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:37:15.729050
+Time exit:        09:39:18.284467
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -0.89
+PnL total:        132.56000000000003
+PnL trade w fees: -8.39
+PnL total w fees: 110.06
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:39:18.796441
+Time exit:        09:39:54.298367
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -58.25
+PnL total:        74.31000000000003
+PnL trade w fees: -65.75
+PnL total w fees: 44.31
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:39:54.802109
+Time exit:        09:41:32.350080
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        74.31000000000003
+PnL trade w fees: -7.5
+PnL total w fees: 36.81
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:42:04.070578
+Time exit:        09:44:21.719986
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        0.47
+PnL total:        74.78000000000003
+PnL trade w fees: -7.03
+PnL total w fees: 29.78
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:44:23.048494
+Time exit:        09:46:20.798144
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        16.97
+PnL total:        91.75000000000003
+PnL trade w fees: 9.469999999999999
+PnL total w fees: 39.25
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:46:33.243985
+Time exit:        09:48:11.957626
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -133.77
+PnL total:        -42.01999999999998
+PnL trade w fees: -141.27
+PnL total w fees: -102.02000000000001
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:48:25.536586
+Time exit:        09:50:18.144288
+Ticker:           NSYS
+Size(USD):        2500
+PnL trade:        -9.24
+PnL total:        -51.259999999999984
+PnL trade w fees: -16.740000000000002
+PnL total w fees: -118.76000000000002
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:36.578944
+Time exit:        09:52:28.340361
+Ticker:           NSYS
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -51.259999999999984
+PnL trade w fees: -7.5
+PnL total w fees: -126.26000000000002
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:53:16.177293
+Time exit:        09:56:23.840809
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        19.53
+PnL total:        -31.729999999999983
+PnL trade w fees: 12.030000000000001
+PnL total w fees: -114.23000000000002
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:58:10.184557
+Time exit:        09:58:47.815359
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -5.63
+PnL total:        -37.359999999999985
+PnL trade w fees: -13.129999999999999
+PnL total w fees: -127.36000000000001
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:59:49.850396
+Time exit:        10:00:40.865551
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -21.12
+PnL total:        -58.47999999999999
+PnL trade w fees: -28.62
+PnL total w fees: -155.98000000000002
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:13.583346
+Time exit:        10:04:21.262092
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        57.69
+PnL total:        -0.789999999999992
+PnL trade w fees: 50.19
+PnL total w fees: -105.79000000000002
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:04:58.017668
+Time exit:        10:06:20.655097
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        -18.24
+PnL total:        -19.02999999999999
+PnL trade w fees: -25.74
+PnL total w fees: -131.53000000000003
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:06:20.918133
+Time exit:        10:07:24.678599
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -52.0
+PnL total:        -71.02999999999999
+PnL trade w fees: -59.5
+PnL total w fees: -191.03000000000003
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:08:35.577344
+Time exit:        10:09:17.802770
+Ticker:           NSYS
+Size(USD):        2500
+PnL trade:        -18.96
+PnL total:        -89.98999999999998
+PnL trade w fees: -26.46
+PnL total w fees: -217.49000000000004
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:09:50.468059
+Time exit:        10:10:33.134067
+Ticker:           NSYS
+Size(USD):        2500
+PnL trade:        -37.68
+PnL total:        -127.66999999999999
+PnL trade w fees: -45.18
+PnL total w fees: -262.67
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:10:59.785879
+Time exit:        10:12:18.445417
+Ticker:           NSYS
+Size(USD):        2500
+PnL trade:        -18.68
+PnL total:        -146.35
+PnL trade w fees: -26.18
+PnL total w fees: -288.85
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:12:35.032186
+Time exit:        10:14:17.635170
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        -17.92
+PnL total:        -164.26999999999998
+PnL trade w fees: -25.42
+PnL total w fees: -314.27000000000004
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:14:24.124019
+Time exit:        10:17:06.760343
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        35.26
+PnL total:        -129.01
+PnL trade w fees: 27.759999999999998
+PnL total w fees: -286.51000000000005
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:19.340174
+Time exit:        10:18:03.901598
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        -52.8
+PnL total:        -181.81
+PnL trade w fees: -60.3
+PnL total w fees: -346.81000000000006
+Trade cnt succ:   22
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:47.828497
+Time exit:        10:24:19.535410
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        35.84
+PnL total:        -145.97
+PnL trade w fees: 28.340000000000003
+PnL total w fees: -318.47
+Trade cnt succ:   23
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:24:23.976089
+Time exit:        10:25:41.607600
+Ticker:           NSYS
+Size(USD):        2500
+PnL trade:        -18.64
+PnL total:        -164.61
+PnL trade w fees: -26.14
+PnL total w fees: -344.61
+Trade cnt succ:   24
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:25:42.035339
+Time exit:        10:27:19.652843
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -31.11
+PnL total:        -195.72000000000003
+PnL trade w fees: -38.61
+PnL total w fees: -383.22
+Trade cnt succ:   25
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:20.130271
+Time exit:        10:28:14.688874
+Ticker:           GEVO
+Size(USD):        2500
+PnL trade:        -17.85
+PnL total:        -213.57000000000002
+PnL trade w fees: -25.35
+PnL total w fees: -408.57000000000005
+Trade cnt succ:   26
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:28:15.199900
+Time exit:        10:29:02.721664
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        -27.66
+PnL total:        -241.23000000000002
+PnL trade w fees: -35.16
+PnL total w fees: -443.73
+Trade cnt succ:   27
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:29:14.136696
+Time exit:        10:33:41.941929
+Ticker:           JE
+Size(USD):        2500
+PnL trade:        150.1
+PnL total:        -91.13000000000002
+PnL trade w fees: 142.6
+PnL total w fees: -301.13
+Trade cnt succ:   28
+a20pcps_0_19:     0
+a20freq_0_19:     0
+

@@ -1,0 +1,252 @@
+Time entry:       09:31:02.048614
+Time exit:        09:32:48.595727
+Ticker:           TYME
+Size(USD):        2500
+PnL trade:        -31.14
+PnL total:        -31.14
+PnL trade w fees: -38.64
+PnL total w fees: -38.64
+Trade cnt succ:   1
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:34:28.880378
+Time exit:        09:35:15.517416
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        -5.56
+PnL total:        -36.7
+PnL trade w fees: -13.059999999999999
+PnL total w fees: -51.7
+Trade cnt succ:   2
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:36:31.079306
+Time exit:        09:38:14.734629
+Ticker:           PLAN
+Size(USD):        2500
+PnL trade:        -6.4
+PnL total:        -43.1
+PnL trade w fees: -13.9
+PnL total w fees: -65.60000000000001
+Trade cnt succ:   3
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:40:22.258011
+Time exit:        09:43:56.958118
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        5.64
+PnL total:        -37.46
+PnL trade w fees: -1.8600000000000003
+PnL total w fees: -67.46000000000001
+Trade cnt succ:   4
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:43:59.371501
+Time exit:        09:45:45.025979
+Ticker:           PLAN
+Size(USD):        2500
+PnL trade:        2.8
+PnL total:        -34.660000000000004
+PnL trade w fees: -4.7
+PnL total w fees: -72.16000000000001
+Trade cnt succ:   5
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:45:45.612230
+Time exit:        09:47:25.082454
+Ticker:           PLAN
+Size(USD):        2500
+PnL trade:        -4.4
+PnL total:        -39.06
+PnL trade w fees: -11.9
+PnL total w fees: -84.06000000000002
+Trade cnt succ:   6
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:47:26.103456
+Time exit:        09:48:45.118606
+Ticker:           TYME
+Size(USD):        2500
+PnL trade:        -68.72
+PnL total:        -107.78
+PnL trade w fees: -76.22
+PnL total w fees: -160.28000000000003
+Trade cnt succ:   7
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:50:02.209797
+Time exit:        09:51:16.317338
+Ticker:           PLAN
+Size(USD):        2500
+PnL trade:        -1.6
+PnL total:        -109.38
+PnL trade w fees: -9.1
+PnL total w fees: -169.38000000000002
+Trade cnt succ:   8
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:54:12.816587
+Time exit:        09:54:47.412933
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        -14.1
+PnL total:        -123.47999999999999
+PnL trade w fees: -21.6
+PnL total w fees: -190.98000000000002
+Trade cnt succ:   9
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       09:57:17.207869
+Time exit:        10:01:03.008274
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -123.47999999999999
+PnL trade w fees: -7.5
+PnL total w fees: -198.48000000000002
+Trade cnt succ:   10
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:01:57.966076
+Time exit:        10:02:42.522665
+Ticker:           PLAN
+Size(USD):        2500
+PnL trade:        -10.0
+PnL total:        -133.48
+PnL trade w fees: -17.5
+PnL total w fees: -215.98000000000002
+Trade cnt succ:   11
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:02:43.033898
+Time exit:        10:04:45.580925
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        -9.94
+PnL total:        -143.42
+PnL trade w fees: -17.439999999999998
+PnL total w fees: -233.42000000000002
+Trade cnt succ:   12
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:03.043533
+Time exit:        10:05:39.751422
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        -10.01
+PnL total:        -153.42999999999998
+PnL trade w fees: -17.509999999999998
+PnL total w fees: -250.93
+Trade cnt succ:   13
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:05:52.260043
+Time exit:        10:07:22.894962
+Ticker:           TYME
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -153.42999999999998
+PnL trade w fees: -7.5
+PnL total w fees: -258.43
+Trade cnt succ:   14
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:07:25.353898
+Time exit:        10:10:03.983060
+Ticker:           PLAN
+Size(USD):        2500
+PnL trade:        2.0
+PnL total:        -151.42999999999998
+PnL trade w fees: -5.5
+PnL total w fees: -263.93
+Trade cnt succ:   15
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:11:26.230008
+Time exit:        10:14:25.832966
+Ticker:           TYME
+Size(USD):        2500
+PnL trade:        57.45
+PnL total:        -93.97999999999998
+PnL trade w fees: 49.95
+PnL total w fees: -213.98000000000002
+Trade cnt succ:   16
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:15:13.706972
+Time exit:        10:17:25.363474
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        0.0
+PnL total:        -93.97999999999998
+PnL trade w fees: -7.5
+PnL total w fees: -221.48000000000002
+Trade cnt succ:   17
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:17:39.932179
+Time exit:        10:20:44.582570
+Ticker:           PLAN
+Size(USD):        2500
+PnL trade:        -2.4
+PnL total:        -96.37999999999998
+PnL trade w fees: -9.9
+PnL total w fees: -231.38000000000002
+Trade cnt succ:   18
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:20:46.237900
+Time exit:        10:23:19.652932
+Ticker:           TYME
+Size(USD):        2500
+PnL trade:        55.74
+PnL total:        -40.63999999999998
+PnL trade w fees: 48.24
+PnL total w fees: -183.14000000000001
+Trade cnt succ:   19
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:26:30.937045
+Time exit:        10:27:12.341965
+Ticker:           TYME
+Size(USD):        2500
+PnL trade:        -72.96
+PnL total:        -113.59999999999997
+PnL trade w fees: -80.46
+PnL total w fees: -263.6
+Trade cnt succ:   20
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
+Time entry:       10:27:26.858670
+Time exit:        10:29:52.544019
+Ticker:           IMUX
+Size(USD):        2500
+PnL trade:        8.52
+PnL total:        -105.07999999999997
+PnL trade w fees: 1.0199999999999996
+PnL total w fees: -262.58000000000004
+Trade cnt succ:   21
+a20pcps_0_19:     0
+a20freq_0_19:     0
+
